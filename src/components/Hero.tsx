@@ -78,7 +78,7 @@ export const Hero = () => {
 
           {/* Main title - elegant and refined */}
           <div className="space-y-6 animate-slide-up">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight tracking-wide font-light relative" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight tracking-wide font-light relative hyphens-none" style={{ fontFamily: "'Cormorant Garamond', serif", hyphens: 'none', wordBreak: 'keep-all' }}>
               <span className="block relative">
                 <span className="relative z-10 text-foreground drop-shadow-sm">
                   {t("heroTitle")}

@@ -134,10 +134,17 @@ All colors MUST be HSL.
   }
 
   /* Better text wrapping for mobile */
-  p, h1, h2, h3, h4, h5, h6 {
+  p, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
+  }
+
+  /* Main hero title - no hyphenation */
+  h1 {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: none;
   }
 }
 
