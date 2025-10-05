@@ -110,11 +110,34 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    /* Prevent font size inflation on mobile */
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "liga" 1, "kern" 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Prevent horizontal overflow on mobile */
+    overflow-x: hidden;
+  }
+
+  /* Ensure all elements respect container boundaries */
+  * {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  /* Better text wrapping for mobile */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
   }
 }
 
@@ -174,6 +197,10 @@ All colors MUST be HSL.
 
   .animate-shimmer-fast {
     animation: shimmer 3s ease-in-out infinite;
+  }
+
+  .animate-shimmer-slow {
+    animation: shimmer 15s ease-in-out infinite;
   }
 
   /* Floating animation for orbs */

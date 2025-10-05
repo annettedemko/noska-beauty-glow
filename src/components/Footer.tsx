@@ -34,7 +34,7 @@ export const Footer = () => {
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-8 pb-8 border-b border-gold/20">
-          <div className="flex gap-10 text-sm uppercase tracking-[0.2em]">
+          <div className="flex gap-6 sm:gap-10 text-xs sm:text-sm uppercase tracking-[0.1em] sm:tracking-[0.2em]">
             <Link to="/impressum" className="hover:text-gold transition-colors duration-300 relative group">
               {t("impressum")}
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-gold group-hover:w-full transition-all duration-300" />
@@ -47,7 +47,7 @@ export const Footer = () => {
 
           <button
             onClick={toggleLanguage}
-            className="text-sm font-sans tracking-[0.3em] uppercase border border-gold/30 px-6 py-2 hover:bg-gold/10 hover:border-gold transition-all duration-300"
+            className="text-xs sm:text-sm font-sans tracking-[0.2em] sm:tracking-[0.3em] uppercase border border-gold/30 px-4 sm:px-6 py-2 hover:bg-gold/10 hover:border-gold transition-all duration-300"
           >
             {language === "DE" ? "RU" : "DE"}
           </button>

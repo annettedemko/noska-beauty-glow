@@ -82,7 +82,7 @@ export const Navigation = () => {
             variant="ghost"
             size="sm"
             onClick={toggleLanguage}
-            className="font-sans text-xs tracking-[0.3em] uppercase border border-gold/30 hover:bg-gold/10 hover:border-gold transition-all duration-300"
+            className="font-sans text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase border border-gold/30 hover:bg-gold/10 hover:border-gold transition-all duration-300 px-3 sm:px-4"
           >
             {language === "DE" ? "RU" : "DE"}
           </Button>

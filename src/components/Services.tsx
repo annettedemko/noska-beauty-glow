@@ -80,14 +80,14 @@ export const Services = () => {
               {/* Gold accent bar */}
               <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-gold transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-bottom" />
 
-              <div className="grid md:grid-cols-12 gap-6 p-8 md:p-10">
+              <div className="grid md:grid-cols-12 gap-6 p-6 md:p-10">
                 {/* Service info */}
                 <div className="md:col-span-5 space-y-3 flex flex-col justify-center">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 border border-gold/30 flex items-center justify-center">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 flex-shrink-0 border border-gold/30 flex items-center justify-center">
                       <div className="w-3 h-3 bg-gradient-gold rotate-45" />
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-serif font-semibold tracking-wide">
+                    <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif font-semibold tracking-wide break-words leading-tight">
                       {service.name}
                     </h3>
                   </div>
@@ -97,18 +97,18 @@ export const Services = () => {
                 <div className="md:col-span-3 flex items-center">
                   <div className="space-y-1">
                     <p className="text-xs uppercase tracking-wider text-muted-foreground">Preis</p>
-                    <span className="text-2xl md:text-3xl font-serif text-gradient-gold font-semibold">
+                    <span className="text-xl sm:text-2xl md:text-3xl font-serif text-gradient-gold font-semibold">
                       {service.price}
                     </span>
                   </div>
                 </div>
 
                 {/* Action button */}
-                <div className="md:col-span-4 flex items-center justify-end">
+                <div className="md:col-span-4 flex items-center justify-start md:justify-end">
                   {service.isSpecial ? (
                     <Link
                       to={service.link!}
-                      className="group/btn relative px-8 py-4 border-2 border-gold/30 text-foreground font-sans text-xs tracking-[0.25em] uppercase hover:border-gold transition-all duration-300 inline-block overflow-hidden"
+                      className="group/btn relative px-6 sm:px-8 py-3 sm:py-4 border-2 border-gold/30 text-foreground font-sans text-xs tracking-[0.15em] sm:tracking-[0.25em] uppercase hover:border-gold transition-all duration-300 inline-block overflow-hidden text-center w-full sm:w-auto"
                     >
                       <span className="relative z-10">{t("learnMore")}</span>
                       <div className="absolute inset-0 bg-gradient-gold opacity-0 group-hover/btn:opacity-10 transition-opacity duration-300" />
@@ -118,7 +118,7 @@ export const Services = () => {
                       href={service.bookingUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group/btn relative px-8 py-4 bg-gradient-gold text-foreground font-sans text-xs tracking-[0.25em] uppercase shadow-gold hover-lift inline-block overflow-hidden"
+                      className="group/btn relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-gold text-foreground font-sans text-xs tracking-[0.15em] sm:tracking-[0.25em] uppercase shadow-gold hover-lift inline-block overflow-hidden text-center w-full sm:w-auto"
                     >
                       <span className="relative z-10 font-semibold">{t("bookNow")}</span>
                       <div className="absolute inset-0 bg-gradient-to-r from-gold-dark to-gold opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />

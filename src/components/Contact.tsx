@@ -82,15 +82,15 @@ export const Contact = () => {
           </div>
 
           {/* Booking section */}
-          <div className="flex flex-col items-center justify-center space-y-8 bg-background/60 backdrop-blur-sm border border-gold/20 p-12 shadow-luxury">
+          <div className="flex flex-col items-center justify-center space-y-8 bg-background/60 backdrop-blur-sm border border-gold/20 p-6 sm:p-8 md:p-12 shadow-luxury">
             <div className="text-center space-y-4">
               <div className="w-16 h-16 mx-auto border-2 border-gold flex items-center justify-center mb-6">
                 <div className="w-8 h-8 bg-gradient-gold rotate-45" />
               </div>
-              <h3 className="font-serif text-2xl md:text-3xl font-semibold tracking-wide">
+              <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-semibold tracking-wide break-words px-2">
                 Online Termin buchen
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-sm sm:text-base text-muted-foreground px-2">
                 Buchen Sie Ihren Termin bequem über Treatwell
               </p>
             </div>
@@ -99,9 +99,9 @@ export const Contact = () => {
               href="https://buchung.treatwell.de/ort/permanent-make-up-by-anastasia-noska/?utm_medium=partner-ecosystem&utm_campaign=partner-instagram&utm_content=book-now&fbclid=PARlRTSANHvkBleHRuA2FlbQIxMAABp1qQGFg8ck5Nj90Oz6-hBzpeoVFVtqhm3khdo7DOlAnK-Y6iNfV3VLczqRz4_aem_u5OjR9Br5NBX_q6yx0myKA"
               target="_blank"
               rel="noopener noreferrer"
-              className="group/btn relative px-12 py-5 bg-gradient-gold text-foreground font-sans text-sm tracking-[0.25em] uppercase shadow-gold hover-lift overflow-hidden"
+              className="group/btn relative px-6 sm:px-10 md:px-12 py-4 sm:py-5 bg-gradient-gold text-foreground font-sans text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.25em] uppercase shadow-gold hover-lift overflow-hidden text-center w-full sm:w-auto"
             >
-              <span className="relative z-10 font-semibold">{t("treatwellButton")}</span>
+              <span className="relative z-10 font-semibold whitespace-nowrap">{t("treatwellButton")}</span>
               <div className="absolute inset-0 bg-gradient-to-r from-gold-dark to-gold opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
             </a>
           </div>
