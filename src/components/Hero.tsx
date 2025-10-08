@@ -15,7 +15,7 @@ export const Hero = () => {
             loop
             playsInline
             poster="/16.jpg"
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-[center_20%] sm:object-[center_25%] md:object-top"
             style={{
               filter: 'grayscale(100%) contrast(1.3)',
             }}
@@ -31,7 +31,7 @@ export const Hero = () => {
         </div>
 
         {/* Gradient overlay - more transparent at bottom to show the important detail */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/60 to-background/40 sm:from-background/80 sm:via-background/50 sm:to-background/30 md:from-background/70 md:via-background/40 md:to-background/20" />
 
         {/* Sophisticated grey marble veins effect */}
         <div className="absolute inset-0 opacity-[0.04]">
@@ -93,21 +93,21 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.025)_100%)]" />
 
 
-      <div className="container relative z-10 px-6 py-32">
-        <div className="max-w-6xl mx-auto text-center space-y-20">
+      <div className="container relative z-10 px-4 pt-24 pb-16 sm:px-6 sm:py-24 md:py-32">
+        <div className="max-w-6xl mx-auto text-center space-y-8 sm:space-y-12 md:space-y-16 lg:space-y-20">
           {/* Ultra-premium decorative top element */}
-          <div className="flex items-center justify-center gap-8 opacity-50 animate-fade-in">
-            <div className="h-[2px] w-32 bg-gradient-to-r from-transparent via-muted-foreground/40 to-muted-foreground/60" />
+          <div className="flex items-center justify-center gap-4 sm:gap-8 opacity-50 animate-fade-in">
+            <div className="h-[2px] w-16 sm:w-32 bg-gradient-to-r from-transparent via-muted-foreground/40 to-muted-foreground/60" />
             <div className="relative">
-              <div className="w-3 h-3 bg-accent rotate-45" />
-              <div className="absolute inset-0 w-3 h-3 bg-accent/30 rotate-45 animate-ping" style={{ animationDuration: '3s' }} />
+              <div className="w-2 h-2 sm:w-3 sm:h-3 bg-accent rotate-45" />
+              <div className="absolute inset-0 w-2 h-2 sm:w-3 sm:h-3 bg-accent/30 rotate-45 animate-ping" style={{ animationDuration: '3s' }} />
             </div>
-            <div className="h-[2px] w-32 bg-gradient-to-l from-transparent via-muted-foreground/40 to-muted-foreground/60" />
+            <div className="h-[2px] w-16 sm:w-32 bg-gradient-to-l from-transparent via-muted-foreground/40 to-muted-foreground/60" />
           </div>
 
           {/* Main title - ultimate elegance */}
-          <div className="space-y-8 animate-slide-up">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-[1.1] tracking-tight font-bold relative hyphens-none" style={{ fontFamily: "'Cormorant Garamond', serif", hyphens: 'none', wordBreak: 'keep-all', letterSpacing: '0.02em' }}>
+          <div className="space-y-6 sm:space-y-8 animate-slide-up">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-[1.1] tracking-tight font-bold relative hyphens-none" style={{ fontFamily: "'Cormorant Garamond', serif", hyphens: 'none', wordBreak: 'keep-all', letterSpacing: '0.02em' }}>
               <span className="block relative">
                 <span className="relative z-10 text-foreground">
                   {t("heroTitle")}
@@ -116,24 +116,24 @@ export const Hero = () => {
             </h1>
 
             {/* Exquisite separator */}
-            <div className="flex items-center justify-center gap-4 py-6">
-              <div className="w-16 h-[1.5px] bg-gradient-to-r from-transparent to-muted-foreground/40" />
-              <div className="flex gap-1.5">
-                <div className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" style={{ animationDelay: '0s', animationDuration: '2.5s' }} />
-                <div className="w-1.5 h-1.5 bg-accent/70 rounded-full animate-pulse" style={{ animationDelay: '0.4s', animationDuration: '2.5s' }} />
-                <div className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" style={{ animationDelay: '0.8s', animationDuration: '2.5s' }} />
+            <div className="flex items-center justify-center gap-3 sm:gap-4 py-4 sm:py-6">
+              <div className="w-8 sm:w-16 h-[1.5px] bg-gradient-to-r from-transparent to-muted-foreground/40" />
+              <div className="flex gap-1 sm:gap-1.5">
+                <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-accent rounded-full animate-pulse" style={{ animationDelay: '0s', animationDuration: '2.5s' }} />
+                <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-accent/70 rounded-full animate-pulse" style={{ animationDelay: '0.4s', animationDuration: '2.5s' }} />
+                <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-accent rounded-full animate-pulse" style={{ animationDelay: '0.8s', animationDuration: '2.5s' }} />
               </div>
-              <div className="w-16 h-[1.5px] bg-gradient-to-l from-transparent to-muted-foreground/40" />
+              <div className="w-8 sm:w-16 h-[1.5px] bg-gradient-to-l from-transparent to-muted-foreground/40" />
             </div>
           </div>
 
           {/* Subtitle - pure sophistication */}
-          <div className="relative inline-block animate-fade-in-delay px-6">
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light tracking-[0.25em] sm:tracking-[0.35em] md:tracking-[0.45em] lg:tracking-[0.65em] uppercase text-muted-foreground" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+          <div className="relative inline-block animate-fade-in-delay px-4 sm:px-6">
+            <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-light tracking-[0.2em] sm:tracking-[0.35em] md:tracking-[0.45em] lg:tracking-[0.65em] uppercase text-muted-foreground" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               {t("heroSubtitle")}
             </p>
             {/* Premium underline with animation */}
-            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-40 sm:w-56 h-[2px] overflow-hidden">
+            <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 transform -translate-x-1/2 w-32 sm:w-40 md:w-56 h-[2px] overflow-hidden">
               <div className="h-full bg-gradient-to-r from-transparent via-accent/40 to-transparent">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent animate-shimmer" style={{ animationDuration: '4s' }} />
               </div>
@@ -141,12 +141,12 @@ export const Hero = () => {
           </div>
 
           {/* Ultra-luxury CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center pt-20 animate-fade-in-delay-2">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center pt-10 sm:pt-16 md:pt-20 animate-fade-in-delay-2">
             <a
               href="https://wa.me/491779093936"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative px-8 sm:px-12 md:px-14 py-5 sm:py-6 bg-accent text-white text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] md:tracking-[0.4em] uppercase shadow-luxury hover-lift overflow-hidden transition-all duration-700"
+              className="group relative px-6 sm:px-12 md:px-14 py-4 sm:py-5 md:py-6 bg-accent text-white text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.3em] md:tracking-[0.4em] uppercase shadow-luxury hover-lift overflow-hidden transition-all duration-700"
               style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
               {/* Animated glow */}
@@ -173,7 +173,7 @@ export const Hero = () => {
               href="https://buchung.treatwell.de/ort/permanent-make-up-by-anastasia-noska/?utm_medium=partner-ecosystem&utm_campaign=partner-instagram&utm_content=book-now&fbclid=PARlRTSANHvkBleHRuA2FlbQIxMAABp1qQGFg8ck5Nj90Oz6-hBzpeoVFVtqhm3khdo7DOlAnK-Y6iNfV3VLczqRz4_aem_u5OjR9Br5NBX_q6yx0myKA"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative px-8 sm:px-12 md:px-14 py-5 sm:py-6 border-2 border-accent/60 text-foreground text-xs sm:text-sm tracking-[0.2em] sm:tracking-[0.3em] md:tracking-[0.4em] uppercase hover-lift overflow-hidden bg-white/60 backdrop-blur-sm transition-all duration-700"
+              className="group relative px-6 sm:px-12 md:px-14 py-4 sm:py-5 md:py-6 border-2 border-accent/60 text-foreground text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.3em] md:tracking-[0.4em] uppercase hover-lift overflow-hidden bg-white/60 backdrop-blur-sm transition-all duration-700"
               style={{ fontFamily: "'Montserrat', sans-serif" }}
             >
               {/* Outer glow on hover */}
@@ -194,13 +194,13 @@ export const Hero = () => {
           </div>
 
           {/* Premium decorative bottom element */}
-          <div className="flex items-center justify-center gap-8 opacity-50 pt-20 animate-fade-in-delay-3">
-            <div className="h-[2px] w-32 bg-gradient-to-r from-transparent via-muted-foreground/40 to-muted-foreground/60" />
+          <div className="flex items-center justify-center gap-8 opacity-50 pt-10 sm:pt-16 md:pt-20 animate-fade-in-delay-3">
+            <div className="h-[2px] w-16 sm:w-32 bg-gradient-to-r from-transparent via-muted-foreground/40 to-muted-foreground/60" />
             <div className="relative">
-              <div className="w-3 h-3 bg-accent rotate-45" />
-              <div className="absolute inset-0 w-3 h-3 bg-accent/30 rotate-45 animate-ping" style={{ animationDuration: '3s' }} />
+              <div className="w-2 h-2 sm:w-3 sm:h-3 bg-accent rotate-45" />
+              <div className="absolute inset-0 w-2 h-2 sm:w-3 sm:h-3 bg-accent/30 rotate-45 animate-ping" style={{ animationDuration: '3s' }} />
             </div>
-            <div className="h-[2px] w-32 bg-gradient-to-l from-transparent via-muted-foreground/40 to-muted-foreground/60" />
+            <div className="h-[2px] w-16 sm:w-32 bg-gradient-to-l from-transparent via-muted-foreground/40 to-muted-foreground/60" />
           </div>
         </div>
       </div>
