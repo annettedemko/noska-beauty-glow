@@ -14,7 +14,7 @@ export const Contact = () => {
           {/* Decorative element */}
           <div className="flex items-center justify-center gap-4 opacity-60">
             <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver" />
-            <div className="w-2 h-2 bg-silver rotate-45" />
+            <img src="/logo A.png" alt="Logo" className="w-6 h-6 object-contain" />
             <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver" />
           </div>
 
@@ -84,8 +84,8 @@ export const Contact = () => {
           {/* Booking section */}
           <div className="flex flex-col items-center justify-center space-y-8 bg-background/60 backdrop-blur-sm border border-silver/20 p-6 sm:p-8 md:p-12 shadow-luxury">
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 mx-auto border-2 border-silver flex items-center justify-center mb-6">
-                <div className="w-8 h-8 bg-accent rotate-45" />
+              <div className="w-20 h-20 mx-auto flex items-center justify-center mb-6">
+                <img src="/logo A.png" alt="Anastasia Noska Logo" className="w-full h-full object-contain" />
               </div>
               <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-semibold tracking-wide break-words px-2">
                 {t("bookingTitle")}

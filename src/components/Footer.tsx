@@ -16,16 +16,14 @@ export const Footer = () => {
         {/* Top decorative element */}
         <div className="flex items-center justify-center gap-4 opacity-40 mb-12">
           <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver" />
-          <div className="w-2 h-2 bg-silver rotate-45" />
+          <img src="/logo A.png" alt="Logo" className="w-6 h-6 object-contain" />
           <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver" />
         </div>
 
         {/* Brand section */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-10 h-10 bg-accent flex items-center justify-center">
-              <div className="w-5 h-5 border-2 border-foreground rotate-45" />
-            </div>
+            <img src="/logo A.png" alt="Anastasia Noska Logo" className="w-12 h-12 object-contain" />
             <span className="font-serif text-3xl tracking-wider">Anastasia Noska</span>
           </div>
           <p className="text-sm text-muted-foreground tracking-wider uppercase">
