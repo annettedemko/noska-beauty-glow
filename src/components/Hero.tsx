@@ -6,16 +6,16 @@ export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Elegant monochrome background with subtle depth */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 w-full h-full">
         {/* Hero background video */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 w-full h-full">
           <video
             autoPlay
             muted
             loop
             playsInline
             poster="/16.jpg"
-            className="w-full h-full object-cover object-[center_20%] sm:object-[center_25%] md:object-top"
+            className="absolute inset-0 w-full h-full min-w-full min-h-full object-cover object-[center_20%] sm:object-[center_25%] md:object-top"
             style={{
               filter: 'grayscale(100%) contrast(1.3)',
             }}
