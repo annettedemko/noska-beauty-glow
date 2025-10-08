@@ -5,49 +5,49 @@ export const Footer = () => {
   const { t, language, toggleLanguage } = useLanguage();
 
   return (
-    <footer className="relative py-16 px-6 border-t border-gold/20 bg-gradient-to-b from-background to-champagne/10 overflow-hidden">
+    <footer className="relative py-16 px-6 border-t border-silver/20 bg-gradient-to-b from-background to-pearl/15 overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-gold rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gold-dark rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-silver rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-charcoal rounded-full blur-3xl" />
       </div>
 
       <div className="container max-w-6xl mx-auto relative z-10">
         {/* Top decorative element */}
         <div className="flex items-center justify-center gap-4 opacity-40 mb-12">
-          <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-gold" />
-          <div className="w-2 h-2 bg-gold rotate-45" />
-          <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-gold" />
+          <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver" />
+          <div className="w-2 h-2 bg-silver rotate-45" />
+          <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver" />
         </div>
 
         {/* Brand section */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-10 h-10 bg-gradient-gold flex items-center justify-center">
+            <div className="w-10 h-10 bg-accent flex items-center justify-center">
               <div className="w-5 h-5 border-2 border-foreground rotate-45" />
             </div>
             <span className="font-serif text-3xl tracking-wider">Anastasia Noska</span>
           </div>
           <p className="text-sm text-muted-foreground tracking-wider uppercase">
-            Premium Permanent Make-up München
+            {t("footerTagline")}
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-8 pb-8 border-b border-gold/20">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-8 pb-8 border-b border-silver/20">
           <div className="flex gap-6 sm:gap-10 text-xs sm:text-sm uppercase tracking-[0.1em] sm:tracking-[0.2em]">
-            <Link to="/impressum" className="hover:text-gold transition-colors duration-300 relative group">
+            <Link to="/impressum" className="hover:text-accent transition-colors duration-300 relative group">
               {t("impressum")}
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-gold group-hover:w-full transition-all duration-300" />
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent group-hover:w-full transition-all duration-300" />
             </Link>
-            <Link to="/datenschutz" className="hover:text-gold transition-colors duration-300 relative group">
+            <Link to="/datenschutz" className="hover:text-accent transition-colors duration-300 relative group">
               {t("privacy")}
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-gold group-hover:w-full transition-all duration-300" />
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent group-hover:w-full transition-all duration-300" />
             </Link>
           </div>
 
           <button
             onClick={toggleLanguage}
-            className="text-xs sm:text-sm font-sans tracking-[0.2em] sm:tracking-[0.3em] uppercase border border-gold/30 px-4 sm:px-6 py-2 hover:bg-gold/10 hover:border-gold transition-all duration-300"
+            className="text-xs sm:text-sm font-sans tracking-[0.2em] sm:tracking-[0.3em] uppercase border border-silver/30 px-4 sm:px-6 py-2 hover:bg-silver/10 hover:border-silver transition-all duration-300"
           >
             {language === "DE" ? "RU" : "DE"}
           </button>
@@ -64,7 +64,7 @@ export const Footer = () => {
               href="https://instagram.com/anastasia__noska"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-gold transition-colors duration-300"
+              className="text-muted-foreground hover:text-accent transition-colors duration-300"
               aria-label="Instagram"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -75,7 +75,7 @@ export const Footer = () => {
               href="https://wa.me/491779093936"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-gold transition-colors duration-300"
+              className="text-muted-foreground hover:text-accent transition-colors duration-300"
               aria-label="WhatsApp"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

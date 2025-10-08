@@ -24,12 +24,21 @@ const translations = {
 
     // About
     aboutTitle: "Über mich",
-    aboutText1: "Zertifizierte Spezialistin",
-    aboutText2: "Fokus auf Natürlichkeit",
-    aboutText3: "Studio in München",
+    aboutText1: "Mein Name ist Anastasia Noska – ich bin zertifizierte Spezialistin für Permanent Make-up, Camouflage-Behandlungen und Kopfhautpigmentierung in München.",
+    aboutText2: "Meine Arbeit ist mehr als nur ein Beruf – sie ist meine Leidenschaft. Ich habe mich darauf spezialisiert, die natürliche Schönheit meiner Kundinnen zu unterstreichen, ohne sie zu verändern.",
+    aboutText3: "Jede Behandlung ist für mich eine stille Kunst: Das perfekte Permanent Make-up erkennt man daran, dass es nicht auffällt, sondern wirkt, als wäre es schon immer da gewesen – harmonisch, sanft und authentisch.",
+    aboutSectionTitle1: "Wahre Schönheit braucht kein Make-up",
+    aboutPara1: "Ich glaube daran, dass jede Frau das Recht hat, sich wohl in ihrer Haut zu fühlen – ohne stundenlange Schminkroutinen oder Unsicherheiten.",
+    aboutPara2: "Besonders am Herzen liegen mir:",
+    aboutService1: "Camouflage von Dehnungsstreifen und Narben – für Frauen, die ihren Körper wieder mit Stolz zeigen möchten",
+    aboutService2: "Kopfhautpigmentierung (Scalp Micropigmentation) – für ein volleres Haarbild und neues Selbstvertrauen bei Haarverlust",
+    aboutSectionTitle2: "Mein Weg",
+    aboutPara3: "Ich habe zahlreiche Schulungen und Masterclasses bei internationalen Trainerinnen absolviert und bilde mich kontinuierlich weiter, um höchste Qualität und modernste Techniken zu garantieren.",
+    aboutPara4: "Ich freue mich darauf, auch Sie bald persönlich begrüßen zu dürfen – um Ihre natürliche Schönheit zu betonen und Ihnen ein Stück neues Selbstvertrauen zu schenken.",
 
     // Services
     servicesTitle: "Leistungen",
+    servicesSubtitle: "Premium Permanent Make-up Services",
     powderBrows: "Powder / Ombre Brows",
     aquarellLips: "Aquarell / Velvet / Ombre Lippen",
     eyeliner: "Lidstrich (klassisch)",
@@ -58,6 +67,7 @@ const translations = {
 
     // Gallery
     galleryTitle: "Meine Arbeiten",
+    gallerySubtitle: "Portfolio unserer Arbeiten",
 
     // Testimonials
     testimonialsTitle: "Kundenfeedbacks",
@@ -67,9 +77,15 @@ const translations = {
 
     // Contact
     contactTitle: "Kontakt",
+    contactSubtitle: "Vereinbaren Sie einen Termin",
+    contactAddress: "Adresse",
+    contactWhatsapp: "WhatsApp",
+    contactEmail: "Email",
     address: "Hildegardstr. 4, München",
     instagram: "Instagram",
     treatwellButton: "Jetzt online buchen",
+    bookingTitle: "Online Termin buchen",
+    bookingSubtitle: "Buchen Sie Ihren Termin bequem über Treatwell",
 
     // FAQ
     faqTitle: "FAQ",
@@ -85,12 +101,28 @@ const translations = {
     privacy: "Datenschutzerklärung",
     agb: "AGB",
     copyright: "© 2025 Anastasia Noska – Permanent Make-up München",
+    footerTagline: "Premium Permanent Make-up München",
 
     // Specialty Pages
     scalpTitle: "Kopfhaut Pigmentierung (Trichopigmentierung)",
     scalpDesc: "Für Männer und Frauen – professionelle Trichopigmentierung in München",
+    scalpIntro: "Die Kopfhautpigmentierung (Trichopigmentierung) ist eine innovative Lösung für Männer und Frauen mit Haarausfall oder lichtem Haar. Diese Technik erzeugt den Eindruck von dichterem Haar durch präzise Pigmentierung der Kopfhaut.",
+    scalpSuitableTitle: "Die Behandlung ist ideal für:",
+    scalpSuitable1: "Geheimratsecken und Haarlichtung",
+    scalpSuitable2: "Narben von Haartransplantationen",
+    scalpSuitable3: "Alopecia areata",
+    scalpSuitable4: "Diffusen Haarausfall",
+    scalpPrice: "Preis: 300 €",
     camouflageTitle: "Camouflage Dehnungsstreifen/Narben",
     camouflageDesc: "Professionelles Camouflage von Narben, Dehnungsstreifen und anderen Hautveränderungen",
+    camouflageIntro: "Camouflage-Pigmentierung ist eine wirksame Methode, um Narben und Dehnungsstreifen optisch zu minimieren. Durch präzise Farbabstimmung werden betroffene Bereiche an den natürlichen Hautton angeglichen.",
+    camouflageSuitableTitle: "Die Behandlung eignet sich für:",
+    camouflageSuitable1: "Schwangerschaftsstreifen",
+    camouflageSuitable2: "Narben von Operationen (z.B. Kaiserschnitt)",
+    camouflageSuitable3: "Brust-OP Narben",
+    camouflageSuitable4: "Andere Hautveränderungen",
+    camouflagePrice: "Preis: 200 €",
+    backToHome: "Zurück zur Hauptseite",
   },
   RU: {
     // Navigation
@@ -107,12 +139,21 @@ const translations = {
 
     // About
     aboutTitle: "Обо мне",
-    aboutText1: "Сертифицированный специалист",
-    aboutText2: "Упор на натуральность",
-    aboutText3: "Студия в Мюнхене",
+    aboutText1: "Меня зовут Анастасия Носка – я сертифицированный специалист по перманентному макияжу, камуфляжу и пигментации кожи головы в Мюнхене.",
+    aboutText2: "Моя работа – это больше, чем просто профессия – это моя страсть. Я специализируюсь на подчеркивании естественной красоты моих клиенток, не меняя её.",
+    aboutText3: "Каждая процедура для меня – тихое искусство: идеальный перманентный макияж тот, который незаметен, но выглядит так, будто он был всегда – гармонично, нежно и аутентично.",
+    aboutSectionTitle1: "Истинная красота не нуждается в макияже",
+    aboutPara1: "Я верю, что каждая женщина имеет право чувствовать себя комфортно в своей коже – без многочасовых рутин макияжа или неуверенности.",
+    aboutPara2: "Особенно близки мне:",
+    aboutService1: "Камуфляж растяжек и шрамов – для женщин, которые хотят снова показывать свое тело с гордостью",
+    aboutService2: "Пигментация кожи головы (Scalp Micropigmentation) – для более полного образа волос и новой уверенности при выпадении волос",
+    aboutSectionTitle2: "Мой путь",
+    aboutPara3: "Я прошла многочисленные обучения и мастер-классы у международных тренеров и постоянно совершенствуюсь, чтобы гарантировать высочайшее качество и современные техники.",
+    aboutPara4: "Я с нетерпением жду возможности лично встретиться с вами – чтобы подчеркнуть вашу естественную красоту и подарить вам частичку новой уверенности в себе.",
 
     // Services
     servicesTitle: "Услуги",
+    servicesSubtitle: "Премиум услуги перманентного макияжа",
     powderBrows: "Пудровые / Омбре брови",
     aquarellLips: "Акварельные / Бархатные / Омбре губы",
     eyeliner: "Межресничная стрелка",
@@ -141,6 +182,7 @@ const translations = {
 
     // Gallery
     galleryTitle: "Мои работы",
+    gallerySubtitle: "Портфолио наших работ",
 
     // Testimonials
     testimonialsTitle: "Отзывы клиентов",
@@ -150,9 +192,15 @@ const translations = {
 
     // Contact
     contactTitle: "Контакты",
+    contactSubtitle: "Записаться на процедуру",
+    contactAddress: "Адрес",
+    contactWhatsapp: "WhatsApp",
+    contactEmail: "Email",
     address: "Hildegardstr. 4, Мюнхен",
     instagram: "Instagram",
     treatwellButton: "Записаться онлайн",
+    bookingTitle: "Онлайн запись",
+    bookingSubtitle: "Забронируйте процедуру через Treatwell",
 
     // FAQ
     faqTitle: "FAQ",
@@ -168,12 +216,28 @@ const translations = {
     privacy: "Datenschutzerklärung",
     agb: "AGB",
     copyright: "© 2025 Анастасия Носка – Перманентный макияж Мюнхен",
+    footerTagline: "Премиум перманентный макияж Мюнхен",
 
     // Specialty Pages
     scalpTitle: "Пигментация кожи головы (Трихопигментация)",
     scalpDesc: "Для мужчин и женщин – профессиональная трихопигментация в Мюнхене",
+    scalpIntro: "Пигментация кожи головы (трихопигментация) – это инновационное решение для мужчин и женщин с выпадением волос или редкими волосами. Эта техника создает впечатление более густых волос с помощью точной пигментации кожи головы.",
+    scalpSuitableTitle: "Процедура идеальна для:",
+    scalpSuitable1: "Залысин и редеющих волос",
+    scalpSuitable2: "Шрамов от пересадки волос",
+    scalpSuitable3: "Очаговой алопеции",
+    scalpSuitable4: "Диффузного выпадения волос",
+    scalpPrice: "Цена: 300 €",
     camouflageTitle: "Камуфляж растяжек/шрамов",
     camouflageDesc: "Профессиональный камуфляж шрамов, растяжек и других изменений кожи",
+    camouflageIntro: "Камуфляжная пигментация – это эффективный метод визуального уменьшения шрамов и растяжек. С помощью точного подбора цвета пораженные области приводятся в соответствие с естественным тоном кожи.",
+    camouflageSuitableTitle: "Процедура подходит для:",
+    camouflageSuitable1: "Растяжек от беременности",
+    camouflageSuitable2: "Шрамов от операций (например, кесарево сечение)",
+    camouflageSuitable3: "Шрамов от операций на груди",
+    camouflageSuitable4: "Других изменений кожи",
+    camouflagePrice: "Цена: 200 €",
+    backToHome: "Вернуться на главную",
   },
 };
 

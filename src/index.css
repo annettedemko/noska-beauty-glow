@@ -8,57 +8,59 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Luxury color scheme with gold accents */
-    --background: 0 0% 98%; /* Pure white/cream for elegance */
-    --foreground: 0 0% 10%; /* Deep black for contrast */
+    /* Soft monochrome luxury color scheme - elegant soft greys */
+    --background: 0 0% 98%; /* Pure white for elegance */
+    --foreground: 0 0% 15%; /* Soft dark grey for contrast */
 
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 10%;
+    --card: 0 0% 96%;
+    --card-foreground: 0 0% 15%;
 
     --popover: 0 0% 98%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 0 0% 15%;
 
-    --primary: 0 0% 10%; /* Deep black */
+    --primary: 0 0% 25%; /* Soft charcoal */
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 30 20% 92%; /* Soft champagne */
-    --secondary-foreground: 0 0% 10%;
+    --secondary: 0 0% 90%; /* Soft light grey */
+    --secondary-foreground: 0 0% 15%;
 
-    --muted: 30 20% 92%;
+    --muted: 0 0% 92%;
     --muted-foreground: 0 0% 40%;
 
-    --accent: 43 100% 70%; /* Luxurious gold */
-    --accent-foreground: 0 0% 10%;
+    --accent: 0 0% 45%; /* Medium soft grey */
+    --accent-foreground: 0 0% 98%;
 
-    --gold: 43 100% 70%; /* Rich gold */
-    --gold-dark: 40 95% 55%; /* Darker gold for depth */
-    --champagne: 30 20% 92%; /* Champagne beige */
-    --pearl: 0 0% 96%; /* Pearl white */
+    --gold: 0 0% 55%; /* Soft medium grey */
+    --gold-dark: 0 0% 35%; /* Soft dark grey */
+    --champagne: 0 0% 92%; /* Very light grey */
+    --pearl: 0 0% 95%; /* Pearl white grey */
+    --silver: 0 0% 60%; /* Soft grey accent */
+    --charcoal: 0 0% 30%; /* Soft charcoal */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 43 60% 80%; /* Soft gold border */
-    --input: 43 60% 80%;
-    --ring: 43 100% 70%;
+    --border: 0 0% 88%; /* Soft grey border */
+    --input: 0 0% 88%;
+    --ring: 0 0% 70%;
 
     --radius: 0; /* sharp corners for premium look */
 
     --sidebar-background: 0 0% 98%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-foreground: 0 0% 20%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary: 0 0% 10%;
 
     --sidebar-primary-foreground: 0 0% 98%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent: 0 0% 92%;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-accent-foreground: 0 0% 10%;
 
-    --sidebar-border: 220 13% 91%;
+    --sidebar-border: 0 0% 85%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 0 0% 60%;
   }
 
   .dark {
@@ -74,34 +76,36 @@ All colors MUST be HSL.
     --primary: 0 0% 98%;
     --primary-foreground: 0 0% 8%;
 
-    --secondary: 0 0% 15%;
+    --secondary: 0 0% 18%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 43 100% 60%;
+    --accent: 0 0% 70%;
     --accent-foreground: 0 0% 8%;
 
-    --gold: 43 100% 60%;
-    --gold-dark: 40 95% 45%;
-    --champagne: 30 15% 25%;
-    --pearl: 0 0% 20%;
+    --gold: 0 0% 70%;
+    --gold-dark: 0 0% 45%;
+    --champagne: 0 0% 22%;
+    --pearl: 0 0% 25%;
+    --silver: 0 0% 75%;
+    --charcoal: 0 0% 15%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 43 60% 40%;
-    --input: 43 60% 40%;
-    --ring: 43 100% 60%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 0 0% 30%;
+    --input: 0 0% 30%;
+    --ring: 0 0% 60%;
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 0% 80%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 0 0% 18%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 0 0% 60%;
   }
 }
 
@@ -148,7 +152,7 @@ All colors MUST be HSL.
   }
 }
 
-/* Luxury gradients and custom utilities */
+/* Monochrome luxury gradients and custom utilities */
 @layer utilities {
   .bg-gradient-luxury {
     background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--champagne)) 100%);
@@ -158,6 +162,10 @@ All colors MUST be HSL.
     background: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-dark)) 100%);
   }
 
+  .bg-gradient-silver {
+    background: linear-gradient(135deg, hsl(var(--silver)) 0%, hsl(var(--charcoal)) 100%);
+  }
+
   .text-gradient-gold {
     background: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-dark)) 100%);
     -webkit-background-clip: text;
@@ -165,18 +173,35 @@ All colors MUST be HSL.
     background-clip: text;
   }
 
+  .text-gradient-silver {
+    background: linear-gradient(135deg, hsl(var(--silver)) 0%, hsl(var(--charcoal)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   .shadow-luxury {
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
   }
 
   .shadow-gold {
-    box-shadow: 0 4px 20px rgba(218, 165, 32, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .shadow-silver {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12), 0 8px 40px rgba(0, 0, 0, 0.06);
   }
 
   .border-gradient-gold {
     border: 1px solid transparent;
     background: linear-gradient(white, white) padding-box,
                 linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-dark)) 100%) border-box;
+  }
+
+  .border-gradient-silver {
+    border: 1px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, hsl(var(--silver)) 0%, hsl(var(--charcoal)) 100%) border-box;
   }
 
   .hover-lift {
@@ -300,13 +325,13 @@ All colors MUST be HSL.
     animation: sparkle 2s ease-in-out infinite;
   }
 
-  /* Luxury glow pulse */
+  /* Luxury soft glow pulse */
   @keyframes glow-pulse {
     0%, 100% {
-      box-shadow: 0 0 20px rgba(218, 165, 32, 0.3), 0 0 40px rgba(218, 165, 32, 0.2);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.08), 0 0 40px rgba(0, 0, 0, 0.05);
     }
     50% {
-      box-shadow: 0 0 40px rgba(218, 165, 32, 0.5), 0 0 80px rgba(218, 165, 32, 0.3);
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.12), 0 0 80px rgba(0, 0, 0, 0.08);
     }
   }
 

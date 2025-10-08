@@ -8,13 +8,13 @@ import { Testimonials } from "@/components/Testimonials";
 import { Contact } from "@/components/Contact";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
-import { WatercolorBackground } from "@/components/WatercolorBackground";
+import { VideoBackground } from "@/components/VideoBackground";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background relative">
-      {/* Акварельные разводы по всей странице */}
-      <WatercolorBackground />
+      {/* Luxury video background */}
+      <VideoBackground />
 
       {/* Контент */}
       <div className="relative z-10">
