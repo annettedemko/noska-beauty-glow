@@ -5,20 +5,21 @@ import { useEffect, useState } from "react";
 export const Hero = () => {
   const { t } = useLanguage();
   const isMobile = useIsMobile();
-
   const [heroHeight, setHeroHeight] = useState("100vh");
 
   useEffect(() => {
-    const vh = window.innerHeight;
-    setHeroHeight(`${vh}px`);
-  }, []); // только при монтировании
+    if (isMobile) {
+      const vh = window.innerHeight;
+      setHeroHeight(`${vh}px`);
+    }
+  }, [isMobile]);
 
   return (
     <section
-      className="relative overflow-hidden flex items-center justify-center"
-      style={{ height: heroHeight }}
+      className="relative overflow-hidden flex items-center justify-center h-screen"
+      style={isMobile ? { height: heroHeight } : undefined}
     >
-      {/* 📽 Фон: видео на мобилках, изображение на десктопах */}
+      {/* 🎥 Video (Mobile) / Image (Desktop) */}
       {isMobile ? (
         <video
           autoPlay
@@ -49,11 +50,11 @@ export const Hero = () => {
         />
       )}
 
-      {/* 🌫 Градиент сверху видео/фото */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/60 to-background/40 sm:from-background/80 sm:via-background/50 sm:to-background/30 md:from-background/70 md:via-background/40 md:to-background/20" />
+      {/* 🌫️ Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/60 to-background/40 sm:from-background/80 sm:via-background/50 sm:to-background/30 md:from-background/70 md:via-background/40 md:to-background/20 z-10" />
 
-      {/* 📝 Контент */}
-      <div className="container relative z-10 px-4 pb-16 sm:px-6 sm:py-24 md:py-32 pt-36 md:pt-48 lg:pt-56 xl:pt-64">
+      {/* 📝 Content */}
+      <div className="container relative z-20 px-4 pb-16 sm:px-6 pt-36 sm:pt-44 md:pt-52 lg:pt-60 xl:pt-64">
         <div className="max-w-6xl mx-auto text-center space-y-8 sm:space-y-12 md:space-y-16 lg:space-y-20">
           <h1
             className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-[1.1] tracking-tight font-bold relative hyphens-none"
@@ -69,7 +70,7 @@ export const Hero = () => {
             {t("heroSubtitle")}
           </p>
 
-          {/* 🔘 Кнопки */}
+          {/* 🔘 CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center pt-10 sm:pt-16 md:pt-20">
             <a
               href="https://wa.me/491779093936"
@@ -94,3 +95,4 @@ export const Hero = () => {
     </section>
   );
 };
+
