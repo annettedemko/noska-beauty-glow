@@ -42,7 +42,7 @@ export const Hero = () => {
       </div>
 
       {/* Контент Hero: заголовок, подзаголовок, кнопки */}
-      <div className="container relative z-10 px-4 pt-24 pb-16 sm:px-6 sm:py-24 md:py-32">
+      <div className="container relative z-10 px-4 pb-16 sm:px-6 sm:py-24 md:py-32 pt-36 md:pt-48 lg:pt-56 xl:pt-64">
         <div className="max-w-6xl mx-auto text-center space-y-8 sm:space-y-12 md:space-y-16 lg:space-y-20">
           <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-[1.1] tracking-tight font-bold relative hyphens-none" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             <span className="relative z-10 text-foreground">{t("heroTitle")}</span>

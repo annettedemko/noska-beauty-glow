@@ -14,18 +14,17 @@ export const About = () => {
     { src: "/1.jpg", alt: "Anastasia Noska" },
     { src: "/2.jpg", alt: "Zertifikate" },
     { src: "/3.jpg", alt: "Schulungen" },
-    { src: "/20.jpg", alt: "Studio" },
+    { src: "/20.jpg", alt: "Schulungen" },
+    { src: "/26.jpg", alt: "Zertifikate" },
+    { src: "/27.jpg", alt: "Zertifikate" },
   ];
 
   return (
     <section id="about" className="py-32 px-6 relative overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background to-pearl/30" />
 
       <div className="container max-w-7xl mx-auto relative z-10">
-        {/* Section Header */}
         <div className="text-center mb-24 space-y-8">
-          {/* Decorative element */}
           <div className="flex items-center justify-center gap-4 opacity-60">
             <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver" />
             <div className="w-2 h-2 bg-silver rotate-45" />
@@ -38,7 +37,7 @@ export const About = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-20 items-center">
-          {/* Left: Photo carousel */}
+          {/* Left: Carousel only */}
           <div className="space-y-8">
             <Carousel
               opts={{
@@ -56,7 +55,6 @@ export const About = () => {
                         alt={image.alt}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
-                      {/* Decorative frame */}
                       <div className="absolute inset-4 border-2 border-silver/30 opacity-0 group-hover:opacity-100 transition-all duration-700" />
                     </div>
                   </CarouselItem>
@@ -67,7 +65,7 @@ export const About = () => {
             </Carousel>
           </div>
 
-          {/* Right: Text */}
+          {/* Right: Full text preserved */}
           <div className="space-y-8">
             <div className="space-y-6">
               <div className="group/text relative pl-8 py-4">
