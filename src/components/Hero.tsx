@@ -19,6 +19,7 @@ export const Hero = () => {
             className="absolute inset-0 w-full h-full object-cover object-center"
             style={{
               filter: "grayscale(100%) contrast(1.3)",
+              transform: isMobile ? "scale(1.15)" : "none",
             }}
           >
             <source src="/5.mp4" type="video/mp4" />
