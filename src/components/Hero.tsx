@@ -54,7 +54,7 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/60 to-background/40 sm:from-background/80 sm:via-background/50 sm:to-background/30 md:from-background/70 md:via-background/40 md:to-background/20 z-10" />
 
       {/* 📝 Content */}
-      <div className="container relative z-20 px-4 pb-16 sm:px-6 pt-36 sm:pt-44 md:pt-52 lg:pt-60 xl:pt-64">
+      <div className="container relative z-20 px-4 pb-16 sm:px-6 pt-36 sm:pt-44 md:pt-24 lg:pt-28 xl:pt-32">
         <div className="max-w-6xl mx-auto text-center space-y-8 sm:space-y-12 md:space-y-16 lg:space-y-20">
           <h1
             className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl leading-[1.1] tracking-tight font-bold relative hyphens-none"
@@ -95,4 +95,3 @@ export const Hero = () => {
     </section>
   );
 };
-
