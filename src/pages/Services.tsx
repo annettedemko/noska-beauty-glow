@@ -75,7 +75,22 @@ const Services = () => {
 
           {/* 👁️ Powder / Ombre Brows */}
           <section ref={browsRef} id="brows" className="py-24 px-6 relative overflow-hidden scroll-mt-24">
-            <div className="absolute inset-0 bg-gradient-to-b from-background via-pearl/20 to-background" />
+            {/* Background image */}
+            <div className="absolute inset-0 pointer-events-none z-0">
+              <div className="absolute inset-0">
+                <img
+                  src="/23.jpg"
+                  alt="Brows Background"
+                  className="w-full h-full object-cover"
+                  style={{
+                    filter: "grayscale(100%) contrast(1.3)",
+                    opacity: 0.3,
+                    transform: "rotate(90deg) scale(1.5)",
+                  }}
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background/80" />
+            </div>
 
             <div className="container max-w-4xl mx-auto relative z-10">
               <div className="bg-background/60 backdrop-blur-sm border border-charcoal/20 shadow-luxury p-6 sm:p-8 md:p-12 lg:p-16">
@@ -146,7 +161,21 @@ const Services = () => {
 
           {/* 💋 Aquarell / Velvet / Ombre Lippen */}
           <section ref={lipsRef} id="lips" className="py-24 px-6 relative overflow-hidden scroll-mt-24">
-            <div className="absolute inset-0 bg-gradient-to-b from-pearl/10 via-background to-pearl/10" />
+            {/* Background image */}
+            <div className="absolute inset-0 pointer-events-none z-0">
+              <div className="absolute inset-0">
+                <img
+                  src="/24.jpg"
+                  alt="Lips Background"
+                  className="w-full h-full object-cover"
+                  style={{
+                    filter: "grayscale(100%) contrast(1.3)",
+                    opacity: 0.3,
+                  }}
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background/80" />
+            </div>
 
             <div className="container max-w-4xl mx-auto relative z-10">
               <div className="bg-background/60 backdrop-blur-sm border border-charcoal/20 shadow-luxury p-6 sm:p-8 md:p-12 lg:p-16">
@@ -223,7 +252,21 @@ const Services = () => {
 
           {/* 🔄 Nachkorrektur */}
           <section ref={touchupRef} id="touchup" className="py-24 px-6 relative overflow-hidden scroll-mt-24">
-            <div className="absolute inset-0 bg-gradient-to-b from-background via-pearl/20 to-background" />
+            {/* Background image */}
+            <div className="absolute inset-0 pointer-events-none z-0">
+              <div className="absolute inset-0">
+                <img
+                  src="/5.jpg"
+                  alt="Touchup Background"
+                  className="w-full h-full object-cover"
+                  style={{
+                    filter: "grayscale(100%) contrast(1.3)",
+                    opacity: 0.3,
+                  }}
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background/80" />
+            </div>
 
             <div className="container max-w-4xl mx-auto relative z-10">
               <div className="bg-background/60 backdrop-blur-sm border border-charcoal/20 shadow-luxury p-6 sm:p-8 md:p-12 lg:p-16">
