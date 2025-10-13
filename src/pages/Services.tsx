@@ -84,12 +84,12 @@ const Services = () => {
                   className="w-full h-full object-cover"
                   style={{
                     filter: "grayscale(100%) contrast(1.3)",
-                    opacity: 0.3,
-                    transform: "rotate(90deg) scale(1.5)",
+                    opacity: 0.6,
+                    transform: "rotate(270deg) scale(1.7)",
                   }}
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background/80" />
+              <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background/70" />
             </div>
 
             <div className="container max-w-4xl mx-auto relative z-10">
@@ -170,11 +170,11 @@ const Services = () => {
                   className="w-full h-full object-cover"
                   style={{
                     filter: "grayscale(100%) contrast(1.3)",
-                    opacity: 0.3,
+                    opacity: 0.6,
                   }}
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background/80" />
+              <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background/70" />
             </div>
 
             <div className="container max-w-4xl mx-auto relative z-10">
@@ -261,11 +261,11 @@ const Services = () => {
                   className="w-full h-full object-cover"
                   style={{
                     filter: "grayscale(100%) contrast(1.3)",
-                    opacity: 0.3,
+                    opacity: 0.6,
                   }}
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background/80" />
+              <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background/70" />
             </div>
 
             <div className="container max-w-4xl mx-auto relative z-10">
