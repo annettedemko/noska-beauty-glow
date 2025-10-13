@@ -41,7 +41,9 @@ export const Services = () => {
     {
       name: t("remover"),
       price: t("priceRequest"),
-      bookingUrl: "https://wa.me/491779093936"
+      isSpecial: true,
+      link: "/remover-muenchen",
+      featured: false
     },
   ];
 
