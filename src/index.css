@@ -255,6 +255,27 @@ All colors MUST be HSL.
     animation: float 20s ease-in-out infinite;
   }
 
+  /* Delayed floating animation for variety */
+  @keyframes float-delayed {
+    0%, 100% {
+      transform: translate(0, 0) scale(1);
+    }
+    25% {
+      transform: translate(-15px, 15px) scale(0.95);
+    }
+    50% {
+      transform: translate(20px, -10px) scale(1.08);
+    }
+    75% {
+      transform: translate(-8px, 20px) scale(0.98);
+    }
+  }
+
+  .animate-float-delayed {
+    animation: float-delayed 25s ease-in-out infinite;
+    animation-delay: -5s;
+  }
+
   /* Sway animation for light rays */
   @keyframes sway {
     0%, 100% {
@@ -410,5 +431,217 @@ All colors MUST be HSL.
   .animate-gradient-shift {
     background-size: 200% 200%;
     animation: gradient-shift 8s ease infinite;
+  }
+
+  /* 🌟 PREMIUM MOBILE ANIMATIONS 🌟 */
+
+  /* Smooth reveal on scroll */
+  @keyframes reveal-up {
+    from {
+      opacity: 0;
+      transform: translateY(40px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes reveal-left {
+    from {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes reveal-right {
+    from {
+      opacity: 0;
+      transform: translateX(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes reveal-scale {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .reveal-animation {
+    opacity: 0;
+  }
+
+  .reveal-animation.is-visible {
+    animation: reveal-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .reveal-left {
+    opacity: 0;
+  }
+
+  .reveal-left.is-visible {
+    animation: reveal-left 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .reveal-right {
+    opacity: 0;
+  }
+
+  .reveal-right.is-visible {
+    animation: reveal-right 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .reveal-scale {
+    opacity: 0;
+  }
+
+  .reveal-scale.is-visible {
+    animation: reveal-scale 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* Premium glassmorphism */
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-effect-strong {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(30px) saturate(200%);
+    -webkit-backdrop-filter: blur(30px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Tap feedback effect */
+  @keyframes tap-bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+  }
+
+  .tap-feedback:active {
+    animation: tap-bounce 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Shimmer loading effect */
+  @keyframes shimmer-load {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+
+  .shimmer-loading {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.05) 20%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0.05) 80%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer-load 2s ease-in-out infinite;
+  }
+
+  /* Parallax smooth scroll */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* Premium card hover effects for mobile */
+  @media (hover: hover) and (pointer: fine) {
+    .premium-card-hover {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .premium-card-hover:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15), 0 0 100px rgba(255, 255, 255, 0.05);
+    }
+  }
+
+  /* Touch ripple effect */
+  @keyframes ripple {
+    from {
+      opacity: 1;
+      transform: scale(0);
+    }
+    to {
+      opacity: 0;
+      transform: scale(4);
+    }
+  }
+
+  .ripple-effect {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ripple-effect::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+    animation: ripple 0.6s;
+    opacity: 0;
+  }
+
+  .ripple-effect:active::after {
+    opacity: 1;
+    transition: 0s;
+  }
+
+  /* Smooth entrance animations */
+  .stagger-children > * {
+    opacity: 0;
+    animation: reveal-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+  .stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+  .stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+  .stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+  .stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+  .stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
+
+  /* Luxury page transition */
+  @keyframes page-enter {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .page-transition {
+    animation: page-enter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 }

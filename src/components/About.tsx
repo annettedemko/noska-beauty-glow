@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const About = () => {
   const { t } = useLanguage();
@@ -15,6 +16,7 @@ export const About = () => {
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const { ref: aboutRef, isVisible } = useScrollAnimation(0.1);
 
   const minSwipeDistance = 50;
 
@@ -83,11 +85,11 @@ export const About = () => {
   }, [lightboxOpen]);
 
   return (
-    <section id="about" className="py-32 px-6 relative overflow-hidden">
+    <section id="about" className="py-32 px-6 relative overflow-hidden" ref={aboutRef}>
       <div className="absolute inset-0 bg-gradient-to-br from-background to-pearl/30" />
 
       <div className="container max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-24 space-y-8">
+        <div className={`text-center mb-24 space-y-8 reveal-animation ${isVisible ? 'is-visible' : ''}`}>
           <div className="flex items-center justify-center gap-4 opacity-60">
             <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver" />
             <div className="w-2 h-2 bg-silver rotate-45" />
@@ -113,7 +115,7 @@ export const About = () => {
                 {aboutImages.map((image, index) => (
                   <CarouselItem key={index}>
                     <div
-                      className="relative aspect-[3/4] overflow-hidden shadow-luxury group cursor-pointer"
+                      className="relative aspect-[3/4] overflow-hidden shadow-luxury group cursor-pointer tap-feedback transform transition-all duration-300 hover:shadow-2xl"
                       onClick={() => openLightbox(index)}
                     >
                       <img
@@ -250,7 +252,6 @@ export const About = () => {
           {/* Image container with swipe support */}
           <div
             className="w-full h-full flex items-center justify-center p-4 sm:p-8 md:p-12"
-            onClick={(e) => e.stopPropagation()}
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
@@ -266,10 +267,11 @@ export const About = () => {
               <img
                 src={aboutImages[lightboxIndex].src}
                 alt={aboutImages[lightboxIndex].alt}
-                className={`max-w-full max-h-[85vh] sm:max-h-[80vh] object-contain rounded-lg shadow-2xl transition-all duration-500 ${
+                className={`max-w-full max-h-[85vh] sm:max-h-[80vh] object-contain rounded-lg shadow-2xl transition-all duration-500 cursor-pointer ${
                   imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
                 }`}
                 onLoad={() => setImageLoaded(true)}
+                onClick={closeLightbox}
               />
             </div>
           </div>

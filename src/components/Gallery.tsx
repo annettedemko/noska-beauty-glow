@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const Gallery = () => {
   const { t } = useLanguage();
@@ -15,6 +16,7 @@ export const Gallery = () => {
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const { ref: galleryRef, isVisible } = useScrollAnimation(0.1);
 
   const minSwipeDistance = 50;
 
@@ -97,25 +99,31 @@ export const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="py-32 px-6 relative overflow-hidden">
-      {/* Luxury background */}
+    <section id="gallery" className="py-32 px-6 relative overflow-hidden" ref={galleryRef}>
+      {/* Luxury background with animation */}
       <div className="absolute inset-0 bg-gradient-to-b from-pearl/20 via-background to-pearl/20" />
+
+      {/* Animated particles for mobile */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/3 right-1/4 w-48 h-48 bg-champagne/5 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-1/3 left-1/4 w-56 h-56 bg-pearl/5 rounded-full blur-3xl animate-float-delayed" />
+      </div>
 
       <div className="container max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-24 space-y-8">
-          {/* Decorative element */}
-          <div className="flex items-center justify-center gap-4 opacity-60">
-            <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver" />
-            <div className="w-2 h-2 bg-silver rotate-45" />
-            <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver" />
+        <div className={`text-center mb-24 space-y-8 reveal-animation ${isVisible ? 'is-visible' : ''}`}>
+          {/* Decorative element with animation */}
+          <div className="flex items-center justify-center gap-4 opacity-60 animate-in slide-in-from-top duration-700">
+            <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver animate-shimmer" />
+            <div className="w-2 h-2 bg-silver rotate-45 animate-pulse" />
+            <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver animate-shimmer" />
           </div>
 
-          <h2 className="font-serif text-4xl md:text-6xl text-center tracking-wide font-bold">
+          <h2 className="font-serif text-4xl md:text-6xl text-center tracking-wide font-bold animate-in fade-in slide-in-from-bottom duration-1000">
             {t("galleryTitle")}
           </h2>
 
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom duration-1000 delay-200">
             {t("gallerySubtitle")}
           </p>
         </div>
@@ -131,27 +139,41 @@ export const Gallery = () => {
             {galleryImages.map((image, index) => (
               <CarouselItem key={index} className="pl-1 md:pl-4 basis-[98%] sm:basis-[98%] md:basis-1/2 lg:basis-1/3">
                 <div
-                  className="group relative aspect-square overflow-hidden shadow-luxury cursor-pointer"
+                  className="group relative aspect-square overflow-hidden shadow-luxury cursor-pointer tap-feedback transform transition-all duration-500 hover:shadow-2xl active:scale-95"
                   onClick={() => openLightbox(index)}
                 >
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-active:scale-105"
                   />
 
-                  {/* Decorative frame that appears on hover */}
-                  <div className="absolute inset-6 border-2 border-silver opacity-0 group-hover:opacity-100 transition-all duration-700 transform scale-90 group-hover:scale-100" />
+                  {/* Shimmer effect on mobile */}
+                  <div className="absolute inset-0 -translate-x-full group-active:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 pointer-events-none" />
 
-                  {/* Decorative corners */}
-                  <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-silver/0 group-hover:border-silver/80 transition-all duration-500" />
-                  <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-silver/0 group-hover:border-silver/80 transition-all duration-500" />
-                  <div className="absolute bottom-0 left-0 w-12 h-12 border-b-2 border-l-2 border-silver/0 group-hover:border-silver/80 transition-all duration-500" />
-                  <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-silver/0 group-hover:border-silver/80 transition-all duration-500" />
+                  {/* Decorative frame that appears on hover/tap */}
+                  <div className="absolute inset-6 border-2 border-silver opacity-0 group-hover:opacity-100 group-active:opacity-80 transition-all duration-700 transform scale-90 group-hover:scale-100 group-active:scale-95 pointer-events-none" />
 
-                  {/* Caption overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                    <p className="text-white font-sans text-sm tracking-wider uppercase">{image.category}</p>
+                  {/* Decorative corners with improved mobile visibility */}
+                  <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-silver/0 group-hover:border-silver/80 group-active:border-silver/60 transition-all duration-500" />
+                  <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-silver/0 group-hover:border-silver/80 group-active:border-silver/60 transition-all duration-500" />
+                  <div className="absolute bottom-0 left-0 w-12 h-12 border-b-2 border-l-2 border-silver/0 group-hover:border-silver/80 group-active:border-silver/60 transition-all duration-500" />
+                  <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-silver/0 group-hover:border-silver/80 group-active:border-silver/60 transition-all duration-500" />
+
+                  {/* Caption overlay with better mobile interaction */}
+                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 bg-gradient-to-t from-black/90 to-transparent translate-y-full group-hover:translate-y-0 group-active:translate-y-0 transition-transform duration-500">
+                    <p className="text-white font-sans text-xs sm:text-sm tracking-wider uppercase">{image.category}</p>
+                  </div>
+
+                  {/* Mobile tap indicator */}
+                  <div className="md:hidden absolute inset-0 flex items-center justify-center opacity-0 group-active:opacity-100 transition-opacity duration-200 pointer-events-none">
+                    <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center animate-ping">
+                      <div className="w-16 h-16 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center">
+                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m0 0v6m0-6h6m-6 0H4" />
+                        </svg>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </CarouselItem>
@@ -169,19 +191,22 @@ export const Gallery = () => {
         </div>
       </div>
 
-      {/* Modern Lightbox Modal */}
+      {/* Modern Lightbox Modal with premium effects */}
       {lightboxOpen && (
         <div
           className="fixed inset-0 z-50 bg-black/98 backdrop-blur-sm flex items-center justify-center animate-in fade-in duration-300"
           onClick={closeLightbox}
         >
-          {/* Close button */}
+          {/* Premium gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-black via-charcoal/20 to-black pointer-events-none" />
+
+          {/* Close button with enhanced mobile interaction */}
           <button
             onClick={closeLightbox}
-            className="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-white/80 hover:text-white bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full transition-all duration-300 z-50 group"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-white/80 hover:text-white active:text-white bg-white/10 hover:bg-white/20 active:bg-white/30 backdrop-blur-md rounded-full transition-all duration-300 z-50 group tap-feedback active:scale-90"
             aria-label="Close"
           >
-            <svg className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 group-hover:rotate-90 group-active:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
@@ -234,6 +259,9 @@ export const Gallery = () => {
                 className={`max-w-full max-h-[85vh] sm:max-h-[80vh] object-contain rounded-lg shadow-2xl transition-all duration-500 cursor-pointer ${
                   imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
                 }`}
+                style={{
+                  boxShadow: imageLoaded ? '0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 100px rgba(194, 178, 128, 0.1)' : 'none'
+                }}
                 onLoad={() => setImageLoaded(true)}
                 onClick={(e) => {
                   e.stopPropagation();

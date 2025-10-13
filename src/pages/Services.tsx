@@ -11,6 +11,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Services = () => {
   const { t } = useLanguage();
@@ -23,6 +24,11 @@ const Services = () => {
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const [imageLoaded, setImageLoaded] = useState(false);
+
+  const { ref: browsAnimRef, isVisible: browsVisible } = useScrollAnimation(0.1);
+  const { ref: lipsAnimRef, isVisible: lipsVisible } = useScrollAnimation(0.1);
+  const { ref: touchupAnimRef, isVisible: touchupVisible } = useScrollAnimation(0.1);
+  const { ref: galleryAnimRef, isVisible: galleryVisible } = useScrollAnimation(0.1);
 
   const minSwipeDistance = 50;
 
@@ -128,35 +134,48 @@ const Services = () => {
         <main className="pt-24">
           {/* Hero */}
           <section className="relative py-32 px-6 overflow-hidden">
-            {/* Luxury background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-background via-champagne/10 to-background" />
+            {/* Luxury background with animation */}
+            <div className="absolute inset-0 bg-gradient-to-br from-background via-champagne/10 to-background animate-in fade-in duration-1000" />
+
+            {/* Animated particles for mobile */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-champagne/5 rounded-full blur-3xl animate-float" />
+              <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-pearl/5 rounded-full blur-3xl animate-float-delayed" />
+            </div>
 
             <div className="container max-w-6xl mx-auto relative z-10">
-              {/* Decorative element */}
-              <div className="flex items-center justify-center gap-4 opacity-60 mb-12">
-                <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver" />
-                <div className="w-2 h-2 bg-silver rotate-45" />
-                <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver" />
+              {/* Decorative element with animation */}
+              <div className="flex items-center justify-center gap-4 opacity-60 mb-12 animate-in slide-in-from-top duration-700">
+                <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver animate-shimmer" />
+                <div className="w-2 h-2 bg-silver rotate-45 animate-pulse" />
+                <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver animate-shimmer" />
               </div>
 
-              <h1 className="font-serif text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-center mb-8 tracking-wide font-bold break-words px-2">
+              <h1 className="font-serif text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-center mb-8 tracking-wide font-bold break-words px-2 animate-in fade-in slide-in-from-bottom duration-1000 delay-150">
                 {t("servicesPageTitle")}
               </h1>
-              <p className="text-center text-base sm:text-lg md:text-xl lg:text-2xl font-light mb-12 tracking-wide text-muted-foreground max-w-3xl mx-auto px-4">
+              <p className="text-center text-base sm:text-lg md:text-xl lg:text-2xl font-light mb-12 tracking-wide text-muted-foreground max-w-3xl mx-auto px-4 animate-in fade-in slide-in-from-bottom duration-1000 delay-300">
                 {t("servicesPageDesc")}
               </p>
 
-              {/* Decorative element */}
-              <div className="flex items-center justify-center gap-4 opacity-60">
-                <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver" />
-                <div className="w-2 h-2 bg-silver rotate-45" />
-                <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver" />
+              {/* Decorative element with animation */}
+              <div className="flex items-center justify-center gap-4 opacity-60 animate-in slide-in-from-bottom duration-700 delay-500">
+                <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver animate-shimmer" />
+                <div className="w-2 h-2 bg-silver rotate-45 animate-pulse" />
+                <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver animate-shimmer" />
               </div>
             </div>
           </section>
 
           {/* 👁️ Powder / Ombre Brows */}
-          <section ref={browsRef} id="brows" className="py-24 px-6 relative overflow-hidden scroll-mt-24 mb-16 min-h-screen">
+          <section
+            ref={(node) => {
+              browsRef.current = node;
+              browsAnimRef.current = node as HTMLDivElement;
+            }}
+            id="brows"
+            className="py-24 px-6 relative overflow-hidden scroll-mt-24 mb-16 min-h-screen"
+          >
             {/* Background image */}
             <div className="absolute inset-0 pointer-events-none z-0">
               <div className="absolute inset-0">
@@ -175,9 +194,18 @@ const Services = () => {
             </div>
 
             <div className="container max-w-4xl mx-auto relative z-10">
-              <div className="bg-background/60 backdrop-blur-sm border border-charcoal/20 shadow-luxury p-6 sm:p-8 md:p-12 lg:p-16">
-                <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-center mb-8 text-accent font-bold">
-                  {t("browsTitle")}
+              <div className={`bg-background/60 backdrop-blur-sm border border-charcoal/20 shadow-luxury p-6 sm:p-8 md:p-12 lg:p-16 reveal-animation transform transition-all duration-700 hover:shadow-2xl hover:border-accent/30 ${browsVisible ? 'is-visible' : ''}`}>
+                {/* Decorative corner accents for mobile */}
+                <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-accent/20 opacity-0 animate-in fade-in duration-700 delay-300" style={{ opacity: browsVisible ? 1 : 0 }} />
+                <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-accent/20 opacity-0 animate-in fade-in duration-700 delay-400" style={{ opacity: browsVisible ? 1 : 0 }} />
+                <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-accent/20 opacity-0 animate-in fade-in duration-700 delay-500" style={{ opacity: browsVisible ? 1 : 0 }} />
+                <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-accent/20 opacity-0 animate-in fade-in duration-700 delay-600" style={{ opacity: browsVisible ? 1 : 0 }} />
+
+                <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-center mb-8 text-accent font-bold relative">
+                  <span className="relative inline-block">
+                    {t("browsTitle")}
+                    <div className="absolute -bottom-2 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
+                  </span>
                 </h2>
 
                 <div className="space-y-8 text-base sm:text-lg font-light leading-relaxed">
@@ -225,15 +253,17 @@ const Services = () => {
                   </div>
 
                   <div className="pt-12 text-center border-t border-charcoal/20 mt-12">
-                    <p className="text-2xl sm:text-3xl font-serif mb-8 text-accent font-semibold">{t("browsPrice")}</p>
+                    <p className="text-2xl sm:text-3xl font-serif mb-8 text-accent font-semibold animate-in fade-in slide-in-from-bottom duration-700">{t("browsPrice")}</p>
                     <a
                       href="https://buchung.treatwell.de/ort/permanent-make-up-by-anastasia-noska/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group/btn relative px-6 sm:px-10 md:px-12 py-4 sm:py-5 bg-accent text-white font-sans text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.25em] uppercase shadow-luxury hover-lift overflow-hidden inline-block"
+                      className="group/btn relative px-6 sm:px-10 md:px-12 py-4 sm:py-5 bg-accent text-white font-sans text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.25em] uppercase shadow-luxury hover-lift overflow-hidden inline-block tap-feedback animate-in zoom-in duration-500 delay-300 hover:scale-105 active:scale-95 transition-transform"
                     >
                       <span className="relative z-10 font-semibold whitespace-nowrap">{t("bookNow")}</span>
                       <div className="absolute inset-0 bg-gradient-to-r from-charcoal to-silver opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
+                      {/* Shimmer effect on mobile */}
+                      <div className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000" />
                     </a>
                   </div>
                 </div>
@@ -242,7 +272,14 @@ const Services = () => {
           </section>
 
           {/* 💋 Aquarell / Velvet / Ombre Lippen */}
-          <section ref={lipsRef} id="lips" className="py-24 px-6 relative overflow-hidden scroll-mt-24 mb-16 min-h-screen">
+          <section
+            ref={(node) => {
+              lipsRef.current = node;
+              lipsAnimRef.current = node as HTMLDivElement;
+            }}
+            id="lips"
+            className="py-24 px-6 relative overflow-hidden scroll-mt-24 mb-16 min-h-screen"
+          >
             {/* Background image */}
             <div className="absolute inset-0 pointer-events-none z-0">
               <div className="absolute inset-0">
@@ -261,9 +298,18 @@ const Services = () => {
             </div>
 
             <div className="container max-w-4xl mx-auto relative z-10">
-              <div className="bg-background/60 backdrop-blur-sm border border-charcoal/20 shadow-luxury p-6 sm:p-8 md:p-12 lg:p-16">
-                <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-center mb-8 text-accent font-bold">
-                  {t("lipsTitle")}
+              <div className={`bg-background/60 backdrop-blur-sm border border-charcoal/20 shadow-luxury p-6 sm:p-8 md:p-12 lg:p-16 reveal-animation transform transition-all duration-700 hover:shadow-2xl hover:border-accent/30 ${lipsVisible ? 'is-visible' : ''}`}>
+                {/* Decorative corner accents for mobile */}
+                <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-accent/20 opacity-0 animate-in fade-in duration-700 delay-300" style={{ opacity: lipsVisible ? 1 : 0 }} />
+                <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-accent/20 opacity-0 animate-in fade-in duration-700 delay-400" style={{ opacity: lipsVisible ? 1 : 0 }} />
+                <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-accent/20 opacity-0 animate-in fade-in duration-700 delay-500" style={{ opacity: lipsVisible ? 1 : 0 }} />
+                <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-accent/20 opacity-0 animate-in fade-in duration-700 delay-600" style={{ opacity: lipsVisible ? 1 : 0 }} />
+
+                <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-center mb-8 text-accent font-bold relative">
+                  <span className="relative inline-block">
+                    {t("lipsTitle")}
+                    <div className="absolute -bottom-2 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
+                  </span>
                 </h2>
 
                 <div className="space-y-8 text-base sm:text-lg font-light leading-relaxed">
@@ -317,15 +363,17 @@ const Services = () => {
                   </div>
 
                   <div className="pt-12 text-center border-t border-charcoal/20 mt-12">
-                    <p className="text-2xl sm:text-3xl font-serif mb-8 text-accent font-semibold">{t("lipsPrice")}</p>
+                    <p className="text-2xl sm:text-3xl font-serif mb-8 text-accent font-semibold animate-in fade-in slide-in-from-bottom duration-700">{t("lipsPrice")}</p>
                     <a
                       href="https://buchung.treatwell.de/ort/permanent-make-up-by-anastasia-noska/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group/btn relative px-6 sm:px-10 md:px-12 py-4 sm:py-5 bg-accent text-white font-sans text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.25em] uppercase shadow-luxury hover-lift overflow-hidden inline-block"
+                      className="group/btn relative px-6 sm:px-10 md:px-12 py-4 sm:py-5 bg-accent text-white font-sans text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.25em] uppercase shadow-luxury hover-lift overflow-hidden inline-block tap-feedback animate-in zoom-in duration-500 delay-300 hover:scale-105 active:scale-95 transition-transform"
                     >
                       <span className="relative z-10 font-semibold whitespace-nowrap">{t("bookNow")}</span>
                       <div className="absolute inset-0 bg-gradient-to-r from-charcoal to-silver opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
+                      {/* Shimmer effect on mobile */}
+                      <div className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000" />
                     </a>
                   </div>
                 </div>
@@ -334,7 +382,14 @@ const Services = () => {
           </section>
 
           {/* 🔄 Nachkorrektur */}
-          <section ref={touchupRef} id="touchup" className="py-24 px-6 relative overflow-hidden scroll-mt-24">
+          <section
+            ref={(node) => {
+              touchupRef.current = node;
+              touchupAnimRef.current = node as HTMLDivElement;
+            }}
+            id="touchup"
+            className="py-24 px-6 relative overflow-hidden scroll-mt-24"
+          >
             {/* Background image */}
             <div className="absolute inset-0 pointer-events-none z-0">
               <div className="absolute inset-0">
@@ -352,9 +407,18 @@ const Services = () => {
             </div>
 
             <div className="container max-w-4xl mx-auto relative z-10">
-              <div className="bg-background/60 backdrop-blur-sm border border-charcoal/20 shadow-luxury p-6 sm:p-8 md:p-12 lg:p-16">
-                <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-center mb-8 text-accent font-bold">
-                  {t("touchupTitle")}
+              <div className={`bg-background/60 backdrop-blur-sm border border-charcoal/20 shadow-luxury p-6 sm:p-8 md:p-12 lg:p-16 reveal-animation transform transition-all duration-700 hover:shadow-2xl hover:border-accent/30 ${touchupVisible ? 'is-visible' : ''}`}>
+                {/* Decorative corner accents for mobile */}
+                <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-accent/20 opacity-0 animate-in fade-in duration-700 delay-300" style={{ opacity: touchupVisible ? 1 : 0 }} />
+                <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-accent/20 opacity-0 animate-in fade-in duration-700 delay-400" style={{ opacity: touchupVisible ? 1 : 0 }} />
+                <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-accent/20 opacity-0 animate-in fade-in duration-700 delay-500" style={{ opacity: touchupVisible ? 1 : 0 }} />
+                <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-accent/20 opacity-0 animate-in fade-in duration-700 delay-600" style={{ opacity: touchupVisible ? 1 : 0 }} />
+
+                <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-center mb-8 text-accent font-bold relative">
+                  <span className="relative inline-block">
+                    {t("touchupTitle")}
+                    <div className="absolute -bottom-2 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
+                  </span>
                 </h2>
 
                 <div className="space-y-8 text-base sm:text-lg font-light leading-relaxed">
@@ -389,15 +453,17 @@ const Services = () => {
                   </div>
 
                   <div className="pt-12 text-center border-t border-charcoal/20 mt-12">
-                    <p className="text-2xl sm:text-3xl font-serif mb-8 text-accent font-semibold">{t("touchupPriceText")}</p>
+                    <p className="text-2xl sm:text-3xl font-serif mb-8 text-accent font-semibold animate-in fade-in slide-in-from-bottom duration-700">{t("touchupPriceText")}</p>
                     <a
                       href="https://buchung.treatwell.de/ort/permanent-make-up-by-anastasia-noska/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group/btn relative px-6 sm:px-10 md:px-12 py-4 sm:py-5 bg-accent text-white font-sans text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.25em] uppercase shadow-luxury hover-lift overflow-hidden inline-block"
+                      className="group/btn relative px-6 sm:px-10 md:px-12 py-4 sm:py-5 bg-accent text-white font-sans text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.25em] uppercase shadow-luxury hover-lift overflow-hidden inline-block tap-feedback animate-in zoom-in duration-500 delay-300 hover:scale-105 active:scale-95 transition-transform"
                     >
                       <span className="relative z-10 font-semibold whitespace-nowrap">{t("bookNow")}</span>
                       <div className="absolute inset-0 bg-gradient-to-r from-charcoal to-silver opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
+                      {/* Shimmer effect on mobile */}
+                      <div className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000" />
                     </a>
                   </div>
                 </div>
@@ -406,25 +472,31 @@ const Services = () => {
           </section>
 
           {/* Gallery Carousel */}
-          <section className="py-32 px-6 relative overflow-hidden">
-            {/* Luxury background */}
+          <section className="py-32 px-6 relative overflow-hidden" ref={galleryAnimRef}>
+            {/* Luxury background with animation */}
             <div className="absolute inset-0 bg-gradient-to-b from-pearl/20 via-background to-pearl/20" />
+
+            {/* Animated particles */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <div className="absolute top-1/3 right-1/4 w-48 h-48 bg-champagne/5 rounded-full blur-3xl animate-float" />
+              <div className="absolute bottom-1/3 left-1/4 w-56 h-56 bg-pearl/5 rounded-full blur-3xl animate-float-delayed" />
+            </div>
 
             <div className="container max-w-7xl mx-auto relative z-10">
               {/* Section Header */}
-              <div className="text-center mb-24 space-y-8">
-                {/* Decorative element */}
-                <div className="flex items-center justify-center gap-4 opacity-60">
-                  <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver" />
-                  <div className="w-2 h-2 bg-silver rotate-45" />
-                  <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver" />
+              <div className={`text-center mb-24 space-y-8 reveal-animation ${galleryVisible ? 'is-visible' : ''}`}>
+                {/* Decorative element with animation */}
+                <div className="flex items-center justify-center gap-4 opacity-60 animate-in slide-in-from-top duration-700">
+                  <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver animate-shimmer" />
+                  <div className="w-2 h-2 bg-silver rotate-45 animate-pulse" />
+                  <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver animate-shimmer" />
                 </div>
 
-                <h2 className="font-serif text-4xl md:text-6xl text-center tracking-wide font-bold">
+                <h2 className="font-serif text-4xl md:text-6xl text-center tracking-wide font-bold animate-in fade-in slide-in-from-bottom duration-1000">
                   {t("galleryTitle")}
                 </h2>
 
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-in fade-in slide-in-from-bottom duration-1000 delay-200">
                   {t("gallerySubtitle")}
                 </p>
               </div>
@@ -440,27 +512,39 @@ const Services = () => {
                   {galleryImages.map((image, index) => (
                     <CarouselItem key={index} className="pl-1 md:pl-4 basis-[98%] sm:basis-[98%] md:basis-1/2 lg:basis-1/3">
                       <div
-                        className="group relative aspect-square overflow-hidden shadow-luxury cursor-pointer"
+                        className="group relative aspect-square overflow-hidden shadow-luxury cursor-pointer tap-feedback transform transition-all duration-500 hover:shadow-2xl active:scale-95"
                         onClick={() => openLightbox(index)}
                       >
                         <img
                           src={image.src}
                           alt={image.alt}
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-active:scale-105"
                         />
 
-                        {/* Decorative frame that appears on hover */}
-                        <div className="absolute inset-6 border-2 border-silver opacity-0 group-hover:opacity-100 transition-all duration-700 transform scale-90 group-hover:scale-100" />
+                        {/* Shimmer effect on mobile */}
+                        <div className="absolute inset-0 -translate-x-full group-active:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 pointer-events-none" />
 
-                        {/* Decorative corners */}
-                        <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-silver/0 group-hover:border-silver/80 transition-all duration-500" />
-                        <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-silver/0 group-hover:border-silver/80 transition-all duration-500" />
-                        <div className="absolute bottom-0 left-0 w-12 h-12 border-b-2 border-l-2 border-silver/0 group-hover:border-silver/80 transition-all duration-500" />
-                        <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-silver/0 group-hover:border-silver/80 transition-all duration-500" />
+                        {/* Decorative frame that appears on hover/tap */}
+                        <div className="absolute inset-6 border-2 border-silver opacity-0 group-hover:opacity-100 group-active:opacity-80 transition-all duration-700 transform scale-90 group-hover:scale-100 group-active:scale-95 pointer-events-none" />
 
-                        {/* Caption overlay */}
-                        <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                          <p className="text-white font-sans text-sm tracking-wider uppercase">{image.category}</p>
+                        {/* Decorative corners with improved mobile visibility */}
+                        <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-silver/0 group-hover:border-silver/80 group-active:border-silver/60 transition-all duration-500" />
+                        <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-silver/0 group-hover:border-silver/80 group-active:border-silver/60 transition-all duration-500" />
+                        <div className="absolute bottom-0 left-0 w-12 h-12 border-b-2 border-l-2 border-silver/0 group-hover:border-silver/80 group-active:border-silver/60 transition-all duration-500" />
+                        <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-silver/0 group-hover:border-silver/80 group-active:border-silver/60 transition-all duration-500" />
+
+                        {/* Caption overlay with better mobile interaction */}
+                        <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 bg-gradient-to-t from-black/90 to-transparent translate-y-full group-hover:translate-y-0 group-active:translate-y-0 transition-transform duration-500">
+                          <p className="text-white font-sans text-xs sm:text-sm tracking-wider uppercase">{image.category}</p>
+                        </div>
+
+                        {/* Mobile tap indicator */}
+                        <div className="md:hidden absolute inset-0 flex items-center justify-center opacity-0 group-active:opacity-100 transition-opacity duration-200 pointer-events-none">
+                          <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m0 0v6m0-6h6m-6 0H4" />
+                            </svg>
+                          </div>
                         </div>
                       </div>
                     </CarouselItem>
