@@ -97,10 +97,10 @@ const Camouflage = () => {
           className="w-full h-full object-cover"
           style={{
             filter: "grayscale(100%) contrast(1.3)",
-            opacity: 0.5,
+            opacity: 0.7,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/40 to-background/50" />
       </div>
 
       {/* Content */}

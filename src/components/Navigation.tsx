@@ -130,17 +130,17 @@ export const Navigation = () => {
 
               {/* Dropdown Menu */}
               {servicesDropdownOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-background/98 backdrop-blur-xl border border-silver/30 shadow-luxury rounded-sm overflow-hidden animate-in fade-in slide-in-from-top-2 duration-300">
+                <div className="absolute top-full left-0 mt-2 min-w-[320px] bg-gradient-to-b from-background/95 via-pearl/30 to-background/95 backdrop-blur-xl shadow-luxury overflow-hidden animate-in fade-in slide-in-from-top-2 duration-300">
                   {services.map((service, index) => (
                     <button
                       key={index}
                       onClick={() => navigateToService(service.path)}
-                      className="w-full text-left px-6 py-3 text-sm font-sans tracking-[0.1em] hover:bg-accent/10 hover:text-accent transition-all duration-300 border-b border-silver/10 last:border-b-0 group/item"
+                      className="w-full text-left px-6 py-4 text-sm font-sans tracking-[0.05em] hover:bg-accent/20 hover:text-accent transition-all duration-300 border-b border-charcoal/10 last:border-b-0 group/item"
                     >
-                      <div className="flex items-center justify-between">
-                        <span>{service.name}</span>
+                      <div className="flex items-center justify-between gap-3">
+                        <span className="whitespace-normal leading-relaxed">{service.name}</span>
                         <svg
-                          className="w-3 h-3 opacity-0 group-hover/item:opacity-100 transform translate-x-0 group-hover/item:translate-x-1 transition-all duration-300"
+                          className="w-3 h-3 flex-shrink-0 opacity-0 group-hover/item:opacity-100 transform translate-x-0 group-hover/item:translate-x-1 transition-all duration-300"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
