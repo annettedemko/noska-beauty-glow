@@ -131,6 +131,52 @@ const translations = {
     removerSessions1: "Je nach Tiefe und Intensität des Pigments werden 2–5 Behandlungen im Abstand von etwa 4–6 Wochen empfohlen.",
     removerSessions2: "Nach jeder Sitzung hellt sich die behandelte Zone deutlich auf.",
     removerPrice: "Preis: Auf Anfrage",
+
+    // Services Detail Page
+    servicesPageTitle: "Premium Permanent Make-up Services",
+    servicesPageDesc: "Professionelle Behandlungen für natürliche Schönheit",
+
+    // Brows
+    browsTitle: "Powder / Ombre Brows",
+    browsIntro: "Perfekt geformte und natürlich wirkende Augenbrauen sind der Rahmen Ihres Gesichts. Mit der Powder- und Ombre-Brows-Technik schaffen wir einen sanften, pudrigen Effekt, der aussieht wie dezentes Make-up – aber 24/7 hält.",
+    browsTechniquesTitle: "Techniken im Detail:",
+    browsOmbre: "Ombre Brows",
+    browsOmbreDesc: "Sanfter Farbverlauf vom helleren Anfang zu einem dunkleren Ende der Braue",
+    browsPowder: "Powder Brows",
+    browsPowderDesc: "Gleichmäßiger, weicher Farbauftrag für einen gepuderten Look",
+    browsAdvantagesTitle: "Vorteile:",
+    browsAdv1: "Natürliches Ergebnis, das nicht aufgemalt wirkt",
+    browsAdv2: "Perfekt für alle Hauttypen – auch fettige Haut",
+    browsAdv3: "Hält 1–3 Jahre, je nach Hauttyp und Pflege",
+    browsPrice: "Preis: 200 €",
+
+    // Lips
+    lipsTitle: "Aquarell / Velvet / Ombre Lippen",
+    lipsIntro: "Volle, frische und perfekt konturierte Lippen – ohne tägliches Nachschminken. Unsere Lippen-Techniken verleihen Ihren Lippen natürliche Farbe, Definition und einen Hauch von Glamour.",
+    lipsTechniquesTitle: "Techniken im Detail:",
+    lipsAquarell: "Aquarell Lips",
+    lipsAquarellDesc: "Zarte, transparente Farbe für einen natürlichen, frischen Look",
+    lipsVelvet: "Velvet Lips",
+    lipsVelvetDesc: "Samtige, satte Farbe für vollere und definierte Lippen",
+    lipsOmbre: "Ombre Lips",
+    lipsOmbreDesc: "Farbverlauf von innen nach außen für einen 3D-Effekt",
+    lipsAdvantagesTitle: "Vorteile:",
+    lipsAdv1: "Optisch vollere und symmetrischere Lippen",
+    lipsAdv2: "Natürlicher Kussmund ohne Lippenstift",
+    lipsAdv3: "Langanhaltende Farbe für 2–4 Jahre",
+    lipsPrice: "Preis: 200 €",
+
+    // Touchup
+    touchupTitle: "Nachkorrektur",
+    touchupIntro: "Eine Nachkorrektur ist ein wichtiger Teil jeder Permanent-Make-up-Behandlung. Nach der ersten Sitzung wird das Ergebnis noch einmal perfektioniert, um Farbintensität und Form optimal anzupassen.",
+    touchupWhenTitle: "Wann ist eine Nachkorrektur nötig?",
+    touchupWhen1: "4–6 Wochen nach der Erstbehandlung (Heilungsphase abgeschlossen)",
+    touchupWhen2: "Bei ungleichmäßiger Farbaufnahme",
+    touchupWhen3: "Zum Auffrischen nach 12–18 Monaten",
+    touchupImportantTitle: "Wichtig:",
+    touchupImportant: "Die Nachkorrektur ist in der Regel kürzer als die Erstbehandlung und dient dazu, kleine Anpassungen vorzunehmen und das Ergebnis zu verfeinern.",
+    touchupPriceText: "Preis: 100 €",
+
     backToHome: "Zurück zur Hauptseite",
   },
   RU: {
@@ -255,6 +301,52 @@ const translations = {
     removerSessions1: "В зависимости от глубины и интенсивности пигмента рекомендуется 2-5 процедур с интервалом около 4-6 недель.",
     removerSessions2: "После каждого сеанса обработанная зона заметно светлеет.",
     removerPrice: "Цена: по запросу",
+
+    // Services Detail Page
+    servicesPageTitle: "Премиум услуги перманентного макияжа",
+    servicesPageDesc: "Профессиональные процедуры для естественной красоты",
+
+    // Brows
+    browsTitle: "Пудровые / Омбре брови",
+    browsIntro: "Идеально оформленные и естественные брови – это обрамление вашего лица. С техникой Powder и Ombre Brows мы создаем мягкий, пудровый эффект, который выглядит как деликатный макияж – но держится 24/7.",
+    browsTechniquesTitle: "Техники в деталях:",
+    browsOmbre: "Омбре брови",
+    browsOmbreDesc: "Мягкий градиент от более светлого начала к более темному концу брови",
+    browsPowder: "Пудровые брови",
+    browsPowderDesc: "Равномерное, мягкое нанесение цвета для припудренного образа",
+    browsAdvantagesTitle: "Преимущества:",
+    browsAdv1: "Естественный результат, не выглядит нарисованным",
+    browsAdv2: "Идеально для всех типов кожи – даже жирной",
+    browsAdv3: "Держится 1-3 года в зависимости от типа кожи и ухода",
+    browsPrice: "Цена: 200 €",
+
+    // Lips
+    lipsTitle: "Акварельные / Бархатные / Омбре губы",
+    lipsIntro: "Полные, свежие и идеально очерченные губы – без ежедневного подкрашивания. Наши техники для губ придают им естественный цвет, четкость и нотку гламура.",
+    lipsTechniquesTitle: "Техники в деталях:",
+    lipsAquarell: "Акварельные губы",
+    lipsAquarellDesc: "Нежный, прозрачный цвет для естественного, свежего образа",
+    lipsVelvet: "Бархатные губы",
+    lipsVelvetDesc: "Насыщенный бархатный цвет для более полных и четких губ",
+    lipsOmbre: "Омбре губы",
+    lipsOmbreDesc: "Градиент цвета изнутри наружу для 3D-эффекта",
+    lipsAdvantagesTitle: "Преимущества:",
+    lipsAdv1: "Визуально более полные и симметричные губы",
+    lipsAdv2: "Естественные губы без помады",
+    lipsAdv3: "Стойкий цвет на 2-4 года",
+    lipsPrice: "Цена: 200 €",
+
+    // Touchup
+    touchupTitle: "Коррекция",
+    touchupIntro: "Коррекция – важная часть любой процедуры перманентного макияжа. После первого сеанса результат еще раз совершенствуется для оптимальной настройки интенсивности цвета и формы.",
+    touchupWhenTitle: "Когда необходима коррекция?",
+    touchupWhen1: "Через 4-6 недель после первой процедуры (фаза заживления завершена)",
+    touchupWhen2: "При неравномерном принятии цвета",
+    touchupWhen3: "Для обновления через 12-18 месяцев",
+    touchupImportantTitle: "Важно:",
+    touchupImportant: "Коррекция обычно короче, чем первая процедура, и служит для внесения небольших корректировок и доработки результата.",
+    touchupPriceText: "Цена: 100 €",
+
     backToHome: "Вернуться на главную",
   },
 };

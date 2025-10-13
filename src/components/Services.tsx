@@ -24,19 +24,23 @@ export const Services = () => {
     {
       name: t("powderBrows"),
       price: t("price200"),
-      image: "/4.jpg",
-      bookingUrl: "https://buchung.treatwell.de/ort/permanent-make-up-by-anastasia-noska/?utm_medium=partner-ecosystem&utm_campaign=partner-instagram&utm_content=book-now&fbclid=PARlRTSANHvkBleHRuA2FlbQIxMAABp1qQGFg8ck5Nj90Oz6-hBzpeoVFVtqhm3khdo7DOlAnK-Y6iNfV3VLczqRz4_aem_u5OjR9Br5NBX_q6yx0myKA"
+      isSpecial: true,
+      link: "/services-muenchen#brows",
+      featured: false
     },
     {
       name: t("aquarellLips"),
       price: t("price200"),
-      image: "/5.jpg",
-      bookingUrl: "https://buchung.treatwell.de/ort/permanent-make-up-by-anastasia-noska/?utm_medium=partner-ecosystem&utm_campaign=partner-instagram&utm_content=book-now&fbclid=PARlRTSANHvkBleHRuA2FlbQIxMAABp1qQGFg8ck5Nj90Oz6-hBzpeoVFVtqhm3khdo7DOlAnK-Y6iNfV3VLczqRz4_aem_u5OjR9Br5NBX_q6yx0myKA"
+      isSpecial: true,
+      link: "/services-muenchen#lips",
+      featured: false
     },
     {
       name: t("touchup"),
       price: t("price100"),
-      bookingUrl: "https://wa.me/491779093936"
+      isSpecial: true,
+      link: "/services-muenchen#touchup",
+      featured: false
     },
     {
       name: t("remover"),

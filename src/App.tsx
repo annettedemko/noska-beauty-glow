@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import Kopfhaut from "./pages/Kopfhaut";
 import Camouflage from "./pages/Camouflage";
 import Remover from "./pages/Remover";
+import Services from "./pages/Services";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import NotFound from "./pages/NotFound";
@@ -28,10 +29,12 @@ const App = () => (
             <Route path="/kopfhaut-muenchen" element={<Kopfhaut />} />
             <Route path="/camouflage-muenchen" element={<Camouflage />} />
             <Route path="/remover-muenchen" element={<Remover />} />
+            <Route path="/services-muenchen" element={<Services />} />
             {/* Redirect old URLs to new SEO-friendly URLs */}
             <Route path="/kopfhaut" element={<Kopfhaut />} />
             <Route path="/camouflage" element={<Camouflage />} />
             <Route path="/remover" element={<Remover />} />
+            <Route path="/services" element={<Services />} />
             <Route path="/impressum" element={<Impressum />} />
             <Route path="/datenschutz" element={<Datenschutz />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
