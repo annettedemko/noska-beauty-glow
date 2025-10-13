@@ -122,7 +122,7 @@ const Camouflage = () => {
                 <div className="pt-12 text-center border-t border-charcoal/20 mt-12">
                   <p className="text-2xl sm:text-3xl font-serif mb-8 text-accent font-semibold">{t("camouflagePrice")}</p>
                   <a
-                    href="https://wa.me/491779093936"
+                    href="https://buchung.treatwell.de/ort/permanent-make-up-by-anastasia-noska/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group/btn relative px-6 sm:px-10 md:px-12 py-4 sm:py-5 bg-accent text-white font-sans text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.25em] uppercase shadow-luxury hover-lift overflow-hidden inline-block"
