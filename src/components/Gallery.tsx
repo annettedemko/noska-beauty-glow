@@ -78,6 +78,7 @@ export const Gallery = () => {
     // Trichopigmentierung - ГЛАВНОЕ!
     { src: "/9.jpg", alt: "Kopfhaut Pigmentierung", category: "Trichopigmentierung" },
     { src: "/8.jpg", alt: "Kopfhaut Pigmentierung", category: "Trichopigmentierung" },
+    { src: "/28.jpg", alt: "Kopfhaut Pigmentierung", category: "Trichopigmentierung" },
     // Камуфляж шрамов - ГЛАВНОЕ!
     { src: "/14.PNG", alt: "Narben Camouflage", category: "Camouflage" },
     { src: "/15.jpg", alt: "Narben Camouflage", category: "Camouflage" },
