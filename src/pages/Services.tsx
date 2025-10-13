@@ -3,7 +3,14 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { VideoBackground } from "@/components/VideoBackground";
 import { Link, useLocation } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Services = () => {
   const { t } = useLanguage();
@@ -74,19 +81,19 @@ const Services = () => {
           </section>
 
           {/* 👁️ Powder / Ombre Brows */}
-          <section ref={browsRef} id="brows" className="py-24 px-6 relative overflow-hidden scroll-mt-24">
+          <section ref={browsRef} id="brows" className="py-24 px-6 relative overflow-hidden scroll-mt-24 mb-16 min-h-screen">
             {/* Background image */}
             <div className="absolute inset-0 pointer-events-none z-0">
               <div className="absolute inset-0">
                 <img
                   src="/23.jpg"
                   alt="Brows Background"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover md:object-cover"
                   style={{
                     filter: "grayscale(100%) contrast(1.3)",
-                    opacity: 0.35,
-                    transform: "rotate(270deg) scale(2.5)",
-                    objectFit: "cover",
+                    opacity: 0.8,
+                    transform: "rotate(270deg) scale(1.5)",
+                    objectPosition: "center",
                   }}
                 />
               </div>
@@ -161,21 +168,21 @@ const Services = () => {
           </section>
 
           {/* 💋 Aquarell / Velvet / Ombre Lippen */}
-          <section ref={lipsRef} id="lips" className="py-24 px-6 relative overflow-hidden scroll-mt-24">
+          <section ref={lipsRef} id="lips" className="py-24 px-6 relative overflow-hidden scroll-mt-24 mb-16">
             {/* Background image */}
             <div className="absolute inset-0 pointer-events-none z-0">
               <div className="absolute inset-0">
                 <img
-                  src="/24.jpg"
+                  src="/25.jpg"
                   alt="Lips Background"
                   className="w-full h-full object-cover"
                   style={{
                     filter: "grayscale(100%) contrast(1.3)",
-                    opacity: 0.4,
+                    opacity: 0.8,
                   }}
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/30 to-background/40" />
+              <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/40 to-background/50" />
             </div>
 
             <div className="container max-w-4xl mx-auto relative z-10">
@@ -262,7 +269,7 @@ const Services = () => {
                   className="w-full h-full object-cover"
                   style={{
                     filter: "grayscale(100%) contrast(1.3)",
-                    opacity: 0.35,
+                    opacity: 0.8,
                   }}
                 />
               </div>
@@ -319,6 +326,88 @@ const Services = () => {
                     </a>
                   </div>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Gallery Carousel */}
+          <section className="py-32 px-6 relative overflow-hidden">
+            {/* Luxury background */}
+            <div className="absolute inset-0 bg-gradient-to-b from-pearl/20 via-background to-pearl/20" />
+
+            <div className="container max-w-7xl mx-auto relative z-10">
+              {/* Section Header */}
+              <div className="text-center mb-24 space-y-8">
+                {/* Decorative element */}
+                <div className="flex items-center justify-center gap-4 opacity-60">
+                  <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver" />
+                  <div className="w-2 h-2 bg-silver rotate-45" />
+                  <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver" />
+                </div>
+
+                <h2 className="font-serif text-4xl md:text-6xl text-center tracking-wide font-bold">
+                  {t("galleryTitle")}
+                </h2>
+
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  {t("gallerySubtitle")}
+                </p>
+              </div>
+
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full"
+              >
+                <CarouselContent className="-ml-2 md:-ml-4">
+                  {[
+                    { src: "/19.jpg", alt: "Augenbrauen", category: "Augenbrauen" },
+                    { src: "/21.jpg", alt: "Augenbrauen", category: "Augenbrauen" },
+                    { src: "/22.jpg", alt: "Augenbrauen", category: "Augenbrauen" },
+                    { src: "/23.jpg", alt: "Augenbrauen", category: "Augenbrauen" },
+                    { src: "/7.jpg", alt: "Augenbrauen", category: "Augenbrauen" },
+                    { src: "/4.jpg", alt: "Lippen", category: "Lippen" },
+                    { src: "/5.jpg", alt: "Lippen", category: "Lippen" },
+                    { src: "/6.jpg", alt: "Lippen", category: "Lippen" },
+                    { src: "/24.jpg", alt: "Lippen", category: "Lippen" },
+                    { src: "/25.jpg", alt: "Lippen", category: "Lippen" },
+                  ].map((image, index) => (
+                    <CarouselItem key={index} className="pl-2 md:pl-4 basis-[95%] sm:basis-[95%] md:basis-1/2 lg:basis-1/3">
+                      <div className="group relative aspect-square overflow-hidden shadow-luxury cursor-pointer">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+
+                        {/* Decorative frame that appears on hover */}
+                        <div className="absolute inset-6 border-2 border-silver opacity-0 group-hover:opacity-100 transition-all duration-700 transform scale-90 group-hover:scale-100" />
+
+                        {/* Decorative corners */}
+                        <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-silver/0 group-hover:border-silver/80 transition-all duration-500" />
+                        <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-silver/0 group-hover:border-silver/80 transition-all duration-500" />
+                        <div className="absolute bottom-0 left-0 w-12 h-12 border-b-2 border-l-2 border-silver/0 group-hover:border-silver/80 transition-all duration-500" />
+                        <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-silver/0 group-hover:border-silver/80 transition-all duration-500" />
+
+                        {/* Caption overlay */}
+                        <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                          <p className="text-white font-sans text-sm tracking-wider uppercase">{image.category}</p>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-4 bg-background/95 border-silver/30 hover:bg-accent/20 hover:border-accent shadow-luxury" />
+                <CarouselNext className="right-4 bg-background/95 border-silver/30 hover:bg-accent/20 hover:border-accent shadow-luxury" />
+              </Carousel>
+
+              {/* Bottom decorative element */}
+              <div className="flex items-center justify-center gap-4 opacity-60 mt-24">
+                <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver" />
+                <div className="w-2 h-2 bg-silver rotate-45" />
+                <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver" />
               </div>
             </div>
           </section>

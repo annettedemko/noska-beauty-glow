@@ -128,7 +128,7 @@ export const Gallery = () => {
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {galleryImages.map((image, index) => (
-              <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-full md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={index} className="pl-2 md:pl-4 basis-[95%] sm:basis-[95%] md:basis-1/2 lg:basis-1/3">
                 <div
                   className="group relative aspect-square overflow-hidden shadow-luxury cursor-pointer"
                   onClick={() => openLightbox(index)}
