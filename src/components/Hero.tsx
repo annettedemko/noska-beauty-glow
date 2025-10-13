@@ -1,16 +1,27 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useIsMobile } from "@/hooks/useIsMobile";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export const Hero = () => {
   const { t } = useLanguage();
   const isMobile = useIsMobile();
   const [heroHeight, setHeroHeight] = useState("100vh");
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     if (isMobile) {
       const vh = window.innerHeight;
       setHeroHeight(`${vh}px`);
+    }
+  }, [isMobile]);
+
+  useEffect(() => {
+    // Force video to play when component mounts
+    if (videoRef.current && isMobile) {
+      videoRef.current.load();
+      videoRef.current.play().catch(err => {
+        console.log("Video autoplay failed:", err);
+      });
     }
   }, [isMobile]);
 
@@ -22,6 +33,7 @@ export const Hero = () => {
       {/* 🎥 Video (Mobile) / Image (Desktop) */}
       {isMobile ? (
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
