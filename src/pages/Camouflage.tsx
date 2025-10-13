@@ -1,17 +1,86 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { VideoBackground } from "@/components/VideoBackground";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Camouflage = () => {
   const { t } = useLanguage();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const minSwipeDistance = 50;
+
+  const galleryImages = [
+    { src: "/12.jpg", alt: "Camouflage Example 1" },
+    { src: "/13.jpg", alt: "Camouflage Example 2" },
+    { src: "/14.PNG", alt: "Camouflage Example 3" },
+    { src: "/15.jpg", alt: "Camouflage Example 4" },
+    { src: "/16.jpg", alt: "Camouflage Example 5" },
+    { src: "/17.jpg", alt: "Camouflage Example 6" },
+  ];
+
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+    setImageLoaded(false);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+    document.body.style.overflow = 'unset';
+  };
+
+  const nextImage = () => {
+    setImageLoaded(false);
+    setLightboxIndex((prev) => (prev + 1) % galleryImages.length);
+  };
+
+  const prevImage = () => {
+    setImageLoaded(false);
+    setLightboxIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+  };
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    if (isLeftSwipe) {
+      nextImage();
+    }
+    if (isRightSwipe) {
+      prevImage();
+    }
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!lightboxOpen) return;
+      if (e.key === 'ArrowLeft') prevImage();
+      if (e.key === 'ArrowRight') nextImage();
+      if (e.key === 'Escape') closeLightbox();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [lightboxOpen]);
 
   useEffect(() => {
     document.title = "Narben Camouflage München - Permanent Make-up by Anastasia Noska";
 
-    // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute("content", "Professionelle Narben Camouflage in München. Kaschierung von Schwangerschaftsstreifen, OP-Narben und Hautveränderungen durch Permanent Make-up.");
@@ -19,9 +88,20 @@ const Camouflage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background relative">
-      {/* Luxury video background */}
-      <VideoBackground />
+    <div className="min-h-screen relative">
+      {/* Fixed background image */}
+      <div className="fixed inset-0 z-0">
+        <img
+          src="/16.jpg"
+          alt="Background"
+          className="w-full h-full object-cover"
+          style={{
+            filter: "grayscale(100%) contrast(1.3)",
+            opacity: 0.5,
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background/70" />
+      </div>
 
       {/* Content */}
       <div className="relative z-10">
@@ -61,24 +141,28 @@ const Camouflage = () => {
         <section className="py-12 px-6">
           <div className="container max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="aspect-[4/3] overflow-hidden shadow-luxury group">
-                <img src="/12.jpg" alt="Camouflage Example 1" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-              </div>
-              <div className="aspect-[4/3] overflow-hidden shadow-luxury group">
-                <img src="/13.jpg" alt="Camouflage Example 2" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-              </div>
-              <div className="aspect-[4/3] overflow-hidden shadow-luxury group">
-                <img src="/14.PNG" alt="Camouflage Example 3" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-              </div>
-              <div className="aspect-[4/3] overflow-hidden shadow-luxury group">
-                <img src="/15.jpg" alt="Camouflage Example 4" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-              </div>
-              <div className="aspect-[4/3] overflow-hidden shadow-luxury group">
-                <img src="/16.jpg" alt="Camouflage Example 5" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-              </div>
-              <div className="aspect-[4/3] overflow-hidden shadow-luxury group">
-                <img src="/17.jpg" alt="Camouflage Example 6" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-              </div>
+              {galleryImages.map((image, index) => (
+                <div
+                  key={index}
+                  className="aspect-[4/3] overflow-hidden shadow-luxury group cursor-pointer relative"
+                  onClick={() => openLightbox(index)}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+
+                  {/* Zoom indicator */}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm rounded-full p-3">
+                      <svg className="w-6 h-6 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -152,6 +236,80 @@ const Camouflage = () => {
 
         <Footer />
       </div>
+
+      {/* Lightbox Modal */}
+      {lightboxOpen && (
+        <div
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
+          onClick={closeLightbox}
+        >
+          {/* Close button */}
+          <button
+            onClick={closeLightbox}
+            className="absolute top-4 right-4 z-50 text-white hover:text-accent transition-colors p-2"
+            aria-label="Close"
+          >
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          {/* Navigation arrows */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              prevImage();
+            }}
+            className="absolute left-4 z-50 text-white hover:text-accent transition-colors p-2"
+            aria-label="Previous"
+          >
+            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              nextImage();
+            }}
+            className="absolute right-4 z-50 text-white hover:text-accent transition-colors p-2"
+            aria-label="Next"
+          >
+            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          {/* Image counter */}
+          <div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-white text-sm">
+            {lightboxIndex + 1} / {galleryImages.length}
+          </div>
+
+          {/* Image container */}
+          <div
+            className="relative max-w-7xl max-h-[90vh] mx-auto px-16"
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
+            onClick={closeLightbox}
+          >
+            {!imageLoaded && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-12 h-12 border-4 border-accent border-t-transparent rounded-full animate-spin" />
+              </div>
+            )}
+            <img
+              src={galleryImages[lightboxIndex].src}
+              alt={galleryImages[lightboxIndex].alt}
+              className={`max-w-full max-h-[90vh] object-contain transition-opacity duration-300 ${
+                imageLoaded ? 'opacity-100' : 'opacity-0'
+              }`}
+              onLoad={() => setImageLoaded(true)}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

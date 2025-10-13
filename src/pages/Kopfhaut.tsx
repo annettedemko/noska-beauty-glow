@@ -278,7 +278,6 @@ const Kopfhaut = () => {
           {/* Image container with swipe support */}
           <div
             className="w-full h-full flex items-center justify-center p-4 sm:p-8 md:p-12"
-            onClick={(e) => e.stopPropagation()}
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
@@ -294,10 +293,11 @@ const Kopfhaut = () => {
               <img
                 src={galleryImages[lightboxIndex].src}
                 alt={galleryImages[lightboxIndex].alt}
-                className={`max-w-full max-h-[85vh] sm:max-h-[80vh] object-contain rounded-lg shadow-2xl transition-all duration-500 ${
+                className={`max-w-full max-h-[85vh] sm:max-h-[80vh] object-contain rounded-lg shadow-2xl transition-all duration-500 cursor-pointer ${
                   imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
                 }`}
                 onLoad={() => setImageLoaded(true)}
+                onClick={closeLightbox}
               />
             </div>
           </div>

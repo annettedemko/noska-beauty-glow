@@ -84,12 +84,13 @@ const Services = () => {
                   className="w-full h-full object-cover"
                   style={{
                     filter: "grayscale(100%) contrast(1.3)",
-                    opacity: 0.6,
-                    transform: "rotate(270deg) scale(1.7)",
+                    opacity: 0.35,
+                    transform: "rotate(270deg) scale(2.5)",
+                    objectFit: "cover",
                   }}
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background/70" />
+              <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/40 to-background/50" />
             </div>
 
             <div className="container max-w-4xl mx-auto relative z-10">
@@ -170,11 +171,11 @@ const Services = () => {
                   className="w-full h-full object-cover"
                   style={{
                     filter: "grayscale(100%) contrast(1.3)",
-                    opacity: 0.6,
+                    opacity: 0.4,
                   }}
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background/70" />
+              <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/30 to-background/40" />
             </div>
 
             <div className="container max-w-4xl mx-auto relative z-10">
@@ -261,11 +262,11 @@ const Services = () => {
                   className="w-full h-full object-cover"
                   style={{
                     filter: "grayscale(100%) contrast(1.3)",
-                    opacity: 0.6,
+                    opacity: 0.35,
                   }}
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background/70" />
+              <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/40 to-background/50" />
             </div>
 
             <div className="container max-w-4xl mx-auto relative z-10">
