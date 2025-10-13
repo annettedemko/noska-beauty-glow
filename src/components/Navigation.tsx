@@ -219,13 +219,13 @@ export const Navigation = () => {
               </button>
 
               {/* Mobile Dropdown Items */}
-              <div className={`overflow-hidden transition-all duration-300 ${mobileServicesOpen ? 'max-h-96 mt-3' : 'max-h-0'}`}>
-                <div className="flex flex-col gap-3 pl-4 border-l-2 border-accent/30">
+              <div className={`overflow-hidden transition-all duration-300 ${mobileServicesOpen ? 'max-h-96 mt-4' : 'max-h-0'}`}>
+                <div className="flex flex-col gap-4 pl-4 border-l-2 border-accent/30">
                   {services.map((service, index) => (
                     <button
                       key={index}
                       onClick={() => navigateToService(service.path)}
-                      className="text-left text-xs font-sans tracking-[0.15em] hover:text-accent transition-all duration-300"
+                      className="text-left text-sm font-sans tracking-[0.1em] hover:text-accent transition-all duration-300 leading-relaxed py-1"
                     >
                       {service.name}
                     </button>
