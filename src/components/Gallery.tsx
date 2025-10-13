@@ -76,8 +76,8 @@ export const Gallery = () => {
   // Gallery images - акцент на Trichopigmentierung и камуфляж шрамов (первые в списке!)
   const galleryImages = [
     // Trichopigmentierung - ГЛАВНОЕ!
-    { src: "/8.jpg", alt: "Kopfhaut Pigmentierung", category: "Trichopigmentierung" },
     { src: "/9.jpg", alt: "Kopfhaut Pigmentierung", category: "Trichopigmentierung" },
+    { src: "/8.jpg", alt: "Kopfhaut Pigmentierung", category: "Trichopigmentierung" },
     // Камуфляж шрамов - ГЛАВНОЕ!
     { src: "/14.PNG", alt: "Narben Camouflage", category: "Camouflage" },
     { src: "/15.jpg", alt: "Narben Camouflage", category: "Camouflage" },
@@ -126,9 +126,9 @@ export const Gallery = () => {
           }}
           className="w-full"
         >
-          <CarouselContent className="-ml-2 md:-ml-4">
+          <CarouselContent className="-ml-1 md:-ml-4">
             {galleryImages.map((image, index) => (
-              <CarouselItem key={index} className="pl-2 md:pl-4 basis-[95%] sm:basis-[95%] md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={index} className="pl-1 md:pl-4 basis-full sm:basis-full md:basis-1/2 lg:basis-1/3">
                 <div
                   className="group relative aspect-square overflow-hidden shadow-luxury cursor-pointer"
                   onClick={() => openLightbox(index)}
@@ -234,7 +234,10 @@ export const Gallery = () => {
                   imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
                 }`}
                 onLoad={() => setImageLoaded(true)}
-                onClick={closeLightbox}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  closeLightbox();
+                }}
               />
             </div>
           </div>
