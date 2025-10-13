@@ -121,8 +121,8 @@ const Camouflage = () => {
               <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver" />
             </div>
 
-            <h1 className="font-serif text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-center mb-8 tracking-wide font-bold px-2 leading-tight">
-              <span className="inline-block">{t("camouflageTitle")}</span>
+            <h1 className="font-serif text-xl sm:text-2xl md:text-5xl lg:text-6xl xl:text-7xl text-center mb-8 tracking-wide font-bold px-2 leading-tight">
+              <span className="inline-block whitespace-nowrap">{t("camouflageTitle")}</span>
             </h1>
             <p className="text-center text-base sm:text-lg md:text-xl lg:text-2xl font-light mb-12 tracking-wide text-muted-foreground max-w-3xl mx-auto px-4">
               {t("camouflageDesc")}

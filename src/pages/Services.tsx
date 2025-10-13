@@ -167,7 +167,7 @@ const Services = () => {
                   style={{
                     filter: "grayscale(100%) contrast(1.3)",
                     opacity: 0.8,
-                    objectPosition: "70% center",
+                    objectPosition: "0% center",
                   }}
                 />
               </div>
