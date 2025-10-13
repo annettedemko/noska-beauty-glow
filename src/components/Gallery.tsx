@@ -92,7 +92,7 @@ export const Gallery = () => {
     { src: "/5.jpg", alt: "Lippen", category: "Lippen" },
     { src: "/6.jpg", alt: "Lippen", category: "Lippen" },
     { src: "/24.jpg", alt: "Lippen", category: "Lippen" },
-    { src: "/25.jpg", alt: "Lippen", category: "Lippen" },
+    { src: "/25.jpeg", alt: "Lippen", category: "Lippen" },
   ];
 
   return (

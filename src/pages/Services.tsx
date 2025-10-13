@@ -36,7 +36,7 @@ const Services = () => {
     { src: "/5.jpg", alt: "Lippen", category: "Lippen" },
     { src: "/6.jpg", alt: "Lippen", category: "Lippen" },
     { src: "/24.jpg", alt: "Lippen", category: "Lippen" },
-    { src: "/25.jpg", alt: "Lippen", category: "Lippen" },
+    { src: "/25.jpeg", alt: "Lippen", category: "Lippen" },
   ];
 
   const openLightbox = (index: number) => {
@@ -247,7 +247,7 @@ const Services = () => {
             <div className="absolute inset-0 pointer-events-none z-0">
               <div className="absolute inset-0">
                 <img
-                  src="/25.jpg"
+                  src="/25.jpeg"
                   alt="Lips Background"
                   className="w-full h-full object-cover scale-110 md:scale-100"
                   style={{
