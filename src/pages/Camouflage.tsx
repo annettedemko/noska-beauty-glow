@@ -121,8 +121,8 @@ const Camouflage = () => {
               <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver" />
             </div>
 
-            <h1 className="font-serif text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-center mb-8 tracking-wide font-bold break-words px-2">
-              {t("camouflageTitle")}
+            <h1 className="font-serif text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-center mb-8 tracking-wide font-bold px-2 leading-tight">
+              <span className="inline-block">{t("camouflageTitle")}</span>
             </h1>
             <p className="text-center text-base sm:text-lg md:text-xl lg:text-2xl font-light mb-12 tracking-wide text-muted-foreground max-w-3xl mx-auto px-4">
               {t("camouflageDesc")}
@@ -240,30 +240,30 @@ const Camouflage = () => {
       {/* Lightbox Modal */}
       {lightboxOpen && (
         <div
-          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
+          className="fixed inset-0 z-50 bg-black/98 backdrop-blur-sm flex items-center justify-center animate-in fade-in duration-300"
           onClick={closeLightbox}
         >
           {/* Close button */}
           <button
             onClick={closeLightbox}
-            className="absolute top-4 right-4 z-50 text-white hover:text-accent transition-colors p-2"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-white/80 hover:text-white bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full transition-all duration-300 z-50 group"
             aria-label="Close"
           >
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
 
-          {/* Navigation arrows */}
+          {/* Navigation buttons - Hidden on mobile, visible on desktop */}
           <button
             onClick={(e) => {
               e.stopPropagation();
               prevImage();
             }}
-            className="absolute left-4 z-50 text-white hover:text-accent transition-colors p-2"
+            className="hidden md:flex absolute left-4 lg:left-8 w-12 h-12 lg:w-14 lg:h-14 items-center justify-center text-white/80 hover:text-white bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full transition-all duration-300 z-50 group hover:scale-110"
             aria-label="Previous"
           >
-            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 lg:w-8 lg:h-8 group-hover:-translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
@@ -273,40 +273,54 @@ const Camouflage = () => {
               e.stopPropagation();
               nextImage();
             }}
-            className="absolute right-4 z-50 text-white hover:text-accent transition-colors p-2"
+            className="hidden md:flex absolute right-4 lg:right-8 w-12 h-12 lg:w-14 lg:h-14 items-center justify-center text-white/80 hover:text-white bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full transition-all duration-300 z-50 group hover:scale-110"
             aria-label="Next"
           >
-            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 lg:w-8 lg:h-8 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
 
-          {/* Image counter */}
-          <div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-white text-sm">
-            {lightboxIndex + 1} / {galleryImages.length}
-          </div>
-
-          {/* Image container */}
+          {/* Image container with swipe support */}
           <div
-            className="relative max-w-7xl max-h-[90vh] mx-auto px-16"
+            className="w-full h-full flex items-center justify-center p-4 sm:p-8 md:p-12"
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
-            onClick={closeLightbox}
           >
-            {!imageLoaded && (
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-12 h-12 border-4 border-accent border-t-transparent rounded-full animate-spin" />
-              </div>
-            )}
-            <img
-              src={galleryImages[lightboxIndex].src}
-              alt={galleryImages[lightboxIndex].alt}
-              className={`max-w-full max-h-[90vh] object-contain transition-opacity duration-300 ${
-                imageLoaded ? 'opacity-100' : 'opacity-0'
-              }`}
-              onLoad={() => setImageLoaded(true)}
-            />
+            <div className="relative max-w-7xl max-h-full">
+              {/* Loading spinner */}
+              {!imageLoaded && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-12 h-12 border-4 border-white/20 border-t-white rounded-full animate-spin"></div>
+                </div>
+              )}
+
+              <img
+                src={galleryImages[lightboxIndex].src}
+                alt={galleryImages[lightboxIndex].alt}
+                className={`max-w-full max-h-[85vh] sm:max-h-[80vh] object-contain rounded-lg shadow-2xl transition-all duration-500 cursor-pointer ${
+                  imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+                }`}
+                onLoad={() => setImageLoaded(true)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  closeLightbox();
+                }}
+              />
+            </div>
+          </div>
+
+          {/* Counter */}
+          <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 z-50">
+            <div className="text-white/60 text-xs sm:text-sm font-light">
+              {lightboxIndex + 1} / {galleryImages.length}
+            </div>
+          </div>
+
+          {/* Swipe indicator for mobile */}
+          <div className="md:hidden absolute bottom-16 left-1/2 transform -translate-x-1/2 text-white/40 text-xs animate-pulse">
+            ← Swipe to navigate →
           </div>
         </div>
       )}
