@@ -89,18 +89,24 @@ const Camouflage = () => {
 
   return (
     <div className="min-h-screen relative">
-      {/* Fixed background image */}
+      {/* Luxury video background */}
       <div className="fixed inset-0 z-0">
-        <img
-          src="/16.jpg"
-          alt="Background"
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
           style={{
             filter: "grayscale(100%) contrast(1.3)",
-            opacity: 0.7,
+            opacity: 0.8,
           }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/40 to-background/50" />
+        >
+          <source src="/video2.mp4" type="video/mp4" />
+        </video>
+        {/* Elegant overlay gradients */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/30 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/20 via-transparent to-background/20" />
       </div>
 
       {/* Content */}
@@ -121,8 +127,8 @@ const Camouflage = () => {
               <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver" />
             </div>
 
-            <h1 className="font-serif text-xl sm:text-2xl md:text-5xl lg:text-6xl xl:text-7xl text-center mb-8 tracking-wide font-bold px-2 leading-tight">
-              <span className="inline-block whitespace-nowrap">{t("camouflageTitle")}</span>
+            <h1 className="font-serif text-2xl sm:text-3xl md:text-6xl lg:text-7xl xl:text-8xl text-center mb-8 tracking-wide font-bold px-4 leading-relaxed break-words max-w-5xl mx-auto">
+              {t("camouflageTitle")}
             </h1>
             <p className="text-center text-base sm:text-lg md:text-xl lg:text-2xl font-light mb-12 tracking-wide text-muted-foreground max-w-3xl mx-auto px-4">
               {t("camouflageDesc")}
