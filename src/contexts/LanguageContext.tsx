@@ -119,7 +119,7 @@ const translations = {
     camouflageSuitable2: "Narben von Operationen (z.B. Kaiserschnitt)",
     camouflageSuitable3: "Brust-OP Narben",
     camouflageSuitable4: "Andere Hautveränderungen",
-    camouflagePrice: "Preis: 230 €",
+    camouflagePrice: "Preis: ab 200 €",
     removerTitle: "Pigmententfernung mit Remover",
     removerDesc: "Schonende Entfernung von Permanent Make-up ohne Laser",
     removerIntro: "Mit der Zeit kann sich die Farbe eines Permanent Make-ups verändern oder nicht mehr zum aktuellen Stil passen. Die Pigmententfernung mit Remover ist eine schonende Methode, um unerwünschte oder ungleichmäßige Pigmente aus der Haut zu entfernen – ohne Laser und ohne Narbenbildung.",
@@ -148,7 +148,7 @@ const translations = {
     browsAdv1: "Natürliches Ergebnis, das nicht aufgemalt wirkt",
     browsAdv2: "Perfekt für alle Hauttypen – auch fettige Haut",
     browsAdv3: "Hält 1–3 Jahre, je nach Hauttyp und Pflege",
-    browsPrice: "Preis: 230 €",
+    browsPrice: "Preis: 180 €",
 
     // Lips
     lipsTitle: "Aquarell / Velvet / Ombre Lippen",
@@ -164,7 +164,7 @@ const translations = {
     lipsAdv1: "Optisch vollere und symmetrischere Lippen",
     lipsAdv2: "Natürlicher Kussmund ohne Lippenstift",
     lipsAdv3: "Langanhaltende Farbe für 2–4 Jahre",
-    lipsPrice: "Preis: 230 €",
+    lipsPrice: "Preis: 200 €",
 
     // Touchup
     touchupTitle: "Nachkorrektur",
@@ -289,7 +289,7 @@ const translations = {
     camouflageSuitable2: "Шрамов от операций (например, кесарево сечение)",
     camouflageSuitable3: "Шрамов от операций на груди",
     camouflageSuitable4: "Других изменений кожи",
-    camouflagePrice: "Цена: 230 €",
+    camouflagePrice: "Цена: от 200 €",
     removerTitle: "Удаление пигмента с помощью ремувера",
     removerDesc: "Щадящее удаление перманентного макияжа без лазера",
     removerIntro: "Со временем цвет перманентного макияжа может измениться или перестать соответствовать актуальному стилю. Удаление пигмента с помощью ремувера – это щадящий метод удаления нежелательных или неравномерных пигментов из кожи – без лазера и без образования рубцов.",
@@ -318,7 +318,7 @@ const translations = {
     browsAdv1: "Естественный результат, не выглядит нарисованным",
     browsAdv2: "Идеально для всех типов кожи – даже жирной",
     browsAdv3: "Держится 1-3 года в зависимости от типа кожи и ухода",
-    browsPrice: "Цена: 230 €",
+    browsPrice: "Цена: 180 €",
 
     // Lips
     lipsTitle: "Акварельные / Бархатные / Омбре губы",
@@ -334,7 +334,7 @@ const translations = {
     lipsAdv1: "Визуально более полные и симметричные губы",
     lipsAdv2: "Естественные губы без помады",
     lipsAdv3: "Стойкий цвет на 2-4 года",
-    lipsPrice: "Цена: 230 €",
+    lipsPrice: "Цена: 200 €",
 
     // Touchup
     touchupTitle: "Коррекция",
