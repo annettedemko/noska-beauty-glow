@@ -1,10 +1,17 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 
 const Datenschutz = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        titleDE="Datenschutzerklärung - Permanent Make-up München | Anastasia Noska"
+        titleRU="Datenschutzerklärung - Перманентный макияж Мюнхен | Анастасия Носка"
+        descriptionDE="Datenschutzerklärung und Informationen zum Schutz Ihrer persönlichen Daten bei Anastasia Noska, Permanent Make-up München."
+        descriptionRU="Политика конфиденциальности и информация о защите ваших персональных данных у Анастасии Носка, перманентный макияж Мюнхен."
+      />
       <Navigation />
 
       <main className="pt-24">

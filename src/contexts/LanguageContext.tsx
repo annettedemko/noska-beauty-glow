@@ -1,4 +1,5 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, ReactNode, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 type Language = "DE" | "RU";
 
@@ -354,10 +355,35 @@ const translations = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
+  const location = useLocation();
+  const navigate = useNavigate();
   const [language, setLanguage] = useState<Language>("DE");
 
+  // Detect language from URL on mount and route change
+  useEffect(() => {
+    const pathLang = location.pathname.startsWith("/ru") ? "RU" : "DE";
+    setLanguage(pathLang);
+
+    // Update HTML lang attribute
+    document.documentElement.lang = pathLang.toLowerCase();
+  }, [location.pathname]);
+
   const toggleLanguage = () => {
-    setLanguage((prev) => (prev === "DE" ? "RU" : "DE"));
+    const newLang = language === "DE" ? "RU" : "DE";
+    const currentPath = location.pathname;
+
+    // Replace language prefix in URL
+    let newPath: string;
+    if (currentPath.startsWith("/de")) {
+      newPath = currentPath.replace("/de", "/ru");
+    } else if (currentPath.startsWith("/ru")) {
+      newPath = currentPath.replace("/ru", "/de");
+    } else {
+      // Fallback for unexpected paths
+      newPath = `/${newLang.toLowerCase()}`;
+    }
+
+    navigate(newPath + location.hash);
   };
 
   const t = (key: string): string => {

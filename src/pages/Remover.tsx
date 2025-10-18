@@ -2,6 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { VideoBackground } from "@/components/VideoBackground";
+import { SEOHead } from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -22,6 +23,15 @@ const Remover = () => {
 
   return (
     <div className="min-h-screen bg-background relative">
+      <SEOHead
+        titleDE="PMU Remover München - Permanent Make-up entfernen ohne Laser | Anastasia Noska"
+        titleRU="Ремувер ПМУ Мюнхен - удаление перманентного макияжа без лазера | Анастасия Носка"
+        descriptionDE="Schonende Entfernung von Permanent Make-up mit Remover ohne Laser in München. Korrektur von unerwünschten PMU-Pigmenten. Preis auf Anfrage. Termin bei Anastasia Noska buchen."
+        descriptionRU="Щадящее удаление перманентного макияжа ремувером без лазера в Мюнхене. Коррекция нежелательных пигментов ПМУ. Цена по запросу. Записаться к Анастасии Носка."
+        keywordsDE="Remover München, PMU entfernen München, Permanent Make-up entfernen München, PMU Korrektur München, Remover ohne Laser München, Pigmententfernung München"
+        keywordsRU="Ремувер Мюнхен, Удаление ПМУ Мюнхен, Удаление перманентного макияжа Мюнхен, Коррекция ПМУ Мюнхен, Ремувер без лазера Мюнхен, Удаление пигмента Мюнхен"
+      />
+
       {/* Luxury video background */}
       <VideoBackground />
 

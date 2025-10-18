@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const { t, language, toggleLanguage } = useLanguage();
+  const langPrefix = language === "DE" ? "/de" : "/ru";
 
   return (
     <footer className="relative py-16 px-6 border-t border-silver/20 bg-gradient-to-b from-background to-pearl/15 overflow-hidden">
@@ -33,11 +34,11 @@ export const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-8 pb-8 border-b border-silver/20">
           <div className="flex gap-6 sm:gap-10 text-xs sm:text-sm uppercase tracking-[0.1em] sm:tracking-[0.2em]">
-            <Link to="/impressum" className="hover:text-accent transition-colors duration-300 relative group">
+            <Link to={`${langPrefix}/impressum`} className="hover:text-accent transition-colors duration-300 relative group">
               {t("impressum")}
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent group-hover:w-full transition-all duration-300" />
             </Link>
-            <Link to="/datenschutz" className="hover:text-accent transition-colors duration-300 relative group">
+            <Link to={`${langPrefix}/datenschutz`} className="hover:text-accent transition-colors duration-300 relative group">
               {t("privacy")}
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent group-hover:w-full transition-all duration-300" />
             </Link>

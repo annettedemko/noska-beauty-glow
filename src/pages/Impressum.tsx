@@ -1,10 +1,17 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 
 const Impressum = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        titleDE="Impressum - Permanent Make-up München | Anastasia Noska"
+        titleRU="Impressum - Перманентный макияж Мюнхен | Анастасия Носка"
+        descriptionDE="Impressum und rechtliche Angaben von Anastasia Noska, Permanent Make-up Spezialistin in München."
+        descriptionRU="Impressum и юридическая информация Анастасии Носка, специалиста по перманентному макияжу в Мюнхене."
+      />
       <Navigation />
 
       <main className="pt-24">

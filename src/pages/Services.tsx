@@ -2,6 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { VideoBackground } from "@/components/VideoBackground";
+import { SEOHead } from "@/components/SEOHead";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -124,6 +125,15 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-background relative">
+      <SEOHead
+        titleDE="Permanent Make-up Services München - by Anastasia Noska"
+        titleRU="Услуги перманентного макияжа в Мюнхене - от Анастасии Носка"
+        descriptionDE="Professionelle Permanent Make-up Services in München: Powder Brows (180€), Aquarell Lippen (200€), Nachkorrekturen (100€). Premium Qualität von Anastasia Noska."
+        descriptionRU="Профессиональные услуги перманентного макияжа в Мюнхене: пудровые брови (180€), акварельные губы (200€), коррекция (100€). Премиум качество от Анастасии Носка."
+        keywordsDE="Powder Brows München, Ombre Brows München, Aquarell Lippen München, Velvet Lips München, Nachkorrektur PMU München, Permanent Make-up Preise München"
+        keywordsRU="Пудровые брови Мюнхен, Омбре брови Мюнхен, Акварельные губы Мюнхен, Бархатные губы Мюнхен, Коррекция ПМУ Мюнхен, Цены перманентный макияж Мюнхен"
+      />
+
       {/* Luxury video background */}
       <VideoBackground />
 

@@ -1,6 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -89,6 +90,15 @@ const Camouflage = () => {
 
   return (
     <div className="min-h-screen relative">
+      <SEOHead
+        titleDE="Camouflage München - Dehnungsstreifen & Narben kaschieren | Anastasia Noska"
+        titleRU="Камуфляж Мюнхен - маскировка растяжек и шрамов | Анастасия Носка"
+        descriptionDE="Professionelles Camouflage von Dehnungsstreifen, Schwangerschaftsstreifen, OP-Narben und Hautveränderungen in München. Preis ab 200€. Natürliche Ergebnisse von Anastasia Noska."
+        descriptionRU="Профессиональный камуфляж растяжек, шрамов от беременности, послеоперационных шрамов и изменений кожи в Мюнхене. Цена от 200€. Естественные результаты от Анастасии Носка."
+        keywordsDE="Camouflage München, Dehnungsstreifen kaschieren München, Schwangerschaftsstreifen entfernen München, Narben kaschieren München, Kaiserschnitt Narbe München, Brust OP Narbe München"
+        keywordsRU="Камуфляж Мюнхен, Маскировка растяжек Мюнхен, Удаление растяжек от беременности Мюнхен, Маскировка шрамов Мюнхен, Шрам от кесарева сечения Мюнхен, Шрам от операции на груди Мюнхен"
+      />
+
       {/* Luxury video background */}
       <div className="fixed inset-0 z-0">
         <video

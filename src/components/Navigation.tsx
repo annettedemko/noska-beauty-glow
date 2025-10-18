@@ -14,9 +14,12 @@ export const Navigation = () => {
 
   const scrollToSection = (id: string) => {
     setMobileMenuOpen(false); // Close mobile menu
+    const langPrefix = language === "DE" ? "/de" : "/ru";
+    const homePath = langPrefix;
+
     // If not on home page, navigate to home first
-    if (location.pathname !== "/") {
-      navigate("/");
+    if (!location.pathname.match(/^\/(de|ru)\/?$/)) {
+      navigate(homePath);
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
@@ -32,7 +35,8 @@ export const Navigation = () => {
   };
 
   const goToHome = () => {
-    navigate("/");
+    const langPrefix = language === "DE" ? "/de" : "/ru";
+    navigate(langPrefix);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -70,13 +74,14 @@ export const Navigation = () => {
     };
   }, []);
 
+  const langPrefix = language === "DE" ? "/de" : "/ru";
   const services = [
-    { name: t("scalpPigmentation"), path: "/kopfhaut-muenchen" },
-    { name: t("scarCamouflage"), path: "/camouflage-muenchen" },
-    { name: t("powderBrows"), path: "/services-muenchen#brows" },
-    { name: t("aquarellLips"), path: "/services-muenchen#lips" },
-    { name: t("touchup"), path: "/services-muenchen#touchup" },
-    { name: t("remover"), path: "/remover-muenchen" },
+    { name: t("scalpPigmentation"), path: `${langPrefix}/kopfhaut-muenchen` },
+    { name: t("scarCamouflage"), path: `${langPrefix}/camouflage-muenchen` },
+    { name: t("powderBrows"), path: `${langPrefix}/services-muenchen#brows` },
+    { name: t("aquarellLips"), path: `${langPrefix}/services-muenchen#lips` },
+    { name: t("touchup"), path: `${langPrefix}/services-muenchen#touchup` },
+    { name: t("remover"), path: `${langPrefix}/remover-muenchen` },
   ];
 
   return (

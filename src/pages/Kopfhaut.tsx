@@ -1,6 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -89,6 +90,15 @@ const Kopfhaut = () => {
 
   return (
     <div className="min-h-screen relative">
+      <SEOHead
+        titleDE="Kopfhaut Pigmentierung München - Trichopigmentierung | Anastasia Noska"
+        titleRU="Пигментация кожи головы Мюнхен - Трихопигментация | Анастасия Носка"
+        descriptionDE="Professionelle Kopfhaut Pigmentierung (Trichopigmentierung) in München für Männer und Frauen. Bei Haarausfall, Geheimratsecken, Narben. Preis: 300€. Jetzt Termin buchen!"
+        descriptionRU="Профессиональная пигментация кожи головы (трихопигментация) в Мюнхене для мужчин и женщин. При выпадении волос, залысинах, шрамах. Цена: 300€. Запишитесь сейчас!"
+        keywordsDE="Kopfhaut Pigmentierung München, Trichopigmentierung München, Scalp Micropigmentation München, SMP München, Haarausfall Lösung München, Geheimratsecken kaschieren München"
+        keywordsRU="Пигментация кожи головы Мюнхен, Трихопигментация Мюнхен, SMP Мюнхен, Решение выпадения волос Мюнхен, Маскировка залысин Мюнхен"
+      />
+
       {/* 🔳 Monochrome image background */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <div className="absolute inset-0">
