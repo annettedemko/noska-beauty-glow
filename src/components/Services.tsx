@@ -2,7 +2,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "react-router-dom";
 
 export const Services = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const langPrefix = language === "DE" ? "/de" : "/ru";
 
   const services = [
     // ГЛАВНЫЕ УСЛУГИ - акцент на них!
@@ -10,43 +11,43 @@ export const Services = () => {
       name: t("scalpPigmentation"),
       price: t("price300"),
       isSpecial: true,
-      link: "/kopfhaut-muenchen",
+      link: `${langPrefix}/kopfhaut-muenchen`,
       featured: true
     },
     {
       name: t("scarCamouflage"),
       price: t("price200"),
       isSpecial: true,
-      link: "/camouflage-muenchen",
+      link: `${langPrefix}/camouflage-muenchen`,
       featured: true
     },
     // Остальные услуги
     {
       name: t("powderBrows"),
-      price: t("price200"),
+      price: t("price180"),
       isSpecial: true,
-      link: "/services-muenchen#brows",
+      link: `${langPrefix}/services-muenchen#brows`,
       featured: false
     },
     {
       name: t("aquarellLips"),
       price: t("price200"),
       isSpecial: true,
-      link: "/services-muenchen#lips",
+      link: `${langPrefix}/services-muenchen#lips`,
       featured: false
     },
     {
       name: t("touchup"),
       price: t("price100"),
       isSpecial: true,
-      link: "/services-muenchen#touchup",
+      link: `${langPrefix}/services-muenchen#touchup`,
       featured: false
     },
     {
       name: t("remover"),
       price: t("priceRequest"),
       isSpecial: true,
-      link: "/remover-muenchen",
+      link: `${langPrefix}/remover-muenchen`,
       featured: false
     },
   ];
