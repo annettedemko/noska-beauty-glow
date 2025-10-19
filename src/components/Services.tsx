@@ -16,7 +16,7 @@ export const Services = () => {
     },
     {
       name: t("scarCamouflage"),
-      price: t("price200"),
+      price: t("price200From"),
       isSpecial: true,
       link: `${langPrefix}/camouflage-muenchen`,
       featured: true
