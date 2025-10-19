@@ -1,148 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- Home Page -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home Page (DE) -->
   <url>
     <loc>https://noskabeautyglow.com/</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://noskabeautyglow.com/" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://noskabeautyglow.com/ru" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://noskabeautyglow.com/" />
     <lastmod>2025-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- Home Page -->
+  <!-- Home Page (RU) -->
   <url>
     <loc>https://noskabeautyglow.com/ru</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://noskabeautyglow.com/" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://noskabeautyglow.com/ru" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://noskabeautyglow.com/" />
     <lastmod>2025-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Services Page -->
+  <!-- Services Page (DE) -->
   <url>
     <loc>https://noskabeautyglow.com/services-muenchen</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://noskabeautyglow.com/services-muenchen" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://noskabeautyglow.com/ru/services-muenchen" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://noskabeautyglow.com/services-muenchen" />
     <lastmod>2025-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  <!-- Services Page -->
+  <!-- Services Page (RU) -->
   <url>
     <loc>https://noskabeautyglow.com/ru/services-muenchen</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://noskabeautyglow.com/services-muenchen" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://noskabeautyglow.com/ru/services-muenchen" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://noskabeautyglow.com/services-muenchen" />
     <lastmod>2025-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Kopfhaut Pigmentierung -->
+  <!-- Kopfhaut Pigmentierung (DE) -->
   <url>
     <loc>https://noskabeautyglow.com/kopfhaut-muenchen</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://noskabeautyglow.com/kopfhaut-muenchen" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://noskabeautyglow.com/ru/kopfhaut-muenchen" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://noskabeautyglow.com/kopfhaut-muenchen" />
     <lastmod>2025-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Kopfhaut Pigmentierung -->
+  <!-- Kopfhaut Pigmentierung (RU) -->
   <url>
     <loc>https://noskabeautyglow.com/ru/kopfhaut-muenchen</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://noskabeautyglow.com/kopfhaut-muenchen" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://noskabeautyglow.com/ru/kopfhaut-muenchen" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://noskabeautyglow.com/kopfhaut-muenchen" />
     <lastmod>2025-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Camouflage -->
+  <!-- Camouflage (DE) -->
   <url>
     <loc>https://noskabeautyglow.com/camouflage-muenchen</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://noskabeautyglow.com/camouflage-muenchen" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://noskabeautyglow.com/ru/camouflage-muenchen" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://noskabeautyglow.com/camouflage-muenchen" />
     <lastmod>2025-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Camouflage -->
+  <!-- Camouflage (RU) -->
   <url>
     <loc>https://noskabeautyglow.com/ru/camouflage-muenchen</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://noskabeautyglow.com/camouflage-muenchen" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://noskabeautyglow.com/ru/camouflage-muenchen" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://noskabeautyglow.com/camouflage-muenchen" />
     <lastmod>2025-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Remover -->
+  <!-- Remover (DE) -->
   <url>
     <loc>https://noskabeautyglow.com/remover-muenchen</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://noskabeautyglow.com/remover-muenchen" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://noskabeautyglow.com/ru/remover-muenchen" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://noskabeautyglow.com/remover-muenchen" />
     <lastmod>2025-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <!-- Remover -->
+  <!-- Remover (RU) -->
   <url>
     <loc>https://noskabeautyglow.com/ru/remover-muenchen</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://noskabeautyglow.com/remover-muenchen" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://noskabeautyglow.com/ru/remover-muenchen" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://noskabeautyglow.com/remover-muenchen" />
     <lastmod>2025-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Impressum -->
+  <!-- Impressum (DE) -->
   <url>
     <loc>https://noskabeautyglow.com/impressum</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://noskabeautyglow.com/impressum" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://noskabeautyglow.com/ru/impressum" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://noskabeautyglow.com/impressum" />
     <lastmod>2025-10-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  <!-- Impressum -->
+  <!-- Impressum (RU) -->
   <url>
     <loc>https://noskabeautyglow.com/ru/impressum</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://noskabeautyglow.com/impressum" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://noskabeautyglow.com/ru/impressum" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://noskabeautyglow.com/impressum" />
     <lastmod>2025-10-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
-  <!-- Datenschutz -->
+  <!-- Datenschutz (DE) -->
   <url>
     <loc>https://noskabeautyglow.com/datenschutz</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://noskabeautyglow.com/datenschutz" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://noskabeautyglow.com/ru/datenschutz" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://noskabeautyglow.com/datenschutz" />
     <lastmod>2025-10-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-  <!-- Datenschutz -->
+  <!-- Datenschutz (RU) -->
   <url>
     <loc>https://noskabeautyglow.com/ru/datenschutz</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://noskabeautyglow.com/datenschutz" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://noskabeautyglow.com/ru/datenschutz" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://noskabeautyglow.com/datenschutz" />
     <lastmod>2025-10-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
