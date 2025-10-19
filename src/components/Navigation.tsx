@@ -14,11 +14,10 @@ export const Navigation = () => {
 
   const scrollToSection = (id: string) => {
     setMobileMenuOpen(false); // Close mobile menu
-    const langPrefix = language === "DE" ? "/de" : "/ru";
-    const homePath = langPrefix;
+    const homePath = language === "DE" ? "/" : "/ru";
 
     // If not on home page, navigate to home first
-    if (!location.pathname.match(/^\/(de|ru)\/?$/)) {
+    if (!location.pathname.match(/^\/(ru)?\/?$/)) {
       navigate(homePath);
       setTimeout(() => {
         const element = document.getElementById(id);
@@ -35,8 +34,8 @@ export const Navigation = () => {
   };
 
   const goToHome = () => {
-    const langPrefix = language === "DE" ? "/de" : "/ru";
-    navigate(langPrefix);
+    const homePath = language === "DE" ? "/" : "/ru";
+    navigate(homePath);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -74,7 +73,7 @@ export const Navigation = () => {
     };
   }, []);
 
-  const langPrefix = language === "DE" ? "/de" : "/ru";
+  const langPrefix = language === "DE" ? "" : "/ru";
   const services = [
     { name: t("scalpPigmentation"), path: `${langPrefix}/kopfhaut-muenchen` },
     { name: t("scarCamouflage"), path: `${langPrefix}/camouflage-muenchen` },

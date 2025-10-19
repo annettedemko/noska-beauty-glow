@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Services = () => {
   const { t, language } = useLanguage();
-  const langPrefix = language === "DE" ? "/de" : "/ru";
+  const langPrefix = language === "DE" ? "" : "/ru";
 
   const services = [
     // ГЛАВНЫЕ УСЛУГИ - акцент на них!

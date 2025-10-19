@@ -363,6 +363,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
   // Detect language from URL on mount and route change
   useEffect(() => {
+    // Russian has /ru prefix, German has no prefix
     const pathLang = location.pathname.startsWith("/ru") ? "RU" : "DE";
     setLanguage(pathLang);
 
@@ -374,15 +375,18 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     const newLang = language === "DE" ? "RU" : "DE";
     const currentPath = location.pathname;
 
-    // Replace language prefix in URL
+    // Toggle between German (no prefix) and Russian (/ru prefix)
     let newPath: string;
-    if (currentPath.startsWith("/de")) {
-      newPath = currentPath.replace("/de", "/ru");
-    } else if (currentPath.startsWith("/ru")) {
-      newPath = currentPath.replace("/ru", "/de");
+    if (currentPath.startsWith("/ru")) {
+      // Russian → German: remove /ru prefix
+      newPath = currentPath.replace("/ru", "") || "/";
     } else {
-      // Fallback for unexpected paths
-      newPath = `/${newLang.toLowerCase()}`;
+      // German → Russian: add /ru prefix
+      if (currentPath === "/") {
+        newPath = "/ru";
+      } else {
+        newPath = `/ru${currentPath}`;
+      }
     }
 
     navigate(newPath + location.hash);

@@ -34,7 +34,7 @@
   "background_color": "#FEFEFE",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "start_url": "/de",
+  "start_url": "/",
   "scope": "/",
   "categories": [
     "beauty",
@@ -47,7 +47,7 @@
       "name": "Termin buchen",
       "short_name": "Buchen",
       "description": "Online Termin buchen über Treatwell",
-      "url": "/de#contact",
+      "url": "/#contact",
       "icons": [
         {
           "src": "/logo A.png",
@@ -59,7 +59,7 @@
       "name": "Services",
       "short_name": "Leistungen",
       "description": "Alle Permanent Make-up Services",
-      "url": "/de/services-muenchen",
+      "url": "/services-muenchen",
       "icons": [
         {
           "src": "/logo A.png",
@@ -71,7 +71,7 @@
       "name": "Portfolio",
       "short_name": "Galerie",
       "description": "Meine Arbeiten ansehen",
-      "url": "/de#gallery",
+      "url": "/#gallery",
       "icons": [
         {
           "src": "/logo A.png",

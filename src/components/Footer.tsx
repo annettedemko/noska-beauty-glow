@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const { t, language, toggleLanguage } = useLanguage();
-  const langPrefix = language === "DE" ? "/de" : "/ru";
+  const langPrefix = language === "DE" ? "" : "/ru";
 
   return (
     <footer className="relative py-16 px-6 border-t border-silver/20 bg-gradient-to-b from-background to-pearl/15 overflow-hidden">

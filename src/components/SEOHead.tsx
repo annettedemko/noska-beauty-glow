@@ -40,9 +40,10 @@ export const SEOHead = ({
   const canonicalUrl = `${baseUrl}${location.pathname}`;
 
   // Build alternate URLs
-  const pathWithoutLang = location.pathname.replace(/^\/(de|ru)/, "");
-  const deUrl = `${baseUrl}/de${pathWithoutLang}`;
-  const ruUrl = `${baseUrl}/ru${pathWithoutLang}`;
+  // German has no prefix, Russian has /ru prefix
+  const pathWithoutLang = location.pathname.replace(/^\/ru/, "");
+  const deUrl = `${baseUrl}${pathWithoutLang || "/"}`;
+  const ruUrl = `${baseUrl}/ru${pathWithoutLang || ""}`;
 
   useEffect(() => {
     // Update title

@@ -86,17 +86,18 @@ const DEFAULT_LANG = 'de';
 
 // Generate URL entry with hreflang
 const generateUrlEntry = (page, lang) => {
-  const fullPath = `/${lang}${page.path}`;
+  // German has no prefix, Russian has /ru prefix
+  const fullPath = lang === 'de' ? page.path || '/' : `/ru${page.path}`;
   const loc = `${SITE_URL}${fullPath}`;
 
   // Generate hreflang links for all languages
   const hreflangLinks = LANGUAGES.map(l => {
-    const hrefPath = `/${l}${page.path}`;
+    const hrefPath = l === 'de' ? page.path || '/' : `/ru${page.path}`;
     return `    <xhtml:link rel="alternate" hreflang="${l}" href="${SITE_URL}${hrefPath}" />`;
   }).join('\n');
 
-  // Add x-default (fallback to German)
-  const defaultPath = `/${DEFAULT_LANG}${page.path}`;
+  // Add x-default (fallback to German - no prefix)
+  const defaultPath = page.path || '/';
   const xDefaultLink = `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}${defaultPath}" />`;
 
   return `  <!-- ${page.comment} -->
@@ -152,7 +153,8 @@ const writeSitemap = () => {
 
     pages.forEach(page => {
       LANGUAGES.forEach(lang => {
-        console.log(`   - ${SITE_URL}/${lang}${page.path}`);
+        const fullPath = lang === 'de' ? page.path || '/' : `/ru${page.path}`;
+        console.log(`   - ${SITE_URL}${fullPath}`);
       });
     });
 
