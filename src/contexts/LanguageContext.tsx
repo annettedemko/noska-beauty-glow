@@ -359,7 +359,11 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const location = useLocation();
   const navigate = useNavigate();
-  const [language, setLanguage] = useState<Language>("DE");
+
+  // Initialize language based on current URL path
+  const [language, setLanguage] = useState<Language>(() => {
+    return location.pathname.startsWith("/ru") ? "RU" : "DE";
+  });
 
   // Detect language from URL on mount and route change
   useEffect(() => {
