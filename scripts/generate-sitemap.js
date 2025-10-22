@@ -13,7 +13,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Configuration
-const SITE_URL = 'https://noskabeautyglow.com';
+const SITE_URL = 'https://pmu-noska.de';
 const OUTPUT_PATH = path.join(__dirname, '../public/sitemap.xml');
 
 // Get current date in YYYY-MM-DD format

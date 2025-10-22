@@ -1,10 +1,10 @@
-# robots.txt for noskabeautyglow.com
+# robots.txt for pmu-noska.de
 
 User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://noskabeautyglow.com/sitemap.xml
+Sitemap: https://pmu-noska.de/sitemap.xml
 
 # Allow all major search engines
 User-agent: Googlebot

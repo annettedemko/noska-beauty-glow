@@ -20,12 +20,12 @@ export const SEOHead = ({
   descriptionRU,
   keywordsDE = "",
   keywordsRU = "",
-  ogImageDE = "https://noskabeautyglow.com/logo%20A.png",
-  ogImageRU = "https://noskabeautyglow.com/logo%20A.png",
+  ogImageDE = "https://pmu-noska.de/logo%20A.png",
+  ogImageRU = "https://pmu-noska.de/logo%20A.png",
 }: SEOHeadProps) => {
   const { language } = useLanguage();
   const location = useLocation();
-  const baseUrl = "https://noskabeautyglow.com";
+  const baseUrl = "https://pmu-noska.de";
 
   // Determine current language and corresponding content
   const isGerman = language === "DE";
