@@ -10,6 +10,7 @@ import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 import { VideoBackground } from "@/components/VideoBackground";
 import { SEOHead } from "@/components/SEOHead";
+import { StructuredData } from "@/components/StructuredData";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
         keywordsDE="Permanent Make-up München, PMU München, Powder Brows München, Augenbrauen München, Lippen München, Lidstrich München, Kopfhaut Pigmentierung München, Camouflage München, Anastasia Noska"
         keywordsRU="Перманентный макияж Мюнхен, ПМУ Мюнхен, Пудровые брови Мюнхен, Брови Мюнхен, Губы Мюнхен, Пигментация кожи головы Мюнхен, Камуфляж Мюнхен, Анастасия Носка"
       />
+      <StructuredData />
 
       {/* Luxury video background */}
       <VideoBackground />

@@ -1,23 +1,42 @@
 # robots.txt for pmu-noska.de
 
+# Default rules for all crawlers
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /*.json$
+Crawl-delay: 1
 
-# Sitemaps
+# Sitemap
 Sitemap: https://pmu-noska.de/sitemap.xml
 
-# Allow all major search engines
+# Google
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0
 
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
+# Yandex (important for Russian audience)
 User-agent: Yandex
 Allow: /
+Crawl-delay: 1
 
+# Social media bots
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
 Allow: /
