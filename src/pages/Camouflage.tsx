@@ -89,7 +89,7 @@ const Camouflage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen bg-background">
       <SEOHead
         titleDE="Camouflage München - Dehnungsstreifen & Narben kaschieren | Anastasia Noska"
         titleRU="Камуфляж Мюнхен - маскировка растяжек и шрамов | Анастасия Носка"
@@ -99,29 +99,7 @@ const Camouflage = () => {
         keywordsRU="Камуфляж Мюнхен, Маскировка растяжек Мюнхен, Удаление растяжек от беременности Мюнхен, Маскировка шрамов Мюнхен, Шрам от кесарева сечения Мюнхен, Шрам от операции на груди Мюнхен"
       />
 
-      {/* Luxury video background */}
-      <div className="fixed inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-          style={{
-            filter: "grayscale(100%) contrast(1.3)",
-            opacity: 0.8,
-          }}
-        >
-          <source src="/video2.mp4" type="video/mp4" />
-        </video>
-        {/* Elegant overlay gradients */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/30 to-background/40" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/20 via-transparent to-background/20" />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10">
-        <Navigation />
+      <Navigation />
 
       <main className="pt-24">
         {/* Hero */}
@@ -250,8 +228,7 @@ const Camouflage = () => {
         </section>
       </main>
 
-        <Footer />
-      </div>
+      <Footer />
 
       {/* Lightbox Modal */}
       {lightboxOpen && (
