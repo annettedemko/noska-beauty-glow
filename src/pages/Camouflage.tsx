@@ -3,6 +3,8 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { VideoBackground } from "@/components/VideoBackground";
+import { RelatedServices } from "@/components/RelatedServices";
+import { StructuredData } from "@/components/StructuredData";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -99,6 +101,7 @@ const Camouflage = () => {
         keywordsDE="Camouflage München, Dehnungsstreifen kaschieren München, Schwangerschaftsstreifen entfernen München, Narben kaschieren München, Kaiserschnitt Narbe München, Brust OP Narbe München"
         keywordsRU="Камуфляж Мюнхен, Маскировка растяжек Мюнхен, Удаление растяжек от беременности Мюнхен, Маскировка шрамов Мюнхен, Шрам от кесарева сечения Мюнхен, Шрам от операции на груди Мюнхен"
       />
+      <StructuredData />
 
       {/* Luxury background like on homepage */}
       <VideoBackground />
@@ -219,6 +222,9 @@ const Camouflage = () => {
             </div>
           </div>
         </section>
+
+        {/* Related Services - Internal Linking */}
+        <RelatedServices currentService="/camouflage-muenchen" />
 
         {/* Back Link */}
         <section className="py-12 px-6">
