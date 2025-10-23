@@ -84,11 +84,17 @@ const pages = [
 const LANGUAGES = ['de', 'ru'];
 const DEFAULT_LANG = 'de';
 
-// Generate URL entry
+// Generate URL entry with hreflang links
 const generateUrlEntry = (page, lang) => {
   // German has no prefix, Russian has /ru prefix
   const fullPath = lang === 'de' ? page.path || '/' : `/ru${page.path}`;
   const loc = `${SITE_URL}${fullPath}`;
+
+  // Generate alternate language URLs
+  const dePath = page.path || '/';
+  const ruPath = `/ru${page.path}`;
+  const deUrl = `${SITE_URL}${dePath}`;
+  const ruUrl = `${SITE_URL}${ruPath}`;
 
   return `  <!-- ${page.comment} (${lang.toUpperCase()}) -->
   <url>
@@ -96,13 +102,17 @@ const generateUrlEntry = (page, lang) => {
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="${deUrl}" />
+    <xhtml:link rel="alternate" hreflang="ru" href="${ruUrl}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${deUrl}" />
   </url>`;
 };
 
 // Generate complete sitemap
 const generateSitemap = () => {
   const header = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 `;
 
   const footer = `

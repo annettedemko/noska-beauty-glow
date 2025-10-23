@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <!-- Home Page (DE) -->
   <url>
     <loc>https://pmu-noska.de/</loc>
     <lastmod>2025-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/" />
   </url>
   <!-- Home Page (RU) -->
   <url>
@@ -13,6 +17,9 @@
     <lastmod>2025-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/" />
   </url>
 
   <!-- Services Page (DE) -->
@@ -21,6 +28,9 @@
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/services-muenchen" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru/services-muenchen" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/services-muenchen" />
   </url>
   <!-- Services Page (RU) -->
   <url>
@@ -28,6 +38,9 @@
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/services-muenchen" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru/services-muenchen" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/services-muenchen" />
   </url>
 
   <!-- Kopfhaut Pigmentierung (DE) -->
@@ -36,6 +49,9 @@
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/kopfhaut-muenchen" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru/kopfhaut-muenchen" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/kopfhaut-muenchen" />
   </url>
   <!-- Kopfhaut Pigmentierung (RU) -->
   <url>
@@ -43,6 +59,9 @@
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/kopfhaut-muenchen" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru/kopfhaut-muenchen" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/kopfhaut-muenchen" />
   </url>
 
   <!-- Camouflage (DE) -->
@@ -51,6 +70,9 @@
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/camouflage-muenchen" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru/camouflage-muenchen" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/camouflage-muenchen" />
   </url>
   <!-- Camouflage (RU) -->
   <url>
@@ -58,6 +80,9 @@
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/camouflage-muenchen" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru/camouflage-muenchen" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/camouflage-muenchen" />
   </url>
 
   <!-- Remover (DE) -->
@@ -66,6 +91,9 @@
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/remover-muenchen" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru/remover-muenchen" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/remover-muenchen" />
   </url>
   <!-- Remover (RU) -->
   <url>
@@ -73,6 +101,9 @@
     <lastmod>2025-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/remover-muenchen" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru/remover-muenchen" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/remover-muenchen" />
   </url>
 
   <!-- Impressum (DE) -->
@@ -81,6 +112,9 @@
     <lastmod>2025-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/impressum" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru/impressum" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/impressum" />
   </url>
   <!-- Impressum (RU) -->
   <url>
@@ -88,6 +122,9 @@
     <lastmod>2025-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/impressum" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru/impressum" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/impressum" />
   </url>
 
   <!-- Datenschutz (DE) -->
@@ -96,6 +133,9 @@
     <lastmod>2025-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/datenschutz" />
   </url>
   <!-- Datenschutz (RU) -->
   <url>
@@ -103,5 +143,8 @@
     <lastmod>2025-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/datenschutz" />
   </url>
 </urlset>
