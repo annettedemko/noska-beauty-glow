@@ -2,6 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
+import { VideoBackground } from "@/components/VideoBackground";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -89,7 +90,7 @@ const Camouflage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
       <SEOHead
         titleDE="Camouflage München - Dehnungsstreifen & Narben kaschieren | Anastasia Noska"
         titleRU="Камуфляж Мюнхен - маскировка растяжек и шрамов | Анастасия Носка"
@@ -99,7 +100,12 @@ const Camouflage = () => {
         keywordsRU="Камуфляж Мюнхен, Маскировка растяжек Мюнхен, Удаление растяжек от беременности Мюнхен, Маскировка шрамов Мюнхен, Шрам от кесарева сечения Мюнхен, Шрам от операции на груди Мюнхен"
       />
 
-      <Navigation />
+      {/* Luxury background like on homepage */}
+      <VideoBackground />
+
+      {/* Content */}
+      <div className="relative z-10">
+        <Navigation />
 
       <main className="pt-24">
         {/* Hero */}
@@ -228,7 +234,8 @@ const Camouflage = () => {
         </section>
       </main>
 
-      <Footer />
+        <Footer />
+      </div>
 
       {/* Lightbox Modal */}
       {lightboxOpen && (
