@@ -18,8 +18,8 @@ const Index = () => {
       <SEOHead
         titleDE="Permanent Make-up München – Anastasia Noska | Natürlich schön"
         titleRU="Перманентный макияж Мюнхен – Анастасия Носка | Естественная красота"
-        descriptionDE="Permanent Make-up München: Powder Brows, Aquarell Lippen, Lidstrich. Kopfhaut Pigmentierung & Camouflage. Zertifizierte Spezialistin in München. Jetzt Termin buchen!"
-        descriptionRU="Перманентный макияж в Мюнхене: пудровые брови, акварельные губы, подводка. Пигментация кожи головы и камуфляж. Сертифицированный специалист в Мюнхене. Запишитесь сейчас!"
+        descriptionDE="Permanent Make-up München: Powder Brows, Lippen, Kopfhaut Pigmentierung & Camouflage. Jetzt Termin bei Anastasia Noska buchen!"
+        descriptionRU="Перманентный макияж Мюнхен: пудровые брови, губы, пигментация кожи головы. Запишитесь к Анастасии Носка!"
         keywordsDE="Permanent Make-up München, PMU München, Powder Brows München, Augenbrauen München, Lippen München, Lidstrich München, Kopfhaut Pigmentierung München, Camouflage München, Anastasia Noska"
         keywordsRU="Перманентный макияж Мюнхен, ПМУ Мюнхен, Пудровые брови Мюнхен, Брови Мюнхен, Губы Мюнхен, Пигментация кожи головы Мюнхен, Камуфляж Мюнхен, Анастасия Носка"
       />
