@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 interface Service {
@@ -17,6 +17,8 @@ interface RelatedServicesProps {
 
 export const RelatedServices = ({ currentService, showCount = 3 }: RelatedServicesProps) => {
   const { language } = useLanguage();
+  const navigate = useNavigate();
+  const location = useLocation();
   const isGerman = language === "DE";
   const langPrefix = isGerman ? "" : "/ru";
 
@@ -26,8 +28,8 @@ export const RelatedServices = ({ currentService, showCount = 3 }: RelatedServic
       titleRU: "Все услуги",
       descriptionDE: "Entdecken Sie unser komplettes Angebot an Permanent Make-up Services in München",
       descriptionRU: "Откройте для себя наш полный спектр услуг перманентного макияжа в Мюнхене",
-      path: "/services-muenchen",
-      image: "/1.jpg"
+      path: "/#services",
+      image: "/16.jpg"
     },
     {
       titleDE: "Kopfhaut Pigmentierung",
@@ -35,7 +37,7 @@ export const RelatedServices = ({ currentService, showCount = 3 }: RelatedServic
       descriptionDE: "Natürliche Lösung bei Haarausfall und lichtem Haar",
       descriptionRU: "Естественное решение при выпадении волос и редких волосах",
       path: "/kopfhaut-muenchen",
-      image: "/10.PNG"
+      image: "/9.jpg"
     },
     {
       titleDE: "Camouflage",
@@ -46,12 +48,12 @@ export const RelatedServices = ({ currentService, showCount = 3 }: RelatedServic
       image: "/12.jpg"
     },
     {
-      titleDE: "Remover",
+      titleDE: "Brows & Lips",
       titleRU: "Ремувер",
-      descriptionDE: "Schonende Entfernung von unerwünschtem Permanent Make-up",
+      descriptionDE: "Powder Brows, Aquarell Lippen & Lidstrich - Natürliche Perfektion",
       descriptionRU: "Бережное удаление нежелательного перманентного макияжа",
-      path: "/remover-muenchen",
-      image: "/18.jpg"
+      path: "/services-muenchen",
+      image: "/24.JPG"
     }
   ];
 
@@ -90,16 +92,100 @@ export const RelatedServices = ({ currentService, showCount = 3 }: RelatedServic
           {relatedServices.map((service, index) => {
             const title = isGerman ? service.titleDE : service.titleRU;
             const description = isGerman ? service.descriptionDE : service.descriptionRU;
+
+            // Build full path
             const fullPath = `${langPrefix}${service.path}`;
 
+            // Check if path contains hash for anchor links to homepage
+            const isHomepageAnchor = service.path.startsWith('/#');
+
+            // Handler for clicking on homepage anchor links
+            const handleClick = (e: React.MouseEvent) => {
+              if (isHomepageAnchor) {
+                e.preventDefault();
+                const hash = service.path.substring(2); // Remove /# to get id
+                const homePath = langPrefix || "/";
+
+                // If not on home page, navigate to home first
+                if (!location.pathname.match(/^\/(ru)?\/?$/)) {
+                  navigate(homePath);
+                  setTimeout(() => {
+                    const element = document.getElementById(hash);
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }, 100);
+                } else {
+                  const element = document.getElementById(hash);
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }
+              }
+            };
+
+            // For homepage anchor links, use button with onClick handler
+            if (isHomepageAnchor) {
+              return (
+                <button
+                  key={service.path}
+                  onClick={handleClick}
+                  className="group block h-full text-left w-full"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <article className="h-full flex flex-col bg-background/60 backdrop-blur-sm border border-charcoal/20 shadow-luxury overflow-hidden hover-lift transition-all duration-500">
+                    {/* Image */}
+                    <div className="aspect-[4/3] overflow-hidden relative">
+                      <img
+                        src={service.image}
+                        alt={title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-8 flex flex-col flex-grow">
+                      <h3 className="font-serif text-2xl mb-3 text-foreground group-hover:text-accent transition-colors duration-300">
+                        {title}
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
+                        {description}
+                      </p>
+
+                      {/* CTA */}
+                      <div className="flex items-center gap-2 text-accent group-hover:gap-4 transition-all duration-300">
+                        <span className="text-sm uppercase tracking-[0.2em] font-semibold">
+                          {isGerman ? "Mehr erfahren" : "Узнать больше"}
+                        </span>
+                        <svg
+                          className="w-5 h-5 transform group-hover:translate-x-2 transition-transform duration-300"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </div>
+                    </div>
+                  </article>
+                </button>
+              );
+            }
+
+            // For regular links, use React Router Link
+            const LinkComponent = Link;
+            const linkProps = { to: fullPath };
+
             return (
-              <Link
+              <LinkComponent
                 key={service.path}
-                to={fullPath}
-                className="group block"
+                {...linkProps}
+                className="group block h-full"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <article className="bg-background/60 backdrop-blur-sm border border-charcoal/20 shadow-luxury overflow-hidden hover-lift transition-all duration-500">
+                <article className="h-full flex flex-col bg-background/60 backdrop-blur-sm border border-charcoal/20 shadow-luxury overflow-hidden hover-lift transition-all duration-500">
                   {/* Image */}
                   <div className="aspect-[4/3] overflow-hidden relative">
                     <img
@@ -112,11 +198,11 @@ export const RelatedServices = ({ currentService, showCount = 3 }: RelatedServic
                   </div>
 
                   {/* Content */}
-                  <div className="p-8">
+                  <div className="p-8 flex flex-col flex-grow">
                     <h3 className="font-serif text-2xl mb-3 text-foreground group-hover:text-accent transition-colors duration-300">
                       {title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed mb-6">
+                    <p className="text-muted-foreground leading-relaxed mb-6 flex-grow">
                       {description}
                     </p>
 
@@ -136,20 +222,37 @@ export const RelatedServices = ({ currentService, showCount = 3 }: RelatedServic
                     </div>
                   </div>
                 </article>
-              </Link>
+              </LinkComponent>
             );
           })}
         </div>
 
-        {/* View All Link */}
+        {/* Contact Link */}
         {currentService !== "/services-muenchen" && (
           <div className="text-center mt-12">
-            <Link
-              to={`${langPrefix}/services-muenchen`}
+            <button
+              onClick={() => {
+                const homePath = langPrefix || "/";
+                // If not on home page, navigate to home first
+                if (!location.pathname.match(/^\/(ru)?\/?$/)) {
+                  navigate(homePath);
+                  setTimeout(() => {
+                    const element = document.getElementById("contact");
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }, 100);
+                } else {
+                  const element = document.getElementById("contact");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }
+              }}
               className="inline-flex items-center gap-3 px-8 py-4 bg-accent text-white font-sans text-sm tracking-[0.2em] uppercase shadow-luxury hover-lift group"
             >
               <span className="font-semibold">
-                {isGerman ? "Alle Leistungen ansehen" : "Посмотреть все услуги"}
+                {isGerman ? "Kontakt aufnehmen" : "Связаться с нами"}
               </span>
               <svg
                 className="w-5 h-5 transform group-hover:translate-x-2 transition-transform duration-300"
@@ -159,7 +262,7 @@ export const RelatedServices = ({ currentService, showCount = 3 }: RelatedServic
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </Link>
+            </button>
           </div>
         )}
       </div>

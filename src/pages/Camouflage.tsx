@@ -2,6 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
+import { ServiceHero } from "@/components/ServiceHero";
 import { VideoBackground } from "@/components/VideoBackground";
 import { RelatedServices } from "@/components/RelatedServices";
 import { StructuredData } from "@/components/StructuredData";
@@ -110,35 +111,17 @@ const Camouflage = () => {
       <div className="relative z-10">
         <Navigation />
 
-      <main className="pt-24">
-        {/* Hero */}
-        <section className="relative py-32 px-6 overflow-hidden">
-          {/* Luxury background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-background via-champagne/10 to-background" />
-
-          <div className="container max-w-6xl mx-auto relative z-10">
-            {/* Decorative element */}
-            <div className="flex items-center justify-center gap-4 opacity-60 mb-12">
-              <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver" />
-              <div className="w-2 h-2 bg-silver rotate-45" />
-              <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver" />
-            </div>
-
-            <h1 className="font-serif text-2xl sm:text-3xl md:text-6xl lg:text-7xl xl:text-8xl text-center mb-8 tracking-wide font-bold px-4 leading-relaxed break-words max-w-5xl mx-auto">
-              {t("camouflageTitle")}
-            </h1>
-            <p className="text-center text-base sm:text-lg md:text-xl lg:text-2xl font-light mb-12 tracking-wide text-muted-foreground max-w-3xl mx-auto px-4">
-              {t("camouflageDesc")}
-            </p>
-
-            {/* Decorative element */}
-            <div className="flex items-center justify-center gap-4 opacity-60">
-              <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver" />
-              <div className="w-2 h-2 bg-silver rotate-45" />
-              <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver" />
-            </div>
-          </div>
-        </section>
+      <main className="pt-0">
+        {/* Hero Section */}
+        <ServiceHero
+          title={t("camouflageTitle")}
+          description={t("camouflageDesc")}
+          backgroundImage="/13.jpg"
+          ctaButtons={{
+            whatsappLink: "https://wa.me/491779093936",
+            bookingLink: "https://buchung.treatwell.de/ort/permanent-make-up-by-anastasia-noska/",
+          }}
+        />
 
         {/* Gallery */}
         <section className="py-12 px-6">

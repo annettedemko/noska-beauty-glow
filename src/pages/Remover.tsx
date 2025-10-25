@@ -1,8 +1,11 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { ServiceHero } from "@/components/ServiceHero";
 import { VideoBackground } from "@/components/VideoBackground";
 import { SEOHead } from "@/components/SEOHead";
+import { RelatedServices } from "@/components/RelatedServices";
+import { StructuredData } from "@/components/StructuredData";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -39,35 +42,17 @@ const Remover = () => {
       <div className="relative z-10">
         <Navigation />
 
-        <main className="pt-24">
-          {/* Hero */}
-          <section className="relative py-32 px-6 overflow-hidden">
-            {/* Luxury background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-background via-champagne/10 to-background" />
-
-            <div className="container max-w-6xl mx-auto relative z-10">
-              {/* Decorative element */}
-              <div className="flex items-center justify-center gap-4 opacity-60 mb-12">
-                <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver" />
-                <div className="w-2 h-2 bg-silver rotate-45" />
-                <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver" />
-              </div>
-
-              <h1 className="font-serif text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-center mb-8 tracking-wide font-bold break-words px-2">
-                {t("removerTitle")}
-              </h1>
-              <p className="text-center text-base sm:text-lg md:text-xl lg:text-2xl font-light mb-12 tracking-wide text-muted-foreground max-w-3xl mx-auto px-4">
-                {t("removerDesc")}
-              </p>
-
-              {/* Decorative element */}
-              <div className="flex items-center justify-center gap-4 opacity-60">
-                <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver" />
-                <div className="w-2 h-2 bg-silver rotate-45" />
-                <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver" />
-              </div>
-            </div>
-          </section>
+        <main className="pt-0">
+          {/* Hero Section */}
+          <ServiceHero
+            title={t("removerTitle")}
+            description={t("removerDesc")}
+            backgroundImage="/19.jpg"
+            ctaButtons={{
+              whatsappLink: "https://wa.me/491779093936",
+              bookingLink: "https://buchung.treatwell.de/ort/permanent-make-up-by-anastasia-noska/",
+            }}
+          />
 
           {/* Description */}
           <section className="py-24 px-6 relative overflow-hidden">

@@ -2,6 +2,10 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
+import { ServiceHero } from "@/components/ServiceHero";
+import { VideoBackground } from "@/components/VideoBackground";
+import { RelatedServices } from "@/components/RelatedServices";
+import { StructuredData } from "@/components/StructuredData";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -121,19 +125,16 @@ const Kopfhaut = () => {
         <Navigation />
 
         <main className="pt-0">
-          {/* 🩶 Hero Section with white semi-transparent overlay */}
-          <section className="relative overflow-hidden">
-            <div className="w-full bg-white/70 py-12 sm:py-16 md:py-20 lg:py-24">
-              <div className="container max-w-6xl mx-auto relative z-10 pt-[10vh] sm:pt-[12vh] md:pt-[15vh] px-6">
-                <h1 className="font-serif text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-center mb-4 tracking-wide font-bold break-words px-2">
-                  {t("scalpTitle")}
-                </h1>
-                <p className="text-center text-base sm:text-lg md:text-xl lg:text-2xl font-light mb-8 tracking-wide text-muted-foreground max-w-3xl mx-auto px-4">
-                  {t("scalpDesc")}
-                </p>
-              </div>
-            </div>
-          </section>
+          {/* Hero Section */}
+          <ServiceHero
+            title={t("scalpTitle")}
+            description={t("scalpDesc")}
+            backgroundImage="/29.jpg"
+            ctaButtons={{
+              whatsappLink: "https://wa.me/491779093936",
+              bookingLink: "https://buchung.treatwell.de/ort/permanent-make-up-by-anastasia-noska/",
+            }}
+          />
 
           {/* 🖼️ Gallery Section */}
           <section className="pt-[8vh] sm:pt-[10vh] md:pt-[15vh] pb-12 px-6 mb-[8vh] sm:mb-[10vh] md:mb-[15vh]">

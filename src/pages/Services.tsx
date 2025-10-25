@@ -1,6 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { ServiceHero } from "@/components/ServiceHero";
 import { VideoBackground } from "@/components/VideoBackground";
 import { SEOHead } from "@/components/SEOHead";
 import { Link, useLocation } from "react-router-dom";
@@ -141,41 +142,17 @@ const Services = () => {
       <div className="relative z-10">
         <Navigation />
 
-        <main className="pt-24">
-          {/* Hero */}
-          <section className="relative py-32 px-6 overflow-hidden">
-            {/* Luxury background with animation */}
-            <div className="absolute inset-0 bg-gradient-to-br from-background via-champagne/10 to-background animate-in fade-in duration-1000" />
-
-            {/* Animated particles for mobile */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-champagne/5 rounded-full blur-3xl animate-float" />
-              <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-pearl/5 rounded-full blur-3xl animate-float-delayed" />
-            </div>
-
-            <div className="container max-w-6xl mx-auto relative z-10">
-              {/* Decorative element with animation */}
-              <div className="flex items-center justify-center gap-4 opacity-60 mb-12 animate-in slide-in-from-top duration-700">
-                <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver animate-shimmer" />
-                <div className="w-2 h-2 bg-silver rotate-45 animate-pulse" />
-                <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver animate-shimmer" />
-              </div>
-
-              <h1 className="font-serif text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-center mb-8 tracking-wide font-bold break-words px-2 animate-in fade-in slide-in-from-bottom duration-1000 delay-150">
-                {t("servicesPageTitle")}
-              </h1>
-              <p className="text-center text-base sm:text-lg md:text-xl lg:text-2xl font-light mb-12 tracking-wide text-muted-foreground max-w-3xl mx-auto px-4 animate-in fade-in slide-in-from-bottom duration-1000 delay-300">
-                {t("servicesPageDesc")}
-              </p>
-
-              {/* Decorative element with animation */}
-              <div className="flex items-center justify-center gap-4 opacity-60 animate-in slide-in-from-bottom duration-700 delay-500">
-                <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver animate-shimmer" />
-                <div className="w-2 h-2 bg-silver rotate-45 animate-pulse" />
-                <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver animate-shimmer" />
-              </div>
-            </div>
-          </section>
+        <main className="pt-0">
+          {/* Hero Section */}
+          <ServiceHero
+            title={t("servicesPageTitle")}
+            description={t("servicesPageDesc")}
+            backgroundImage="/7.jpg"
+            ctaButtons={{
+              whatsappLink: "https://wa.me/491779093936",
+              bookingLink: "https://buchung.treatwell.de/ort/permanent-make-up-by-anastasia-noska/",
+            }}
+          />
 
           {/* 👁️ Powder / Ombre Brows */}
           <section

@@ -42,7 +42,7 @@ export const Contact = () => {
               <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-accent group-hover:w-[4px] group-active:w-[5px] transition-all duration-300" />
               <p className="text-xs uppercase tracking-[0.3em] text-accent font-semibold mb-3">{t("contactAddress")}</p>
               <a
-                href="https://maps.google.com/?q=Hildegardstr.+4+München"
+                href="https://maps.app.goo.gl/XGUwn9CWqRcSi5Lq9?g_st=ipc"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-xl font-serif hover:text-accent active:text-accent transition-colors"
