@@ -120,6 +120,34 @@ const Remover = () => {
             </div>
           </section>
 
+          {/* SEO Text Section */}
+          <section className="py-24 px-6 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-b from-background via-pearl/20 to-background" />
+
+            <div className="container max-w-4xl mx-auto relative z-10">
+              <div className="bg-background/60 backdrop-blur-sm border border-charcoal/20 shadow-luxury p-6 sm:p-8 md:p-12 lg:p-16">
+                <h2 className="font-serif text-3xl md:text-4xl text-center mb-8 text-accent font-bold">
+                  {t("removerSeoTitle")}
+                </h2>
+
+                <div className="space-y-8 text-base sm:text-lg font-light leading-relaxed">
+                  <p className="text-foreground/90">
+                    {t("removerSeoText")}
+                  </p>
+
+                  <div className="pt-4">
+                    <h3 className="font-serif text-2xl mb-6 text-accent">
+                      {t("removerSeoSubtitle")}
+                    </h3>
+                    <p className="text-foreground/90">
+                      {t("removerSeoText2")}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Back Link */}
           <section className="py-12 px-6">
             <div className="container max-w-4xl mx-auto text-center">
