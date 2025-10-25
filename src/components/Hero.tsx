@@ -152,7 +152,7 @@ export const Hero = () => {
           </div>
 
           {/* 🔘 CTA BUTTONS */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center pt-4 sm:pt-8 animate-fade-in-delay-2">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center pt-4 sm:pt-8 pb-16 sm:pb-0 animate-fade-in-delay-2">
             {/* WhatsApp Button */}
             <a
               href="https://wa.me/491779093936"
@@ -214,8 +214,9 @@ export const Hero = () => {
 
       {/* 🌟 SCROLL INDICATOR - Perfectly Centered */}
       <div
-        className="absolute bottom-8 left-0 right-0 z-20 flex justify-center animate-fade-in-delay-3"
+        className="absolute left-0 right-0 z-20 flex justify-center animate-fade-in-delay-3"
         style={{
+          bottom: isMobile ? "0.5rem" : "2rem",
           opacity: scrollY > 100 ? 0 : 1,
           transition: "opacity 0.5s ease-out",
         }}

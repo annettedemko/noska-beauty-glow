@@ -73,7 +73,7 @@ export const ServiceHero = ({
           }}
         />
       ) : (
-        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/60 to-background/40 sm:from-background/80 sm:via-background/50 sm:to-background/30 md:from-background/70 md:via-background/40 md:to-background/20 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/75 to-background/60 z-10" />
       )}
 
       {/* Floating Particles - Mobile only */}
@@ -270,37 +270,31 @@ export const ServiceHero = ({
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div
-        className="absolute bottom-8 left-0 right-0 z-20 flex justify-center animate-fade-in-delay-3"
-        style={{
-          opacity: scrollY > 100 ? 0 : 1,
-          transition: "opacity 0.5s ease-out",
-        }}
-      >
-        <div className="flex flex-col items-center gap-2">
-          <div
-            className={`text-xs uppercase font-light ${
-              isMobile ? "text-white/80" : "text-foreground/70"
-            }`}
-            style={{
-              fontFamily: "'Montserrat', sans-serif",
-              textShadow: isMobile
-                ? "0 2px 4px rgba(0,0,0,0.4)"
-                : "0 1px 3px rgba(0,0,0,0.15)",
-              letterSpacing: "0.2em",
-              paddingRight: "0.2em",
-            }}
-          >
-            Scroll
+      {/* Scroll Indicator - Mobile only */}
+      {isMobile && (
+        <div
+          className="absolute bottom-8 left-0 right-0 z-20 animate-fade-in-delay-3"
+          style={{
+            opacity: scrollY > 100 ? 0 : 1,
+            transition: "opacity 0.5s ease-out",
+          }}
+        >
+          <div className="flex flex-col items-center gap-2 mx-auto w-fit">
+            <div
+              className="text-xs uppercase font-light text-white/80"
+              style={{
+                fontFamily: "'Montserrat', sans-serif",
+                textShadow: "0 2px 4px rgba(0,0,0,0.4)",
+                letterSpacing: "0.2em",
+                paddingRight: "0.2em",
+              }}
+            >
+              Scroll
+            </div>
+            <div className="w-[1px] h-12 bg-gradient-to-b from-white/60 via-transparent to-transparent" />
           </div>
-          <div
-            className={`w-[1px] h-12 bg-gradient-to-b via-transparent to-transparent ${
-              isMobile ? "from-white/60" : "from-foreground/50"
-            }`}
-          />
         </div>
-      </div>
+      )}
     </section>
   );
 };
