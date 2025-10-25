@@ -19,10 +19,12 @@
     <!-- Ahrefs Web Analytics -->
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="5f9DXeW69Bf4uuCK8xnjJw" async></script>
 
-    <!-- Canonical URL (static fallback for crawlers) -->
+    <!--
+      Canonical and hreflang tags:
+      - Base canonical below for initial page load / crawlers
+      - SEOHead component updates these dynamically for each route
+    -->
     <link rel="canonical" href="https://pmu-noska.de/" />
-
-    <!-- Hreflang (static fallback for crawlers) -->
     <link rel="alternate" hreflang="de" href="https://pmu-noska.de/" />
     <link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru" />
     <link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/" />
