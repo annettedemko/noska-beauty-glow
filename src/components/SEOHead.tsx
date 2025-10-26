@@ -43,9 +43,10 @@ export const SEOHead = ({
   // German has no prefix, Russian has /ru prefix
   const pathWithoutLang = location.pathname.replace(/^\/ru/, "");
   const deUrl = `${baseUrl}${pathWithoutLang || "/"}`;
-  // Ensure ruUrl never has trailing slash (except root which becomes /ru)
-  const ruPath = pathWithoutLang || "";
-  const ruUrl = ruPath ? `${baseUrl}/ru${ruPath}` : `${baseUrl}/ru`;
+  // Ensure ruUrl never has trailing slash
+  // If pathWithoutLang is "/" (root), make it /ru (no trailing slash)
+  // If pathWithoutLang is "/some-page", make it /ru/some-page
+  const ruUrl = pathWithoutLang === "/" ? `${baseUrl}/ru` : `${baseUrl}/ru${pathWithoutLang}`;
 
   useEffect(() => {
     // Update title
