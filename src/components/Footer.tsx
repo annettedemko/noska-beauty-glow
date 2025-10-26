@@ -23,10 +23,10 @@ export const Footer = () => {
 
         {/* Brand section */}
         <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-3 mb-4">
+          <Link to={langPrefix || "/"} className="inline-flex items-center justify-center gap-3 mb-4 hover:opacity-80 transition-opacity">
             <img src="/logo A.png" alt="Anastasia Noska Logo" className="w-14 h-14 object-contain" />
             <span className="font-serif text-3xl tracking-wider">Anastasia Noska</span>
-          </div>
+          </Link>
           <p className="text-sm text-muted-foreground tracking-wider uppercase">
             {t("footerTagline")}
           </p>

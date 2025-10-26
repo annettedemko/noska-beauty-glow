@@ -11,7 +11,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "prerender": "vite preview --port 4173 & sleep 5 && node scripts/prerender.js && kill $(lsof -ti:4173)",
-    "generate:sitemap": "node scripts/generate-sitemap.js"
+    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "optimize:images": "node scripts/optimize-images.cjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -78,6 +79,7 @@
     "globals": "^15.15.0",
     "postcss": "^8.5.6",
     "puppeteer": "^24.26.1",
+    "sharp": "^0.34.4",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.38.0",

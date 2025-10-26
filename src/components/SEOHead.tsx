@@ -43,7 +43,9 @@ export const SEOHead = ({
   // German has no prefix, Russian has /ru prefix
   const pathWithoutLang = location.pathname.replace(/^\/ru/, "");
   const deUrl = `${baseUrl}${pathWithoutLang || "/"}`;
-  const ruUrl = `${baseUrl}/ru${pathWithoutLang || ""}`;
+  // Ensure ruUrl never has trailing slash (except root which becomes /ru)
+  const ruPath = pathWithoutLang || "";
+  const ruUrl = ruPath ? `${baseUrl}/ru${ruPath}` : `${baseUrl}/ru`;
 
   useEffect(() => {
     // Update title
@@ -80,6 +82,8 @@ export const SEOHead = ({
     updateMetaTag("description", description);
     if (keywords) updateMetaTag("keywords", keywords);
     updateMetaTag("author", "Anastasia Noska");
+    updateMetaTag("robots", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
+    updateMetaTag("googlebot", "index, follow");
     updateMetaTag("geo.region", "DE-BY");
     updateMetaTag("geo.placename", "München");
 
