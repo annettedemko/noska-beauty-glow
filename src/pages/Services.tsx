@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { ServiceHero } from "@/components/ServiceHero";
 import { VideoBackground } from "@/components/VideoBackground";
 import { SEOHead } from "@/components/SEOHead";
+import { RelatedServices } from "@/components/RelatedServices";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -563,6 +564,8 @@ const Services = () => {
             </div>
           </section>
         </main>
+
+        <RelatedServices currentService="/services-muenchen" />
 
         <Footer />
       </div>

@@ -267,6 +267,8 @@ const Kopfhaut = () => {
           </section>
         </main>
 
+        <RelatedServices currentService="/kopfhaut-muenchen" />
+
         <Footer />
       </div>
 

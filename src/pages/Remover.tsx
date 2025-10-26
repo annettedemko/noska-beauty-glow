@@ -162,6 +162,8 @@ const Remover = () => {
           </section>
         </main>
 
+        <RelatedServices currentService="/remover-muenchen" />
+
         <Footer />
       </div>
     </div>

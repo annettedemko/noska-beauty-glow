@@ -32,12 +32,20 @@ export const RelatedServices = ({ currentService, showCount = 3 }: RelatedServic
       image: "/16.jpg"
     },
     {
+      titleDE: "Powder Brows & Lips",
+      titleRU: "Брови и Губы",
+      descriptionDE: "Powder Brows, Aquarell Lippen & Lidstrich - Natürliche Perfektion",
+      descriptionRU: "Пудровые брови, Акварельные губы и Подводка - Естественное совершенство",
+      path: "/services-muenchen",
+      image: "/23.jpg"
+    },
+    {
       titleDE: "Kopfhaut Pigmentierung",
       titleRU: "Пигментация кожи головы",
       descriptionDE: "Natürliche Lösung bei Haarausfall und lichtem Haar",
       descriptionRU: "Естественное решение при выпадении волос и редких волосах",
       path: "/kopfhaut-muenchen",
-      image: "/9.jpg"
+      image: "/28.jpg"
     },
     {
       titleDE: "Camouflage",
@@ -48,12 +56,12 @@ export const RelatedServices = ({ currentService, showCount = 3 }: RelatedServic
       image: "/12.jpg"
     },
     {
-      titleDE: "Brows & Lips",
+      titleDE: "PMU Remover",
       titleRU: "Ремувер",
-      descriptionDE: "Powder Brows, Aquarell Lippen & Lidstrich - Natürliche Perfektion",
+      descriptionDE: "Schonende Entfernung von unerwünschtem Permanent Make-up",
       descriptionRU: "Бережное удаление нежелательного перманентного макияжа",
-      path: "/services-muenchen",
-      image: "/24.JPG"
+      path: "/remover-muenchen",
+      image: "/20.jpg"
     }
   ];
 
