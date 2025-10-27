@@ -3,20 +3,27 @@ export const VideoBackground = () => {
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
       {/* Image background with monochrome filter */}
       <div className="absolute inset-0">
-        <img
-          src="/12.jpg"
-          srcSet="/12-mobile.jpg 480w, /12.jpg 750w"
-          sizes="100vw"
-          alt="Background"
-          width="750"
-          height="742"
-          className="w-full h-full object-cover"
-          style={{
-            filter: 'grayscale(100%) contrast(1.3)',
-            opacity: 0.85,
-          }}
-          fetchpriority="high"
-        />
+        <picture>
+          <source
+            type="image/webp"
+            srcSet="/12-mobile.webp 480w, /12.webp 750w"
+            sizes="100vw"
+          />
+          <img
+            src="/12.jpg"
+            srcSet="/12-mobile.jpg 480w, /12.jpg 750w"
+            sizes="100vw"
+            alt="Background"
+            width="750"
+            height="742"
+            className="w-full h-full object-cover"
+            style={{
+              filter: 'grayscale(100%) contrast(1.3)',
+              opacity: 0.85,
+            }}
+            fetchpriority="high"
+          />
+        </picture>
       </div>
 
       {/* Elegant overlay with gradient for depth */}
