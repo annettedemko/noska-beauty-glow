@@ -5,6 +5,8 @@ export const VideoBackground = () => {
       <div className="absolute inset-0">
         <img
           src="/12.jpg"
+          srcSet="/12-mobile.jpg 480w, /12.jpg 750w"
+          sizes="100vw"
           alt="Background"
           width="750"
           height="742"

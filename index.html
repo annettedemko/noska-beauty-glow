@@ -104,12 +104,15 @@
 
     <!-- Preload critical assets -->
     <link rel="preload" href="/logo A.png" as="image" type="image/png">
-    <link rel="preload" href="/12.jpg" as="image" type="image/jpeg" fetchpriority="high">
+    <!-- Preload hero background - mobile first -->
+    <link rel="preload" href="/12-mobile.jpg" as="image" type="image/jpeg" media="(max-width: 768px)" fetchpriority="high">
+    <link rel="preload" href="/12.jpg" as="image" type="image/jpeg" media="(min-width: 769px)" fetchpriority="high">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&family=Bodoni+Moda:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700&family=Bodoni+Moda:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <!-- Reduced font weights for better performance: only 400,600,700 -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;600;700&family=Bodoni+Moda:wght@400;600;700&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;600;700&family=Bodoni+Moda:wght@400;600;700&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
   </head>
 
   <body>
