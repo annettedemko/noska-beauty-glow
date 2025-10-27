@@ -65,10 +65,17 @@ export const RelatedServices = ({ currentService, showCount = 3 }: RelatedServic
     }
   ];
 
-  // Filter out current service
-  const relatedServices = allServices
-    .filter(service => service.path !== currentService)
-    .slice(0, showCount);
+  // Filter out current service and prioritize based on current page
+  let relatedServices = allServices.filter(service => service.path !== currentService);
+
+  // Special handling for /services-muenchen page:
+  // Ensure remover-muenchen is always included and show specific services
+  if (currentService === "/services-muenchen") {
+    // Show: Kopfhaut, Camouflage, Remover (exclude "Alle Leistungen")
+    relatedServices = relatedServices.filter(service => service.path !== "/#services");
+  }
+
+  relatedServices = relatedServices.slice(0, showCount);
 
   if (relatedServices.length === 0) {
     return null;
