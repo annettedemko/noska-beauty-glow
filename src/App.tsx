@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -5,14 +6,16 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import Index from "./pages/Index";
-import Kopfhaut from "./pages/Kopfhaut";
-import Camouflage from "./pages/Camouflage";
-import Remover from "./pages/Remover";
-import Services from "./pages/Services";
-import Impressum from "./pages/Impressum";
-import Datenschutz from "./pages/Datenschutz";
-import NotFound from "./pages/NotFound";
+
+// Lazy load pages for better performance
+import Index from "./pages/Index"; // Keep home page eager
+const Kopfhaut = lazy(() => import("./pages/Kopfhaut"));
+const Camouflage = lazy(() => import("./pages/Camouflage"));
+const Remover = lazy(() => import("./pages/Remover"));
+const Services = lazy(() => import("./pages/Services"));
+const Impressum = lazy(() => import("./pages/Impressum"));
+const Datenschutz = lazy(() => import("./pages/Datenschutz"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
@@ -24,7 +27,8 @@ const App = () => (
           <Toaster />
           <Sonner />
           <ScrollToTop />
-          <Routes>
+          <Suspense fallback={<div className="flex items-center justify-center min-h-screen"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div></div>}>
+            <Routes>
             {/* German routes (default, no language prefix) */}
             <Route path="/" element={<Index />} />
             <Route path="/kopfhaut-muenchen" element={<Kopfhaut />} />
@@ -60,7 +64,8 @@ const App = () => (
 
             {/* 404 - ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
-          </Routes>
+            </Routes>
+          </Suspense>
         </TooltipProvider>
       </LanguageProvider>
     </BrowserRouter>

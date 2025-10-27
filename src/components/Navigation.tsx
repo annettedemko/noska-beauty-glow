@@ -89,7 +89,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo/Brand - Clickable to go home */}
           <button onClick={goToHome} className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            <img src="/logo A.png" alt="Anastasia Noska Logo" className="w-12 h-12 object-contain" />
+            <img src="/logo A.png" alt="Anastasia Noska Logo" width="48" height="48" className="w-12 h-12 object-contain" />
             <span className="font-serif text-xl tracking-wider">Anastasia Noska</span>
           </button>
 

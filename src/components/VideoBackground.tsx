@@ -6,11 +6,14 @@ export const VideoBackground = () => {
         <img
           src="/12.jpg"
           alt="Background"
+          width="750"
+          height="742"
           className="w-full h-full object-cover"
           style={{
             filter: 'grayscale(100%) contrast(1.3)',
             opacity: 0.85,
           }}
+          fetchpriority="high"
         />
       </div>
 
