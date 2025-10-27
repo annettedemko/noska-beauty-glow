@@ -73,6 +73,31 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="PMU Noska" />
 
+    <!-- Critical CSS to prevent CLS and optimize fonts -->
+    <style>
+      /* Reserve space for fixed navigation to prevent layout shift */
+      body {
+        margin: 0;
+        padding: 0;
+        font-display: swap;
+      }
+
+      /* Prevent FOUC and CLS */
+      #root {
+        min-height: 100vh;
+      }
+
+      /* Critical background styles */
+      .fixed.top-0 {
+        height: 96px;
+      }
+
+      /* System font fallback for faster initial render */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      }
+    </style>
+
     <title>Permanent Make-up München – Anastasia Noska | Natürlich schön</title>
     <meta name="description" content="Permanent Make-up München: Powder Brows, Lippen, Kopfhaut Pigmentierung & Camouflage. Jetzt Termin bei Anastasia Noska buchen!" />
     <meta name="keywords" content="Permanent Make-up München, PMU München, Powder Brows München, Augenbrauen München, Lippen München, Lidstrich München, Kopfhaut Pigmentierung München, Camouflage München, Anastasia Noska" />
