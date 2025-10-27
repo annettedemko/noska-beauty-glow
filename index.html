@@ -8,21 +8,39 @@
     <meta name="fragment" content="!" />
     <meta name="prerender-status-code" content="200" />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PBZV8M72VJ"></script>
+    <!-- Google Analytics - Loaded after page load to not block rendering -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-PBZV8M72VJ');
+
+      // Load gtag.js after page load (skip during prerender)
+      if (typeof navigator !== 'undefined' && !navigator.userAgent.includes('HeadlessChrome')) {
+        window.addEventListener('load', function() {
+          var script = document.createElement('script');
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=G-PBZV8M72VJ';
+          script.async = true;
+          document.head.appendChild(script);
+        });
+      }
     </script>
 
     <!-- Google Site Verification -->
     <meta name="google-site-verification" content="1uwMWOgJcmsW9ehR2rfolbkc5BZMmHD0xqKFwabdCt4" />
 
-    <!-- Ahrefs Web Analytics -->
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="5f9DXeW69Bf4uuCK8xnjJw" async></script>
+    <!-- Ahrefs Web Analytics - Loaded after page load -->
+    <script>
+      if (typeof navigator !== 'undefined' && !navigator.userAgent.includes('HeadlessChrome')) {
+        window.addEventListener('load', function() {
+          var script = document.createElement('script');
+          script.src = 'https://analytics.ahrefs.com/analytics.js';
+          script.setAttribute('data-key', '5f9DXeW69Bf4uuCK8xnjJw');
+          script.async = true;
+          document.head.appendChild(script);
+        });
+      }
+    </script>
 
     <!--
       Canonical and hreflang tags:
@@ -78,6 +96,12 @@
     <meta name="twitter:image" content="https://pmu-noska.de/logo%20A.png" />
     <meta name="twitter:image:alt" content="Permanent Make-up München - Anastasia Noska Logo" />
     
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://analytics.ahrefs.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
     <!-- Preload critical assets -->
     <link rel="preload" href="/logo A.png" as="image" type="image/png">
     <link rel="preload" href="/12.jpg" as="image" type="image/jpeg" fetchpriority="high">
@@ -91,5 +115,8 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Preload critical JavaScript -->
+    <link rel="modulepreload" href="/src/main.tsx">
   </body>
 </html>
