@@ -19,10 +19,27 @@ export const Hero = () => {
   useEffect(() => {
     // Force video to play when component mounts
     if (videoRef.current && isMobile) {
-      videoRef.current.load();
-      videoRef.current.play().catch(err => {
-        console.log("Video autoplay failed:", err);
-      });
+      const video = videoRef.current;
+
+      // Set attributes directly for better compatibility
+      video.setAttribute('autoplay', '');
+      video.setAttribute('muted', '');
+      video.setAttribute('playsinline', '');
+      video.muted = true; // Critical for autoplay
+
+      // Try to play immediately
+      const playPromise = video.play();
+
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            console.log('Video autoplay started successfully');
+          })
+          .catch(err => {
+            console.log('Video autoplay blocked by browser:', err);
+            // If autoplay fails, poster will be shown
+          });
+      }
     }
   }, [isMobile]);
 
@@ -49,7 +66,10 @@ export const Hero = () => {
           muted
           loop
           playsInline
+          preload="auto"
           poster="/16.jpg"
+          webkit-playsinline="true"
+          x5-playsinline="true"
           className="absolute left-0 w-full object-cover object-[center_25%]"
           style={{
             top: "-17%",
