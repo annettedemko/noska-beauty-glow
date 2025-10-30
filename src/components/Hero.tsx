@@ -58,30 +58,46 @@ export const Hero = () => {
       className="relative overflow-hidden flex items-center justify-center h-screen"
       style={isMobile ? { height: heroHeight } : undefined}
     >
-      {/* 🎥 Video (Mobile) / Image (Desktop) */}
+      {/* 🎥 Background: Poster image always visible, video plays on top if autoplay works */}
       {isMobile ? (
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          poster="/16.jpg"
-          webkit-playsinline="true"
-          x5-playsinline="true"
-          className="absolute left-0 w-full object-cover object-[center_25%]"
-          style={{
-            top: "-17%",
-            height: "135%",
-            filter: "grayscale(100%) contrast(0.95) brightness(1.05)",
-            transform: "scale(1.3)",
-            backfaceVisibility: "hidden",
-            willChange: "transform",
-          }}
-        >
-          <source src="/5.mp4" type="video/mp4" />
-        </video>
+        <>
+          {/* Poster as background (always visible) */}
+          <div
+            className="absolute left-0 w-full object-cover object-[center_25%] bg-cover bg-center"
+            style={{
+              top: "-17%",
+              height: "135%",
+              backgroundImage: "url(/16.jpg)",
+              filter: "grayscale(100%) contrast(0.95) brightness(1.05)",
+              transform: "scale(1.3)",
+              backfaceVisibility: "hidden",
+            }}
+          />
+          {/* Video overlay (hidden if not playing) */}
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            poster="/16.jpg"
+            webkit-playsinline="true"
+            x5-playsinline="true"
+            controls={false}
+            className="absolute left-0 w-full object-cover object-[center_25%] pointer-events-none"
+            style={{
+              top: "-17%",
+              height: "135%",
+              filter: "grayscale(100%) contrast(0.95) brightness(1.05)",
+              transform: "scale(1.3)",
+              backfaceVisibility: "hidden",
+              willChange: "transform",
+            }}
+          >
+            <source src="/5.mp4" type="video/mp4" />
+          </video>
+        </>
       ) : (
         <img
           src="/16.jpg"
