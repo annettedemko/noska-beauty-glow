@@ -53,6 +53,26 @@ export const Contact = () => {
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-accent/5 to-transparent transition-transform duration-1000 pointer-events-none" />
             </a>
 
+            <a
+              href="https://maps.app.goo.gl/PdddogcVErFvof8h7?g_st=ipc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative block pl-8 py-6 bg-background/60 backdrop-blur-sm border border-silver/20 hover:border-accent/30 active:border-accent/50 transition-all duration-300 shadow-luxury hover:shadow-2xl active:scale-[0.98] tap-feedback animate-in slide-in-from-left duration-700 delay-75 cursor-pointer"
+            >
+              <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-accent group-hover:w-[4px] group-active:w-[5px] transition-all duration-300" />
+              <div className="flex items-start gap-3">
+                <div className="text-2xl mt-1">🅿️</div>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.3em] text-accent font-semibold mb-3">{t("contactParking")}</p>
+                  <p className="text-xl font-serif group-hover:text-accent group-active:text-accent transition-colors">
+                    {t("parkingText")}
+                  </p>
+                </div>
+              </div>
+              {/* Hover shimmer effect */}
+              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-accent/5 to-transparent transition-transform duration-1000 pointer-events-none" />
+            </a>
+
             <div className="group relative pl-8 py-6 bg-background/60 backdrop-blur-sm border border-silver/20 hover:border-accent/30 active:border-accent/50 transition-all duration-500 shadow-luxury hover:shadow-2xl active:scale-[0.98] tap-feedback animate-in slide-in-from-left duration-700 delay-100">
               <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-accent group-hover:w-[4px] group-active:w-[5px] transition-all duration-300" />
               <p className="text-xs uppercase tracking-[0.3em] text-accent font-semibold mb-3">{t("contactWhatsapp")}</p>
