@@ -3,6 +3,17 @@
   "outputDirectory": "dist",
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": ".*\\.vercel\\.app"
+        }
+      ],
+      "destination": "https://pmu-noska.de/:path*",
+      "permanent": true
+    },
+    {
       "source": "/de",
       "destination": "/",
       "permanent": true
@@ -11,6 +22,18 @@
       "source": "/de/:path*",
       "destination": "/:path*",
       "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "Accept-Language",
+          "value": "ru.*"
+        }
+      ],
+      "destination": "/ru",
+      "permanent": false
     }
   ],
   "trailingSlash": false,

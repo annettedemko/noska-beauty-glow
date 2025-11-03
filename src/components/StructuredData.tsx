@@ -9,12 +9,17 @@ export const StructuredData = () => {
   // LocalBusiness Schema
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "BeautySalon",
+    "@type": ["BeautySalon", "LocalBusiness", "Organization"],
     "@id": "https://pmu-noska.de/#organization",
     "name": isGerman ? "Permanent Make-up by Anastasia Noska" : "Перманентный макияж от Анастасии Носка",
     "alternateName": "PMU Noska",
     "url": "https://pmu-noska.de",
-    "logo": "https://pmu-noska.de/logo%20A.png",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://pmu-noska.de/logo%20A.png",
+      "width": 512,
+      "height": 512
+    },
     "image": [
       "https://pmu-noska.de/logo%20A.png",
       "https://pmu-noska.de/12.jpg"
@@ -22,7 +27,9 @@ export const StructuredData = () => {
     "description": isGerman
       ? "Professionelles Permanent Make-up Studio in München. Spezialisiert auf Powder Brows, Aquarell Lippen, Lidstrich, Kopfhaut Pigmentierung und Camouflage."
       : "Профессиональная студия перманентного макияжа в Мюнхене. Специализируется на пудровых бровях, акварельных губах, подводке, пигментации кожи головы и камуфляже.",
-    "priceRange": "€€",
+    "priceRange": "€€-€€€",
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": isGerman ? "Bar, EC-Karte" : "Наличные, EC-карта",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "München",
@@ -37,6 +44,7 @@ export const StructuredData = () => {
       "longitude": 11.5820
     },
     "telephone": "+49-xxx-xxxxxxx",
+    "email": "info@pmu-noska.de",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -48,6 +56,13 @@ export const StructuredData = () => {
     "sameAs": [
       "https://www.instagram.com/anastasia__noska"
     ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+49-xxx-xxxxxxx",
+      "contactType": isGerman ? "Kundenservice" : "Служба поддержки",
+      "availableLanguage": ["German", "Russian"],
+      "areaServed": "DE"
+    },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": isGerman ? "Permanent Make-up Services" : "Услуги перманентного макияжа",
@@ -116,16 +131,30 @@ export const StructuredData = () => {
         }
       ]
     },
-    "areaServed": {
-      "@type": "City",
-      "name": "München"
-    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "München"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Bayern"
+      }
+    ],
     "founder": {
       "@type": "Person",
       "name": "Anastasia Noska",
-      "jobTitle": isGerman ? "PMU Spezialistin" : "Специалист по перманентному макияжу"
+      "jobTitle": isGerman ? "PMU Spezialistin" : "Специалист по перманентному макияжу",
+      "sameAs": "https://www.instagram.com/anastasia__noska"
     },
-    "slogan": isGerman ? "Natürlich schön" : "Естественная красота"
+    "slogan": isGerman ? "Natürlich schön" : "Естественная красота",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "50",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
   };
 
   // WebSite Schema
@@ -215,6 +244,87 @@ export const StructuredData = () => {
 
   const breadcrumbSchema = getBreadcrumbSchema();
 
+  // FAQ Schema for home page
+  const getFAQSchema = () => {
+    if (location.pathname !== "/" && location.pathname !== "/ru") {
+      return null;
+    }
+
+    return {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": isGerman ? [
+        {
+          "@type": "Question",
+          "name": "Was ist Permanent Make-up?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Permanent Make-up ist eine kosmetische Technik, bei der Pigmente in die oberste Hautschicht eingebracht werden. Dies ermöglicht es, Augenbrauen, Lippen und Lidstriche dauerhaft zu betonen und zu verschönern."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie lange hält Permanent Make-up?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Haltbarkeit von Permanent Make-up beträgt in der Regel 1-3 Jahre, abhängig von Hauttyp, Pflege und der behandelten Zone. Eine Auffrischung wird empfohlen, um die Farbe und Form optimal zu erhalten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist Permanent Make-up schmerzhaft?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die meisten Kunden empfinden die Behandlung als gut erträglich. Vor der Behandlung wird ein Betäubungsgel aufgetragen, um das Unbehagen zu minimieren."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was kostet Permanent Make-up in München?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die Preise variieren je nach Behandlung: Powder Brows ab 300€, Aquarell Lippen ab 350€, Kopfhaut Pigmentierung ab 400€, Camouflage ab 200€. Eine kostenlose Beratung ist jederzeit möglich."
+          }
+        }
+      ] : [
+        {
+          "@type": "Question",
+          "name": "Что такое перманентный макияж?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Перманентный макияж - это косметическая техника, при которой пигменты вводятся в верхний слой кожи. Это позволяет надолго подчеркнуть и улучшить брови, губы и веки."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как долго держится перманентный макияж?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Стойкость перманентного макияжа обычно составляет 1-3 года в зависимости от типа кожи, ухода и обработанной зоны. Рекомендуется обновление для оптимального сохранения цвета и формы."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Болезненна ли процедура перманентного макияжа?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Большинство клиентов считают процедуру вполне терпимой. Перед процедурой наносится обезболивающий гель для минимизации дискомфорта."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько стоит перманентный макияж в Мюнхене?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Цены варьируются в зависимости от процедуры: Пудровые брови от 300€, Акварельные губы от 350€, Пигментация кожи головы от 400€, Камуфляж от 200€. Бесплатная консультация доступна в любое время."
+          }
+        }
+      ]
+    };
+  };
+
+  const faqSchema = getFAQSchema();
+
   return (
     <>
       {/* LocalBusiness Schema */}
@@ -228,6 +338,14 @@ export const StructuredData = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
+
+      {/* FAQ Schema (only on home page) */}
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
       {/* Breadcrumb Schema (only on non-home pages) */}
       {breadcrumbSchema && (
