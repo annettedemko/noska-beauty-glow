@@ -96,12 +96,12 @@ const Camouflage = () => {
   return (
     <div className="min-h-screen bg-background relative">
       <SEOHead
-        titleDE="Camouflage München - Dehnungsstreifen & Narben kaschieren | Anastasia Noska"
-        titleRU="Камуфляж Мюнхен - маскировка растяжек и шрамов | Анастасия Носка"
-        descriptionDE="Professionelles Camouflage von Dehnungsstreifen, Schwangerschaftsstreifen, OP-Narben und Hautveränderungen in München. Preis ab 200€. Natürliche Ergebnisse von Anastasia Noska."
-        descriptionRU="Профессиональный камуфляж растяжек, шрамов от беременности, послеоперационных шрамов и изменений кожи в Мюнхене. Цена от 200€. Естественные результаты от Анастасии Носка."
-        keywordsDE="Camouflage München, Dehnungsstreifen kaschieren München, Schwangerschaftsstreifen entfernen München, Narben kaschieren München, Kaiserschnitt Narbe München, Brust OP Narbe München"
-        keywordsRU="Камуфляж Мюнхен, Маскировка растяжек Мюнхен, Удаление растяжек от беременности Мюнхен, Маскировка шрамов Мюнхен, Шрам от кесарева сечения Мюнхен, Шрам от операции на груди Мюнхен"
+        titleDE="Camouflage München ab 200€ - Narben & Dehnungsstreifen kaschieren ★★★★★"
+        titleRU="Камуфляж Мюнхен от 200€ - маскировка шрамов и растяжек ★★★★★"
+        descriptionDE="Camouflage München ✓ Narben & Dehnungsstreifen kaschieren ✓ Schwangerschaftsstreifen, Kaiserschnitt, OP-Narben ✓ Ab 200€ ✓ PMU Technik ✓ 5.0★ Bewertung ✓ Termin bei Anastasia Noska!"
+        descriptionRU="Камуфляж Мюнхен ✓ Маскировка шрамов и растяжек ✓ Растяжки от беременности, кесарево, послеоперационные шрамы ✓ От 200€ ✓ PMU техника ✓ 5.0★ ✓ Запись!"
+        keywordsDE="Camouflage München, Dehnungsstreifen kaschieren München, Schwangerschaftsstreifen entfernen München, Narben kaschieren München, Kaiserschnitt Narbe München, Brust OP Narbe München, Narben Camouflage PMU München"
+        keywordsRU="Камуфляж Мюнхен, Маскировка растяжек Мюнхен, Удаление растяжек от беременности Мюнхен, Маскировка шрамов Мюнхен, Шрам от кесарева Мюнхен, Шрам от операции Мюнхен"
       />
       <StructuredData />
 

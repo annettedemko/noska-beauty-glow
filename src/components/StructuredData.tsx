@@ -150,11 +150,91 @@ export const StructuredData = () => {
     "slogan": isGerman ? "Natürlich schön" : "Естественная красота",
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "50",
+      "ratingValue": "5.0",
+      "reviewCount": "6",
       "bestRating": "5",
       "worstRating": "1"
-    }
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Неля Малько"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Ich war bei der Kosmetikerin Anastasia zur Narbenabdeckung und bin super zufrieden! Sie arbeitet schnell, sorgfältig und sehr professionell. Außerdem ist sie unglaublich freundlich und aufmerksam. Das Studio ist sauber, gemütlich und gut erreichbar. Absolute Empfehlung!"
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Alina Nowikow"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Ich bin absolut begeistert von meinem Permanent Make-up! Das Ergebnis ist super natürlich geworden, und ich spare jeden Tag so viel Zeit beim Schminken. Die Behandlung war professionell, hygienisch und die Beratung vorab sehr ausführlich. Ich habe mich rundum wohlgefühlt und kann es nur weiterempfehlen!"
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Caroline"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Beste Permanent Make up Studio in München! Top Preis-Leistungsverhältnis! Anastasia macht ihre Arbeit ordentlich und fachgerecht! Ich komme unbedingt wieder! Danke!"
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Наталия Макарова"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Ich habe bei Anastasia die Puderaugenbrauen machen lassen. Ich bin wirklich sehr zufrieden. Meine Augenbrauen waren immer nicht so dick und wirkten etwas lückenhaft. Nach der Behandlung sehen sie voller aus, als ob ich sie mit einem sanft getönten Brauenstift geschminkt habe. Das Pigment wurde perfekt an mir angepasst. Ich bin für ein tolles Ergebnis dankbar! Ich komme unbedingt gerne wieder!"
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Анна-Мария Чепкасова"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Ich bin mit dem Ergebnis des permanent make ups sehr zufrieden. Beratung und Behandlung waren freundlich und kompetent. Ich habe mich mit Anastasia sehr wohl gefühlt!"
+      },
+      {
+        "@type": "Review",
+        "author": {
+          "@type": "Person",
+          "name": "Viktor Astrov"
+        },
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "reviewBody": "Ich habe meiner Frau einen Gutschein für eine Behandlung bei Anastasia geschenkt. Sie war nicht nur mit dem Ergebnis, sondern auch mit Anastasias unglaublich einfühlsamen und fürsorglichen Umgang mit ihren Kunden zufrieden."
+      }
+    ]
   };
 
   // WebSite Schema

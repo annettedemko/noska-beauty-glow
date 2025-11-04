@@ -96,12 +96,12 @@ const Kopfhaut = () => {
   return (
     <div className="min-h-screen relative">
       <SEOHead
-        titleDE="Kopfhaut Pigmentierung München - Trichopigmentierung | Anastasia Noska"
-        titleRU="Пигментация кожи головы Мюнхен - Трихопигментация | Анастасия Носка"
-        descriptionDE="Professionelle Kopfhaut Pigmentierung (Trichopigmentierung) in München für Männer und Frauen. Bei Haarausfall, Geheimratsecken, Narben. Preis: 300€. Jetzt Termin buchen!"
-        descriptionRU="Профессиональная пигментация кожи головы (трихопигментация) в Мюнхене для мужчин и женщин. При выпадении волос, залысинах, шрамах. Цена: 300€. Запишитесь сейчас!"
-        keywordsDE="Kopfhaut Pigmentierung München, Trichopigmentierung München, Scalp Micropigmentation München, SMP München, Haarausfall Lösung München, Geheimratsecken kaschieren München"
-        keywordsRU="Пигментация кожи головы Мюнхен, Трихопигментация Мюнхен, SMP Мюнхен, Решение выпадения волос Мюнхен, Маскировка залысин Мюнхен"
+        titleDE="Kopfhaut Pigmentierung München (SMP) ab 400€ | Trichopigmentierung ★★★★★"
+        titleRU="Пигментация кожи головы Мюнхен (SMP) от 400€ | Трихопигментация ★★★★★"
+        descriptionDE="Kopfhaut Pigmentierung München ✓ SMP bei Haarausfall & Geheimratsecken ✓ Für Männer & Frauen ✓ Ab 400€ ✓ Natürliche Ergebnisse ✓ 5.0★ Google Bewertung ✓ Anastasia Noska - Jetzt Termin!"
+        descriptionRU="Пигментация кожи головы Мюнхен ✓ SMP при выпадении волос ✓ Для мужчин и женщин ✓ От 400€ ✓ Естественные результаты ✓ 5.0★ Google ✓ Запись сейчас!"
+        keywordsDE="Kopfhaut Pigmentierung München, Trichopigmentierung München, Scalp Micropigmentation München, SMP München, Haarausfall Lösung München, Geheimratsecken kaschieren München, Haarpigmentierung München, lichtes Haar München"
+        keywordsRU="Пигментация кожи головы Мюнхен, Трихопигментация Мюнхен, SMP Мюнхен, Решение выпадения волос Мюнхен, Маскировка залысин Мюнхен, пигментация волос Мюнхен"
       />
 
       {/* 🔳 Monochrome image background */}
