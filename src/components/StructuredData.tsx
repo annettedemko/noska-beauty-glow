@@ -76,10 +76,9 @@ export const StructuredData = () => {
               ? "Natürliche Augenbrauen mit Powder Brows Technik"
               : "Естественные брови техникой пудрового напыления",
             "offers": {
-              "@type": "AggregateOffer",
+              "@type": "Offer",
               "priceCurrency": "EUR",
-              "lowPrice": "300",
-              "highPrice": "450"
+              "price": "180"
             }
           }
         },
@@ -92,10 +91,9 @@ export const StructuredData = () => {
               ? "Natürliche Lippenfarbe mit Aquarell Technik"
               : "Естественный цвет губ акварельной техникой",
             "offers": {
-              "@type": "AggregateOffer",
+              "@type": "Offer",
               "priceCurrency": "EUR",
-              "lowPrice": "350",
-              "highPrice": "500"
+              "price": "200"
             }
           }
         },
@@ -108,9 +106,9 @@ export const StructuredData = () => {
               ? "Kaschierung von Haarausfall und lichtem Haar"
               : "Маскировка выпадения волос и редких волос",
             "offers": {
-              "@type": "AggregateOffer",
+              "@type": "Offer",
               "priceCurrency": "EUR",
-              "lowPrice": "400"
+              "price": "300"
             }
           }
         },
@@ -363,7 +361,7 @@ export const StructuredData = () => {
           "name": "Was kostet Permanent Make-up in München?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Die Preise variieren je nach Behandlung: Powder Brows ab 300€, Aquarell Lippen ab 350€, Kopfhaut Pigmentierung ab 400€, Camouflage ab 200€. Eine kostenlose Beratung ist jederzeit möglich."
+            "text": "Die Preise variieren je nach Behandlung: Powder Brows 180€, Aquarell Lippen 200€, Kopfhaut Pigmentierung 300€, Camouflage ab 200€. Eine kostenlose Beratung ist jederzeit möglich."
           }
         }
       ] : [
@@ -396,7 +394,7 @@ export const StructuredData = () => {
           "name": "Сколько стоит перманентный макияж в Мюнхене?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Цены варьируются в зависимости от процедуры: Пудровые брови от 300€, Акварельные губы от 350€, Пигментация кожи головы от 400€, Камуфляж от 200€. Бесплатная консультация доступна в любое время."
+            "text": "Цены варьируются в зависимости от процедуры: Пудровые брови 180€, Акварельные губы 200€, Пигментация кожи головы 300€, Камуфляж от 200€. Бесплатная консультация доступна в любое время."
           }
         }
       ]
@@ -424,13 +422,7 @@ export const StructuredData = () => {
         "offers": {
           "@type": "Offer",
           "priceCurrency": "EUR",
-          "price": "400",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "priceCurrency": "EUR",
-            "price": "400",
-            "minPrice": "400"
-          }
+          "price": "300"
         },
         "serviceType": "Kopfhaut Pigmentierung, SMP, Scalp Micropigmentation"
       };
@@ -480,25 +472,13 @@ export const StructuredData = () => {
             "@type": "Offer",
             "name": isGerman ? "Powder Brows" : "Пудровые брови",
             "priceCurrency": "EUR",
-            "price": "300",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "priceCurrency": "EUR",
-              "minPrice": "300",
-              "maxPrice": "450"
-            }
+            "price": "180"
           },
           {
             "@type": "Offer",
             "name": isGerman ? "Aquarell Lippen" : "Акварельные губы",
             "priceCurrency": "EUR",
-            "price": "350",
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "priceCurrency": "EUR",
-              "minPrice": "350",
-              "maxPrice": "500"
-            }
+            "price": "200"
           }
         ],
         "serviceType": "Permanent Make-up, Powder Brows, Aquarell Lippen, Microblading"

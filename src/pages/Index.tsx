@@ -18,8 +18,8 @@ const Index = () => {
       <SEOHead
         titleDE="Permanent Make-up München – Powder Brows, Lippen | Anastasia Noska ★★★★★"
         titleRU="Перманентный макияж Мюнхен – пудровые брови, губы | Анастасия Носка ★★★★★"
-        descriptionDE="Permanent Make-up München ✓ Powder Brows ab 300€ ✓ Aquarell Lippen ✓ Kopfhaut Pigmentierung ✓ Camouflage ✓ 6 Google Bewertungen: 5.0★ ✓ Natürliche Ergebnisse ✓ Jetzt Termin buchen!"
-        descriptionRU="Перманентный макияж Мюнхен ✓ Пудровые брови от 300€ ✓ Акварельные губы ✓ Пигментация кожи головы ✓ Камуфляж ✓ 6 отзывов Google: 5.0★ ✓ Запишитесь сейчас!"
+        descriptionDE="Permanent Make-up München ✓ Powder Brows 180€ ✓ Aquarell Lippen 200€ ✓ Kopfhaut Pigmentierung ✓ Camouflage ab 200€ ✓ 6 Google Bewertungen: 5.0★ ✓ Natürliche Ergebnisse ✓ Jetzt Termin!"
+        descriptionRU="Перманентный макияж Мюнхен ✓ Пудровые брови 180€ ✓ Акварельные губы 200€ ✓ Пигментация кожи головы ✓ Камуфляж от 200€ ✓ 6 отзывов Google: 5.0★ ✓ Запишитесь!"
         keywordsDE="Permanent Make-up München, PMU München, Powder Brows München, Augenbrauen München, Lippen München, Lidstrich München, Kopfhaut Pigmentierung München, Camouflage München, Anastasia Noska, beste PMU München, 5 Sterne Bewertung"
         keywordsRU="Перманентный макияж Мюнхен, ПМУ Мюнхен, Пудровые брови Мюнхен, Брови Мюнхен, Губы Мюнхен, Пигментация кожи головы Мюнхен, Камуфляж Мюнхен, Анастасия Носка, лучший ПМУ Мюнхен, 5 звезд"
       />

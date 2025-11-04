@@ -96,10 +96,10 @@ const Kopfhaut = () => {
   return (
     <div className="min-h-screen relative">
       <SEOHead
-        titleDE="Kopfhaut Pigmentierung München (SMP) ab 400€ | Trichopigmentierung ★★★★★"
-        titleRU="Пигментация кожи головы Мюнхен (SMP) от 400€ | Трихопигментация ★★★★★"
-        descriptionDE="Kopfhaut Pigmentierung München ✓ SMP bei Haarausfall & Geheimratsecken ✓ Für Männer & Frauen ✓ Ab 400€ ✓ Natürliche Ergebnisse ✓ 5.0★ Google Bewertung ✓ Anastasia Noska - Jetzt Termin!"
-        descriptionRU="Пигментация кожи головы Мюнхен ✓ SMP при выпадении волос ✓ Для мужчин и женщин ✓ От 400€ ✓ Естественные результаты ✓ 5.0★ Google ✓ Запись сейчас!"
+        titleDE="Kopfhaut Pigmentierung München (SMP) 300€ | Trichopigmentierung ★★★★★"
+        titleRU="Пигментация кожи головы Мюнхен (SMP) 300€ | Трихопигментация ★★★★★"
+        descriptionDE="Kopfhaut Pigmentierung München ✓ SMP bei Haarausfall & Geheimratsecken ✓ Für Männer & Frauen ✓ 300€ ✓ Natürliche Ergebnisse ✓ 5.0★ Google Bewertung ✓ Anastasia Noska - Jetzt Termin!"
+        descriptionRU="Пигментация кожи головы Мюнхен ✓ SMP при выпадении волос ✓ Для мужчин и женщин ✓ 300€ ✓ Естественные результаты ✓ 5.0★ Google ✓ Запись сейчас!"
         keywordsDE="Kopfhaut Pigmentierung München, Trichopigmentierung München, Scalp Micropigmentation München, SMP München, Haarausfall Lösung München, Geheimratsecken kaschieren München, Haarpigmentierung München, lichtes Haar München"
         keywordsRU="Пигментация кожи головы Мюнхен, Трихопигментация Мюнхен, SMP Мюнхен, Решение выпадения волос Мюнхен, Маскировка залысин Мюнхен, пигментация волос Мюнхен"
       />
