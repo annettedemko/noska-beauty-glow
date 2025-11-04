@@ -325,6 +325,111 @@ export const StructuredData = () => {
 
   const faqSchema = getFAQSchema();
 
+  // Service Schema for specific service pages
+  const getServiceSchema = () => {
+    const path = location.pathname.replace(/^\/ru/, "");
+
+    if (path === "/kopfhaut-muenchen") {
+      return {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": isGerman ? "Kopfhaut Pigmentierung München" : "Пигментация кожи головы Мюнхен",
+        "description": isGerman
+          ? "Professionelle Kopfhaut Pigmentierung (SMP) bei Haarausfall. Natürliche Kaschierung von lichtem Haar und Haarverlust in München."
+          : "Профессиональная пигментация кожи головы (SMP) при выпадении волос. Естественная маскировка редких волос в Мюнхене.",
+        "provider": {
+          "@id": "https://pmu-noska.de/#organization"
+        },
+        "areaServed": "München",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "price": "400",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "priceCurrency": "EUR",
+            "price": "400",
+            "minPrice": "400"
+          }
+        },
+        "serviceType": "Kopfhaut Pigmentierung, SMP, Scalp Micropigmentation"
+      };
+    }
+
+    if (path === "/camouflage-muenchen") {
+      return {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": isGerman ? "Camouflage München - Narben & Dehnungsstreifen" : "Камуфляж Мюнхен - Шрамы и растяжки",
+        "description": isGerman
+          ? "Professionelle Camouflage von Narben, Dehnungsstreifen und Hautverfärbungen mit Permanent Make-up in München."
+          : "Профессиональный камуфляж шрамов, растяжек и пигментных пятен перманентным макияжем в Мюнхене.",
+        "provider": {
+          "@id": "https://pmu-noska.de/#organization"
+        },
+        "areaServed": "München",
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "price": "200",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "priceCurrency": "EUR",
+            "price": "200",
+            "minPrice": "200"
+          }
+        },
+        "serviceType": "Camouflage, Narben Kaschierung, Dehnungsstreifen Camouflage"
+      };
+    }
+
+    if (path === "/services-muenchen") {
+      return {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": isGerman ? "Permanent Make-up München" : "Перманентный макияж Мюнхен",
+        "description": isGerman
+          ? "Professionelles Permanent Make-up: Powder Brows, Aquarell Lippen, Lidstrich in München. Natürliche Ergebnisse von Anastasia Noska."
+          : "Профессиональный перманентный макияж: пудровые брови, акварельные губы, подводка в Мюнхене.",
+        "provider": {
+          "@id": "https://pmu-noska.de/#organization"
+        },
+        "areaServed": "München",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": isGerman ? "Powder Brows" : "Пудровые брови",
+            "priceCurrency": "EUR",
+            "price": "300",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "EUR",
+              "minPrice": "300",
+              "maxPrice": "450"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": isGerman ? "Aquarell Lippen" : "Акварельные губы",
+            "priceCurrency": "EUR",
+            "price": "350",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "EUR",
+              "minPrice": "350",
+              "maxPrice": "500"
+            }
+          }
+        ],
+        "serviceType": "Permanent Make-up, Powder Brows, Aquarell Lippen, Microblading"
+      };
+    }
+
+    return null;
+  };
+
+  const serviceSchema = getServiceSchema();
+
   return (
     <>
       {/* LocalBusiness Schema */}
@@ -344,6 +449,14 @@ export const StructuredData = () => {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+
+      {/* Service Schema (only on service pages) */}
+      {serviceSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
         />
       )}
 

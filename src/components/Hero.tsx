@@ -101,7 +101,7 @@ export const Hero = () => {
       ) : (
         <img
           src="/16.jpg"
-          alt="Hero Background"
+          alt="Permanent Make-up München Studio - Anastasia Noska PMU Spezialistin"
           className="absolute inset-0 w-full h-full object-cover object-top"
           style={{
             filter: "grayscale(100%) contrast(1.3)",

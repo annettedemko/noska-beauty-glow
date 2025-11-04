@@ -12,6 +12,21 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/" />
+    <image:image>
+      <image:loc>https://pmu-noska.de/12.webp</image:loc>
+      <image:title>Permanent Make-up Studio München - Anastasia Noska</image:title>
+      <image:caption>Professionelles PMU Studio in München mit natürlichen Ergebnissen</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://pmu-noska.de/1.webp</image:loc>
+      <image:title>Powder Brows Ergebnis München</image:title>
+      <image:caption>Natürliche Powder Brows von Anastasia Noska</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://pmu-noska.de/2.webp</image:loc>
+      <image:title>Aquarell Lippen München</image:title>
+      <image:caption>Natürliche Lippen Pigmentierung</image:caption>
+    </image:image>
   </url>
 
   <!-- Home Page (RU) -->
@@ -23,6 +38,21 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/" />
+    <image:image>
+      <image:loc>https://pmu-noska.de/12.webp</image:loc>
+      <image:title>Студия перманентного макияжа Мюнхен - Анастасия Носка</image:title>
+      <image:caption>Профессиональная студия PMU в Мюнхене с естественными результатами</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://pmu-noska.de/1.webp</image:loc>
+      <image:title>Результат пудровых бровей Мюнхен</image:title>
+      <image:caption>Естественные пудровые брови от Анастасии Носка</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://pmu-noska.de/2.webp</image:loc>
+      <image:title>Акварельные губы Мюнхен</image:title>
+      <image:caption>Естественная пигментация губ</image:caption>
+    </image:image>
   </url>
 
   <!-- Services Page (DE) -->
@@ -55,6 +85,16 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/kopfhaut-muenchen" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru/kopfhaut-muenchen" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/kopfhaut-muenchen" />
+    <image:image>
+      <image:loc>https://pmu-noska.de/19.webp</image:loc>
+      <image:title>Kopfhaut Pigmentierung München - Vorher Nachher</image:title>
+      <image:caption>SMP Scalp Micropigmentation bei Haarausfall München</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://pmu-noska.de/20.webp</image:loc>
+      <image:title>Haarpigmentierung Ergebnis München</image:title>
+      <image:caption>Natürliches Ergebnis bei lichtem Haar</image:caption>
+    </image:image>
   </url>
   <!-- Kopfhaut Pigmentierung (RU) -->
   <url>
@@ -76,6 +116,16 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/camouflage-muenchen" />
     <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru/camouflage-muenchen" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/camouflage-muenchen" />
+    <image:image>
+      <image:loc>https://pmu-noska.de/26.webp</image:loc>
+      <image:title>Camouflage München - Narben kaschieren</image:title>
+      <image:caption>Professionelle Narben Camouflage mit PMU München</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://pmu-noska.de/27.webp</image:loc>
+      <image:title>Dehnungsstreifen Camouflage München</image:title>
+      <image:caption>Natürliche Kaschierung von Dehnungsstreifen</image:caption>
+    </image:image>
   </url>
   <!-- Camouflage (RU) -->
   <url>

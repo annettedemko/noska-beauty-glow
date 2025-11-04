@@ -78,24 +78,24 @@ export const Gallery = () => {
   // Gallery images - акцент на Trichopigmentierung и камуфляж шрамов (первые в списке!)
   const galleryImages = [
     // Trichopigmentierung - ГЛАВНОЕ!
-    { src: "/9.jpg", alt: "Kopfhaut Pigmentierung", category: "Trichopigmentierung" },
-    { src: "/8.jpg", alt: "Kopfhaut Pigmentierung", category: "Trichopigmentierung" },
-    { src: "/28.jpg", alt: "Kopfhaut Pigmentierung", category: "Trichopigmentierung" },
+    { src: "/9.jpg", alt: "Kopfhaut Pigmentierung München - SMP Vorher Nachher Ergebnis", category: "Trichopigmentierung" },
+    { src: "/8.jpg", alt: "Scalp Micropigmentation München - Natürliches Haarpigmentierung Ergebnis", category: "Trichopigmentierung" },
+    { src: "/28.jpg", alt: "Trichopigmentierung München - Professionelle Kopfhaut Pigmentierung bei Haarausfall", category: "Trichopigmentierung" },
     // Камуфляж шрамов - ГЛАВНОЕ!
-    { src: "/14.PNG", alt: "Narben Camouflage", category: "Camouflage" },
-    { src: "/15.jpg", alt: "Narben Camouflage", category: "Camouflage" },
+    { src: "/14.PNG", alt: "Narben Camouflage München - Vorher Nachher Vergleich", category: "Camouflage" },
+    { src: "/15.jpg", alt: "Dehnungsstreifen Camouflage München - Natürliche Kaschierung", category: "Camouflage" },
     // Брови
-    { src: "/19.jpg", alt: "Augenbrauen", category: "Augenbrauen" },
-    { src: "/21.jpg", alt: "Augenbrauen", category: "Augenbrauen" },
-    { src: "/22.jpg", alt: "Augenbrauen", category: "Augenbrauen" },
-    { src: "/23.jpg", alt: "Augenbrauen", category: "Augenbrauen" },
-    { src: "/7.jpg", alt: "Augenbrauen", category: "Augenbrauen" },
+    { src: "/19.jpg", alt: "Powder Brows München - Natürliche Augenbrauen Permanent Make-up", category: "Augenbrauen" },
+    { src: "/21.jpg", alt: "Augenbrauen PMU München - Perfekte Powder Brows Technik", category: "Augenbrauen" },
+    { src: "/22.jpg", alt: "Microblading München - Natürliche Augenbrauen Härchenzeichnung", category: "Augenbrauen" },
+    { src: "/23.jpg", alt: "Ombre Brows München - Schattiertes Augenbrauen Permanent Make-up", category: "Augenbrauen" },
+    { src: "/7.jpg", alt: "Permanente Augenbrauen München - Anastasia Noska PMU Spezialistin", category: "Augenbrauen" },
     // Губы
-    { src: "/4.jpg", alt: "Lippen", category: "Lippen" },
-    { src: "/5.jpg", alt: "Lippen", category: "Lippen" },
-    { src: "/6.jpg", alt: "Lippen", category: "Lippen" },
-    { src: "/24.jpg", alt: "Lippen", category: "Lippen" },
-    { src: "/25.jpeg", alt: "Lippen", category: "Lippen" },
+    { src: "/4.jpg", alt: "Aquarell Lippen München - Natürliche Lippen Pigmentierung PMU", category: "Lippen" },
+    { src: "/5.jpg", alt: "Lippen Permanent Make-up München - Natürliche Lippenfarbe", category: "Lippen" },
+    { src: "/6.jpg", alt: "Lip Blush München - Sanfte Lippen Auffrischung mit PMU", category: "Lippen" },
+    { src: "/24.jpg", alt: "Permanente Lippen München - Volle Lippenkontur mit Aquarell Technik", category: "Lippen" },
+    { src: "/25.jpeg", alt: "Lippen PMU München - Natürliches Ergebnis ohne Überzeichnung", category: "Lippen" },
   ];
 
   return (

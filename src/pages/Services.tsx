@@ -5,6 +5,7 @@ import { ServiceHero } from "@/components/ServiceHero";
 import { VideoBackground } from "@/components/VideoBackground";
 import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -142,6 +143,7 @@ const Services = () => {
       {/* Content */}
       <div className="relative z-10">
         <Navigation />
+        <Breadcrumbs />
 
         <main className="pt-0">
           {/* Hero Section */}

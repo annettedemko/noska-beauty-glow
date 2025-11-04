@@ -6,6 +6,7 @@ import { VideoBackground } from "@/components/VideoBackground";
 import { SEOHead } from "@/components/SEOHead";
 import { RelatedServices } from "@/components/RelatedServices";
 import { StructuredData } from "@/components/StructuredData";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -41,6 +42,7 @@ const Remover = () => {
       {/* Content */}
       <div className="relative z-10">
         <Navigation />
+        <Breadcrumbs />
 
         <main className="pt-0">
           {/* Hero Section */}

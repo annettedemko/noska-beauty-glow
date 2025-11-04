@@ -15,8 +15,13 @@ User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
 
+# Google Images - allow all images for better indexing
 User-agent: Googlebot-Image
 Allow: /
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.webp$
+Allow: /*.png$
 
 # Bing
 User-agent: Bingbot
