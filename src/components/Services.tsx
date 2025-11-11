@@ -112,28 +112,16 @@ export const Services = () => {
 
                     {/* Action button */}
                     <div className="md:col-span-4 flex items-center justify-start md:justify-end">
-                      {service.isSpecial ? (
-                        <a
-                          href="https://buchung.treatwell.de/ort/permanent-make-up-by-anastasia-noska/?utm_medium=partner-ecosystem&utm_campaign=partner-instagram&utm_content=book-now&fbclid=PARlRTSANHvkBleHRuA2FlbQIxMAABp1qQGFg8ck5Nj90Oz6-hBzpeoVFVtqhm3khdo7DOlAnK-Y6iNfV3VLczqRz4_aem_u5OjR9Br5NBX_q6yx0myKA"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          className="group/btn relative px-6 sm:px-8 py-3 sm:py-4 bg-accent text-white font-sans text-xs tracking-[0.15em] sm:tracking-[0.25em] uppercase shadow-luxury hover-lift inline-block overflow-hidden text-center w-full sm:w-auto"
-                        >
-                          <span className="relative z-10 font-semibold">{t("bookNow")}</span>
-                          <div className="absolute inset-0 bg-gradient-to-r from-charcoal to-silver opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
-                        </a>
-                      ) : (
-                        <a
-                          href={service.bookingUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="group/btn relative px-6 sm:px-8 py-3 sm:py-4 bg-accent text-white font-sans text-xs tracking-[0.15em] sm:tracking-[0.25em] uppercase shadow-luxury hover-lift inline-block overflow-hidden text-center w-full sm:w-auto"
-                        >
-                          <span className="relative z-10 font-semibold">{t("bookNow")}</span>
-                          <div className="absolute inset-0 bg-gradient-to-r from-charcoal to-silver opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
-                        </a>
-                      )}
+                      <a
+                        href="https://wa.me/491779093936"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="group/btn relative px-6 sm:px-8 py-3 sm:py-4 bg-accent text-white font-sans text-xs tracking-[0.15em] sm:tracking-[0.25em] uppercase shadow-luxury hover-lift inline-block overflow-hidden text-center w-full sm:w-auto"
+                      >
+                        <span className="relative z-10 font-semibold">{t("whatsappContact")}</span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-charcoal to-silver opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
+                      </a>
                     </div>
                   </div>
 

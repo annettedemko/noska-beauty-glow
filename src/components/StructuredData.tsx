@@ -165,6 +165,7 @@ export const StructuredData = () => {
           "ratingValue": "5",
           "bestRating": "5"
         },
+        "datePublished": "2024-12-15",
         "reviewBody": "Ich war bei der Kosmetikerin Anastasia zur Narbenabdeckung und bin super zufrieden! Sie arbeitet schnell, sorgfältig und sehr professionell. Außerdem ist sie unglaublich freundlich und aufmerksam. Das Studio ist sauber, gemütlich und gut erreichbar. Absolute Empfehlung!"
       },
       {
@@ -178,6 +179,7 @@ export const StructuredData = () => {
           "ratingValue": "5",
           "bestRating": "5"
         },
+        "datePublished": "2024-11-28",
         "reviewBody": "Ich bin absolut begeistert von meinem Permanent Make-up! Das Ergebnis ist super natürlich geworden, und ich spare jeden Tag so viel Zeit beim Schminken. Die Behandlung war professionell, hygienisch und die Beratung vorab sehr ausführlich. Ich habe mich rundum wohlgefühlt und kann es nur weiterempfehlen!"
       },
       {
@@ -191,6 +193,7 @@ export const StructuredData = () => {
           "ratingValue": "5",
           "bestRating": "5"
         },
+        "datePublished": "2024-11-10",
         "reviewBody": "Beste Permanent Make up Studio in München! Top Preis-Leistungsverhältnis! Anastasia macht ihre Arbeit ordentlich und fachgerecht! Ich komme unbedingt wieder! Danke!"
       },
       {
@@ -204,6 +207,7 @@ export const StructuredData = () => {
           "ratingValue": "5",
           "bestRating": "5"
         },
+        "datePublished": "2024-10-22",
         "reviewBody": "Ich habe bei Anastasia die Puderaugenbrauen machen lassen. Ich bin wirklich sehr zufrieden. Meine Augenbrauen waren immer nicht so dick und wirkten etwas lückenhaft. Nach der Behandlung sehen sie voller aus, als ob ich sie mit einem sanft getönten Brauenstift geschminkt habe. Das Pigment wurde perfekt an mir angepasst. Ich bin für ein tolles Ergebnis dankbar! Ich komme unbedingt gerne wieder!"
       },
       {
@@ -217,6 +221,7 @@ export const StructuredData = () => {
           "ratingValue": "5",
           "bestRating": "5"
         },
+        "datePublished": "2024-09-18",
         "reviewBody": "Ich bin mit dem Ergebnis des permanent make ups sehr zufrieden. Beratung und Behandlung waren freundlich und kompetent. Ich habe mich mit Anastasia sehr wohl gefühlt!"
       },
       {
@@ -230,6 +235,7 @@ export const StructuredData = () => {
           "ratingValue": "5",
           "bestRating": "5"
         },
+        "datePublished": "2024-08-30",
         "reviewBody": "Ich habe meiner Frau einen Gutschein für eine Behandlung bei Anastasia geschenkt. Sie war nicht nur mit dem Ergebnis, sondern auch mit Anastasias unglaublich einfühlsamen und fürsorglichen Umgang mit ihren Kunden zufrieden."
       }
     ]
@@ -490,6 +496,32 @@ export const StructuredData = () => {
 
   const serviceSchema = getServiceSchema();
 
+  // Video Schema (only on home page, mobile only)
+  const getVideoSchema = () => {
+    if (location.pathname !== "/" && location.pathname !== "/ru") {
+      return null;
+    }
+
+    return {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": isGerman ? "Permanent Make-up München - Anastasia Noska" : "Перманентный макияж Мюнхен - Анастасия Носка",
+      "description": isGerman
+        ? "Professionelles Permanent Make-up Studio in München. Natürliche Ergebnisse mit Powder Brows, Aquarell Lippen und mehr."
+        : "Профессиональная студия перманентного макияжа в Мюнхене. Естественные результаты с пудровыми бровями, акварельными губами и более.",
+      "thumbnailUrl": "https://pmu-noska.de/12.webp",
+      "uploadDate": "2024-01-01T00:00:00Z",
+      "contentUrl": "https://pmu-noska.de/5.mp4",
+      "embedUrl": "https://pmu-noska.de/",
+      "duration": "PT10S",
+      "publisher": {
+        "@id": "https://pmu-noska.de/#organization"
+      }
+    };
+  };
+
+  const videoSchema = getVideoSchema();
+
   return (
     <>
       {/* LocalBusiness Schema */}
@@ -503,6 +535,14 @@ export const StructuredData = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
+
+      {/* Video Schema (only on home page) */}
+      {videoSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+        />
+      )}
 
       {/* FAQ Schema (only on home page) */}
       {faqSchema && (

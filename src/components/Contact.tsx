@@ -112,7 +112,7 @@ export const Contact = () => {
             </div>
           </div>
 
-          {/* Booking section */}
+          {/* Instagram Gallery Preview */}
           <div className="flex flex-col items-center justify-center space-y-8 bg-background/60 backdrop-blur-sm border border-silver/20 p-6 sm:p-8 md:p-12 shadow-luxury hover:shadow-2xl hover:border-accent/30 transition-all duration-500 animate-in slide-in-from-right duration-700 delay-200">
             {/* Decorative corner accents */}
             <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-accent/20 opacity-0 animate-in fade-in duration-700 delay-500" />
@@ -125,20 +125,20 @@ export const Contact = () => {
                 <img src="/logo A.png" alt="Anastasia Noska Logo" className="w-full h-full object-contain animate-pulse" />
               </div>
               <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-semibold tracking-wide break-words px-2">
-                {t("bookingTitle")}
+                {t("language") === "DE" ? "Folgen Sie uns auf Instagram" : "Подписывайтесь на Instagram"}
               </h3>
               <p className="text-sm sm:text-base text-muted-foreground px-2">
-                {t("bookingSubtitle")}
+                {t("language") === "DE" ? "Entdecken Sie unsere neuesten Arbeiten und Inspiration" : "Откройте для себя наши последние работы и вдохновение"}
               </p>
             </div>
 
             <a
-              href="https://buchung.treatwell.de/ort/permanent-make-up-by-anastasia-noska/?utm_medium=partner-ecosystem&utm_campaign=partner-instagram&utm_content=book-now&fbclid=PARlRTSANHvkBleHRuA2FlbQIxMAABp1qQGFg8ck5Nj90Oz6-hBzpeoVFVtqhm3khdo7DOlAnK-Y6iNfV3VLczqRz4_aem_u5OjR9Br5NBX_q6yx0myKA"
+              href="https://www.instagram.com/noska_beauty_glow/"
               target="_blank"
               rel="noopener noreferrer"
               className="group/btn relative px-6 sm:px-10 md:px-12 py-4 sm:py-5 bg-accent text-foreground font-sans text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.25em] uppercase shadow-luxury hover-lift overflow-hidden text-center w-full sm:w-auto tap-feedback hover:scale-105 active:scale-95 transition-transform"
             >
-              <span className="relative z-10 font-semibold whitespace-nowrap">{t("treatwellButton")}</span>
+              <span className="relative z-10 font-semibold whitespace-nowrap">{t("instagram")}</span>
               <div className="absolute inset-0 bg-gradient-to-r from-charcoal to-silver opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
               {/* Shimmer effect on mobile */}
               <div className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full group-active:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000" />

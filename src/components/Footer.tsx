@@ -32,6 +32,86 @@ export const Footer = () => {
           </p>
         </div>
 
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 pb-12 border-b border-silver/20">
+          {/* Services Column */}
+          <div>
+            <h3 className="font-serif text-lg mb-4 tracking-wide">{language === "DE" ? "Leistungen" : "Услуги"}</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to={`${langPrefix}/services-muenchen`} className="text-muted-foreground hover:text-accent transition-colors duration-300">
+                  {language === "DE" ? "Powder Brows & Lippen" : "Брови и Губы"}
+                </Link>
+              </li>
+              <li>
+                <Link to={`${langPrefix}/kopfhaut-muenchen`} className="text-muted-foreground hover:text-accent transition-colors duration-300">
+                  {language === "DE" ? "Kopfhaut Pigmentierung" : "Пигментация кожи головы"}
+                </Link>
+              </li>
+              <li>
+                <Link to={`${langPrefix}/camouflage-muenchen`} className="text-muted-foreground hover:text-accent transition-colors duration-300">
+                  Camouflage
+                </Link>
+              </li>
+              <li>
+                <Link to={`${langPrefix}/remover-muenchen`} className="text-muted-foreground hover:text-accent transition-colors duration-300">
+                  Remover
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Quick Links Column */}
+          <div>
+            <h3 className="font-serif text-lg mb-4 tracking-wide">{language === "DE" ? "Schnellzugriff" : "Быстрые ссылки"}</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to={langPrefix || "/"} className="text-muted-foreground hover:text-accent transition-colors duration-300">
+                  {language === "DE" ? "Startseite" : "Главная"}
+                </Link>
+              </li>
+              <li>
+                <a href={`${langPrefix || "/"}#gallery`} className="text-muted-foreground hover:text-accent transition-colors duration-300">
+                  {language === "DE" ? "Galerie" : "Галерея"}
+                </a>
+              </li>
+              <li>
+                <a href={`${langPrefix || "/"}#about`} className="text-muted-foreground hover:text-accent transition-colors duration-300">
+                  {language === "DE" ? "Über mich" : "Обо мне"}
+                </a>
+              </li>
+              <li>
+                <a href={`${langPrefix || "/"}#contact`} className="text-muted-foreground hover:text-accent transition-colors duration-300">
+                  {language === "DE" ? "Kontakt" : "Контакты"}
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Column */}
+          <div>
+            <h3 className="font-serif text-lg mb-4 tracking-wide">{language === "DE" ? "Kontakt" : "Контакты"}</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>München, Bayern</li>
+              <li>
+                <a href="https://wa.me/491779093936" className="hover:text-accent transition-colors duration-300">
+                  WhatsApp: +49 177 909 3936
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/anastasia__noska" className="hover:text-accent transition-colors duration-300">
+                  Instagram: @anastasia__noska
+                </a>
+              </li>
+              <li className="pt-2">
+                <span className="inline-flex items-center gap-1 text-accent">
+                  ⭐⭐⭐⭐⭐ <span className="text-xs">5.0 (6 {language === "DE" ? "Bewertungen" : "отзывов"})</span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-8 pb-8 border-b border-silver/20">
           <div className="flex gap-6 sm:gap-10 text-xs sm:text-sm uppercase tracking-[0.1em] sm:tracking-[0.2em]">
             <Link to={`${langPrefix}/impressum`} className="hover:text-accent transition-colors duration-300 relative group">

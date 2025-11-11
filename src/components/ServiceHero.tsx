@@ -8,7 +8,7 @@ interface ServiceHeroProps {
   backgroundImage: string;
   ctaButtons?: {
     whatsappLink?: string;
-    bookingLink?: string;
+    instagramLink?: string;
   };
 }
 
@@ -220,10 +220,10 @@ export const ServiceHero = ({
                 </a>
               )}
 
-              {/* Booking Button */}
-              {ctaButtons.bookingLink && (
+              {/* Instagram Button */}
+              {ctaButtons.instagramLink && (
                 <a
-                  href={ctaButtons.bookingLink}
+                  href={ctaButtons.instagramLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative px-8 py-4 overflow-hidden tap-feedback uppercase tracking-[0.2em] font-semibold text-sm transition-all duration-300"
@@ -261,7 +261,7 @@ export const ServiceHero = ({
                         : { textShadow: "0 1px 2px rgba(0,0,0,0.1)" }
                     }
                   >
-                    {t("onlineBooking")}
+                    {t("instagram")}
                   </span>
                 </a>
               )}

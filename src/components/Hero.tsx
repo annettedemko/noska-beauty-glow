@@ -217,9 +217,9 @@ export const Hero = () => {
               </span>
             </a>
 
-            {/* Treatwell Button */}
+            {/* Instagram Button */}
             <a
-              href="https://buchung.treatwell.de/ort/permanent-make-up-by-anastasia-noska/"
+              href="https://www.instagram.com/noska_beauty_glow/"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative px-8 py-4 overflow-hidden tap-feedback uppercase tracking-[0.2em] font-semibold text-sm transition-all duration-300"
@@ -241,7 +241,7 @@ export const Hero = () => {
 
               <span className={`relative z-10 ${isMobile ? 'text-white' : 'text-foreground'}`}
                 style={isMobile ? { textShadow: "0 2px 4px rgba(0,0,0,0.3)" } : { textShadow: "0 1px 2px rgba(0,0,0,0.1)" }}>
-                {t("onlineBooking")}
+                {t("instagram")}
               </span>
             </a>
           </div>

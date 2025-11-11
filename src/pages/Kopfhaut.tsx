@@ -96,8 +96,8 @@ const Kopfhaut = () => {
   return (
     <div className="min-h-screen relative">
       <SEOHead
-        titleDE="Kopfhaut Pigmentierung München (SMP) 300€ | Trichopigmentierung ★★★★★"
-        titleRU="Пигментация кожи головы Мюнхен (SMP) 300€ | Трихопигментация ★★★★★"
+        titleDE="Kopfhaut Pigmentierung München 300€ | TOP Bewertet 5.0★ | SMP"
+        titleRU="Пигментация кожи головы Мюнхен 300€ | ТОП оценка 5.0★ | SMP"
         descriptionDE="Kopfhaut Pigmentierung München ✓ SMP bei Haarausfall & Geheimratsecken ✓ Für Männer & Frauen ✓ 300€ ✓ Natürliche Ergebnisse ✓ 5.0★ Google Bewertung ✓ Anastasia Noska - Jetzt Termin!"
         descriptionRU="Пигментация кожи головы Мюнхен ✓ SMP при выпадении волос ✓ Для мужчин и женщин ✓ 300€ ✓ Естественные результаты ✓ 5.0★ Google ✓ Запись сейчас!"
         keywordsDE="Kopfhaut Pigmentierung München, Trichopigmentierung München, Scalp Micropigmentation München, SMP München, Haarausfall Lösung München, Geheimratsecken kaschieren München, Haarpigmentierung München, lichtes Haar München"
@@ -134,7 +134,7 @@ const Kopfhaut = () => {
             backgroundImage="/29.jpg"
             ctaButtons={{
               whatsappLink: "https://wa.me/491779093936",
-              bookingLink: "https://buchung.treatwell.de/ort/permanent-make-up-by-anastasia-noska/",
+              instagramLink: "https://www.instagram.com/noska_beauty_glow/",
             }}
           />
 
@@ -209,13 +209,13 @@ const Kopfhaut = () => {
                       {t("scalpPrice")}
                     </p>
                     <a
-                      href="https://buchung.treatwell.de/ort/permanent-make-up-by-anastasia-noska/"
+                      href="https://wa.me/491779093936"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group/btn relative px-6 sm:px-10 md:px-12 py-4 sm:py-5 bg-accent text-white font-sans text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.25em] uppercase shadow-luxury hover-lift overflow-hidden inline-block"
                     >
                       <span className="relative z-10 font-semibold whitespace-nowrap">
-                        {t("bookNow")}
+                        {t("whatsappContact")}
                       </span>
                       <div className="absolute inset-0 bg-gradient-to-r from-charcoal to-silver opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
                     </a>

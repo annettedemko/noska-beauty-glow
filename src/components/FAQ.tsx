@@ -20,7 +20,7 @@ export const FAQ = () => {
   const faqsDE = [
     {
       question: "Wie kann ich einen Termin buchen?",
-      answer: "Sie können direkt über WhatsApp, per E-Mail oder über Treatwell einen Termin vereinbaren. Ich melde mich zeitnah bei Ihnen zurück."
+      answer: "Sie können direkt über WhatsApp oder per E-Mail einen Termin vereinbaren. Ich melde mich zeitnah bei Ihnen zurück."
     },
     {
       question: "Wie lange hält das Permanent Make-up?",
@@ -35,7 +35,7 @@ export const FAQ = () => {
   const faqsRU = [
     {
       question: "Как записаться на процедуру?",
-      answer: "Вы можете записаться через WhatsApp, по электронной почте или через Treatwell. Я свяжусь с вами в ближайшее время."
+      answer: "Вы можете записаться через WhatsApp или по электронной почте. Я свяжусь с вами в ближайшее время."
     },
     {
       question: "Сколько держится результат?",

@@ -93,7 +93,7 @@ const translations = {
     // FAQ
     faqTitle: "FAQ",
     faq1Q: "Wie kann ich einen Termin buchen?",
-    faq1A: "Sie können direkt über WhatsApp, per E-Mail oder über Treatwell einen Termin vereinbaren. Ich melde mich zeitnah bei Ihnen zurück.",
+    faq1A: "Sie können direkt über WhatsApp oder per E-Mail einen Termin vereinbaren. Ich melde mich zeitnah bei Ihnen zurück.",
     faq2Q: "Wie lange hält das Permanent Make-up?",
     faq2A: "Die Haltbarkeit beträgt in der Regel 1-3 Jahre, abhängig von Hauttyp, Pflege und Sonneneinstrahlung. Eine Auffrischung wird empfohlen.",
     faq3Q: "Gibt es Kontraindikationen?",
@@ -279,7 +279,7 @@ const translations = {
     // FAQ
     faqTitle: "FAQ",
     faq1Q: "Как записаться на процедуру?",
-    faq1A: "Вы можете записаться через WhatsApp, по электронной почте или через Treatwell. Я свяжусь с вами в ближайшее время.",
+    faq1A: "Вы можете записаться через WhatsApp или по электронной почте. Я свяжусь с вами в ближайшее время.",
     faq2Q: "Сколько держится результат?",
     faq2A: "Обычно 1-3 года, в зависимости от типа кожи, ухода и воздействия солнца. Рекомендуется обновление.",
     faq3Q: "Есть ли противопоказания?",

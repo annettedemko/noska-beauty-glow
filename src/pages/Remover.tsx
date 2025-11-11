@@ -52,7 +52,7 @@ const Remover = () => {
             backgroundImage="/19.jpg"
             ctaButtons={{
               whatsappLink: "https://wa.me/491779093936",
-              bookingLink: "https://buchung.treatwell.de/ort/permanent-make-up-by-anastasia-noska/",
+              instagramLink: "https://www.instagram.com/noska_beauty_glow/",
             }}
           />
 
@@ -108,12 +108,12 @@ const Remover = () => {
                   <div className="pt-12 text-center border-t border-charcoal/20 mt-12">
                     <p className="text-2xl sm:text-3xl font-serif mb-8 text-accent font-semibold">{t("removerPrice")}</p>
                     <a
-                      href="https://buchung.treatwell.de/ort/permanent-make-up-by-anastasia-noska/"
+                      href="https://wa.me/491779093936"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group/btn relative px-6 sm:px-10 md:px-12 py-4 sm:py-5 bg-accent text-white font-sans text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.25em] uppercase shadow-luxury hover-lift overflow-hidden inline-block"
                     >
-                      <span className="relative z-10 font-semibold whitespace-nowrap">{t("bookNow")}</span>
+                      <span className="relative z-10 font-semibold whitespace-nowrap">{t("whatsappContact")}</span>
                       <div className="absolute inset-0 bg-gradient-to-r from-charcoal to-silver opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
                     </a>
                   </div>
