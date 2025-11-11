@@ -2,7 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export const Contact = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { ref: contactRef, isVisible } = useScrollAnimation(0.1);
 
   return (
@@ -125,10 +125,10 @@ export const Contact = () => {
                 <img src="/logo A.png" alt="Anastasia Noska Logo" className="w-full h-full object-contain animate-pulse" />
               </div>
               <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-semibold tracking-wide break-words px-2">
-                {t("language") === "DE" ? "Folgen Sie uns auf Instagram" : "Подписывайтесь на Instagram"}
+                {language === "DE" ? "Folgen Sie uns auf Instagram" : "Подписывайтесь на Instagram"}
               </h3>
               <p className="text-sm sm:text-base text-muted-foreground px-2">
-                {t("language") === "DE" ? "Entdecken Sie unsere neuesten Arbeiten und Inspiration" : "Откройте для себя наши последние работы и вдохновение"}
+                {language === "DE" ? "Entdecken Sie unsere neuesten Arbeiten und Inspiration" : "Откройте для себя наши последние работы и вдохновение"}
               </p>
             </div>
 
