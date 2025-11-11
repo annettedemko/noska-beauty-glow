@@ -68,7 +68,7 @@ export const Hero = () => {
               top: "-17%",
               height: "135%",
               backgroundImage: "url(/16.jpg)",
-              filter: "grayscale(100%) contrast(0.95) brightness(1.05)",
+              filter: "grayscale(100%) contrast(0.55) brightness(1.15)",
               transform: "scale(1.3)",
               backfaceVisibility: "hidden",
             }}
@@ -89,7 +89,7 @@ export const Hero = () => {
             style={{
               top: "-17%",
               height: "135%",
-              filter: "grayscale(100%) contrast(0.95) brightness(1.05)",
+              filter: "grayscale(100%) contrast(0.55) brightness(1.15)",
               transform: "scale(1.3)",
               backfaceVisibility: "hidden",
               willChange: "transform",
