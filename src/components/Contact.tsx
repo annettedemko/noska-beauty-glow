@@ -124,10 +124,10 @@ export const Contact = () => {
               <div className="w-20 h-20 mx-auto flex items-center justify-center mb-6">
                 <img src="/logo A.png" alt="Anastasia Noska Logo" className="w-full h-full object-contain animate-pulse" />
               </div>
-              <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-semibold tracking-wide break-words px-2">
+              <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-semibold tracking-wide px-2" style={{ hyphens: 'none', wordBreak: 'keep-all' }}>
                 {language === "DE" ? "Folgen Sie uns auf Instagram" : "Подписывайтесь на Instagram"}
               </h3>
-              <p className="text-sm sm:text-base text-muted-foreground px-2">
+              <p className="text-sm sm:text-base text-muted-foreground px-2" style={{ hyphens: 'none', wordBreak: 'keep-all' }}>
                 {language === "DE" ? "Entdecken Sie unsere neuesten Arbeiten und Inspiration" : "Откройте для себя наши последние работы и вдохновение"}
               </p>
             </div>
