@@ -223,7 +223,7 @@ export const ServiceHero = ({
               {/* Instagram Button */}
               {ctaButtons.instagramLink && (
                 <a
-                  href={ctaButtons.instagramLink}
+                  href={ctaButtons.instagramLink || "https://www.instagram.com/anastasia__noska?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative px-8 py-4 overflow-hidden tap-feedback uppercase tracking-[0.2em] font-semibold text-sm transition-all duration-300"

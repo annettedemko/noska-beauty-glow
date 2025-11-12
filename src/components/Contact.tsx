@@ -133,7 +133,7 @@ export const Contact = () => {
             </div>
 
             <a
-              href="https://www.instagram.com/noska_beauty_glow/"
+              href="https://www.instagram.com/anastasia__noska?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               target="_blank"
               rel="noopener noreferrer"
               className="group/btn relative px-6 sm:px-10 md:px-12 py-4 sm:py-5 bg-accent text-foreground font-sans text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.25em] uppercase shadow-luxury hover-lift overflow-hidden text-center w-full sm:w-auto tap-feedback hover:scale-105 active:scale-95 transition-transform"

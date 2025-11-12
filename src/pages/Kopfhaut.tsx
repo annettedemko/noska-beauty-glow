@@ -134,7 +134,7 @@ const Kopfhaut = () => {
             backgroundImage="/29.jpg"
             ctaButtons={{
               whatsappLink: "https://wa.me/491779093936",
-              instagramLink: "https://www.instagram.com/noska_beauty_glow/",
+              instagramLink: "https://www.instagram.com/anastasia__noska?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
             }}
           />
 
