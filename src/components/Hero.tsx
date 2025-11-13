@@ -163,7 +163,15 @@ export const Hero = () => {
             }}
           >
             <span className={`relative z-10 drop-shadow-2xl ${isMobile ? 'text-white' : 'text-foreground'}`}>
-              {t("heroTitle")}
+              {t("heroTitle").split(' – ').map((part, index) => (
+                index === 1 ? (
+                  <span key={index} style={{ whiteSpace: 'nowrap' }}>
+                    {' – '}{part}
+                  </span>
+                ) : (
+                  <span key={index}>{part}</span>
+                )
+              ))}
             </span>
           </h1>
 
