@@ -170,7 +170,13 @@ const Datenschutz = () => {
                       Die IP-Anonymisierung ist auf dieser Website aktiviert.
                     </p>
                     <p className="mb-3">
-                      Die Nutzung von Google Analytics erfolgt ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
+                      <strong>Rechtsgrundlage:</strong> Die Nutzung von Google Analytics erfolgt ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
+                    </p>
+                    <p className="mb-3">
+                      <strong>Speicherdauer der Cookies:</strong> Die von Google Analytics gesetzten Cookies (_ga, _gid) werden standardmäßig nach 14 Monaten (_ga) bzw. 24 Stunden (_gid) gelöscht.
+                    </p>
+                    <p className="mb-3">
+                      <strong>Widerruf:</strong> Sie können Ihre Einwilligung jederzeit über die Cookie-Einstellungen am Ende jeder Seite widerrufen. Der Widerruf hat keinen Einfluss auf die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung.
                     </p>
                     <p>
                       Google ist nach dem EU-U.S. Data Privacy Framework zertifiziert.
@@ -188,15 +194,18 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">10. Ahrefs</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">10. Ahrefs Analytics</h2>
                     <p className="mb-3">
-                      Zur Suchmaschinenoptimierung und technischen Analyse der Website wird das Tool Ahrefs (Ahrefs Pte. Ltd., Singapur) eingesetzt.
+                      Diese Website nutzt Ahrefs Analytics (Ahrefs Pte. Ltd., Singapur) zur Analyse des Website-Traffics und zur Suchmaschinenoptimierung.
                     </p>
                     <p className="mb-3">
-                      Dabei können technische Zugriffsdaten (z. B. IP-Adresse, User-Agent) verarbeitet werden.
+                      Ahrefs Analytics kann Cookies setzen und technische Zugriffsdaten (z. B. IP-Adresse, User-Agent, besuchte Seiten) verarbeiten.
+                    </p>
+                    <p className="mb-3">
+                      Die Nutzung von Ahrefs Analytics erfolgt ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
                     </p>
                     <p>
-                      Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Optimierung und Sicherheit der Website).
+                      Sie können Ihre Einwilligung jederzeit über die Cookie-Einstellungen widerrufen.
                     </p>
                   </section>
 
@@ -390,7 +399,13 @@ const Datenschutz = () => {
                       На сайте активирована анонимизация IP-адресов.
                     </p>
                     <p className="mb-3">
-                      Использование Google Analytics осуществляется исключительно на основании вашего согласия в соответствии со ст. 6 ч. 1 п. a GDPR.
+                      <strong>Правовое основание:</strong> Использование Google Analytics осуществляется исключительно на основании вашего согласия в соответствии со ст. 6 ч. 1 п. a GDPR.
+                    </p>
+                    <p className="mb-3">
+                      <strong>Срок хранения cookies:</strong> Файлы cookie, устанавливаемые Google Analytics (_ga, _gid), удаляются по умолчанию через 14 месяцев (_ga) или 24 часа (_gid).
+                    </p>
+                    <p className="mb-3">
+                      <strong>Отзыв согласия:</strong> Вы можете в любое время отозвать свое согласие через настройки cookie в нижней части каждой страницы. Отзыв не влияет на законность обработки данных до момента отзыва.
                     </p>
                     <p>
                       Google сертифицирован в рамках EU-U.S. Data Privacy Framework.
@@ -408,15 +423,18 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">10. Ahrefs</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">10. Ahrefs Analytics</h2>
                     <p className="mb-3">
-                      Для SEO-анализа и технической оптимизации сайта используется сервис Ahrefs (Ahrefs Pte. Ltd., Сингапур).
+                      Наш сайт использует Ahrefs Analytics (Ahrefs Pte. Ltd., Сингапур) для анализа трафика сайта и поисковой оптимизации.
                     </p>
                     <p className="mb-3">
-                      При этом могут обрабатываться технические данные доступа (например, IP-адрес, user-agent).
+                      Ahrefs Analytics может устанавливать cookies и обрабатывать технические данные доступа (например, IP-адрес, user-agent, посещенные страницы).
+                    </p>
+                    <p className="mb-3">
+                      Использование Ahrefs Analytics осуществляется исключительно на основании вашего согласия в соответствии со ст. 6 ч. 1 п. a GDPR.
                     </p>
                     <p>
-                      Обработка осуществляется на основании ст. 6 ч. 1 п. f GDPR (законный интерес в оптимизации и безопасности сайта).
+                      Вы можете отозвать свое согласие в любое время через настройки cookie.
                     </p>
                   </section>
 
