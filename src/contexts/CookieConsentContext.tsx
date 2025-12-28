@@ -2,11 +2,18 @@ import { createContext, useContext, useState, useEffect, ReactNode } from 'react
 
 type ConsentType = 'all' | 'necessary' | null;
 
+interface CookiePreferences {
+  necessary: boolean;
+  analytics: boolean;
+}
+
 interface CookieConsentContextType {
   consent: ConsentType;
+  preferences: CookiePreferences;
   showBanner: boolean;
   acceptAll: () => void;
   acceptNecessary: () => void;
+  savePreferences: (prefs: CookiePreferences) => void;
   openSettings: () => void;
   showSettings: boolean;
   closeSettings: () => void;
@@ -15,23 +22,40 @@ interface CookieConsentContextType {
 const CookieConsentContext = createContext<CookieConsentContextType | undefined>(undefined);
 
 const CONSENT_KEY = 'cookie-consent';
+const PREFERENCES_KEY = 'cookie-preferences';
 
 export const CookieConsentProvider = ({ children }: { children: ReactNode }) => {
   const [consent, setConsent] = useState<ConsentType>(null);
   const [showBanner, setShowBanner] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+  const [preferences, setPreferences] = useState<CookiePreferences>({
+    necessary: true,
+    analytics: false
+  });
 
   useEffect(() => {
     // Check if user has already made a choice
     const savedConsent = localStorage.getItem(CONSENT_KEY);
+    const savedPreferences = localStorage.getItem(PREFERENCES_KEY);
+
+    // Load saved preferences if they exist
+    if (savedPreferences) {
+      try {
+        const prefs = JSON.parse(savedPreferences) as CookiePreferences;
+        setPreferences(prefs);
+
+        // Load analytics if enabled in preferences
+        if (prefs.analytics) {
+          loadGoogleAnalytics();
+        }
+      } catch (e) {
+        console.error('Failed to parse cookie preferences', e);
+      }
+    }
+
     if (savedConsent === 'all' || savedConsent === 'necessary') {
       setConsent(savedConsent as ConsentType);
       setShowBanner(false);
-
-      // Load analytics if user accepted all
-      if (savedConsent === 'all') {
-        loadGoogleAnalytics();
-      }
     } else {
       // Show banner if no consent given
       setShowBanner(true);
@@ -39,19 +63,43 @@ export const CookieConsentProvider = ({ children }: { children: ReactNode }) => 
   }, []);
 
   const acceptAll = () => {
+    const prefs: CookiePreferences = { necessary: true, analytics: true };
     setConsent('all');
+    setPreferences(prefs);
     localStorage.setItem(CONSENT_KEY, 'all');
+    localStorage.setItem(PREFERENCES_KEY, JSON.stringify(prefs));
     setShowBanner(false);
     setShowSettings(false);
     loadGoogleAnalytics();
   };
 
   const acceptNecessary = () => {
+    const prefs: CookiePreferences = { necessary: true, analytics: false };
     setConsent('necessary');
+    setPreferences(prefs);
     localStorage.setItem(CONSENT_KEY, 'necessary');
+    localStorage.setItem(PREFERENCES_KEY, JSON.stringify(prefs));
     setShowBanner(false);
     setShowSettings(false);
     // Don't load analytics
+  };
+
+  const savePreferences = (prefs: CookiePreferences) => {
+    setPreferences(prefs);
+    localStorage.setItem(PREFERENCES_KEY, JSON.stringify(prefs));
+
+    // Update consent type based on preferences
+    const consentType = prefs.analytics ? 'all' : 'necessary';
+    setConsent(consentType);
+    localStorage.setItem(CONSENT_KEY, consentType);
+
+    setShowBanner(false);
+    setShowSettings(false);
+
+    // Load or remove analytics based on preference
+    if (prefs.analytics) {
+      loadGoogleAnalytics();
+    }
   };
 
   const openSettings = () => {
@@ -104,9 +152,11 @@ export const CookieConsentProvider = ({ children }: { children: ReactNode }) => 
     <CookieConsentContext.Provider
       value={{
         consent,
+        preferences,
         showBanner,
         acceptAll,
         acceptNecessary,
+        savePreferences,
         openSettings,
         showSettings,
         closeSettings

@@ -2,6 +2,7 @@ import { useCookieConsent } from "@/contexts/CookieConsentContext";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "react-router-dom";
 import { X } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export const CookieBanner = () => {
   const { showBanner, acceptAll, acceptNecessary, openSettings } = useCookieConsent();
@@ -84,16 +85,30 @@ export const CookieBanner = () => {
 };
 
 export const CookieSettings = () => {
-  const { showSettings, closeSettings, acceptAll, acceptNecessary } = useCookieConsent();
+  const { showSettings, closeSettings, acceptAll, acceptNecessary, savePreferences, preferences } = useCookieConsent();
   const { language } = useLanguage();
   const langPrefix = language === "DE" ? "" : "/ru";
+
+  const [analyticsEnabled, setAnalyticsEnabled] = useState(preferences.analytics);
+
+  // Update local state when preferences change
+  useEffect(() => {
+    setAnalyticsEnabled(preferences.analytics);
+  }, [preferences.analytics]);
+
+  const handleSave = () => {
+    savePreferences({
+      necessary: true,
+      analytics: analyticsEnabled
+    });
+  };
 
   if (!showSettings) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-in fade-in duration-300">
-      {/* Backdrop */}
-      <div className="absolute inset-0 bg-charcoal/90 backdrop-blur-sm" onClick={closeSettings} />
+      {/* Backdrop - click outside does NOT close modal */}
+      <div className="absolute inset-0 bg-charcoal/90 backdrop-blur-sm" />
 
       {/* Modal */}
       <div className="relative bg-background border-2 border-accent/30 shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-in zoom-in-95 duration-300">
@@ -106,15 +121,20 @@ export const CookieSettings = () => {
         <div className="p-6 md:p-8">
           {/* Header */}
           <div className="flex items-start justify-between mb-6">
-            <div className="flex items-center gap-3">
-              <img src="/logo A.png" alt="Logo" className="w-6 h-6" />
-              <h2 className="font-serif text-2xl md:text-3xl font-semibold text-accent">
-                {language === "DE" ? "Cookie-Einstellungen" : "Настройки Cookie"}
-              </h2>
+            <div className="flex-1">
+              <div className="flex items-center gap-3 mb-2">
+                <img src="/logo A.png" alt="Logo" className="w-6 h-6" />
+                <h2 className="font-serif text-2xl md:text-3xl font-semibold text-accent">
+                  {language === "DE" ? "Cookie-Einstellungen" : "Настройки Cookie"}
+                </h2>
+              </div>
+              <p className="text-sm text-muted-foreground ml-9">
+                {language === "DE" ? "Verwalten Sie Ihre Cookie-Präferenzen" : "Управляйте своими предпочтениями cookie"}
+              </p>
             </div>
             <button
               onClick={closeSettings}
-              className="p-2 hover:bg-silver/10 rounded transition-colors"
+              className="p-2 hover:bg-silver/10 rounded transition-colors flex-shrink-0"
               aria-label="Close"
             >
               <X className="w-5 h-5" />
@@ -146,7 +166,7 @@ export const CookieSettings = () => {
 
             {/* Analytics Cookies */}
             <div className="p-3 sm:p-4 border border-silver/20 bg-background/60">
-              <div className="flex items-start justify-between mb-3">
+              <div className="flex items-start justify-between gap-4 mb-3">
                 <div className="flex-1">
                   <h3 className="font-serif text-base sm:text-lg font-semibold mb-2">
                     {language === "DE" ? "Analyse & Statistik" : "Аналитика и статистика"}
@@ -158,8 +178,27 @@ export const CookieSettings = () => {
                   </p>
                   <div className="text-xs text-muted-foreground space-y-1">
                     <p>• Google Analytics (_ga, _gid)</p>
+                    <p>• Ahrefs Analytics</p>
                     <p>• {language === "DE" ? "Anonymisierte IP-Adressen" : "Анонимизированные IP-адреса"}</p>
                   </div>
+                </div>
+                {/* Toggle Switch */}
+                <div className="flex-shrink-0">
+                  <button
+                    onClick={() => setAnalyticsEnabled(!analyticsEnabled)}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 ${
+                      analyticsEnabled ? 'bg-accent' : 'bg-silver/30'
+                    }`}
+                    role="switch"
+                    aria-checked={analyticsEnabled}
+                    aria-label={language === "DE" ? "Analytics aktivieren/deaktivieren" : "Включить/отключить аналитику"}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        analyticsEnabled ? 'translate-x-6' : 'translate-x-1'
+                      }`}
+                    />
+                  </button>
                 </div>
               </div>
             </div>
@@ -177,7 +216,7 @@ export const CookieSettings = () => {
             </div>
           </div>
 
-          {/* Buttons */}
+          {/* Buttons - All equal weight (no dark patterns) */}
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mt-6 sm:mt-8">
             <button
               onClick={acceptNecessary}
@@ -187,8 +226,15 @@ export const CookieSettings = () => {
             </button>
 
             <button
+              onClick={handleSave}
+              className="flex-1 px-4 sm:px-6 py-2.5 sm:py-3 bg-background border border-silver/30 text-foreground font-sans text-[10px] sm:text-xs tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] uppercase hover:border-silver hover:bg-silver/10 transition-all duration-300"
+            >
+              {language === "DE" ? "Speichern" : "Сохранить"}
+            </button>
+
+            <button
               onClick={acceptAll}
-              className="flex-1 px-4 sm:px-6 py-2.5 sm:py-3 bg-accent text-white font-sans text-[10px] sm:text-xs tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] uppercase shadow-luxury hover:bg-accent/90 transition-all duration-300"
+              className="flex-1 px-4 sm:px-6 py-2.5 sm:py-3 bg-background border border-silver/30 text-foreground font-sans text-[10px] sm:text-xs tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] uppercase hover:border-silver hover:bg-silver/10 transition-all duration-300"
             >
               {language === "DE" ? "Alle Akzeptieren" : "Принять все"}
             </button>
