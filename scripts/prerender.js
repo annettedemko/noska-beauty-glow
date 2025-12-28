@@ -16,6 +16,7 @@ const routes = [
   '/services-muenchen',
   '/impressum',
   '/datenschutz',
+  '/agb',
 
   // Russian routes
   '/ru',
@@ -25,6 +26,7 @@ const routes = [
   '/ru/services-muenchen',
   '/ru/impressum',
   '/ru/datenschutz',
+  '/ru/agb',
 ];
 
 const distDir = path.resolve(__dirname, '../dist');

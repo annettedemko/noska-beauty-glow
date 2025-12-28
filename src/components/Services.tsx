@@ -16,7 +16,8 @@ export const Services = () => {
     },
     {
       name: t("scarCamouflage"),
-      price: t("price200From"),
+      price: t("priceCamouflage"),
+      note: t("camouflageNote"),
       isSpecial: true,
       link: `${langPrefix}/camouflage-muenchen`,
       featured: true
@@ -24,7 +25,7 @@ export const Services = () => {
     // Остальные услуги
     {
       name: t("powderBrows"),
-      price: t("price180"),
+      price: t("price200"),
       isSpecial: true,
       link: `${langPrefix}/services-muenchen#brows`,
       featured: false
@@ -45,7 +46,7 @@ export const Services = () => {
     },
     {
       name: t("remover"),
-      price: t("priceRequest"),
+      price: t("price120"),
       isSpecial: true,
       link: `${langPrefix}/remover-muenchen`,
       featured: false
@@ -94,9 +95,16 @@ export const Services = () => {
                         <div className="w-8 h-8 flex-shrink-0 border border-silver/30 flex items-center justify-center">
                           <div className="w-3 h-3 bg-accent rotate-45" />
                         </div>
-                        <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif font-semibold tracking-wide break-words leading-tight">
-                          {service.name}
-                        </h3>
+                        <div className="space-y-1">
+                          <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif font-semibold tracking-wide break-words leading-tight">
+                            {service.name}
+                          </h3>
+                          {service.note && (
+                            <p className="text-xs sm:text-sm text-muted-foreground italic">
+                              {service.note}
+                            </p>
+                          )}
+                        </div>
                       </div>
                     </div>
 
@@ -142,6 +150,33 @@ export const Services = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Price Notice */}
+        <div className="mt-12 text-center">
+          <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+            {language === "DE" ? (
+              <>
+                Alle angegebenen Preise sind Endpreise.<br />
+                Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.<br />
+                Es gelten unsere{" "}
+                <Link to={`${langPrefix}/agb`} className="underline hover:text-accent transition-colors">
+                  AGB
+                </Link>
+                .
+              </>
+            ) : (
+              <>
+                Все указанные цены являются окончательными.<br />
+                Согласно § 19 UStG налог с оборота не взимается.<br />
+                Применяются наши{" "}
+                <Link to={`${langPrefix}/agb`} className="underline hover:text-accent transition-colors">
+                  общие условия (AGB)
+                </Link>
+                .
+              </>
+            )}
+          </p>
         </div>
       </div>
     </section>

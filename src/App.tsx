@@ -4,6 +4,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
+import { CookieConsentProvider } from "@/contexts/CookieConsentContext";
+import { CookieBanner, CookieSettings } from "@/components/CookieBanner";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
 // Lazy load pages for better performance
@@ -14,15 +16,19 @@ const Remover = lazy(() => import("./pages/Remover"));
 const Services = lazy(() => import("./pages/Services"));
 const Impressum = lazy(() => import("./pages/Impressum"));
 const Datenschutz = lazy(() => import("./pages/Datenschutz"));
+const AGB = lazy(() => import("./pages/AGB"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const App = () => (
   <BrowserRouter>
     <LanguageProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <ScrollToTop />
+      <CookieConsentProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <ScrollToTop />
+          <CookieBanner />
+          <CookieSettings />
           <Suspense fallback={<div className="flex items-center justify-center min-h-screen"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div></div>}>
             <Routes>
             {/* German routes (default, no language prefix) */}
@@ -33,6 +39,7 @@ const App = () => (
             <Route path="/services-muenchen" element={<Services />} />
             <Route path="/impressum" element={<Impressum />} />
             <Route path="/datenschutz" element={<Datenschutz />} />
+            <Route path="/agb" element={<AGB />} />
 
             {/* Russian routes (with /ru prefix) */}
             <Route path="/ru" element={<Index />} />
@@ -42,6 +49,7 @@ const App = () => (
             <Route path="/ru/services-muenchen" element={<Services />} />
             <Route path="/ru/impressum" element={<Impressum />} />
             <Route path="/ru/datenschutz" element={<Datenschutz />} />
+            <Route path="/ru/agb" element={<AGB />} />
 
             {/* 301 Redirects from old /de/ URLs to new German URLs (without prefix) */}
             <Route path="/de" element={<Navigate to="/" replace />} />
@@ -51,6 +59,7 @@ const App = () => (
             <Route path="/de/services-muenchen" element={<Navigate to="/services-muenchen" replace />} />
             <Route path="/de/impressum" element={<Navigate to="/impressum" replace />} />
             <Route path="/de/datenschutz" element={<Navigate to="/datenschutz" replace />} />
+            <Route path="/de/agb" element={<Navigate to="/agb" replace />} />
 
             {/* Legacy redirects (old URLs without -muenchen suffix) */}
             <Route path="/kopfhaut" element={<Navigate to="/kopfhaut-muenchen" replace />} />
@@ -63,8 +72,9 @@ const App = () => (
             </Routes>
           </Suspense>
         </TooltipProvider>
-      </LanguageProvider>
-    </BrowserRouter>
+      </CookieConsentProvider>
+    </LanguageProvider>
+  </BrowserRouter>
 );
 
 export default App;

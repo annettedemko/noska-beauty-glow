@@ -1,8 +1,10 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useCookieConsent } from "@/contexts/CookieConsentContext";
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const { t, language, toggleLanguage } = useLanguage();
+  const { openSettings } = useCookieConsent();
   const langPrefix = language === "DE" ? "" : "/ru";
 
   return (
@@ -108,12 +110,31 @@ export const Footer = () => {
                   ⭐⭐⭐⭐⭐ <span className="text-xs">5.0 (6 {language === "DE" ? "Bewertungen" : "отзывов"})</span>
                 </span>
               </li>
+              <li className="pt-3 text-xs leading-relaxed opacity-70">
+                {language === "DE" ? (
+                  <>
+                    Mit Klick auf einen WhatsApp-Link auf dieser Website stimmen Sie der Verarbeitung personenbezogener Daten gemäß unserer{" "}
+                    <Link to={`${langPrefix}/datenschutz`} className="underline hover:text-accent transition-colors">
+                      Datenschutzerklärung
+                    </Link>{" "}
+                    zu.
+                  </>
+                ) : (
+                  <>
+                    Нажимая на ссылку WhatsApp на этом сайте, вы соглашаетесь с обработкой персональных данных в соответствии с нашей{" "}
+                    <Link to={`${langPrefix}/datenschutz`} className="underline hover:text-accent transition-colors">
+                      политикой конфиденциальности
+                    </Link>
+                    .
+                  </>
+                )}
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-8 pb-8 border-b border-silver/20">
-          <div className="flex gap-6 sm:gap-10 text-xs sm:text-sm uppercase tracking-[0.1em] sm:tracking-[0.2em]">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-10 text-xs sm:text-sm uppercase tracking-[0.1em] sm:tracking-[0.2em]">
             <Link to={`${langPrefix}/impressum`} className="hover:text-accent transition-colors duration-300 relative group">
               {t("impressum")}
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent group-hover:w-full transition-all duration-300" />
@@ -122,6 +143,14 @@ export const Footer = () => {
               {t("privacy")}
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent group-hover:w-full transition-all duration-300" />
             </Link>
+            <Link to={`${langPrefix}/agb`} className="hover:text-accent transition-colors duration-300 relative group">
+              AGB
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent group-hover:w-full transition-all duration-300" />
+            </Link>
+            <button onClick={openSettings} className="hover:text-accent transition-colors duration-300 relative group">
+              {language === "DE" ? "Cookies" : "Cookie"}
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent group-hover:w-full transition-all duration-300" />
+            </button>
           </div>
 
           <button

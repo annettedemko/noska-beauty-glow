@@ -8,39 +8,10 @@
     <meta name="fragment" content="!" />
     <meta name="prerender-status-code" content="200" />
 
-    <!-- Google Analytics - Loaded after page load to not block rendering -->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-PBZV8M72VJ');
-
-      // Load gtag.js after page load (skip during prerender)
-      if (typeof navigator !== 'undefined' && !navigator.userAgent.includes('HeadlessChrome')) {
-        window.addEventListener('load', function() {
-          var script = document.createElement('script');
-          script.src = 'https://www.googletagmanager.com/gtag/js?id=G-PBZV8M72VJ';
-          script.async = true;
-          document.head.appendChild(script);
-        });
-      }
-    </script>
-
     <!-- Google Site Verification -->
     <meta name="google-site-verification" content="1uwMWOgJcmsW9ehR2rfolbkc5BZMmHD0xqKFwabdCt4" />
 
-    <!-- Ahrefs Web Analytics - Loaded after page load -->
-    <script>
-      if (typeof navigator !== 'undefined' && !navigator.userAgent.includes('HeadlessChrome')) {
-        window.addEventListener('load', function() {
-          var script = document.createElement('script');
-          script.src = 'https://analytics.ahrefs.com/analytics.js';
-          script.setAttribute('data-key', '5f9DXeW69Bf4uuCK8xnjJw');
-          script.async = true;
-          document.head.appendChild(script);
-        });
-      }
-    </script>
+    <!-- Analytics scripts are loaded conditionally after cookie consent via CookieConsentContext -->
 
     <!--
       Canonical and hreflang tags:
@@ -135,8 +106,6 @@
     <meta name="twitter:image:alt" content="Permanent Make-up München - Anastasia Noska Logo" />
     
     <!-- Aggressive resource hints for maximum performance -->
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://analytics.ahrefs.com">
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="dns-prefetch" href="https://wa.me">

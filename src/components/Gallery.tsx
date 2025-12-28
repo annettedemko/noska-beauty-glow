@@ -183,8 +183,15 @@ export const Gallery = () => {
           <CarouselNext className="right-4 bg-background/95 border-silver/30 hover:bg-accent/20 hover:border-accent shadow-luxury" />
         </Carousel>
 
+        {/* Consent text */}
+        <div className="mt-12 text-center">
+          <p className="text-xs sm:text-sm text-muted-foreground italic max-w-3xl mx-auto">
+            {t("galleryConsent")}
+          </p>
+        </div>
+
         {/* Bottom decorative element */}
-        <div className="flex items-center justify-center gap-4 opacity-60 mt-24">
+        <div className="flex items-center justify-center gap-4 opacity-60 mt-12">
           <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver" />
           <div className="w-2 h-2 bg-silver rotate-45" />
           <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-silver" />

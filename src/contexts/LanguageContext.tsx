@@ -51,6 +51,9 @@ const translations = {
     price200From: "ab 200 €",
     price300: "300 €",
     price100: "100 €",
+    price120: "120 €",
+    priceCamouflage: "100/200/250 €",
+    camouflageNote: "Preis variiert je nach Behandlungsumfang",
     priceRequest: "Anfrage",
     bookNow: "JETZT BUCHEN",
     learnMore: "MEHR ERFAHREN",
@@ -69,6 +72,7 @@ const translations = {
     // Gallery
     galleryTitle: "Meine Arbeiten",
     gallerySubtitle: "Portfolio unserer Arbeiten",
+    galleryConsent: "Alle auf dieser Website dargestellten Vorher-/Nachher-Bilder wurden mit ausdrücklicher, schriftlicher Einwilligung der jeweiligen Kundinnen veröffentlicht.",
 
     // Testimonials
     testimonialsTitle: "Kundenfeedbacks",
@@ -128,7 +132,7 @@ const translations = {
     camouflageSuitable2: "Narben von Operationen (z.B. Kaiserschnitt)",
     camouflageSuitable3: "Brust-OP Narben",
     camouflageSuitable4: "Andere Hautveränderungen",
-    camouflagePrice: "Preis: ab 200 €",
+    camouflagePrice: "Preis: 100/200/250 € (Preis variiert je nach Behandlungsumfang)",
     camouflageSeoTitle: "Narben und Dehnungsstreifen kaschieren in München",
     camouflageSeoText: "Dehnungsstreifen und Narben sind für viele Menschen ein ästhetisches Problem, das das Selbstbewusstsein beeinträchtigen kann. Ob nach einer Schwangerschaft, einer Operation oder durch Gewichtsschwankungen – diese Hautveränderungen sind völlig normal, können aber als störend empfunden werden. Die Camouflage-Pigmentierung bietet eine effektive und schonende Lösung, um Narben, Dehnungsstreifen und andere Hautveränderungen optisch zu minimieren. Bei Permanent Make-up by Anastasia Noska in München nutzen wir modernste Techniken, um betroffene Bereiche an Ihren natürlichen Hautton anzugleichen. Das Ergebnis ist eine deutlich gleichmäßigere Haut, die Sie wieder selbstbewusst zeigen können. Die Behandlung eignet sich besonders für Schwangerschaftsstreifen, Kaiserschnittnarben, Brust-OP-Narben und andere Hautunregelmäßigkeiten.",
     camouflageSeoSubtitle: "Wie funktioniert Camouflage-Pigmentierung?",
@@ -143,7 +147,7 @@ const translations = {
     removerSessionsTitle: "Wie viele Sitzungen sind nötig?",
     removerSessions1: "Je nach Tiefe und Intensität des Pigments werden 2–5 Behandlungen im Abstand von etwa 4–6 Wochen empfohlen.",
     removerSessions2: "Nach jeder Sitzung hellt sich die behandelte Zone deutlich auf.",
-    removerPrice: "Preis: Auf Anfrage",
+    removerPrice: "Preis: 120 €",
     removerSeoTitle: "PMU Remover München: Permanent Make-up schonend entfernen",
     removerSeoText: "Permanent Make-up ist eine langfristige Schönheitslösung – aber manchmal ändern sich Trends, Vorlieben oder das Ergebnis entspricht nicht den Erwartungen. In solchen Fällen bietet die Pigmententfernung mit Remover eine schonende Alternative zur Laserbehandlung. Bei Permanent Make-up by Anastasia Noska in München verwenden wir speziell entwickelte Remover-Produkte, um unerwünschte PMU-Pigmente sicher und effektiv zu entfernen. Im Gegensatz zur Laserbehandlung ist diese Methode hautschonender und hinterlässt keine Narben. Sie eignet sich besonders für die Korrektur von Augenbrauen, Lippen oder Lidstrich, die zu dunkel geworden sind, sich farblich verändert haben oder nicht mehr dem gewünschten Stil entsprechen. Die Behandlung erfolgt ambulant und erfordert keine lange Ausfallzeit.",
     removerSeoSubtitle: "Wann ist eine Pigmententfernung sinnvoll?",
@@ -165,7 +169,7 @@ const translations = {
     browsAdv1: "Natürliches Ergebnis, das nicht aufgemalt wirkt",
     browsAdv2: "Perfekt für alle Hauttypen – auch fettige Haut",
     browsAdv3: "Hält 1–3 Jahre, je nach Hauttyp und Pflege",
-    browsPrice: "Preis: 180 €",
+    browsPrice: "Preis: 200 €",
 
     // Lips
     lipsTitle: "Aquarell / Velvet / Ombre Lippen",
@@ -237,6 +241,9 @@ const translations = {
     price200From: "от 200 €",
     price300: "300 €",
     price100: "100 €",
+    price120: "120 €",
+    priceCamouflage: "100/200/250 €",
+    camouflageNote: "Цена зависит от объёма процедуры",
     priceRequest: "по запросу",
     bookNow: "ЗАПИСАТЬСЯ",
     learnMore: "ПОДРОБНЕЕ",
@@ -255,6 +262,7 @@ const translations = {
     // Gallery
     galleryTitle: "Мои работы",
     gallerySubtitle: "Портфолио наших работ",
+    galleryConsent: "Все фотографии до/после на этом сайте опубликованы с письменного согласия клиенток.",
 
     // Testimonials
     testimonialsTitle: "Отзывы клиентов",
@@ -314,7 +322,7 @@ const translations = {
     camouflageSuitable2: "Шрамов от операций (например, кесарево сечение)",
     camouflageSuitable3: "Шрамов от операций на груди",
     camouflageSuitable4: "Других изменений кожи",
-    camouflagePrice: "Цена: от 200 €",
+    camouflagePrice: "Цена: 100/200/250 € (Цена зависит от объёма процедуры)",
     camouflageSeoTitle: "Маскировка шрамов и растяжек в Мюнхене",
     camouflageSeoText: "Растяжки и шрамы являются эстетической проблемой для многих людей, которая может повлиять на уверенность в себе. Будь то после беременности, операции или из-за колебаний веса – эти изменения кожи совершенно нормальны, но могут восприниматься как нежелательные. Камуфляжная пигментация предлагает эффективное и щадящее решение для визуального уменьшения шрамов, растяжек и других изменений кожи. В Permanent Make-up by Anastasia Noska в Мюнхене мы используем современные технологии, чтобы приблизить пораженные области к вашему естественному тону кожи. Результатом является значительно более равномерная кожа, которую вы снова сможете уверенно показывать. Процедура особенно подходит для растяжек от беременности, шрамов от кесарева сечения, шрамов от операций на груди и других неровностей кожи.",
     camouflageSeoSubtitle: "Как работает камуфляжная пигментация?",
@@ -329,7 +337,7 @@ const translations = {
     removerSessionsTitle: "Сколько сеансов необходимо?",
     removerSessions1: "В зависимости от глубины и интенсивности пигмента рекомендуется 2-5 процедур с интервалом около 4-6 недель.",
     removerSessions2: "После каждого сеанса обработанная зона заметно светлеет.",
-    removerPrice: "Цена: по запросу",
+    removerPrice: "Цена: 120 €",
     removerSeoTitle: "ПМУ Ремувер Мюнхен: Щадящее удаление перманентного макияжа",
     removerSeoText: "Перманентный макияж – это долгосрочное решение для красоты, но иногда меняются тренды, предпочтения или результат не соответствует ожиданиям. В таких случаях удаление пигмента с помощью ремувера предлагает щадящую альтернативу лазерному лечению. В Permanent Make-up by Anastasia Noska в Мюнхене мы используем специально разработанные продукты-ремуверы для безопасного и эффективного удаления нежелательных пигментов ПМУ. В отличие от лазерного лечения этот метод более щадящий для кожи и не оставляет шрамов. Он особенно подходит для коррекции бровей, губ или подводки глаз, которые стали слишком темными, изменили цвет или больше не соответствуют желаемому стилю. Процедура проводится амбулаторно и не требует длительного периода восстановления.",
     removerSeoSubtitle: "Когда имеет смысл удаление пигмента?",
@@ -351,7 +359,7 @@ const translations = {
     browsAdv1: "Естественный результат, не выглядит нарисованным",
     browsAdv2: "Идеально для всех типов кожи – даже жирной",
     browsAdv3: "Держится 1-3 года в зависимости от типа кожи и ухода",
-    browsPrice: "Цена: 180 €",
+    browsPrice: "Цена: 200 €",
 
     // Lips
     lipsTitle: "Акварельные / Бархатные / Омбре губы",

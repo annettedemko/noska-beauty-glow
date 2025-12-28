@@ -68,17 +68,36 @@ export const Contact = () => {
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-accent/5 to-transparent transition-transform duration-1000 pointer-events-none" />
             </a>
 
-            <div className="group relative pl-8 py-6 bg-background/60 backdrop-blur-sm border border-silver/20 hover:border-accent/30 active:border-accent/50 transition-all duration-500 shadow-luxury hover:shadow-2xl active:scale-[0.98] tap-feedback animate-in slide-in-from-left duration-700 delay-100">
+            <div className="group relative pl-8 pr-6 py-6 bg-background/60 backdrop-blur-sm border border-silver/20 hover:border-accent/30 active:border-accent/50 transition-all duration-500 shadow-luxury hover:shadow-2xl active:scale-[0.98] tap-feedback animate-in slide-in-from-left duration-700 delay-100">
               <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-accent group-hover:w-[4px] group-active:w-[5px] transition-all duration-300" />
               <p className="text-xs uppercase tracking-[0.3em] text-accent font-semibold mb-3">{t("contactWhatsapp")}</p>
               <a
                 href="https://wa.me/491779093936"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-xl font-serif hover:text-accent active:text-accent transition-colors"
+                className="block text-xl font-serif hover:text-accent active:text-accent transition-colors mb-3"
               >
                 +49 177 9093936
               </a>
+              <p className="text-xs leading-relaxed text-muted-foreground/70">
+                {language === "DE" ? (
+                  <>
+                    Mit Klick auf einen WhatsApp-Link auf dieser Website stimmen Sie der Verarbeitung personenbezogener Daten gemäß unserer{" "}
+                    <a href="/datenschutz" className="underline hover:text-accent transition-colors">
+                      Datenschutzerklärung
+                    </a>{" "}
+                    zu.
+                  </>
+                ) : (
+                  <>
+                    Нажимая на ссылку WhatsApp на этом сайте, вы соглашаетесь с обработкой персональных данных в соответствии с нашей{" "}
+                    <a href="/ru/datenschutz" className="underline hover:text-accent transition-colors">
+                      политикой конфиденциальности
+                    </a>
+                    .
+                  </>
+                )}
+              </p>
               {/* Hover shimmer effect */}
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-accent/5 to-transparent transition-transform duration-1000 pointer-events-none" />
             </div>

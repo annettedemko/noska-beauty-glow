@@ -152,6 +152,13 @@ const Camouflage = () => {
                 </div>
               ))}
             </div>
+
+            {/* Consent text */}
+            <div className="mt-12 text-center">
+              <p className="text-xs sm:text-sm text-muted-foreground italic max-w-3xl mx-auto">
+                {t("galleryConsent")}
+              </p>
+            </div>
           </div>
         </section>
 
