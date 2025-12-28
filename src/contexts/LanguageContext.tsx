@@ -26,7 +26,7 @@ const translations = {
     // About
     aboutTitle: "Über mich",
     aboutText1: "Mein Name ist Anastasia Noska – ich bin zertifizierte Spezialistin für Permanent Make-up, Camouflage-Behandlungen und Kopfhautpigmentierung in München.",
-    aboutText2: "Meine Arbeit ist mehr als nur ein Beruf – sie ist meine Leidenschaft. Ich habe mich darauf spezialisiert, die natürliche Schönheit meiner Kundinnen zu unterstreichen, ohne sie zu verändern.",
+    aboutText2: "Meine Arbeit ist mehr als nur ein Beruf – sie ist meine Leidenschaft. Ich habe mich darauf spezialisiert, die natürliche Schönheit meiner Kunden zu unterstreichen, ohne sie zu verändern.",
     aboutText3: "Jede Behandlung ist für mich eine stille Kunst: Das perfekte Permanent Make-up erkennt man daran, dass es nicht auffällt, sondern wirkt, als wäre es schon immer da gewesen – harmonisch, sanft und authentisch.",
     aboutSectionTitle1: "Wahre Schönheit braucht kein Make-up",
     aboutPara1: "Ich glaube daran, dass jede Frau das Recht hat, sich in ihrer Haut wohlzufühlen – ohne stundenlange Schminkroutinen oder Unzufriedenheit mit dem eigenen Spiegelbild.",
@@ -72,7 +72,7 @@ const translations = {
     // Gallery
     galleryTitle: "Meine Arbeiten",
     gallerySubtitle: "Portfolio unserer Arbeiten",
-    galleryConsent: "Alle auf dieser Website dargestellten Vorher-/Nachher-Bilder wurden mit ausdrücklicher, schriftlicher Einwilligung der jeweiligen Kundinnen veröffentlicht.",
+    galleryConsent: "Alle auf dieser Website dargestellten Vorher-/Nachher-Bilder wurden mit ausdrücklicher, schriftlicher Einwilligung der jeweiligen Kunden veröffentlicht.",
 
     // Testimonials
     testimonialsTitle: "Kundenfeedbacks",
@@ -217,7 +217,7 @@ const translations = {
     // About
     aboutTitle: "Обо мне",
     aboutText1: "Меня зовут Анастасия Носка – я сертифицированный специалист по перманентному макияжу, камуфляжу и пигментации кожи головы в Мюнхене.",
-    aboutText2: "Моя работа – это больше, чем просто профессия – это моя страсть. Я специализируюсь на подчеркивании естественной красоты моих клиенток, не меняя её.",
+    aboutText2: "Моя работа – это больше, чем просто профессия – это моя страсть. Я специализируюсь на подчеркивании естественной красоты моих клиентов, не меняя её.",
     aboutText3: "Каждая процедура для меня – тихое искусство: идеальный перманентный макияж тот, который незаметен, но выглядит так, будто он был всегда – гармонично, нежно и аутентично.",
     aboutSectionTitle1: "Истинная красота не нуждается в макияже",
     aboutPara1: "Я верю, что каждая женщина имеет право чувствовать себя комфортно в своей коже – без многочасовых рутин макияжа или недовольства своим отражением в зеркале.",
@@ -263,7 +263,7 @@ const translations = {
     // Gallery
     galleryTitle: "Мои работы",
     gallerySubtitle: "Портфолио наших работ",
-    galleryConsent: "Все фотографии до/после на этом сайте опубликованы с письменного согласия клиенток.",
+    galleryConsent: "Все фотографии до/после на этом сайте опубликованы с письменного согласия клиентов.",
 
     // Testimonials
     testimonialsTitle: "Отзывы клиентов",

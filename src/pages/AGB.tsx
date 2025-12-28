@@ -37,7 +37,7 @@ const AGB = () => {
                       Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Dienstleistungen, die von Anastasia Noska, Einzelunternehmerin, angeboten werden.
                     </p>
                     <p>
-                      Abweichende Bedingungen der Kundinnen und Kunden finden keine Anwendung, sofern ihnen nicht ausdrücklich schriftlich zugestimmt wurde.
+                      Abweichende Bedingungen der Kunden finden keine Anwendung, sofern ihnen nicht ausdrücklich schriftlich zugestimmt wurde.
                     </p>
                   </section>
 
@@ -125,9 +125,9 @@ const AGB = () => {
                   <div className="my-8 border-t border-charcoal/20"></div>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">7. Mitwirkungspflichten der Kundinnen und Kunden</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">7. Mitwirkungspflichten der Kunden</h2>
                     <p className="mb-4">
-                      Die Kundin bzw. der Kunde ist verpflichtet, vor der Behandlung wahrheitsgemäße Angaben zu machen, insbesondere zu:
+                      Der Kunde ist verpflichtet, vor der Behandlung wahrheitsgemäße Angaben zu machen, insbesondere zu:
                     </p>
                     <ul className="list-disc list-inside pl-4 mb-4 space-y-1">
                       <li>bestehenden Erkrankungen</li>
