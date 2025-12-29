@@ -205,6 +205,9 @@ const AGB = () => {
                     <p className="mb-4">
                       Es gilt das Recht der Bundesrepublik Deutschland.
                     </p>
+                    <p className="mb-4">
+                      Ein Widerrufsrecht besteht nicht, da es sich bei den angebotenen Dienstleistungen um terminlich festgelegte Dienstleistungen handelt (§ 312g Abs. 2 Nr. 9 BGB).
+                    </p>
                     <p>
                       Sollten einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.
                     </p>
@@ -399,6 +402,9 @@ const AGB = () => {
                     <h2 className="font-serif text-2xl mb-4 text-accent">12. Заключительные положения</h2>
                     <p className="mb-4">
                       Применяется право Федеративной Республики Германия.
+                    </p>
+                    <p className="mb-4">
+                      Право на отказ не предусмотрено, так как предлагаемые услуги являются услугами с фиксированной датой (§ 312g п. 2 № 9 BGB).
                     </p>
                     <p>
                       Если отдельные положения настоящих AGB полностью или частично недействительны или станут таковыми, действительность остальных положений остается неизменной.
