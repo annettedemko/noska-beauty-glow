@@ -66,10 +66,19 @@ const AGB = () => {
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">3. Leistungen</h2>
                     <p className="mb-4">
-                      Anastasia Noska bietet Dienstleistungen im Bereich Permanent Make-up (PMU) und kosmetische Behandlungen an.
+                      Anastasia Noska bietet spezialisierte Dienstleistungen im Bereich Permanent Make-up (PMU) sowie damit verbundene ästhetische Pigmentierungsbehandlungen an.
+                    </p>
+                    <p className="mb-4">Hierzu zählen insbesondere:</p>
+                    <ul className="list-disc list-inside pl-4 mb-4 space-y-1">
+                      <li>Permanent Make-up</li>
+                      <li>Camouflage- bzw. Narbenpigmentierung</li>
+                      <li>Trichopigmentation</li>
+                    </ul>
+                    <p className="mb-4">
+                      Es werden keine kosmetischen oder medizinischen Behandlungen im klassischen oder heilkundlichen Sinne erbracht.
                     </p>
                     <p>
-                      Der konkrete Leistungsumfang ergibt sich aus der individuellen Absprache mit der Kundin bzw. dem Kunden im Rahmen der Terminvereinbarung (z. B. über WhatsApp oder Instagram).
+                      Der konkrete Leistungsumfang ergibt sich aus der individuellen Absprache mit dem Kunden im Rahmen der Terminvereinbarung (z. B. über WhatsApp oder Instagram).
                     </p>
                   </section>
 
@@ -252,7 +261,16 @@ const AGB = () => {
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">3. Услуги</h2>
                     <p className="mb-4">
-                      Анастасия Носка предлагает услуги в области перманентного макияжа (PMU) и косметических процедур.
+                      Анастасия Носка предлагает специализированные услуги в области перманентного макияжа (PMU), а также связанные с ним эстетические процедуры пигментации.
+                    </p>
+                    <p className="mb-4">К ним относятся в частности:</p>
+                    <ul className="list-disc list-inside pl-4 mb-4 space-y-1">
+                      <li>Перманентный макияж</li>
+                      <li>Камуфляж / пигментация шрамов</li>
+                      <li>Трихопигментация</li>
+                    </ul>
+                    <p className="mb-4">
+                      Косметические или медицинские процедуры в классическом или лечебном смысле не проводятся.
                     </p>
                     <p>
                       Конкретный объем услуг определяется в индивидуальном порядке с клиентом при записи на прием (например, через WhatsApp или Instagram).
