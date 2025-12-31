@@ -113,9 +113,16 @@ const AGB = () => {
                       Die Zahlung erfolgt nach Erbringung der Dienstleistung vor Ort.
                       Es werden keine Vorauszahlungen, Anzahlungen oder Teilzahlungen verlangt.
                     </p>
-                    <p>
+                    <p className="mb-4">
                       Gemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).
                     </p>
+                    <div>
+                      <p className="font-medium mb-2">Akzeptierte Zahlungsmethoden:</p>
+                      <ul className="list-disc list-inside pl-4 space-y-1">
+                        <li>Barzahlung</li>
+                        <li>Überweisung (nach Vereinbarung)</li>
+                      </ul>
+                    </div>
                   </section>
 
                   <div className="my-8 border-t border-charcoal/20"></div>
@@ -134,18 +141,23 @@ const AGB = () => {
                   <div className="my-8 border-t border-charcoal/20"></div>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">7. Mitwirkungspflichten der Kunden</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">7. Pflichten des Kunden – Gesundheitsangaben</h2>
                     <p className="mb-4">
-                      Der Kunde ist verpflichtet, vor der Behandlung wahrheitsgemäße Angaben zu machen, insbesondere zu:
+                      Der Kunde ist verpflichtet, dem Behandler vor Beginn einer Permanent-Make-up-Behandlung (PMU) alle für die Durchführung und das Ergebnis der Behandlung relevanten gesundheitlichen Umstände vollständig und wahrheitsgemäß mitzuteilen.
                     </p>
+                    <p className="mb-4">Dies umfasst insbesondere, jedoch nicht abschließend:</p>
                     <ul className="list-disc list-inside pl-4 mb-4 space-y-1">
-                      <li>bestehenden Erkrankungen</li>
-                      <li>Allergien oder Unverträglichkeiten</li>
-                      <li>Schwangerschaft</li>
-                      <li>relevanten medizinischen oder kosmetischen Vorbehandlungen</li>
+                      <li>bekannte Allergien oder Unverträglichkeiten, insbesondere gegenüber Pigmenten, Betäubungsmitteln, Latex oder Desinfektionsmitteln</li>
+                      <li>bestehende Hauterkrankungen, Hautentzündungen, Infektionen, Narben, Akne, Herpes oder andere Hautveränderungen im Behandlungsbereich</li>
+                      <li>die Einnahme von Medikamenten, insbesondere blutverdünnender, hormoneller, antibiotischer oder immunsuppressiver Präparate</li>
+                      <li>eine bestehende Schwangerschaft oder Stillzeit</li>
+                      <li>frühere Permanent-Make-up-, Microblading-, Tattoo- oder sonstige kosmetische bzw. medizinisch-ästhetische Behandlungen im Behandlungsbereich</li>
                     </ul>
+                    <p className="mb-4">
+                      Der Kunde ist verpflichtet, bekannte Kontraindikationen für eine Permanent-Make-up-Behandlung unaufgefordert vor der Behandlung mitzuteilen. Dazu zählen insbesondere Erkrankungen oder Umstände, bei denen eine PMU-Behandlung medizinisch oder hygienisch nicht empfohlen wird.
+                    </p>
                     <p>
-                      Unterbleiben solche Angaben, kann für daraus resultierende Folgen keine Haftung übernommen werden, soweit gesetzlich zulässig.
+                      Unterlässt der Kunde die vollständige oder wahrheitsgemäße Angabe relevanter gesundheitlicher Informationen oder Kontraindikationen, ist eine Haftung des Behandlers für hierauf beruhende Schäden ausgeschlossen, soweit dies gesetzlich zulässig ist. Gesetzliche Haftungstatbestände, insbesondere bei Vorsatz oder grober Fahrlässigkeit, bleiben unberührt.
                     </p>
                   </section>
 
@@ -168,13 +180,17 @@ const AGB = () => {
                   <div className="my-8 border-t border-charcoal/20"></div>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">9. Ergebnisse von Behandlungen</h2>
-                    <p className="mb-4">
-                      Das Ergebnis von Permanent Make-up und kosmetischen Behandlungen ist individuell unterschiedlich und hängt unter anderem von Hauttyp, Lebensweise und Nachpflege ab.
-                    </p>
-                    <p>
-                      Ein bestimmtes Ergebnis kann daher nicht garantiert werden.
-                    </p>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">9. Behandlungsergebnisse</h2>
+                    <ol className="list-decimal list-inside pl-4 space-y-3">
+                      <li>Permanent Make-up stellt einen individuellen, handwerklich-künstlerischen Eingriff dar.</li>
+                      <li>Abweichungen hinsichtlich Farbe, Form, Symmetrie, Farbintensität sowie Haltbarkeit sind möglich und stellen keinen Mangel im Sinne der gesetzlichen Vorschriften dar.</li>
+                      <li>Eine vollständige Farbstabilität, exakte Symmetrie oder eine dauerhafte Haltbarkeit können nicht zugesichert werden.</li>
+                      <li>Das Behandlungsergebnis ist abhängig von individuellen Faktoren, insbesondere Hauttyp, Alter, Stoffwechsel, Medikamenteneinnahme, hormonellen Einflüssen, Vorerkrankungen, Pflegegewohnheiten, Sonneneinstrahlung, Rauchen sowie sonstigen äußeren Einflüssen.</li>
+                      <li>Die Haltbarkeit des Permanent Make-ups ist individuell und kann erheblich variieren.</li>
+                      <li>Da jede Haut Farbpigmente unterschiedlich aufnimmt, wird keine Garantie für ein bestimmtes Behandlungsergebnis übernommen. In Einzelfällen kann es vorkommen, dass Pigmente nur unzureichend oder nicht aufgenommen werden.</li>
+                      <li>Nachbehandlungen (Korrekturen oder Auffrischungen) sind regelmäßig erforderlich und nicht Bestandteil des vereinbarten Grundpreises, sofern nicht ausdrücklich schriftlich etwas anderes vereinbart wurde.</li>
+                      <li>Nachbehandlungen können innerhalb von 8 Wochen nach der Erstbehandlung vereinbart werden. Nach Ablauf dieser Frist gilt die Behandlung als Neu-/Erstbehandlung und wird zum jeweils gültigen Grundpreis berechnet.</li>
+                    </ol>
                   </section>
 
                   <div className="my-8 border-t border-charcoal/20"></div>
@@ -311,9 +327,16 @@ const AGB = () => {
                       Оплата производится после оказания услуги на месте.
                       Предоплата, авансовые или частичные платежи не требуются.
                     </p>
-                    <p>
+                    <p className="mb-4">
                       Согласно § 19 UStG налог с оборота не взимается (режим для малого бизнеса).
                     </p>
+                    <div>
+                      <p className="font-medium mb-2">Принимаемые способы оплаты:</p>
+                      <ul className="list-disc list-inside pl-4 space-y-1">
+                        <li>Наличные</li>
+                        <li>Банковский перевод (по договоренности)</li>
+                      </ul>
+                    </div>
                   </section>
 
                   <div className="my-8 border-t border-charcoal/20"></div>
@@ -332,18 +355,23 @@ const AGB = () => {
                   <div className="my-8 border-t border-charcoal/20"></div>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">7. Обязанности клиентов</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">7. Обязанности клиента – Медицинская информация</h2>
                     <p className="mb-4">
-                      Клиент обязан предоставить правдивую информацию перед процедурой, в частности о:
+                      Клиент обязан предоставить мастеру перед началом процедуры перманентного макияжа (PMU) полную и правдивую информацию обо всех обстоятельствах, касающихся здоровья, которые имеют значение для проведения и результата процедуры.
                     </p>
+                    <p className="mb-4">Это включает в себя, в частности, но не ограничивается:</p>
                     <ul className="list-disc list-inside pl-4 mb-4 space-y-1">
-                      <li>существующих заболеваниях</li>
-                      <li>аллергиях или непереносимостях</li>
-                      <li>беременности</li>
-                      <li>предыдущих медицинских или косметических процедурах</li>
+                      <li>известные аллергии или непереносимости, особенно на пигменты, анестетики, латекс или дезинфицирующие средства</li>
+                      <li>существующие заболевания кожи, воспаления кожи, инфекции, шрамы, акне, герпес или другие изменения кожи в зоне обработки</li>
+                      <li>прием медикаментов, особенно препаратов, разжижающих кровь, гормональных, антибиотиков или иммуносупрессивных препаратов</li>
+                      <li>беременность или грудное вскармливание</li>
+                      <li>предыдущие процедуры перманентного макияжа, микроблейдинга, татуировки или другие косметические или медико-эстетические процедуры в зоне обработки</li>
                     </ul>
+                    <p className="mb-4">
+                      Клиент обязан самостоятельно сообщить о известных противопоказаниях к процедуре перманентного макияжа до начала процедуры. К ним относятся, в частности, заболевания или обстоятельства, при которых процедура PMU не рекомендуется по медицинским или гигиеническим причинам.
+                    </p>
                     <p>
-                      При отсутствии такой информации ответственность за возможные последствия не может быть возложена, насколько это допускается законом.
+                      Если клиент не предоставляет полную или правдивую информацию о соответствующих медицинских обстоятельствах или противопоказаниях, ответственность мастера за ущерб, возникший в результате этого, исключается в той мере, в какой это допускается законом. Законные основания ответственности, особенно при умысле или грубой небрежности, остаются в силе.
                     </p>
                   </section>
 
@@ -367,12 +395,16 @@ const AGB = () => {
 
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">9. Результаты процедур</h2>
-                    <p className="mb-4">
-                      Результат процедур перманентного макияжа и косметических процедур индивидуален и зависит от типа кожи, образа жизни и последующего ухода.
-                    </p>
-                    <p>
-                      Поэтому определенный результат не может быть гарантирован.
-                    </p>
+                    <ol className="list-decimal list-inside pl-4 space-y-3">
+                      <li>Перманентный макияж представляет собой индивидуальное ремесленно-художественное вмешательство.</li>
+                      <li>Отклонения в цвете, форме, симметрии, интенсивности цвета и долговечности возможны и не являются недостатком в смысле законодательных норм.</li>
+                      <li>Полная стабильность цвета, точная симметрия или постоянная долговечность не могут быть гарантированы.</li>
+                      <li>Результат процедуры зависит от индивидуальных факторов, в частности типа кожи, возраста, обмена веществ, приема медикаментов, гормональных влияний, предыдущих заболеваний, привычек ухода, воздействия солнца, курения, а также других внешних факторов.</li>
+                      <li>Долговечность перманентного макияжа индивидуальна и может значительно варьироваться.</li>
+                      <li>Поскольку каждая кожа по-разному принимает цветовые пигменты, гарантия на определенный результат процедуры не предоставляется. В отдельных случаях может случиться, что пигменты принимаются недостаточно или не принимаются вообще.</li>
+                      <li>Повторные процедуры (коррекции или обновления) требуются регулярно и не входят в согласованную базовую цену, если письменно не согласовано иное.</li>
+                      <li>Повторные процедуры могут быть согласованы в течение 8 недель после первичной процедуры. По истечении этого срока процедура считается новой/первичной процедурой и оплачивается по действующей базовой цене.</li>
+                    </ol>
                   </section>
 
                   <div className="my-8 border-t border-charcoal/20"></div>
