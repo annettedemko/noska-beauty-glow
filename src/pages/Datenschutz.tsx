@@ -153,8 +153,11 @@ const Datenschutz = () => {
                     <p className="mb-3">
                       Sofern darüber hinaus Cookies (z. B. zu Analysezwecken) eingesetzt werden, erfolgt dies ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
                     </p>
-                    <p>
+                    <p className="mb-3">
                       Nicht technisch notwendige Cookies werden erst nach ausdrücklicher Einwilligung über ein Cookie-Banner gesetzt.
+                    </p>
+                    <p>
+                      Sie können Ihre Cookie-Einstellungen jederzeit über den entsprechenden Link am Ende der Website ändern.
                     </p>
                   </section>
 
@@ -178,8 +181,11 @@ const Datenschutz = () => {
                     <p className="mb-3">
                       <strong>Widerruf:</strong> Sie können Ihre Einwilligung jederzeit über die Cookie-Einstellungen am Ende jeder Seite widerrufen. Der Widerruf hat keinen Einfluss auf die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung.
                     </p>
-                    <p>
+                    <p className="mb-3">
                       Google ist nach dem EU-U.S. Data Privacy Framework zertifiziert.
+                    </p>
+                    <p>
+                      Eine Übertragung von Daten in Drittstaaten (z. B. USA) kann nicht ausgeschlossen werden.
                     </p>
                   </section>
 
@@ -382,8 +388,11 @@ const Datenschutz = () => {
                     <p className="mb-3">
                       Использование дополнительных cookies (например, аналитических) осуществляется только на основании вашего согласия в соответствии со ст. 6 ч. 1 п. a GDPR.
                     </p>
-                    <p>
+                    <p className="mb-3">
                       Необязательные cookies устанавливаются только после вашего согласия через cookie-баннер.
+                    </p>
+                    <p>
+                      Вы можете изменить настройки cookie в любое время через соответствующую ссылку внизу сайта.
                     </p>
                   </section>
 
@@ -407,8 +416,11 @@ const Datenschutz = () => {
                     <p className="mb-3">
                       <strong>Отзыв согласия:</strong> Вы можете в любое время отозвать свое согласие через настройки cookie в нижней части каждой страницы. Отзыв не влияет на законность обработки данных до момента отзыва.
                     </p>
-                    <p>
+                    <p className="mb-3">
                       Google сертифицирован в рамках EU-U.S. Data Privacy Framework.
+                    </p>
+                    <p>
+                      Передача данных в третьи страны (например, США) не может быть исключена.
                     </p>
                   </section>
 
