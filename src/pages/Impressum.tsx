@@ -27,17 +27,17 @@ const Impressum = () => {
                   IMPRESSUM
                 </h1>
                 <p className="text-lg text-muted-foreground mb-16">
-                  Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)
+                  Angaben gemäß § 5 DDG i. V. m. § 5 TMG
                 </p>
 
-                <div className="space-y-12 text-base font-light leading-relaxed">
+                <div className="space-y-8 text-base font-light leading-relaxed">
                   <section>
-                    <p className="mb-4">
+                    <p className="mb-6">
                       <strong>Anastasia Noska</strong><br />
                       Einzelunternehmerin (Gewerbetreibende)
                     </p>
 
-                    <div className="mb-4">
+                    <div className="mb-6">
                       <p className="font-medium mb-2">Geschäftsadresse (für Post / Impressum):</p>
                       <p className="pl-4">
                         Aubingerstraße 147<br />
@@ -46,7 +46,7 @@ const Impressum = () => {
                       </p>
                     </div>
 
-                    <div className="mb-4">
+                    <div className="mb-6">
                       <p className="font-medium mb-2">Studio / Behandlungsort:</p>
                       <p className="pl-4">
                         Hildegardstraße 4<br />
@@ -55,7 +55,7 @@ const Impressum = () => {
                       </p>
                     </div>
 
-                    <div className="mb-4">
+                    <div className="mb-6">
                       <p className="font-medium mb-2">Kontakt:</p>
                       <p className="pl-4">
                         Telefon: +49 177 9093936<br />
@@ -63,55 +63,58 @@ const Impressum = () => {
                       </p>
                     </div>
 
-                    <div className="mb-4">
+                    <div className="mb-6">
                       <p className="font-medium mb-2">Umsatzsteuer:</p>
                       <p className="pl-4">
                         Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.
                       </p>
                     </div>
 
-                    <div>
+                    <div className="mb-8">
                       <p className="font-medium mb-2">Zuständige Aufsichtsbehörde:</p>
                       <p className="pl-4">
-                        Landeshauptstadt München
+                        Landeshauptstadt München – Kreisverwaltungsreferat
                       </p>
                     </div>
                   </section>
-
-                  <div className="my-8 border-t border-charcoal/20"></div>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-6 text-accent">Haftungsausschluss</h2>
-
-                    <div className="mb-6">
-                      <h3 className="font-serif text-xl mb-3 text-accent/80">Haftung für Inhalte</h3>
-                      <p>
-                        Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt.
-                        Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehmen wir jedoch keine Gewähr.
-                      </p>
-                    </div>
-
-                    <div className="mb-6">
-                      <h3 className="font-serif text-xl mb-3 text-accent/80">Haftung für Links</h3>
-                      <p>
-                        Unsere Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
-                        Für diese fremden Inhalte übernehmen wir daher keine Gewähr.
-                        Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.
-                      </p>
-                    </div>
-
-                    <div>
-                      <h3 className="font-serif text-xl mb-3 text-accent/80">Urheberrecht</h3>
-                      <p>
-                        Die durch die Seitenbetreiber erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht.
-                        Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts
-                        bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
-                      </p>
-                    </div>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">Social Media</h2>
+                    <p className="mb-2">
+                      Dieses Impressum gilt auch für folgende Online-Präsenzen:
+                    </p>
+                    <ul className="list-disc list-inside pl-4 space-y-1">
+                      <li>Instagram</li>
+                      <li>Facebook</li>
+                    </ul>
                   </section>
 
-                  <div className="text-sm text-muted-foreground pt-6 border-t border-charcoal/20">
-                    Stand: Dezember 2025
+                  <section>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">Haftung für Inhalte</h2>
+                    <p>
+                      Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+                      Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+                    </p>
+                  </section>
+
+                  <section>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">Haftung für Links</h2>
+                    <p>
+                      Unsere Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
+                      Für diese Inhalte übernehmen wir keine Haftung. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.
+                    </p>
+                  </section>
+
+                  <section>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">Urheberrecht</h2>
+                    <p>
+                      Die durch die Seitenbetreiberin erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht.
+                      Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung der jeweiligen Urheberin.
+                    </p>
+                  </section>
+
+                  <div className="text-sm text-muted-foreground pt-8">
+                    Stand: Januar 2026
                   </div>
                 </div>
               </>
@@ -122,17 +125,17 @@ const Impressum = () => {
                   IMPRESSUM
                 </h1>
                 <p className="text-lg text-muted-foreground mb-16">
-                  Информация согласно § 5 Закона о цифровых услугах (DDG)
+                  Информация согласно § 5 DDG совм. с § 5 TMG
                 </p>
 
-                <div className="space-y-12 text-base font-light leading-relaxed">
+                <div className="space-y-8 text-base font-light leading-relaxed">
                   <section>
-                    <p className="mb-4">
+                    <p className="mb-6">
                       <strong>Anastasia Noska</strong><br />
                       Индивидуальный предприниматель
                     </p>
 
-                    <div className="mb-4">
+                    <div className="mb-6">
                       <p className="font-medium mb-2">Юридический адрес (для корреспонденции / Impressum):</p>
                       <p className="pl-4">
                         Aubingerstraße 147<br />
@@ -141,7 +144,7 @@ const Impressum = () => {
                       </p>
                     </div>
 
-                    <div className="mb-4">
+                    <div className="mb-6">
                       <p className="font-medium mb-2">Студия / место проведения процедур:</p>
                       <p className="pl-4">
                         Hildegardstraße 4<br />
@@ -150,7 +153,7 @@ const Impressum = () => {
                       </p>
                     </div>
 
-                    <div className="mb-4">
+                    <div className="mb-6">
                       <p className="font-medium mb-2">Контакты:</p>
                       <p className="pl-4">
                         Телефон: +49 177 9093936<br />
@@ -158,55 +161,58 @@ const Impressum = () => {
                       </p>
                     </div>
 
-                    <div className="mb-4">
+                    <div className="mb-6">
                       <p className="font-medium mb-2">Налог с оборота (НДС):</p>
                       <p className="pl-4">
                         Согласно § 19 UStG налог с оборота не взимается.
                       </p>
                     </div>
 
-                    <div>
+                    <div className="mb-8">
                       <p className="font-medium mb-2">Компетентный надзорный орган:</p>
                       <p className="pl-4">
-                        Landeshauptstadt München
+                        Landeshauptstadt München – Kreisverwaltungsreferat
                       </p>
                     </div>
                   </section>
-
-                  <div className="my-8 border-t border-charcoal/20"></div>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-6 text-accent">Отказ от ответственности</h2>
-
-                    <div className="mb-6">
-                      <h3 className="font-serif text-xl mb-3 text-accent/80">Ответственность за содержание</h3>
-                      <p>
-                        Содержание нашего сайта было создано с максимальной тщательностью.
-                        Однако мы не можем гарантировать правильность, полноту и актуальность содержания.
-                      </p>
-                    </div>
-
-                    <div className="mb-6">
-                      <h3 className="font-serif text-xl mb-3 text-accent/80">Ответственность за ссылки</h3>
-                      <p>
-                        Наш сайт содержит ссылки на внешние сайты третьих лиц, на содержание которых мы не имеем влияния.
-                        Поэтому мы не можем нести ответственность за это стороннее содержание.
-                        За содержание связанных страниц всегда несет ответственность соответствующий поставщик или оператор.
-                      </p>
-                    </div>
-
-                    <div>
-                      <h3 className="font-serif text-xl mb-3 text-accent/80">Авторское право</h3>
-                      <p>
-                        Содержание и работы, созданные операторами сайта на этом веб-сайте, подпадают под действие немецкого авторского права.
-                        Воспроизведение, обработка, распространение и любое использование за пределами авторского права
-                        требуют письменного согласия соответствующего автора или создателя.
-                      </p>
-                    </div>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">Социальные сети</h2>
+                    <p className="mb-2">
+                      Данный Impressum также действителен для следующих онлайн-присутствий:
+                    </p>
+                    <ul className="list-disc list-inside pl-4 space-y-1">
+                      <li>Instagram</li>
+                      <li>Facebook</li>
+                    </ul>
                   </section>
 
-                  <div className="text-sm text-muted-foreground pt-6 border-t border-charcoal/20">
-                    Версия: декабрь 2025 года
+                  <section>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">Ответственность за содержание</h2>
+                    <p>
+                      Как поставщик услуг мы несём ответственность за собственное содержание на этих страницах в соответствии с § 7 п. 1 DDG согласно общим законам.
+                      Однако мы не можем гарантировать правильность, полноту и актуальность содержания.
+                    </p>
+                  </section>
+
+                  <section>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">Ответственность за ссылки</h2>
+                    <p>
+                      Наш сайт содержит ссылки на внешние сайты третьих лиц, на содержание которых мы не имеем влияния.
+                      За это содержание мы не несём ответственности. За содержание связанных страниц всегда несет ответственность соответствующий поставщик или оператор.
+                    </p>
+                  </section>
+
+                  <section>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">Авторское право</h2>
+                    <p>
+                      Содержание и работы, созданные владелицей сайта на этом веб-сайте, подпадают под действие немецкого авторского права.
+                      Воспроизведение, обработка, распространение и любое использование за пределами авторского права требуют письменного согласия соответствующей правообладательницы.
+                    </p>
+                  </section>
+
+                  <div className="text-sm text-muted-foreground pt-8">
+                    Версия: январь 2026 года
                   </div>
                 </div>
               </>
