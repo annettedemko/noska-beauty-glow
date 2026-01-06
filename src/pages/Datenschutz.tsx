@@ -85,7 +85,7 @@ const Datenschutz = () => {
                     <p className="mb-2">Diese Daten geben wir nicht ohne Ihre Einwilligung weiter, sofern keine gesetzliche Verpflichtung besteht.</p>
                     <p className="mb-2">Rechtsgrundlage:</p>
                     <ul className="list-disc pl-8 space-y-1">
-                      <li>Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung)</li>
+                      <li>Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung / Vertragserfüllung)</li>
                       <li>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung), soweit diese erforderlich ist</li>
                       <li>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Kommunikation)</li>
                     </ul>
@@ -155,10 +155,13 @@ const Datenschutz = () => {
                       Sie können eine erteilte Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Der Widerruf berührt nicht die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung/Veröffentlichung.
                     </p>
                     <p className="mb-2">Rechtsgrundlage:</p>
-                    <ul className="list-disc pl-8 space-y-1">
-                      <li>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</li>
-                      <li>ggf. Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung)</li>
+                    <ul className="list-disc pl-8 space-y-1 mb-3">
+                      <li>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) für Veröffentlichung</li>
+                      <li>ggf. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an Dokumentation/Qualität), soweit keine Veröffentlichung erfolgt</li>
                     </ul>
+                    <p>
+                      Hinweis: Bei einer Veröffentlichung auf Social-Media-Plattformen können Daten auch außerhalb der EU verarbeitet werden. Hierauf haben wir keinen Einfluss.
+                    </p>
                   </section>
 
                   <section>
@@ -182,16 +185,16 @@ const Datenschutz = () => {
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">9. Cookies / Einwilligungsmanagement</h2>
                     <p className="mb-3">
-                      Unsere Website verwendet Cookies. Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden.
+                      Unsere Website verwendet Cookies und ähnliche Technologien. Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden.
                     </p>
                     <p className="mb-3">
-                      Technisch notwendige Cookies werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO eingesetzt (berechtigtes Interesse an einer funktionierenden Website).
+                      Technisch notwendige Cookies werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO eingesetzt (berechtigtes Interesse an einer funktionierenden Website) sowie – soweit einschlägig – § 25 Abs. 2 TDDDG.
                     </p>
                     <p className="mb-3">
                       Sofern darüber hinaus Cookies oder ähnliche Technologien (z. B. zu Analyse- oder Statistikzwecken) eingesetzt werden, erfolgt dies ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG.
                     </p>
-                    <p className="mb-3">
-                      Nicht technisch notwendige Cookies werden erst nach Ihrer ausdrücklichen Einwilligung über das Cookie-Banner gesetzt. Sie können Ihre Auswahl jederzeit über die Cookie-Einstellungen ändern und eine erteilte Einwilligung mit Wirkung für die Zukunft widerrufen.
+                    <p>
+                      Nicht technisch notwendige Dienste (z. B. Analyse & Statistik) werden erst nach Ihrer ausdrücklichen Einwilligung über das Cookie-Banner geladen (z. B. durch „Alle akzeptieren" oder durch „Speichern" bei aktivierter Kategorie „Analyse & Statistik"). Sie können Ihre Auswahl jederzeit über die Cookie-Einstellungen ändern und eine erteilte Einwilligung mit Wirkung für die Zukunft widerrufen.
                     </p>
                   </section>
 
@@ -204,13 +207,21 @@ const Datenschutz = () => {
                       Google Analytics kann Cookies einsetzen und Informationen über die Benutzung der Website verarbeiten (z. B. Online-Kennungen/Cookie-IDs, Geräteinformationen, aufgerufene Seiten, technische Informationen wie IP-Adresse).
                     </p>
                     <p className="mb-3">
-                      Rechtsgrundlage: Die Nutzung von Google Analytics erfolgt ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG.
+                      Rechtsgrundlage:
+                      Die Nutzung von Google Analytics erfolgt ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG.
                     </p>
                     <p className="mb-3">
                       Empfänger der Daten kann auch Google LLC (USA) sein. Eine Übermittlung in Drittländer (z. B. USA) kann daher nicht ausgeschlossen werden. Google ist nach dem EU-U.S. Data Privacy Framework zertifiziert.
                     </p>
+                    <p className="mb-3">
+                      Widerruf:
+                      Sie können Ihre Einwilligung jederzeit über die Cookie-Einstellungen widerrufen. Der Widerruf hat keinen Einfluss auf die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung.
+                    </p>
                     <p>
-                      Widerruf: Sie können Ihre Einwilligung jederzeit über die Cookie-Einstellungen widerrufen. Der Widerruf hat keinen Einfluss auf die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung.
+                      Weitere Informationen:{' '}
+                      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                        https://policies.google.com/privacy
+                      </a>
                     </p>
                   </section>
 
@@ -223,12 +234,33 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">12. Ahrefs Analytics</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">12. Ahrefs Web Analytics</h2>
                     <p className="mb-3">
-                      Diese Website nutzt Ahrefs Analytics (Ahrefs Pte. Ltd., Singapur) zur Analyse des Website-Traffics und zur Suchmaschinenoptimierung. Ahrefs Analytics kann Cookies einsetzen und technische Zugriffsdaten (z. B. IP-Adresse, User-Agent, besuchte Seiten) verarbeiten.
+                      Diese Website nutzt Ahrefs Web Analytics (Ahrefs Pte. Ltd., Singapur) zur Analyse des Website-Traffics und zur Suchmaschinenoptimierung. Dabei können Cookies eingesetzt sowie technische Zugriffsdaten (z. B. IP-Adresse, User-Agent, aufgerufene Seiten) verarbeitet werden.
+                    </p>
+                    <p className="mb-3">
+                      Ahrefs Web Analytics wird erst nach Ihrer Einwilligung über das Cookie-Banner (Kategorie „Analyse & Statistik") geladen.
+                    </p>
+                    <p className="mb-3">
+                      Rechtsgrundlage:
+                      Die Nutzung von Ahrefs Web Analytics erfolgt ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG.
+                    </p>
+                    <p className="mb-3">
+                      Eine Übermittlung in ein Drittland (z. B. Singapur) kann nicht ausgeschlossen werden.
+                    </p>
+                    <p className="mb-3">
+                      Widerruf:
+                      Sie können Ihre Einwilligung jederzeit über die Cookie-Einstellungen widerrufen.
                     </p>
                     <p>
-                      Die Nutzung erfolgt ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG. Sie können Ihre Einwilligung jederzeit über die Cookie-Einstellungen widerrufen.
+                      Weitere Informationen:{' '}
+                      <a href="https://ahrefs.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                        https://ahrefs.com/legal/privacy-policy
+                      </a>
+                      {' / '}
+                      <a href="https://ahrefs.com/de/legal/cookie-notice" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                        https://ahrefs.com/de/legal/cookie-notice
+                      </a>
                     </p>
                   </section>
 
@@ -264,7 +296,26 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">16. Änderungen dieser Datenschutzerklärung</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">16. Zuständige Datenschutzaufsichtsbehörde (Beschwerderecht)</h2>
+                    <p className="mb-2">
+                      Für nicht-öffentliche Stellen in Bayern ist regelmäßig zuständig:
+                    </p>
+                    <p className="pl-4 mb-3">
+                      Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)<br />
+                      Promenade 18<br />
+                      91522 Ansbach<br />
+                      Deutschland
+                    </p>
+                    <p>
+                      Online-Beschwerde:{' '}
+                      <a href="https://www.lda.bayern.de/de/beschwerde.html" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                        https://www.lda.bayern.de/de/beschwerde.html
+                      </a>
+                    </p>
+                  </section>
+
+                  <section>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">17. Änderungen dieser Datenschutzerklärung</h2>
                     <p className="mb-3">
                       Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht.
                     </p>
@@ -334,11 +385,11 @@ const Datenschutz = () => {
                     <p className="mb-3">
                       При обращении к нам по электронной почте или через форму обратной связи ваши данные, включая контактную информацию, сохраняются для обработки запроса и возможных последующих вопросов.
                     </p>
-                    <p className="mb-2">Передача этих данных третьим лицам без вашего согласия не осуществляется.</p>
+                    <p className="mb-2">Передача этих данных третьим лицам без вашего согласия не осуществляется, если не существует законной обязанности.</p>
                     <p className="mb-2">Правовые основания обработки:</p>
                     <ul className="list-disc pl-8 space-y-1">
-                      <li>ст. 6 ч. 1 п. b GDPR (подготовка договора)</li>
-                      <li>ст. 6 ч. 1 п. a GDPR (согласие)</li>
+                      <li>ст. 6 ч. 1 п. b GDPR (подготовка договора / исполнение договора)</li>
+                      <li>ст. 6 ч. 1 п. a GDPR (согласие), если требуется</li>
                       <li>ст. 6 ч. 1 п. f GDPR (законный интерес в коммуникации)</li>
                     </ul>
                   </section>
@@ -407,10 +458,13 @@ const Datenschutz = () => {
                       Вы можете отозвать данное согласие в любое время с действием на будущее. Отзыв не влияет на законность обработки/публикации, осуществленной до момента отзыва.
                     </p>
                     <p className="mb-2">Правовое основание:</p>
-                    <ul className="list-disc pl-8 space-y-1">
-                      <li>ст. 6 ч. 1 п. a GDPR (согласие)</li>
-                      <li>при необходимости ст. 6 ч. 1 п. b GDPR (исполнение договора)</li>
+                    <ul className="list-disc pl-8 space-y-1 mb-3">
+                      <li>ст. 6 ч. 1 п. a GDPR (согласие) для публикации</li>
+                      <li>при необходимости ст. 6 ч. 1 п. f GDPR (законный интерес в документировании/качестве), если публикация не осуществляется</li>
                     </ul>
+                    <p>
+                      Примечание: При публикации на платформах социальных сетей данные могут обрабатываться за пределами ЕС. На это мы не имеем влияния.
+                    </p>
                   </section>
 
                   <section>
@@ -434,19 +488,16 @@ const Datenschutz = () => {
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">9. Cookies / Управление согласием</h2>
                     <p className="mb-3">
-                      Наш сайт использует файлы cookie. Cookies — это небольшие текстовые файлы, сохраняемые на вашем устройстве.
+                      Наш сайт использует cookies и аналогичные технологии. Cookies — это небольшие текстовые файлы, сохраняемые на вашем устройстве.
                     </p>
                     <p className="mb-3">
-                      Если используются исключительно технически необходимые cookies, обработка осуществляется на основании ст. 6 ч. 1 п. f GDPR (законный интерес в корректной работе сайта).
+                      Технически необходимые cookies используются на основании ст. 6 ч. 1 п. f GDPR (законный интерес в корректной работе сайта), а также – в соответствующих случаях – § 25 п. 2 TDDDG.
                     </p>
                     <p className="mb-3">
-                      Использование дополнительных cookies (например, аналитических) осуществляется только на основании вашего согласия в соответствии со ст. 6 ч. 1 п. a GDPR.
-                    </p>
-                    <p className="mb-3">
-                      Необязательные cookies устанавливаются только после вашего согласия через cookie-баннер.
+                      Если используются дополнительные cookies или аналогичные технологии (например, для анализа или статистики), это осуществляется исключительно на основании вашего согласия в соответствии со ст. 6 ч. 1 п. a GDPR и § 25 п. 1 TDDDG.
                     </p>
                     <p>
-                      Вы можете изменить настройки cookie в любое время через соответствующую ссылку внизу сайта.
+                      Технически необязательные сервисы (например, Анализ и Статистика) загружаются только после вашего явного согласия через cookie-баннер (например, через «Alle akzeptieren» или через «Speichern» при активированной категории «Analyse & Statistik»). Вы можете в любое время изменить свой выбор через настройки cookie и отозвать данное согласие с действием на будущее.
                     </p>
                   </section>
 
@@ -456,25 +507,24 @@ const Datenschutz = () => {
                       Наш сайт использует Google Analytics — сервис веб-аналитики компании Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ирландия.
                     </p>
                     <p className="mb-3">
-                      Google Analytics использует cookies для анализа использования сайта. Собранная информация (например, IP-адрес, тип устройства, посещенные страницы) может передаваться на серверы Google и там храниться.
+                      Google Analytics может использовать cookies и обрабатывать информацию об использовании сайта (например, онлайн-идентификаторы/cookie-ID, информация об устройстве, посещенные страницы, техническая информация, такая как IP-адрес).
                     </p>
                     <p className="mb-3">
-                      На сайте активирована анонимизация IP-адресов.
+                      Правовое основание:
+                      Использование Google Analytics осуществляется исключительно на основании вашего согласия в соответствии со ст. 6 ч. 1 п. a GDPR и § 25 п. 1 TDDDG.
                     </p>
                     <p className="mb-3">
-                      <strong>Правовое основание:</strong> Использование Google Analytics осуществляется исключительно на основании вашего согласия в соответствии со ст. 6 ч. 1 п. a GDPR.
+                      Получателем данных может также быть Google LLC (США). Передача в третьи страны (например, США) не может быть исключена. Google сертифицирован в рамках EU-U.S. Data Privacy Framework.
                     </p>
                     <p className="mb-3">
-                      <strong>Срок хранения cookies:</strong> Файлы cookie, устанавливаемые Google Analytics (_ga, _gid), удаляются по умолчанию через 14 месяцев (_ga) или 24 часа (_gid).
-                    </p>
-                    <p className="mb-3">
-                      <strong>Отзыв согласия:</strong> Вы можете в любое время отозвать свое согласие через настройки cookie в нижней части каждой страницы. Отзыв не влияет на законность обработки данных до момента отзыва.
-                    </p>
-                    <p className="mb-3">
-                      Google сертифицирован в рамках EU-U.S. Data Privacy Framework.
+                      Отзыв:
+                      Вы можете в любое время отозвать свое согласие через настройки cookie. Отзыв не влияет на законность обработки данных до момента отзыва.
                     </p>
                     <p>
-                      Передача данных в третьи страны (например, США) не может быть исключена.
+                      Дополнительная информация:{' '}
+                      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                        https://policies.google.com/privacy
+                      </a>
                     </p>
                   </section>
 
@@ -487,12 +537,33 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">12. Ahrefs Analytics</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">12. Ahrefs Web Analytics</h2>
                     <p className="mb-3">
-                      Наш сайт использует Ahrefs Analytics (Ahrefs Pte. Ltd., Сингапур) для анализа трафика сайта и поисковой оптимизации. Ahrefs Analytics может устанавливать cookies и обрабатывать технические данные доступа (например, IP-адрес, user-agent, посещенные страницы).
+                      Наш сайт использует Ahrefs Web Analytics (Ahrefs Pte. Ltd., Сингапур) для анализа трафика сайта и поисковой оптимизации. При этом могут использоваться cookies, а также обрабатываться технические данные доступа (например, IP-адрес, user-agent, посещенные страницы).
+                    </p>
+                    <p className="mb-3">
+                      Ahrefs Web Analytics загружается только после вашего согласия через cookie-баннер (категория «Analyse & Statistik»).
+                    </p>
+                    <p className="mb-3">
+                      Правовое основание:
+                      Использование Ahrefs Web Analytics осуществляется исключительно на основании вашего согласия в соответствии со ст. 6 ч. 1 п. a GDPR и § 25 п. 1 TDDDG.
+                    </p>
+                    <p className="mb-3">
+                      Передача в третью страну (например, Сингапур) не может быть исключена.
+                    </p>
+                    <p className="mb-3">
+                      Отзыв:
+                      Вы можете в любое время отозвать свое согласие через настройки cookie.
                     </p>
                     <p>
-                      Использование осуществляется исключительно на основании вашего согласия в соответствии со ст. 6 ч. 1 п. a GDPR и § 25 п. 1 TDDDG. Вы можете отозвать свое согласие в любое время через настройки cookie.
+                      Дополнительная информация:{' '}
+                      <a href="https://ahrefs.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                        https://ahrefs.com/legal/privacy-policy
+                      </a>
+                      {' / '}
+                      <a href="https://ahrefs.com/de/legal/cookie-notice" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                        https://ahrefs.com/de/legal/cookie-notice
+                      </a>
                     </p>
                   </section>
 
@@ -528,7 +599,26 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">16. Изменения политики конфиденциальности</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">16. Компетентный надзорный орган по защите данных (право на жалобу)</h2>
+                    <p className="mb-2">
+                      Для негосударственных структур в Баварии, как правило, компетентным является:
+                    </p>
+                    <p className="pl-4 mb-3">
+                      Баварское управление по надзору за защитой данных (BayLDA)<br />
+                      Promenade 18<br />
+                      91522 Ansbach<br />
+                      Германия
+                    </p>
+                    <p>
+                      Онлайн-жалоба:{' '}
+                      <a href="https://www.lda.bayern.de/de/beschwerde.html" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                        https://www.lda.bayern.de/de/beschwerde.html
+                      </a>
+                    </p>
+                  </section>
+
+                  <section>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">17. Изменения политики конфиденциальности</h2>
                     <p className="mb-3">
                       Мы оставляем за собой право изменять данную политику конфиденциальности с целью ее актуализации и соответствия действующим правовым требованиям.
                     </p>
