@@ -73,7 +73,7 @@ const Datenschutz = () => {
                       <li>Uhrzeit der Serveranfrage</li>
                     </ul>
                     <p className="mt-3">
-                      Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der technisch fehlerfreien Darstellung sowie der Sicherheit und Stabilität der Website).
+                      Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der technisch fehlerfreien Bereitstellung sowie der Sicherheit und Stabilität der Website).
                     </p>
                   </section>
 
@@ -118,7 +118,7 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">6. Verlinkung zu Instagram</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">6. Verlinkung zu Instagram / Social Media</h2>
                     <p className="mb-3">
                       Auf unserer Website befinden sich Links zum sozialen Netzwerk Instagram.
                     </p>
@@ -129,7 +129,7 @@ const Datenschutz = () => {
                       Dublin 2, Irland
                     </p>
                     <p className="mb-3">
-                      Beim Anklicken des Instagram-Links können personenbezogene Daten an Instagram übermittelt werden. Wir haben keinen Einfluss auf Art und Umfang der durch Instagram erhobenen und verarbeiteten Daten.
+                      Beim Anklicken des Instagram-Links können personenbezogene Daten an Instagram übermittelt werden. Wir haben keinen Einfluss auf Art, Umfang und Zwecke der durch Instagram erhobenen und verarbeiteten Daten.
                     </p>
                     <p className="mb-3">
                       Rechtsgrundlage:
@@ -144,7 +144,43 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">7. Cookies / Einwilligungsmanagement</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">7. Foto- und Videoaufnahmen (Vorher-/Nachher-Bilder) / Veröffentlichung</h2>
+                    <p className="mb-3">
+                      Im Rahmen unserer Dienstleistungen (z. B. Permanent Make-up, Camouflage, Pigmentierungen) können Foto- und/oder Videoaufnahmen erstellt werden, insbesondere Vorher-/Nachher-Aufnahmen zur Dokumentation der Behandlung und für Qualitätszwecke.
+                    </p>
+                    <p className="mb-3">
+                      Sofern Foto- oder Videoaufnahmen veröffentlicht werden (z. B. auf unserer Website oder auf unseren Social-Media-Kanälen wie Instagram), erfolgt dies ausschließlich auf Grundlage Ihrer vorherigen Einwilligung.
+                    </p>
+                    <p className="mb-3">
+                      Sie können eine erteilte Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Der Widerruf berührt nicht die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung/Veröffentlichung.
+                    </p>
+                    <p className="mb-2">Rechtsgrundlage:</p>
+                    <ul className="list-disc pl-8 space-y-1">
+                      <li>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</li>
+                      <li>ggf. Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung)</li>
+                    </ul>
+                  </section>
+
+                  <section>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">8. Gesundheitsdaten / Anamnese (Fragebogen vor der Behandlung)</h2>
+                    <p className="mb-3">
+                      Vor der Behandlung kann ein Anamnesebogen bzw. Gesundheitsfragebogen ausgefüllt werden (z. B. zu Allergien, Vorerkrankungen, Medikamenten, Hautzustand oder Kontraindikationen). Diese Angaben können Gesundheitsdaten im Sinne von Art. 9 DSGVO darstellen.
+                    </p>
+                    <p className="mb-3">
+                      Die Verarbeitung erfolgt ausschließlich zum Zweck der Beurteilung, ob eine Behandlung sicher durchgeführt werden kann, zur Vorbereitung und Durchführung der Behandlung sowie – soweit anwendbar – zur Erfüllung gesetzlicher Dokumentationspflichten.
+                    </p>
+                    <p className="mb-2">Rechtsgrundlage:</p>
+                    <ul className="list-disc pl-8 space-y-1 mb-3">
+                      <li>Art. 6 Abs. 1 lit. b DSGVO (Vertrag / Vertragsanbahnung)</li>
+                      <li>Art. 9 Abs. 2 lit. a DSGVO (ausdrückliche Einwilligung)</li>
+                    </ul>
+                    <p>
+                      Die Daten werden nur so lange gespeichert, wie dies für die genannten Zwecke erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen.
+                    </p>
+                  </section>
+
+                  <section>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">9. Cookies / Einwilligungsmanagement</h2>
                     <p className="mb-3">
                       Unsere Website verwendet Cookies. Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden.
                     </p>
@@ -160,7 +196,7 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">8. Google Analytics</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">10. Google Analytics</h2>
                     <p className="mb-3">
                       Diese Website nutzt Google Analytics, einen Webanalysedienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland.
                     </p>
@@ -179,17 +215,15 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">9. Google Search Console</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">11. Google Search Console</h2>
                     <p className="mb-3">
                       Diese Website nutzt Google Search Console zur technischen Analyse und Optimierung der Website.
-                    </p>
-                    <p>
-                      Google Search Console setzt nach Kenntnisstand keine Cookies auf der Website und verarbeitet ausschließlich aggregierte Auswertungen.
+                      Google Search Console setzt in der Regel keine Cookies auf der Website und verarbeitet ausschließlich aggregierte Auswertungen.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">10. Ahrefs Analytics</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">12. Ahrefs Analytics</h2>
                     <p className="mb-3">
                       Diese Website nutzt Ahrefs Analytics (Ahrefs Pte. Ltd., Singapur) zur Analyse des Website-Traffics und zur Suchmaschinenoptimierung. Ahrefs Analytics kann Cookies einsetzen und technische Zugriffsdaten (z. B. IP-Adresse, User-Agent, besuchte Seiten) verarbeiten.
                     </p>
@@ -199,7 +233,7 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">11. SSL- bzw. TLS-Verschlüsselung</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">13. SSL- bzw. TLS-Verschlüsselung</h2>
                     <p className="mb-3">
                       Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung.
                       Eine verschlüsselte Verbindung erkennen Sie an „https://" in der Adresszeile Ihres Browsers.
@@ -207,14 +241,14 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">12. Speicherdauer</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">14. Speicherdauer</h2>
                     <p>
                       Personenbezogene Daten werden nur so lange gespeichert, wie dies zur Erfüllung der jeweiligen Zwecke erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">13. Rechte der betroffenen Personen</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">15. Rechte der betroffenen Personen</h2>
                     <p className="mb-2">Sie haben jederzeit das Recht:</p>
                     <ul className="list-disc pl-8 space-y-1">
                       <li>Auskunft über Ihre gespeicherten Daten zu erhalten (Art. 15 DSGVO)</li>
@@ -230,7 +264,7 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">14. Änderungen dieser Datenschutzerklärung</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">16. Änderungen dieser Datenschutzerklärung</h2>
                     <p className="mb-3">
                       Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht.
                     </p>
@@ -336,7 +370,7 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">6. Ссылки на Instagram</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">6. Ссылки на Instagram / Социальные сети</h2>
                     <p className="mb-3">
                       На нашем сайте размещены ссылки на социальную сеть Instagram.
                     </p>
@@ -347,10 +381,11 @@ const Datenschutz = () => {
                       Dublin 2, Ирландия
                     </p>
                     <p className="mb-3">
-                      При переходе по ссылке на Instagram персональные данные могут передаваться данному сервису. Мы не имеем влияния на объем и характер обработки данных Instagram.
+                      При переходе по ссылке на Instagram персональные данные могут передаваться данному сервису. Мы не имеем влияния на характер, объем и цели обработки данных Instagram.
                     </p>
                     <p className="mb-3">
-                      Правовое основание: ст. 6 ч. 1 п. f GDPR (законный интерес в представлении нашей онлайн-деятельности).
+                      Правовое основание:
+                      ст. 6 ч. 1 п. f GDPR (законный интерес в представлении нашей онлайн-деятельности).
                     </p>
                     <p>
                       Политика конфиденциальности Instagram:{' '}
@@ -361,7 +396,43 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">7. Cookies</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">7. Фото- и видеосъемка (фото До/После) / Публикация</h2>
+                    <p className="mb-3">
+                      В рамках наших услуг (например, перманентный макияж, камуфляж, пигментация) могут создаваться фото- и/или видеозаписи, в частности фотографии До/После для документации процедуры и в целях контроля качества.
+                    </p>
+                    <p className="mb-3">
+                      Если фото- или видеоматериалы публикуются (например, на нашем сайте или в социальных сетях, таких как Instagram), это происходит исключительно на основании вашего предварительного согласия.
+                    </p>
+                    <p className="mb-3">
+                      Вы можете отозвать данное согласие в любое время с действием на будущее. Отзыв не влияет на законность обработки/публикации, осуществленной до момента отзыва.
+                    </p>
+                    <p className="mb-2">Правовое основание:</p>
+                    <ul className="list-disc pl-8 space-y-1">
+                      <li>ст. 6 ч. 1 п. a GDPR (согласие)</li>
+                      <li>при необходимости ст. 6 ч. 1 п. b GDPR (исполнение договора)</li>
+                    </ul>
+                  </section>
+
+                  <section>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">8. Данные о здоровье / Анамнез (анкета перед процедурой)</h2>
+                    <p className="mb-3">
+                      Перед процедурой может заполняться анкета анамнеза или медицинская анкета (например, об аллергиях, предыдущих заболеваниях, лекарствах, состоянии кожи или противопоказаниях). Эти данные могут представлять собой данные о здоровье по смыслу ст. 9 GDPR.
+                    </p>
+                    <p className="mb-3">
+                      Обработка осуществляется исключительно с целью оценки безопасности проведения процедуры, подготовки и проведения процедуры, а также – при необходимости – выполнения законных обязательств по документированию.
+                    </p>
+                    <p className="mb-2">Правовое основание:</p>
+                    <ul className="list-disc pl-8 space-y-1 mb-3">
+                      <li>ст. 6 ч. 1 п. b GDPR (договор / преддоговорные отношения)</li>
+                      <li>ст. 9 ч. 2 п. a GDPR (явное согласие)</li>
+                    </ul>
+                    <p>
+                      Данные хранятся только в течение времени, необходимого для указанных целей, или в соответствии с установленными законом сроками хранения.
+                    </p>
+                  </section>
+
+                  <section>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">9. Cookies / Управление согласием</h2>
                     <p className="mb-3">
                       Наш сайт использует файлы cookie. Cookies — это небольшие текстовые файлы, сохраняемые на вашем устройстве.
                     </p>
@@ -380,7 +451,7 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">8. Google Analytics</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">10. Google Analytics</h2>
                     <p className="mb-3">
                       Наш сайт использует Google Analytics — сервис веб-аналитики компании Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ирландия.
                     </p>
@@ -408,33 +479,25 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">9. Google Search Console</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">11. Google Search Console</h2>
                     <p className="mb-3">
                       Мы используем Google Search Console для технического анализа и оптимизации сайта.
-                    </p>
-                    <p>
-                      Google Search Console не использует cookies и обрабатывает только анонимизированные и агрегированные данные.
+                      Google Search Console, как правило, не использует cookies на сайте и обрабатывает только агрегированные данные.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">10. Ahrefs Analytics</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">12. Ahrefs Analytics</h2>
                     <p className="mb-3">
-                      Наш сайт использует Ahrefs Analytics (Ahrefs Pte. Ltd., Сингапур) для анализа трафика сайта и поисковой оптимизации.
-                    </p>
-                    <p className="mb-3">
-                      Ahrefs Analytics может устанавливать cookies и обрабатывать технические данные доступа (например, IP-адрес, user-agent, посещенные страницы).
-                    </p>
-                    <p className="mb-3">
-                      Использование Ahrefs Analytics осуществляется исключительно на основании вашего согласия в соответствии со ст. 6 ч. 1 п. a GDPR.
+                      Наш сайт использует Ahrefs Analytics (Ahrefs Pte. Ltd., Сингапур) для анализа трафика сайта и поисковой оптимизации. Ahrefs Analytics может устанавливать cookies и обрабатывать технические данные доступа (например, IP-адрес, user-agent, посещенные страницы).
                     </p>
                     <p>
-                      Вы можете отозвать свое согласие в любое время через настройки cookie.
+                      Использование осуществляется исключительно на основании вашего согласия в соответствии со ст. 6 ч. 1 п. a GDPR и § 25 п. 1 TDDDG. Вы можете отозвать свое согласие в любое время через настройки cookie.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">11. SSL / TLS-шифрование</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">13. SSL / TLS-шифрование</h2>
                     <p>
                       Наш сайт использует SSL- или TLS-шифрование для защиты передаваемых данных.
                       Зашифрованное соединение определяется по префиксу «https://» в адресной строке браузера.
@@ -442,14 +505,14 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">12. Срок хранения данных</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">14. Срок хранения данных</h2>
                     <p>
                       Персональные данные хранятся только в течение времени, необходимого для достижения целей обработки, либо в соответствии с установленными законом сроками хранения.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">13. Права субъектов данных</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">15. Права субъектов данных</h2>
                     <p className="mb-2">Вы имеете право:</p>
                     <ul className="list-disc pl-8 space-y-1">
                       <li>получить информацию о хранимых данных (ст. 15 GDPR)</li>
@@ -465,7 +528,7 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">14. Изменения политики конфиденциальности</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">16. Изменения политики конфиденциальности</h2>
                     <p className="mb-3">
                       Мы оставляем за собой право изменять данную политику конфиденциальности с целью ее актуализации и соответствия действующим правовым требованиям.
                     </p>
