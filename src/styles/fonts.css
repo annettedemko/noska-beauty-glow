@@ -1,0 +1,25 @@
+/**
+ * Local fonts (GDPR-compliant self-hosting)
+ * Replaces Google Fonts API to avoid external connections
+ */
+
+/* Playfair Display - Serif font for headings */
+@import '@fontsource/playfair-display/400.css';
+@import '@fontsource/playfair-display/600.css';
+@import '@fontsource/playfair-display/700.css';
+
+/* Montserrat - Sans-serif font for body text */
+@import '@fontsource/montserrat/300.css';
+@import '@fontsource/montserrat/400.css';
+@import '@fontsource/montserrat/600.css';
+@import '@fontsource/montserrat/700.css';
+
+/* Bodoni Moda - Alternative serif font */
+@import '@fontsource/bodoni-moda/400.css';
+@import '@fontsource/bodoni-moda/600.css';
+@import '@fontsource/bodoni-moda/700.css';
+
+/* Cormorant Garamond - Elegant serif font */
+@import '@fontsource/cormorant-garamond/400.css';
+@import '@fontsource/cormorant-garamond/600.css';
+@import '@fontsource/cormorant-garamond/700.css';
