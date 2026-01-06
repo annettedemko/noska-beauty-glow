@@ -54,25 +54,25 @@ export const CookieBanner = () => {
               </div>
             </div>
 
-            {/* Buttons */}
+            {/* Buttons - All equal weight (GDPR/TDDDG compliant - no dark patterns) */}
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full md:w-auto">
               <button
                 onClick={acceptNecessary}
-                className="px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 bg-background border border-silver/30 text-foreground font-sans text-[10px] sm:text-xs tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] uppercase hover:border-silver hover:bg-silver/10 transition-all duration-300"
+                className="flex-1 px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 bg-background border border-silver/30 text-foreground font-sans text-[10px] sm:text-xs tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] uppercase hover:border-silver hover:bg-silver/10 transition-all duration-300"
               >
                 {language === "DE" ? "Nur Notwendige" : "Только необходимые"}
               </button>
 
               <button
                 onClick={openSettings}
-                className="px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 bg-background border border-silver/30 text-foreground font-sans text-[10px] sm:text-xs tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] uppercase hover:border-silver hover:bg-silver/10 transition-all duration-300"
+                className="flex-1 px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 bg-background border border-silver/30 text-foreground font-sans text-[10px] sm:text-xs tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] uppercase hover:border-silver hover:bg-silver/10 transition-all duration-300"
               >
                 {language === "DE" ? "Einstellungen" : "Настройки"}
               </button>
 
               <button
                 onClick={acceptAll}
-                className="px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 bg-accent text-white font-sans text-[10px] sm:text-xs tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] uppercase shadow-luxury hover:bg-accent/90 transition-all duration-300"
+                className="flex-1 px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 bg-background border border-silver/30 text-foreground font-sans text-[10px] sm:text-xs tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] uppercase hover:border-silver hover:bg-silver/10 transition-all duration-300"
               >
                 {language === "DE" ? "Alle Akzeptieren" : "Принять все"}
               </button>
