@@ -30,21 +30,19 @@ const AGB = () => {
                   für Dienstleistungen von Anastasia Noska
                 </p>
 
-                <div className="space-y-12 text-base font-light leading-relaxed">
+                <div className="space-y-8 text-base font-light leading-relaxed">
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">1. Geltungsbereich</h2>
-                    <p className="mb-4">
-                      Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Dienstleistungen, die von Anastasia Noska, Einzelunternehmerin, angeboten werden.
+                    <p className="mb-3">
+                      Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Dienstleistungen, die von Anastasia Noska (nachfolgend „Anbieterin") erbracht werden.
                     </p>
                     <p>
-                      Abweichende Bedingungen der Kunden finden keine Anwendung, sofern ihnen nicht ausdrücklich schriftlich zugestimmt wurde.
+                      Abweichende Bedingungen von Kundinnen/Kunden finden keine Anwendung, sofern diesen nicht ausdrücklich in Textform zugestimmt wurde.
                     </p>
                   </section>
 
-                  <div className="my-8 border-t border-charcoal/20"></div>
-
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">2. Anbieter</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">2. Anbieterin</h2>
                     <p className="mb-4">
                       <strong>Anastasia Noska</strong><br />
                       Einzelunternehmerin (Gewerbetreibende)<br />
@@ -61,63 +59,39 @@ const AGB = () => {
                     </div>
                   </section>
 
-                  <div className="my-8 border-t border-charcoal/20"></div>
-
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">3. Leistungen</h2>
-                    <p className="mb-4">
-                      Anastasia Noska bietet spezialisierte Dienstleistungen im Bereich Permanent Make-up (PMU) sowie damit verbundene ästhetische Pigmentierungsbehandlungen an.
+                    <p className="mb-3">
+                      Die Anbieterin erbringt Dienstleistungen im Bereich Permanent Make-up (PMU) sowie damit verbundene ästhetische Pigmentierungsbehandlungen, insbesondere:
                     </p>
-                    <p className="mb-4">Hierzu zählen insbesondere:</p>
-                    <ul className="list-disc list-inside pl-4 mb-4 space-y-1">
+                    <ul className="list-disc list-inside pl-4 mb-3 space-y-1">
                       <li>Permanent Make-up</li>
-                      <li>Camouflage- bzw. Narbenpigmentierung</li>
+                      <li>Camouflage (z. B. Narben- und Dehnungsstreifenpigmentierung)</li>
                       <li>Trichopigmentation</li>
                     </ul>
-                    <p className="mb-4">
-                      Es werden keine kosmetischen oder medizinischen Behandlungen im klassischen oder heilkundlichen Sinne erbracht.
+                    <p className="mb-3">
+                      Es werden keine medizinischen Behandlungen oder heilkundlichen Leistungen erbracht.
                     </p>
                     <p>
-                      Der konkrete Leistungsumfang ergibt sich aus der individuellen Absprache mit dem Kunden im Rahmen der Terminvereinbarung (z. B. über WhatsApp oder Instagram).
+                      Der konkrete Leistungsumfang ergibt sich aus der individuellen Absprache und der Terminbestätigung.
                     </p>
                   </section>
-
-                  <div className="my-8 border-t border-charcoal/20"></div>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">4. Terminvereinbarung</h2>
-                    <p className="mb-4">
-                      Die Terminvereinbarung erfolgt individuell über folgende Kommunikationswege:
-                    </p>
-                    <ul className="list-disc list-inside pl-4 mb-4 space-y-1">
-                      <li>WhatsApp</li>
-                      <li>Instagram</li>
-                      <li>E-Mail oder Telefon (falls angeboten)</li>
-                    </ul>
-                    <p className="mb-4">
-                      Ein verbindlicher Termin kommt zustande, sobald dieser von Anastasia Noska bestätigt wurde.
-                    </p>
-                    <p>
-                      Eine Online-Buchung mit automatischer Terminvergabe findet nicht statt.
-                    </p>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">4. Terminvereinbarung / Vertragsschluss</h2>
+                    <p className="mb-2">(1) Die Terminvereinbarung erfolgt individuell (z. B. per WhatsApp, Instagram, E-Mail oder Telefon).</p>
+                    <p className="mb-2">(2) Ein verbindlicher Termin kommt zustande, sobald die Anbieterin den Termin bestätigt.</p>
+                    <p className="mb-2">(3) Eine Online-Buchung mit automatischer Terminvergabe findet nicht statt.</p>
+                    <p>(4) Die Anbieterin kann eine Behandlung ablehnen oder abbrechen, wenn aus fachlichen/hygienischen Gründen oder aufgrund gesundheitlicher Umstände eine sichere Durchführung nicht gewährleistet ist (siehe Ziffer 7).</p>
                   </section>
-
-                  <div className="my-8 border-t border-charcoal/20"></div>
 
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">5. Preise und Zahlung</h2>
-                    <p className="mb-4">
-                      Die jeweils gültigen Preise ergeben sich aus der auf der Website veröffentlichten Preisliste oder aus der individuellen Absprache.
-                    </p>
-                    <p className="mb-4">
-                      Die Zahlung erfolgt nach Erbringung der Dienstleistung vor Ort.
-                      Es werden keine Vorauszahlungen, Anzahlungen oder Teilzahlungen verlangt.
-                    </p>
-                    <p className="mb-4">
-                      Gemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).
-                    </p>
+                    <p className="mb-3">(1) Die jeweils gültigen Preise ergeben sich aus der veröffentlichten Preisliste oder aus der individuellen Absprache.</p>
+                    <p className="mb-3">(2) Die Zahlung erfolgt nach Erbringung der Dienstleistung vor Ort.</p>
+                    <p className="mb-3">(3) Gemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).</p>
                     <div>
-                      <p className="font-medium mb-2">Akzeptierte Zahlungsmethoden:</p>
+                      <p className="mb-2">(4) Akzeptierte Zahlungsmethoden:</p>
                       <ul className="list-disc list-inside pl-4 space-y-1">
                         <li>Barzahlung</li>
                         <li>Überweisung (nach Vereinbarung)</li>
@@ -125,112 +99,94 @@ const AGB = () => {
                     </div>
                   </section>
 
-                  <div className="my-8 border-t border-charcoal/20"></div>
-
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">6. Stornierung und Terminabsage</h2>
-                    <p className="mb-4">
-                      Eine Terminabsage oder -verschiebung ist jederzeit möglich.
-                    </p>
-                    <p>
-                      Es werden keine Stornogebühren erhoben.
-                      Auch bei kurzfristiger Absage entstehen für die Kundin bzw. den Kunden keine Kosten.
-                    </p>
+                    <p className="mb-2">(1) Eine Terminabsage oder -verschiebung ist jederzeit möglich.</p>
+                    <p className="mb-2">(2) Es werden keine Stornogebühren erhoben.</p>
+                    <p>(3) Die Anbieterin bittet um möglichst frühzeitige Absage, um Termine anderweitig vergeben zu können.</p>
                   </section>
-
-                  <div className="my-8 border-t border-charcoal/20"></div>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">7. Pflichten des Kunden – Gesundheitsangaben</h2>
-                    <p className="mb-4">
-                      Der Kunde ist verpflichtet, dem Behandler vor Beginn einer Permanent-Make-up-Behandlung (PMU) alle für die Durchführung und das Ergebnis der Behandlung relevanten gesundheitlichen Umstände vollständig und wahrheitsgemäß mitzuteilen.
+                    <h2 className="font-serif text-2xl mb-4 text-accent">7. Pflichten der Kundin/des Kunden – Gesundheitsangaben / Kontraindikationen</h2>
+                    <p className="mb-3">
+                      (1) Kundinnen/Kunden sind verpflichtet, vor Beginn der Behandlung alle relevanten gesundheitlichen Umstände vollständig und wahrheitsgemäß mitzuteilen (z. B. Allergien, Hauterkrankungen, Infektionen im Behandlungsbereich, Medikamenteneinnahme – insbesondere blutverdünnende Präparate –, Schwangerschaft/Stillzeit).
                     </p>
-                    <p className="mb-4">Dies umfasst insbesondere, jedoch nicht abschließend:</p>
-                    <ul className="list-disc list-inside pl-4 mb-4 space-y-1">
-                      <li>bekannte Allergien oder Unverträglichkeiten, insbesondere gegenüber Pigmenten, Betäubungsmitteln, Latex oder Desinfektionsmitteln</li>
-                      <li>bestehende Hauterkrankungen, Hautentzündungen, Infektionen, Narben, Akne, Herpes oder andere Hautveränderungen im Behandlungsbereich</li>
-                      <li>die Einnahme von Medikamenten, insbesondere blutverdünnender, hormoneller, antibiotischer oder immunsuppressiver Präparate</li>
-                      <li>eine bestehende Schwangerschaft oder Stillzeit</li>
-                      <li>frühere Permanent-Make-up-, Microblading-, Tattoo- oder sonstige kosmetische bzw. medizinisch-ästhetische Behandlungen im Behandlungsbereich</li>
-                    </ul>
-                    <p className="mb-4">
-                      Der Kunde ist verpflichtet, bekannte Kontraindikationen für eine Permanent-Make-up-Behandlung unaufgefordert vor der Behandlung mitzuteilen. Dazu zählen insbesondere Erkrankungen oder Umstände, bei denen eine PMU-Behandlung medizinisch oder hygienisch nicht empfohlen wird.
+                    <p className="mb-3">
+                      (2) Bestehen Kontraindikationen oder Zweifel an der sicheren Durchführbarkeit, kann die Anbieterin die Behandlung ablehnen oder verschieben.
                     </p>
                     <p>
-                      Unterlässt der Kunde die vollständige oder wahrheitsgemäße Angabe relevanter gesundheitlicher Informationen oder Kontraindikationen, ist eine Haftung des Behandlers für hierauf beruhende Schäden ausgeschlossen, soweit dies gesetzlich zulässig ist. Gesetzliche Haftungstatbestände, insbesondere bei Vorsatz oder grober Fahrlässigkeit, bleiben unberührt.
+                      (3) Werden relevante Angaben trotz Nachfrage nicht oder nicht wahrheitsgemäß gemacht, haftet die Anbieterin für daraus resultierende Folgen nur im Rahmen der gesetzlichen Vorschriften; eine gesetzlich zwingende Haftung bleibt unberührt.
                     </p>
                   </section>
 
-                  <div className="my-8 border-t border-charcoal/20"></div>
-
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">8. Haftung</h2>
-                    <p className="mb-4">
-                      Die Dienstleistungen werden nach bestem Wissen und Gewissen sowie nach dem aktuellen fachlichen Standard erbracht.
-                    </p>
-                    <p className="mb-4">
-                      Eine Haftung für Schäden ist ausgeschlossen, soweit diese nicht auf Vorsatz oder grober Fahrlässigkeit beruhen.
-                      Die Haftung für Verletzungen von Leben, Körper oder Gesundheit bleibt unberührt.
+                    <h2 className="font-serif text-2xl mb-4 text-accent">8. Mitwirkung / Pflegehinweise</h2>
+                    <p className="mb-2">
+                      (1) Kundinnen/Kunden haben die Pflege- und Verhaltensempfehlungen (Aftercare) zu beachten.
                     </p>
                     <p>
-                      Individuelle Reaktionen auf kosmetische oder pigmentierende Behandlungen können nicht ausgeschlossen werden und stellen keinen Mangel dar.
+                      (2) Unterlassene oder fehlerhafte Nachpflege kann das Ergebnis beeinträchtigen und ist bei der Beurteilung von Nachbesserungs-/Korrekturwünschen zu berücksichtigen.
                     </p>
                   </section>
 
-                  <div className="my-8 border-t border-charcoal/20"></div>
-
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">9. Behandlungsergebnisse</h2>
-                    <ol className="list-decimal list-inside pl-4 space-y-3">
-                      <li>Permanent Make-up stellt einen individuellen, handwerklich-künstlerischen Eingriff dar.</li>
-                      <li>Abweichungen hinsichtlich Farbe, Form, Symmetrie, Farbintensität sowie Haltbarkeit sind möglich und stellen keinen Mangel im Sinne der gesetzlichen Vorschriften dar.</li>
-                      <li>Eine vollständige Farbstabilität, exakte Symmetrie oder eine dauerhafte Haltbarkeit können nicht zugesichert werden.</li>
-                      <li>Das Behandlungsergebnis ist abhängig von individuellen Faktoren, insbesondere Hauttyp, Alter, Stoffwechsel, Medikamenteneinnahme, hormonellen Einflüssen, Vorerkrankungen, Pflegegewohnheiten, Sonneneinstrahlung, Rauchen sowie sonstigen äußeren Einflüssen.</li>
-                      <li>Die Haltbarkeit des Permanent Make-ups ist individuell und kann erheblich variieren.</li>
-                      <li>Da jede Haut Farbpigmente unterschiedlich aufnimmt, wird keine Garantie für ein bestimmtes Behandlungsergebnis übernommen. In Einzelfällen kann es vorkommen, dass Pigmente nur unzureichend oder nicht aufgenommen werden.</li>
-                      <li>Nachbehandlungen (Korrekturen oder Auffrischungen) sind regelmäßig erforderlich und nicht Bestandteil des vereinbarten Grundpreises, sofern nicht ausdrücklich schriftlich etwas anderes vereinbart wurde.</li>
-                      <li>Nachbehandlungen können innerhalb von 8 Wochen nach der Erstbehandlung vereinbart werden. Nach Ablauf dieser Frist gilt die Behandlung als Neu-/Erstbehandlung und wird zum jeweils gültigen Grundpreis berechnet.</li>
-                    </ol>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">9. Behandlungsergebnisse / Nachbehandlungen</h2>
+                    <p className="mb-2">(1) PMU und Pigmentierungen sind handwerklich-künstlerische Leistungen. Ergebnisse können je nach Hauttyp und individuellen Faktoren variieren.</p>
+                    <p className="mb-2">(2) Geringfügige Abweichungen in Farbe, Form, Symmetrie, Intensität und Haltbarkeit sind möglich.</p>
+                    <p className="mb-2">(3) Eine bestimmte Haltbarkeit, vollständige Farbstabilität oder exakte Symmetrie kann nicht zugesichert werden.</p>
+                    <p className="mb-2">(4) Nachbehandlungen (Korrekturen/Auffrischungen) sind regelmäßig erforderlich und nicht Bestandteil des Grundpreises, sofern nicht ausdrücklich etwas anderes vereinbart wurde.</p>
+                    <p>(5) Nachbehandlungen können innerhalb von 8 Wochen nach der Erstbehandlung vereinbart werden. Nach Ablauf dieser Frist kann eine Behandlung zum jeweils gültigen Preis als neue Behandlung abgerechnet werden.</p>
                   </section>
-
-                  <div className="my-8 border-t border-charcoal/20"></div>
 
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">10. Foto- und Bildmaterial</h2>
-                    <p className="mb-4">
-                      Foto- oder Videoaufnahmen von Behandlungsergebnissen erfolgen nur mit ausdrücklicher vorheriger Einwilligung der Kundin bzw. des Kunden.
+                    <p className="mb-2">
+                      Foto- oder Videoaufnahmen erfolgen nur mit ausdrücklicher vorheriger Einwilligung der Kundin/des Kunden.
                     </p>
                     <p>
-                      Eine Nutzung zu Werbezwecken (z. B. Website, Instagram) erfolgt ausschließlich nach Zustimmung.
+                      Eine Nutzung zu Werbezwecken (z. B. Website, Instagram) erfolgt ausschließlich nach gesonderter Zustimmung (Einwilligungserklärung).
                     </p>
                   </section>
 
-                  <div className="my-8 border-t border-charcoal/20"></div>
-
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">11. Datenschutz</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">11. Haftung</h2>
+                    <p className="mb-2">
+                      (1) Die Anbieterin haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit sowie bei Schäden aus der Verletzung von Leben, Körper oder Gesundheit.
+                    </p>
+                    <p className="mb-2">
+                      (2) Bei einfacher Fahrlässigkeit haftet die Anbieterin nur bei Verletzung wesentlicher Vertragspflichten (Kardinalpflichten). In diesem Fall ist die Haftung auf den vertragstypischen, vorhersehbaren Schaden begrenzt.
+                    </p>
                     <p>
-                      Die Verarbeitung personenbezogener Daten erfolgt gemäß der geltenden Datenschutzerklärung, die auf der Website abrufbar ist.
+                      (3) Eine weitergehende Haftung ist – soweit gesetzlich zulässig – ausgeschlossen. Zwingende gesetzliche Haftungsvorschriften bleiben unberührt.
                     </p>
                   </section>
 
-                  <div className="my-8 border-t border-charcoal/20"></div>
+                  <section>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">12. Datenschutz</h2>
+                    <p>
+                      Die Verarbeitung personenbezogener Daten erfolgt gemäß der Datenschutzerklärung, die auf der Website abrufbar ist.
+                    </p>
+                  </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">12. Schlussbestimmungen</h2>
-                    <p className="mb-4">
+                    <h2 className="font-serif text-2xl mb-4 text-accent">13. Verbraucherstreitbeilegung</h2>
+                    <p>
+                      Die Anbieterin ist nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+                    </p>
+                  </section>
+
+                  <section>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">14. Schlussbestimmungen</h2>
+                    <p className="mb-2">
                       Es gilt das Recht der Bundesrepublik Deutschland.
-                    </p>
-                    <p className="mb-4">
-                      Ein Widerrufsrecht besteht nicht, da es sich bei den angebotenen Dienstleistungen um terminlich festgelegte Dienstleistungen handelt (§ 312g Abs. 2 Nr. 9 BGB).
                     </p>
                     <p>
                       Sollten einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.
                     </p>
                   </section>
 
-                  <div className="text-sm text-muted-foreground pt-6 border-t border-charcoal/20">
-                    Stand: Dezember 2025
+                  <div className="text-sm text-muted-foreground pt-6">
+                    Stand: Januar 2026
                   </div>
                 </div>
               </>
@@ -244,21 +200,19 @@ const AGB = () => {
                   для услуг Анастасии Носка
                 </p>
 
-                <div className="space-y-12 text-base font-light leading-relaxed">
+                <div className="space-y-8 text-base font-light leading-relaxed">
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">1. Область применения</h2>
-                    <p className="mb-4">
-                      Настоящие Общие условия предоставления услуг (AGB) распространяются на все услуги, предлагаемые Анастасией Носка, индивидуальным предпринимателем.
+                    <p className="mb-3">
+                      Настоящие Общие условия предоставления услуг (AGB) распространяются на все услуги, которые оказываются Anastasia Noska (далее — «Исполнитель»).
                     </p>
                     <p>
-                      Отличающиеся условия клиентов не применяются, если они не были приняты в письменной форме.
+                      Отличающиеся условия клиентов/клиенток не применяются, если на них не было дано явного согласия в текстовой форме.
                     </p>
                   </section>
 
-                  <div className="my-8 border-t border-charcoal/20"></div>
-
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">2. Исполнитель услуг</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">2. Исполнитель</h2>
                     <p className="mb-4">
                       <strong>Anastasia Noska</strong><br />
                       Индивидуальный предприниматель<br />
@@ -275,63 +229,39 @@ const AGB = () => {
                     </div>
                   </section>
 
-                  <div className="my-8 border-t border-charcoal/20"></div>
-
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">3. Услуги</h2>
-                    <p className="mb-4">
-                      Анастасия Носка предлагает специализированные услуги в области перманентного макияжа (PMU), а также связанные с ним эстетические процедуры пигментации.
+                    <p className="mb-3">
+                      Исполнитель предоставляет услуги в области перманентного макияжа (PMU), а также связанные с ним эстетические процедуры пигментации, в частности:
                     </p>
-                    <p className="mb-4">К ним относятся в частности:</p>
-                    <ul className="list-disc list-inside pl-4 mb-4 space-y-1">
+                    <ul className="list-disc list-inside pl-4 mb-3 space-y-1">
                       <li>Перманентный макияж</li>
-                      <li>Камуфляж / пигментация шрамов</li>
+                      <li>Камуфляж (например, пигментация шрамов и растяжек)</li>
                       <li>Трихопигментация</li>
                     </ul>
-                    <p className="mb-4">
-                      Косметические или медицинские процедуры в классическом или лечебном смысле не проводятся.
+                    <p className="mb-3">
+                      Медицинские процедуры или лечебные услуги не оказываются.
                     </p>
                     <p>
-                      Конкретный объем услуг определяется в индивидуальном порядке с клиентом при записи на прием (например, через WhatsApp или Instagram).
+                      Конкретный объем услуг определяется в индивидуальном порядке и подтверждается при записи.
                     </p>
                   </section>
-
-                  <div className="my-8 border-t border-charcoal/20"></div>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">4. Запись на прием</h2>
-                    <p className="mb-4">
-                      Запись на прием осуществляется индивидуально по следующим каналам связи:
-                    </p>
-                    <ul className="list-disc list-inside pl-4 mb-4 space-y-1">
-                      <li>WhatsApp</li>
-                      <li>Instagram</li>
-                      <li>E-mail или телефон (при наличии)</li>
-                    </ul>
-                    <p className="mb-4">
-                      Обязательная запись вступает в силу после её подтверждения Анастасией Носка.
-                    </p>
-                    <p>
-                      Автоматическая онлайн-запись не предусмотрена.
-                    </p>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">4. Запись на прием / Заключение договора</h2>
+                    <p className="mb-2">(1) Запись на прием осуществляется индивидуально (например, через WhatsApp, Instagram, E-mail или телефон).</p>
+                    <p className="mb-2">(2) Обязательная запись вступает в силу после её подтверждения Исполнителем.</p>
+                    <p className="mb-2">(3) Автоматическая онлайн-запись не предусмотрена.</p>
+                    <p>(4) Исполнитель может отказать в проведении процедуры или прервать её, если по профессиональным/гигиеническим причинам или из-за состояния здоровья безопасное проведение не гарантируется (см. пункт 7).</p>
                   </section>
-
-                  <div className="my-8 border-t border-charcoal/20"></div>
 
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">5. Цены и оплата</h2>
-                    <p className="mb-4">
-                      Актуальные цены указаны в прайс-листе на веб-сайте или определяются в индивидуальном порядке.
-                    </p>
-                    <p className="mb-4">
-                      Оплата производится после оказания услуги на месте.
-                      Предоплата, авансовые или частичные платежи не требуются.
-                    </p>
-                    <p className="mb-4">
-                      Согласно § 19 UStG налог с оборота не взимается (режим для малого бизнеса).
-                    </p>
+                    <p className="mb-3">(1) Актуальные цены указаны в опубликованном прайс-листе или определяются в индивидуальном порядке.</p>
+                    <p className="mb-3">(2) Оплата производится после оказания услуги на месте.</p>
+                    <p className="mb-3">(3) Согласно § 19 UStG налог с оборота не взимается (режим для малого бизнеса).</p>
                     <div>
-                      <p className="font-medium mb-2">Принимаемые способы оплаты:</p>
+                      <p className="mb-2">(4) Принимаемые способы оплаты:</p>
                       <ul className="list-disc list-inside pl-4 space-y-1">
                         <li>Наличные</li>
                         <li>Банковский перевод (по договоренности)</li>
@@ -339,112 +269,94 @@ const AGB = () => {
                     </div>
                   </section>
 
-                  <div className="my-8 border-t border-charcoal/20"></div>
-
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">6. Отмена и перенос записи</h2>
-                    <p className="mb-4">
-                      Отмена или перенос записи возможны в любое время.
-                    </p>
-                    <p>
-                      Плата за отмену не взимается.
-                      Даже при отмене в последний момент для клиента не возникает никаких расходов.
-                    </p>
+                    <p className="mb-2">(1) Отмена или перенос записи возможны в любое время.</p>
+                    <p className="mb-2">(2) Плата за отмену не взимается.</p>
+                    <p>(3) Исполнитель просит по возможности отменять запись заблаговременно, чтобы назначить время другим клиентам.</p>
                   </section>
-
-                  <div className="my-8 border-t border-charcoal/20"></div>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">7. Обязанности клиента – Медицинская информация</h2>
-                    <p className="mb-4">
-                      Клиент обязан предоставить мастеру перед началом процедуры перманентного макияжа (PMU) полную и правдивую информацию обо всех обстоятельствах, касающихся здоровья, которые имеют значение для проведения и результата процедуры.
+                    <h2 className="font-serif text-2xl mb-4 text-accent">7. Обязанности клиента/клиентки – Медицинская информация / Противопоказания</h2>
+                    <p className="mb-3">
+                      (1) Клиенты/клиентки обязаны до начала процедуры предоставить полную и правдивую информацию обо всех релевантных обстоятельствах, касающихся здоровья (например, аллергии, заболевания кожи, инфекции в зоне обработки, прием медикаментов — особенно разжижающих кровь препаратов —, беременность/грудное вскармливание).
                     </p>
-                    <p className="mb-4">Это включает в себя, в частности, но не ограничивается:</p>
-                    <ul className="list-disc list-inside pl-4 mb-4 space-y-1">
-                      <li>известные аллергии или непереносимости, особенно на пигменты, анестетики, латекс или дезинфицирующие средства</li>
-                      <li>существующие заболевания кожи, воспаления кожи, инфекции, шрамы, акне, герпес или другие изменения кожи в зоне обработки</li>
-                      <li>прием медикаментов, особенно препаратов, разжижающих кровь, гормональных, антибиотиков или иммуносупрессивных препаратов</li>
-                      <li>беременность или грудное вскармливание</li>
-                      <li>предыдущие процедуры перманентного макияжа, микроблейдинга, татуировки или другие косметические или медико-эстетические процедуры в зоне обработки</li>
-                    </ul>
-                    <p className="mb-4">
-                      Клиент обязан самостоятельно сообщить о известных противопоказаниях к процедуре перманентного макияжа до начала процедуры. К ним относятся, в частности, заболевания или обстоятельства, при которых процедура PMU не рекомендуется по медицинским или гигиеническим причинам.
+                    <p className="mb-3">
+                      (2) При наличии противопоказаний или сомнений в безопасности проведения Исполнитель может отказать в процедуре или отложить её.
                     </p>
                     <p>
-                      Если клиент не предоставляет полную или правдивую информацию о соответствующих медицинских обстоятельствах или противопоказаниях, ответственность мастера за ущерб, возникший в результате этого, исключается в той мере, в какой это допускается законом. Законные основания ответственности, особенно при умысле или грубой небрежности, остаются в силе.
+                      (3) Если релевантная информация не была предоставлена или была предоставлена неправдиво, несмотря на запрос, Исполнитель несет ответственность за вытекающие последствия только в рамках законодательных норм; обязательная законная ответственность остается неизменной.
                     </p>
                   </section>
 
-                  <div className="my-8 border-t border-charcoal/20"></div>
-
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">8. Ответственность</h2>
-                    <p className="mb-4">
-                      Услуги предоставляются с максимальной тщательностью и в соответствии с современными профессиональными стандартами.
-                    </p>
-                    <p className="mb-4">
-                      Ответственность за ущерб исключается, если он не вызван умышленно или грубой небрежностью.
-                      Ответственность за причинение вреда жизни, телу или здоровью остается в силе.
+                    <h2 className="font-serif text-2xl mb-4 text-accent">8. Участие / Рекомендации по уходу</h2>
+                    <p className="mb-2">
+                      (1) Клиенты/клиентки обязаны соблюдать рекомендации по уходу и поведению (Aftercare).
                     </p>
                     <p>
-                      Индивидуальные реакции на косметические или пигментирующие процедуры не могут быть исключены и не являются недостатком.
+                      (2) Пропущенный или неправильный последующий уход может ухудшить результат и учитывается при оценке запросов на доработку/коррекцию.
                     </p>
                   </section>
 
-                  <div className="my-8 border-t border-charcoal/20"></div>
-
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">9. Результаты процедур</h2>
-                    <ol className="list-decimal list-inside pl-4 space-y-3">
-                      <li>Перманентный макияж представляет собой индивидуальное ремесленно-художественное вмешательство.</li>
-                      <li>Отклонения в цвете, форме, симметрии, интенсивности цвета и долговечности возможны и не являются недостатком в смысле законодательных норм.</li>
-                      <li>Полная стабильность цвета, точная симметрия или постоянная долговечность не могут быть гарантированы.</li>
-                      <li>Результат процедуры зависит от индивидуальных факторов, в частности типа кожи, возраста, обмена веществ, приема медикаментов, гормональных влияний, предыдущих заболеваний, привычек ухода, воздействия солнца, курения, а также других внешних факторов.</li>
-                      <li>Долговечность перманентного макияжа индивидуальна и может значительно варьироваться.</li>
-                      <li>Поскольку каждая кожа по-разному принимает цветовые пигменты, гарантия на определенный результат процедуры не предоставляется. В отдельных случаях может случиться, что пигменты принимаются недостаточно или не принимаются вообще.</li>
-                      <li>Повторные процедуры (коррекции или обновления) требуются регулярно и не входят в согласованную базовую цену, если письменно не согласовано иное.</li>
-                      <li>Повторные процедуры могут быть согласованы в течение 8 недель после первичной процедуры. По истечении этого срока процедура считается новой/первичной процедурой и оплачивается по действующей базовой цене.</li>
-                    </ol>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">9. Результаты процедур / Повторные процедуры</h2>
+                    <p className="mb-2">(1) PMU и пигментация являются ремесленно-художественными услугами. Результаты могут варьироваться в зависимости от типа кожи и индивидуальных факторов.</p>
+                    <p className="mb-2">(2) Незначительные отклонения в цвете, форме, симметрии, интенсивности и долговечности возможны.</p>
+                    <p className="mb-2">(3) Определенная долговечность, полная стабильность цвета или точная симметрия не могут быть гарантированы.</p>
+                    <p className="mb-2">(4) Повторные процедуры (коррекции/обновления) требуются регулярно и не входят в базовую цену, если явно не согласовано иное.</p>
+                    <p>(5) Повторные процедуры могут быть согласованы в течение 8 недель после первичной процедуры. По истечении этого срока процедура может быть оплачена по действующей цене как новая процедура.</p>
                   </section>
-
-                  <div className="my-8 border-t border-charcoal/20"></div>
 
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">10. Фото и видеоматериалы</h2>
-                    <p className="mb-4">
-                      Фото или видеосъемка результатов процедур осуществляется только с предварительного явного согласия клиента.
+                    <p className="mb-2">
+                      Фото или видеосъемка осуществляется только с предварительного явного согласия клиента/клиентки.
                     </p>
                     <p>
-                      Использование в рекламных целях (например, на сайте, в Instagram) осуществляется только после получения согласия.
+                      Использование в рекламных целях (например, на сайте, в Instagram) осуществляется только после отдельного согласия (заявление о согласии).
                     </p>
                   </section>
 
-                  <div className="my-8 border-t border-charcoal/20"></div>
-
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">11. Защита данных</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">11. Ответственность</h2>
+                    <p className="mb-2">
+                      (1) Исполнитель несет неограниченную ответственность при умысле и грубой небрежности, а также при ущербе, причиненном жизни, телу или здоровью.
+                    </p>
+                    <p className="mb-2">
+                      (2) При простой небрежности Исполнитель несет ответственность только при нарушении существенных договорных обязанностей (кардинальных обязанностей). В этом случае ответственность ограничена типичным для договора, предсказуемым ущербом.
+                    </p>
                     <p>
-                      Обработка персональных данных осуществляется в соответствии с действующей политикой конфиденциальности, доступной на веб-сайте.
+                      (3) Дальнейшая ответственность — в той мере, в какой это допускается законом — исключается. Обязательные законные положения об ответственности остаются неизменными.
                     </p>
                   </section>
 
-                  <div className="my-8 border-t border-charcoal/20"></div>
+                  <section>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">12. Защита данных</h2>
+                    <p>
+                      Обработка персональных данных осуществляется в соответствии с политикой конфиденциальности, доступной на веб-сайте.
+                    </p>
+                  </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">12. Заключительные положения</h2>
-                    <p className="mb-4">
+                    <h2 className="font-serif text-2xl mb-4 text-accent">13. Разрешение споров с потребителями</h2>
+                    <p>
+                      Исполнитель не обязан и не готов участвовать в процедурах разрешения споров перед потребительской арбитражной службой.
+                    </p>
+                  </section>
+
+                  <section>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">14. Заключительные положения</h2>
+                    <p className="mb-2">
                       Применяется право Федеративной Республики Германия.
-                    </p>
-                    <p className="mb-4">
-                      Право на отказ не предусмотрено, так как предлагаемые услуги являются услугами с фиксированной датой (§ 312g п. 2 № 9 BGB).
                     </p>
                     <p>
                       Если отдельные положения настоящих AGB полностью или частично недействительны или станут таковыми, действительность остальных положений остается неизменной.
                     </p>
                   </section>
 
-                  <div className="text-sm text-muted-foreground pt-6 border-t border-charcoal/20">
-                    Версия: декабрь 2025 года
+                  <div className="text-sm text-muted-foreground pt-6">
+                    Версия: январь 2026 года
                   </div>
                 </div>
               </>
