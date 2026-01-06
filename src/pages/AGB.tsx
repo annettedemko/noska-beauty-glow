@@ -78,11 +78,12 @@ const AGB = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">4. Terminvereinbarung / Vertragsschluss</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">4. Terminvereinbarung / Reservierung / Vertragsschluss</h2>
                     <p className="mb-2">(1) Die Terminvereinbarung erfolgt individuell (z. B. per WhatsApp, Instagram, E-Mail oder Telefon).</p>
-                    <p className="mb-2">(2) Ein verbindlicher Termin kommt zustande, sobald die Anbieterin den Termin bestätigt.</p>
-                    <p className="mb-2">(3) Eine Online-Buchung mit automatischer Terminvergabe findet nicht statt.</p>
-                    <p>(4) Die Anbieterin kann eine Behandlung ablehnen oder abbrechen, wenn aus fachlichen/hygienischen Gründen oder aufgrund gesundheitlicher Umstände eine sichere Durchführung nicht gewährleistet ist (siehe Ziffer 7).</p>
+                    <p className="mb-2">(2) Die Bestätigung eines Termins durch die Anbieterin stellt ausschließlich eine Terminreservierung dar und noch keinen Vertragsschluss über die Behandlung.</p>
+                    <p className="mb-2">(3) Ein Vertrag über die jeweilige Behandlung kommt erst vor Ort in den Geschäftsräumen der Anbieterin zustande, spätestens mit Beginn der Behandlung, nachdem die Kundin/der Kunde über Ablauf, Risiken und Pflegehinweise aufgeklärt wurde und die erforderlichen Unterlagen (insbesondere Einwilligungserklärung sowie ggf. Anamnesebogen) unterzeichnet hat.</p>
+                    <p className="mb-2">(4) Eine Online-Buchung mit automatischer Terminvergabe findet nicht statt.</p>
+                    <p>(5) Die Anbieterin kann eine Behandlung ablehnen oder abbrechen, wenn aus fachlichen/hygienischen Gründen oder aufgrund gesundheitlicher Umstände eine sichere Durchführung nicht gewährleistet ist (siehe Ziffer 7).</p>
                   </section>
 
                   <section>
@@ -178,7 +179,7 @@ const AGB = () => {
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">14. Schlussbestimmungen</h2>
                     <p className="mb-2">
-                      Es gilt das Recht der Bundesrepublik Deutschland.
+                      Es gilt deutsches Recht. Für Verbraucher gilt diese Rechtswahl nur, soweit dadurch nicht der Schutz entzogen wird, der ihnen durch zwingende Bestimmungen des Rechts des Staates ihres gewöhnlichen Aufenthalts gewährt wird.
                     </p>
                     <p>
                       Sollten einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.
@@ -248,11 +249,12 @@ const AGB = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">4. Запись на прием / Заключение договора</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">4. Запись на прием / Резервирование / Заключение договора</h2>
                     <p className="mb-2">(1) Запись на прием осуществляется индивидуально (например, через WhatsApp, Instagram, E-mail или телефон).</p>
-                    <p className="mb-2">(2) Обязательная запись вступает в силу после её подтверждения Исполнителем.</p>
-                    <p className="mb-2">(3) Автоматическая онлайн-запись не предусмотрена.</p>
-                    <p>(4) Исполнитель может отказать в проведении процедуры или прервать её, если по профессиональным/гигиеническим причинам или из-за состояния здоровья безопасное проведение не гарантируется (см. пункт 7).</p>
+                    <p className="mb-2">(2) Подтверждение записи Исполнителем представляет собой исключительно резервирование времени и ещё не является заключением договора о проведении процедуры.</p>
+                    <p className="mb-2">(3) Договор о соответствующей процедуре заключается только на месте в помещении Исполнителя, не позднее начала процедуры, после того как клиент/клиентка была проинформирована о процессе, рисках и рекомендациях по уходу и подписала необходимые документы (в частности, декларацию о согласии и, при необходимости, анкету анамнеза).</p>
+                    <p className="mb-2">(4) Автоматическая онлайн-запись не предусмотрена.</p>
+                    <p>(5) Исполнитель может отказать в проведении процедуры или прервать её, если по профессиональным/гигиеническим причинам или из-за состояния здоровья безопасное проведение не гарантируется (см. пункт 7).</p>
                   </section>
 
                   <section>
@@ -348,7 +350,7 @@ const AGB = () => {
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">14. Заключительные положения</h2>
                     <p className="mb-2">
-                      Применяется право Федеративной Республики Германия.
+                      Применяется немецкое право. Для потребителей этот выбор права действует только в той мере, в какой он не лишает их защиты, предоставленной им обязательными положениями права государства их обычного места жительства.
                     </p>
                     <p>
                       Если отдельные положения настоящих AGB полностью или частично недействительны или станут таковыми, действительность остальных положений остается неизменной.
