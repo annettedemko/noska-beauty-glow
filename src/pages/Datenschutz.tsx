@@ -30,7 +30,7 @@ const Datenschutz = () => {
                   Informationen zum Datenschutz gemäß DSGVO
                 </p>
 
-                <div className="space-y-12 text-base font-light leading-relaxed">
+                <div className="space-y-8 text-base font-light leading-relaxed">
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">1. Verantwortliche Stelle</h2>
                     <p className="mb-3">
@@ -62,7 +62,7 @@ const Datenschutz = () => {
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">3. Zugriffsdaten / Server-Logfiles</h2>
                     <p className="mb-3">
-                      Beim Besuch unserer Website erhebt der Hostinganbieter automatisch Informationen in sogenannten Server-Logfiles. Diese Daten sind nicht bestimmten Personen zuordenbar.
+                      Beim Besuch unserer Website erhebt der Hostinganbieter automatisch Informationen in sogenannten Server-Logfiles. Diese Daten sind in der Regel nicht bestimmten Personen zuordenbar.
                     </p>
                     <p className="mb-2">Erfasst werden insbesondere:</p>
                     <ul className="list-disc pl-8 space-y-1">
@@ -82,11 +82,11 @@ const Datenschutz = () => {
                     <p className="mb-3">
                       Wenn Sie uns per E-Mail oder über ein Kontaktformular kontaktieren, werden Ihre Angaben inklusive der von Ihnen dort angegebenen Kontaktdaten gespeichert, um Ihre Anfrage zu bearbeiten und für den Fall von Anschlussfragen.
                     </p>
-                    <p className="mb-2">Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+                    <p className="mb-2">Diese Daten geben wir nicht ohne Ihre Einwilligung weiter, sofern keine gesetzliche Verpflichtung besteht.</p>
                     <p className="mb-2">Rechtsgrundlage:</p>
                     <ul className="list-disc pl-8 space-y-1">
                       <li>Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung)</li>
-                      <li>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</li>
+                      <li>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung), soweit diese erforderlich ist</li>
                       <li>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Kommunikation)</li>
                     </ul>
                   </section>
@@ -104,7 +104,7 @@ const Datenschutz = () => {
                       Dublin 2, Irland
                     </p>
                     <p className="mb-3">
-                      Bei der Nutzung von WhatsApp können personenbezogene Daten (z. B. Telefonnummer, Nachrichteninhalte) verarbeitet und an Server von WhatsApp übermittelt werden. Es kann nicht ausgeschlossen werden, dass Daten an die Meta Platforms Inc. in den USA übertragen werden.
+                      Bei der Nutzung von WhatsApp können personenbezogene Daten (z. B. Telefonnummer, Nachrichteninhalte) verarbeitet und an Server von WhatsApp übermittelt werden. Es kann nicht ausgeschlossen werden, dass dabei Daten auch an Meta Platforms, Inc. in den USA übermittelt werden.
                     </p>
                     <p className="mb-3">
                       Die Nutzung von WhatsApp erfolgt freiwillig auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
@@ -129,10 +129,11 @@ const Datenschutz = () => {
                       Dublin 2, Irland
                     </p>
                     <p className="mb-3">
-                      Beim Anklicken des Instagram-Links können personenbezogene Daten an Instagram übertragen werden. Wir haben keinen Einfluss auf Art und Umfang der durch Instagram erhobenen Daten.
+                      Beim Anklicken des Instagram-Links können personenbezogene Daten an Instagram übermittelt werden. Wir haben keinen Einfluss auf Art und Umfang der durch Instagram erhobenen und verarbeiteten Daten.
                     </p>
                     <p className="mb-3">
-                      Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer ansprechenden Online-Präsenz)
+                      Rechtsgrundlage:
+                      Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer ansprechenden Online-Präsenz)
                     </p>
                     <p>
                       Weitere Informationen zum Datenschutz bei Instagram finden Sie unter:{' '}
@@ -143,21 +144,18 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">7. Cookies</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">7. Cookies / Einwilligungsmanagement</h2>
                     <p className="mb-3">
                       Unsere Website verwendet Cookies. Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden.
                     </p>
                     <p className="mb-3">
-                      Sofern ausschließlich technisch notwendige Cookies eingesetzt werden, erfolgt die Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer funktionierenden Website).
+                      Technisch notwendige Cookies werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO eingesetzt (berechtigtes Interesse an einer funktionierenden Website).
                     </p>
                     <p className="mb-3">
-                      Sofern darüber hinaus Cookies (z. B. zu Analysezwecken) eingesetzt werden, erfolgt dies ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
+                      Sofern darüber hinaus Cookies oder ähnliche Technologien (z. B. zu Analyse- oder Statistikzwecken) eingesetzt werden, erfolgt dies ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG.
                     </p>
                     <p className="mb-3">
-                      Nicht technisch notwendige Cookies werden erst nach ausdrücklicher Einwilligung über ein Cookie-Banner gesetzt.
-                    </p>
-                    <p>
-                      Sie können Ihre Cookie-Einstellungen jederzeit über den entsprechenden Link am Ende der Website ändern.
+                      Nicht technisch notwendige Cookies werden erst nach Ihrer ausdrücklichen Einwilligung über das Cookie-Banner gesetzt. Sie können Ihre Auswahl jederzeit über die Cookie-Einstellungen ändern und eine erteilte Einwilligung mit Wirkung für die Zukunft widerrufen.
                     </p>
                   </section>
 
@@ -167,25 +165,16 @@ const Datenschutz = () => {
                       Diese Website nutzt Google Analytics, einen Webanalysedienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland.
                     </p>
                     <p className="mb-3">
-                      Google Analytics verwendet Cookies, die eine Analyse der Benutzung der Website ermöglichen. Die durch die Cookies erzeugten Informationen (z. B. IP-Adresse, Gerätetyp, besuchte Seiten) werden in der Regel an Server von Google übertragen und dort gespeichert.
+                      Google Analytics kann Cookies einsetzen und Informationen über die Benutzung der Website verarbeiten (z. B. Online-Kennungen/Cookie-IDs, Geräteinformationen, aufgerufene Seiten, technische Informationen wie IP-Adresse).
                     </p>
                     <p className="mb-3">
-                      Die IP-Anonymisierung ist auf dieser Website aktiviert.
+                      Rechtsgrundlage: Die Nutzung von Google Analytics erfolgt ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG.
                     </p>
                     <p className="mb-3">
-                      <strong>Rechtsgrundlage:</strong> Die Nutzung von Google Analytics erfolgt ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
-                    </p>
-                    <p className="mb-3">
-                      <strong>Speicherdauer der Cookies:</strong> Die von Google Analytics gesetzten Cookies (_ga, _gid) werden standardmäßig nach 14 Monaten (_ga) bzw. 24 Stunden (_gid) gelöscht.
-                    </p>
-                    <p className="mb-3">
-                      <strong>Widerruf:</strong> Sie können Ihre Einwilligung jederzeit über die Cookie-Einstellungen am Ende jeder Seite widerrufen. Der Widerruf hat keinen Einfluss auf die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung.
-                    </p>
-                    <p className="mb-3">
-                      Google ist nach dem EU-U.S. Data Privacy Framework zertifiziert.
+                      Empfänger der Daten kann auch Google LLC (USA) sein. Eine Übermittlung in Drittländer (z. B. USA) kann daher nicht ausgeschlossen werden. Google ist nach dem EU-U.S. Data Privacy Framework zertifiziert.
                     </p>
                     <p>
-                      Eine Übertragung von Daten in Drittstaaten (z. B. USA) kann nicht ausgeschlossen werden.
+                      Widerruf: Sie können Ihre Einwilligung jederzeit über die Cookie-Einstellungen widerrufen. Der Widerruf hat keinen Einfluss auf die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung.
                     </p>
                   </section>
 
@@ -195,23 +184,17 @@ const Datenschutz = () => {
                       Diese Website nutzt Google Search Console zur technischen Analyse und Optimierung der Website.
                     </p>
                     <p>
-                      Google Search Console setzt keine Cookies und verarbeitet ausschließlich anonymisierte und aggregierte Daten.
+                      Google Search Console setzt nach Kenntnisstand keine Cookies auf der Website und verarbeitet ausschließlich aggregierte Auswertungen.
                     </p>
                   </section>
 
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">10. Ahrefs Analytics</h2>
                     <p className="mb-3">
-                      Diese Website nutzt Ahrefs Analytics (Ahrefs Pte. Ltd., Singapur) zur Analyse des Website-Traffics und zur Suchmaschinenoptimierung.
-                    </p>
-                    <p className="mb-3">
-                      Ahrefs Analytics kann Cookies setzen und technische Zugriffsdaten (z. B. IP-Adresse, User-Agent, besuchte Seiten) verarbeiten.
-                    </p>
-                    <p className="mb-3">
-                      Die Nutzung von Ahrefs Analytics erfolgt ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
+                      Diese Website nutzt Ahrefs Analytics (Ahrefs Pte. Ltd., Singapur) zur Analyse des Website-Traffics und zur Suchmaschinenoptimierung. Ahrefs Analytics kann Cookies einsetzen und technische Zugriffsdaten (z. B. IP-Adresse, User-Agent, besuchte Seiten) verarbeiten.
                     </p>
                     <p>
-                      Sie können Ihre Einwilligung jederzeit über die Cookie-Einstellungen widerrufen.
+                      Die Nutzung erfolgt ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG. Sie können Ihre Einwilligung jederzeit über die Cookie-Einstellungen widerrufen.
                     </p>
                   </section>
 
@@ -251,7 +234,7 @@ const Datenschutz = () => {
                     <p className="mb-3">
                       Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht.
                     </p>
-                    <p className="text-sm text-muted-foreground">Stand: Dezember 2025</p>
+                    <p className="text-sm text-muted-foreground">Stand: Januar 2026</p>
                   </section>
                 </div>
               </>
@@ -265,7 +248,7 @@ const Datenschutz = () => {
                   Информация о защите персональных данных в соответствии с GDPR (DSGVO)
                 </p>
 
-                <div className="space-y-12 text-base font-light leading-relaxed">
+                <div className="space-y-8 text-base font-light leading-relaxed">
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">1. Ответственное лицо</h2>
                     <p className="mb-3">
@@ -486,7 +469,7 @@ const Datenschutz = () => {
                     <p className="mb-3">
                       Мы оставляем за собой право изменять данную политику конфиденциальности с целью ее актуализации и соответствия действующим правовым требованиям.
                     </p>
-                    <p className="text-sm text-muted-foreground">Версия: декабрь 2025 года</p>
+                    <p className="text-sm text-muted-foreground">Версия: январь 2026 года</p>
                   </section>
                 </div>
               </>
