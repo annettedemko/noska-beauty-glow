@@ -135,7 +135,7 @@ export const CookieConsentProvider = ({ children }: { children: ReactNode }) => 
     gaScript.onload = () => {
       gtag('js', new Date());
       gtag('config', 'G-PBZV8M72VJ', {
-        anonymize_ip: true,
+        // Note: GA4 automatically anonymizes IP addresses since 2020
         cookie_flags: 'SameSite=None;Secure'
       });
     };

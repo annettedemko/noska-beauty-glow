@@ -104,7 +104,7 @@ const Datenschutz = () => {
                       Dublin 2, Irland
                     </p>
                     <p className="mb-3">
-                      Bei der Nutzung von WhatsApp können personenbezogene Daten (z. B. Telefonnummer, Nachrichteninhalte) verarbeitet und an Server von WhatsApp übermittelt werden. Es kann nicht ausgeschlossen werden, dass dabei Daten auch an Meta Platforms, Inc. in den USA übermittelt werden.
+                      Bei der Nutzung von WhatsApp werden personenbezogene Daten (z. B. Telefonnummer, Nachrichteninhalte) an Meta Platforms Ireland Limited und Meta Platforms, Inc. (USA) übermittelt.
                     </p>
                     <p className="mb-3">
                       Die Nutzung von WhatsApp erfolgt freiwillig auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
@@ -204,14 +204,18 @@ const Datenschutz = () => {
                       Diese Website nutzt Google Analytics, einen Webanalysedienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland.
                     </p>
                     <p className="mb-3">
-                      Google Analytics kann Cookies einsetzen und Informationen über die Benutzung der Website verarbeiten (z. B. Online-Kennungen/Cookie-IDs, Geräteinformationen, aufgerufene Seiten, technische Informationen wie IP-Adresse).
+                      Google Analytics kann Cookies einsetzen und Informationen über die Benutzung der Website verarbeiten (z. B. Online-Kennungen/Cookie-IDs, Geräteinformationen, aufgerufene Seiten, technische Informationen wie IP-Adresse). Google Analytics 4 anonymisiert IP-Adressen automatisch.
                     </p>
                     <p className="mb-3">
                       Rechtsgrundlage:
                       Die Nutzung von Google Analytics erfolgt ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG.
                     </p>
                     <p className="mb-3">
-                      Empfänger der Daten kann auch Google LLC (USA) sein. Eine Übermittlung in Drittländer (z. B. USA) kann daher nicht ausgeschlossen werden. Google ist nach dem EU-U.S. Data Privacy Framework zertifiziert.
+                      Empfänger der Daten kann auch Google LLC (USA) sein. Eine Übermittlung in Drittländer (z. B. USA) kann daher nicht ausgeschlossen werden. Google ist nach dem{' '}
+                      <a href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?id=a2zt000000001L5AAI" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                        EU-U.S. Data Privacy Framework
+                      </a>
+                      {' '}zertifiziert.
                     </p>
                     <p className="mb-3">
                       Widerruf:
@@ -274,9 +278,55 @@ const Datenschutz = () => {
 
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">14. Speicherdauer</h2>
-                    <p>
+                    <p className="mb-4">
                       Personenbezogene Daten werden nur so lange gespeichert, wie dies zur Erfüllung der jeweiligen Zwecke erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen.
                     </p>
+
+                    <h3 className="font-serif text-lg mb-3 text-accent">Konkrete Aufbewahrungsfristen:</h3>
+
+                    <div className="space-y-3 pl-4">
+                      <div>
+                        <p className="font-medium mb-1">Anamnese / Gesundheitsdaten:</p>
+                        <p className="text-sm text-muted-foreground">
+                          10 Jahre ab letzter Behandlung (medizinische Dokumentationspflicht)
+                        </p>
+                      </div>
+
+                      <div>
+                        <p className="font-medium mb-1">Fotos ohne Veröffentlichungseinwilligung:</p>
+                        <p className="text-sm text-muted-foreground">
+                          2 Jahre nach letzter Behandlung, sofern nicht anders vereinbart
+                        </p>
+                      </div>
+
+                      <div>
+                        <p className="font-medium mb-1">Veröffentlichte Fotos (Instagram, Website):</p>
+                        <p className="text-sm text-muted-foreground">
+                          Bis zum Widerruf der Einwilligung
+                        </p>
+                      </div>
+
+                      <div>
+                        <p className="font-medium mb-1">Buchungsbestätigungen / Rechnungen:</p>
+                        <p className="text-sm text-muted-foreground">
+                          10 Jahre (HGB § 257 – gesetzliche Aufbewahrungspflicht für Geschäftsunterlagen)
+                        </p>
+                      </div>
+
+                      <div>
+                        <p className="font-medium mb-1">Cookie-Einwilligungen:</p>
+                        <p className="text-sm text-muted-foreground">
+                          Bis zum Widerruf durch die betroffene Person oder Löschung durch Nutzer (lokaler Speicher)
+                        </p>
+                      </div>
+
+                      <div>
+                        <p className="font-medium mb-1">Kontaktanfragen (E-Mail, WhatsApp):</p>
+                        <p className="text-sm text-muted-foreground">
+                          Bis zur vollständigen Bearbeitung der Anfrage, längstens 3 Jahre
+                        </p>
+                      </div>
+                    </div>
                   </section>
 
                   <section>
@@ -407,7 +457,7 @@ const Datenschutz = () => {
                       Dublin 2, Ирландия
                     </p>
                     <p className="mb-3">
-                      При использовании WhatsApp могут обрабатываться персональные данные (например, номер телефона и содержание сообщений). Не исключено, что данные могут передаваться компании Meta Platforms Inc. в США.
+                      При использовании WhatsApp персональные данные (например, номер телефона и содержание сообщений) передаются компании Meta Platforms Ireland Limited и Meta Platforms, Inc. (США).
                     </p>
                     <p className="mb-3">
                       Использование WhatsApp является добровольным и осуществляется на основании вашего согласия в соответствии со ст. 6 ч. 1 п. a GDPR.
@@ -507,14 +557,17 @@ const Datenschutz = () => {
                       Наш сайт использует Google Analytics — сервис веб-аналитики компании Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ирландия.
                     </p>
                     <p className="mb-3">
-                      Google Analytics может использовать cookies и обрабатывать информацию об использовании сайта (например, онлайн-идентификаторы/cookie-ID, информация об устройстве, посещенные страницы, техническая информация, такая как IP-адрес).
+                      Google Analytics может использовать cookies и обрабатывать информацию об использовании сайта (например, онлайн-идентификаторы/cookie-ID, информация об устройстве, посещенные страницы, техническая информация, такая как IP-адрес). Google Analytics 4 автоматически анонимизирует IP-адреса.
                     </p>
                     <p className="mb-3">
                       Правовое основание:
                       Использование Google Analytics осуществляется исключительно на основании вашего согласия в соответствии со ст. 6 ч. 1 п. a GDPR и § 25 п. 1 TDDDG.
                     </p>
                     <p className="mb-3">
-                      Получателем данных может также быть Google LLC (США). Передача в третьи страны (например, США) не может быть исключена. Google сертифицирован в рамках EU-U.S. Data Privacy Framework.
+                      Получателем данных может также быть Google LLC (США). Передача в третьи страны (например, США) не может быть исключена. Google сертифицирован в рамках{' '}
+                      <a href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?id=a2zt000000001L5AAI" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                        EU-U.S. Data Privacy Framework
+                      </a>.
                     </p>
                     <p className="mb-3">
                       Отзыв:
@@ -577,9 +630,55 @@ const Datenschutz = () => {
 
                   <section>
                     <h2 className="font-serif text-2xl mb-4 text-accent">14. Срок хранения данных</h2>
-                    <p>
+                    <p className="mb-4">
                       Персональные данные хранятся только в течение времени, необходимого для достижения целей обработки, либо в соответствии с установленными законом сроками хранения.
                     </p>
+
+                    <h3 className="font-serif text-lg mb-3 text-accent">Конкретные сроки хранения:</h3>
+
+                    <div className="space-y-3 pl-4">
+                      <div>
+                        <p className="font-medium mb-1">Анамнез / Медицинские данные:</p>
+                        <p className="text-sm text-muted-foreground">
+                          10 лет с момента последней процедуры (обязанность медицинской документации)
+                        </p>
+                      </div>
+
+                      <div>
+                        <p className="font-medium mb-1">Фотографии без согласия на публикацию:</p>
+                        <p className="text-sm text-muted-foreground">
+                          2 года после последней процедуры, если не согласовано иное
+                        </p>
+                      </div>
+
+                      <div>
+                        <p className="font-medium mb-1">Опубликованные фотографии (Instagram, веб-сайт):</p>
+                        <p className="text-sm text-muted-foreground">
+                          До отзыва согласия
+                        </p>
+                      </div>
+
+                      <div>
+                        <p className="font-medium mb-1">Подтверждения записи / Счета:</p>
+                        <p className="text-sm text-muted-foreground">
+                          10 лет (HGB § 257 – законодательная обязанность хранения деловых документов)
+                        </p>
+                      </div>
+
+                      <div>
+                        <p className="font-medium mb-1">Согласия на использование cookie:</p>
+                        <p className="text-sm text-muted-foreground">
+                          До отзыва субъектом данных или удаления пользователем (локальное хранилище)
+                        </p>
+                      </div>
+
+                      <div>
+                        <p className="font-medium mb-1">Контактные запросы (E-mail, WhatsApp):</p>
+                        <p className="text-sm text-muted-foreground">
+                          До полной обработки запроса, максимум 3 года
+                        </p>
+                      </div>
+                    </div>
                   </section>
 
                   <section>

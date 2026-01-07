@@ -163,21 +163,31 @@ const AGB = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">12. Datenschutz</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">12. Widerrufsrecht</h2>
+                    <p className="mb-3">
+                      Bei Verträgen über Dienstleistungen, die zu einem vereinbarten Zeitpunkt oder innerhalb einer genau bestimmten Zeitspanne erbracht werden sollen (z. B. Permanent Make-up-Behandlung mit festem Termin), besteht kein gesetzliches Widerrufsrecht gemäß § 312g Abs. 2 Nr. 9 BGB.
+                    </p>
+                    <p>
+                      Sie können jedoch jederzeit Ihren Termin kostenfrei absagen oder verschieben (siehe Ziffer 6).
+                    </p>
+                  </section>
+
+                  <section>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">13. Datenschutz</h2>
                     <p>
                       Die Verarbeitung personenbezogener Daten erfolgt gemäß der Datenschutzerklärung, die auf der Website abrufbar ist.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">13. Verbraucherstreitbeilegung</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">14. Verbraucherstreitbeilegung</h2>
                     <p>
                       Die Anbieterin ist nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">14. Schlussbestimmungen</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">15. Schlussbestimmungen</h2>
                     <p className="mb-2">
                       Es gilt deutsches Recht. Für Verbraucher gilt diese Rechtswahl nur, soweit dadurch nicht der Schutz entzogen wird, der ihnen durch zwingende Bestimmungen des Rechts des Staates ihres gewöhnlichen Aufenthalts gewährt wird.
                     </p>
@@ -334,21 +344,31 @@ const AGB = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">12. Защита данных</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">12. Право на отказ от договора</h2>
+                    <p className="mb-3">
+                      Для договоров на оказание услуг, которые должны быть оказаны в согласованное время или в течение точно определенного периода времени (например, процедура перманентного макияжа с фиксированной датой), законное право на отказ от договора не предусмотрено согласно § 312g Abs. 2 Nr. 9 BGB.
+                    </p>
+                    <p>
+                      Тем не менее, вы можете в любое время бесплатно отменить или перенести вашу запись (см. пункт 6).
+                    </p>
+                  </section>
+
+                  <section>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">13. Защита данных</h2>
                     <p>
                       Обработка персональных данных осуществляется в соответствии с политикой конфиденциальности, доступной на веб-сайте.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">13. Разрешение споров с потребителями</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">14. Разрешение споров с потребителями</h2>
                     <p>
                       Исполнитель не обязан и не готов участвовать в процедурах разрешения споров перед потребительской арбитражной службой.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">14. Заключительные положения</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">15. Заключительные положения</h2>
                     <p className="mb-2">
                       Применяется немецкое право. Для потребителей этот выбор права действует только в той мере, в какой он не лишает их защиты, предоставленной им обязательными положениями права государства их обычного места жительства.
                     </p>

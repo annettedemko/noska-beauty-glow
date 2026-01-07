@@ -4,12 +4,46 @@ import { Link } from "react-router-dom";
 import { X } from "lucide-react";
 import { useState, useEffect } from "react";
 
+// Toast notification component
+const Toast = ({ message, onClose }: { message: string; onClose: () => void }) => {
+  useEffect(() => {
+    const timer = setTimeout(onClose, 3000);
+    return () => clearTimeout(timer);
+  }, [onClose]);
+
+  return (
+    <div className="fixed top-4 right-4 z-[60] animate-in slide-in-from-top duration-300">
+      <div className="bg-accent text-white px-6 py-3 shadow-2xl border border-accent/50 max-w-md">
+        <p className="text-sm font-sans">{message}</p>
+      </div>
+    </div>
+  );
+};
+
 export const CookieBanner = () => {
   const { showBanner, acceptAll, acceptNecessary, openSettings } = useCookieConsent();
   const { language } = useLanguage();
   const langPrefix = language === "DE" ? "" : "/ru";
+  const [showToast, setShowToast] = useState(false);
 
-  if (!showBanner) return null;
+  const handleAcceptAll = () => {
+    acceptAll();
+    setShowToast(true);
+  };
+
+  const handleAcceptNecessary = () => {
+    acceptNecessary();
+    setShowToast(true);
+  };
+
+  if (!showBanner) {
+    return showToast ? (
+      <Toast
+        message={language === "DE" ? "Ihre Cookie-Einstellungen wurden gespeichert" : "Ваши настройки cookie сохранены"}
+        onClose={() => setShowToast(false)}
+      />
+    ) : null;
+  }
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 animate-in slide-in-from-bottom duration-500">
@@ -57,7 +91,7 @@ export const CookieBanner = () => {
             {/* Buttons - All equal weight (GDPR/TDDDG compliant - no dark patterns) */}
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full md:w-auto">
               <button
-                onClick={acceptNecessary}
+                onClick={handleAcceptNecessary}
                 className="flex-1 px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 bg-background border border-silver/30 text-foreground font-sans text-[10px] sm:text-xs tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] uppercase hover:border-silver hover:bg-silver/10 transition-all duration-300"
               >
                 {language === "DE" ? "Nur Notwendige" : "Только необходимые"}
@@ -71,7 +105,7 @@ export const CookieBanner = () => {
               </button>
 
               <button
-                onClick={acceptAll}
+                onClick={handleAcceptAll}
                 className="flex-1 px-3 sm:px-4 md:px-6 py-2.5 sm:py-3 bg-background border border-silver/30 text-foreground font-sans text-[10px] sm:text-xs tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] uppercase hover:border-silver hover:bg-silver/10 transition-all duration-300"
               >
                 {language === "DE" ? "Alle Akzeptieren" : "Принять все"}
@@ -90,6 +124,7 @@ export const CookieSettings = () => {
   const langPrefix = language === "DE" ? "" : "/ru";
 
   const [analyticsEnabled, setAnalyticsEnabled] = useState(preferences.analytics);
+  const [showToast, setShowToast] = useState(false);
 
   // Update local state when preferences change
   useEffect(() => {
@@ -101,9 +136,27 @@ export const CookieSettings = () => {
       necessary: true,
       analytics: analyticsEnabled
     });
+    setShowToast(true);
   };
 
-  if (!showSettings) return null;
+  const handleAcceptNecessary = () => {
+    acceptNecessary();
+    setShowToast(true);
+  };
+
+  const handleAcceptAll = () => {
+    acceptAll();
+    setShowToast(true);
+  };
+
+  if (!showSettings) {
+    return showToast ? (
+      <Toast
+        message={language === "DE" ? "Ihre Cookie-Einstellungen wurden gespeichert" : "Ваши настройки cookie сохранены"}
+        onClose={() => setShowToast(false)}
+      />
+    ) : null;
+  }
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-in fade-in duration-300">
@@ -219,7 +272,7 @@ export const CookieSettings = () => {
           {/* Buttons - All equal weight (no dark patterns) */}
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mt-6 sm:mt-8">
             <button
-              onClick={acceptNecessary}
+              onClick={handleAcceptNecessary}
               className="flex-1 px-4 sm:px-6 py-2.5 sm:py-3 bg-background border border-silver/30 text-foreground font-sans text-[10px] sm:text-xs tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] uppercase hover:border-silver hover:bg-silver/10 transition-all duration-300"
             >
               {language === "DE" ? "Nur Notwendige" : "Только необходимые"}
@@ -233,7 +286,7 @@ export const CookieSettings = () => {
             </button>
 
             <button
-              onClick={acceptAll}
+              onClick={handleAcceptAll}
               className="flex-1 px-4 sm:px-6 py-2.5 sm:py-3 bg-background border border-silver/30 text-foreground font-sans text-[10px] sm:text-xs tracking-[0.1em] sm:tracking-[0.15em] md:tracking-[0.2em] uppercase hover:border-silver hover:bg-silver/10 transition-all duration-300"
             >
               {language === "DE" ? "Alle Akzeptieren" : "Принять все"}
