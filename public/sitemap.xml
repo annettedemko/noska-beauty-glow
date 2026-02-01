@@ -138,6 +138,27 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/camouflage-muenchen" />
   </url>
 
+  <!-- Nachkorrektur (DE) -->
+  <url>
+    <loc>https://pmu-noska.de/nachkorrektur-muenchen</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/nachkorrektur-muenchen" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru/nachkorrektur-muenchen" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/nachkorrektur-muenchen" />
+  </url>
+  <!-- Nachkorrektur (RU) -->
+  <url>
+    <loc>https://pmu-noska.de/ru/nachkorrektur-muenchen</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/nachkorrektur-muenchen" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru/nachkorrektur-muenchen" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/nachkorrektur-muenchen" />
+  </url>
+
   <!-- Remover (DE) -->
   <url>
     <loc>https://pmu-noska.de/remover-muenchen</loc>

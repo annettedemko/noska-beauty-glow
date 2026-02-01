@@ -492,6 +492,45 @@ export const StructuredData = () => {
       };
     }
 
+    if (path === "/nachkorrektur-muenchen") {
+      return {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": isGerman ? "Nachkorrektur München - PMU Korrektur" : "Коррекция Мюнхен - Коррекция ПМУ",
+        "description": isGerman
+          ? "Nachkorrektur für alle Permanent Make-up Behandlungen in München. 50% vom Erstbehandlungspreis. Powder Brows, Lippen, Kopfhaut Pigmentierung, Camouflage."
+          : "Коррекция для всех процедур перманентного макияжа в Мюнхене. 50% от стоимости первичной процедуры. Брови, губы, пигментация кожи головы, камуфляж.",
+        "provider": {
+          "@id": "https://pmu-noska.de/#organization"
+        },
+        "areaServed": "München",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": isGerman ? "Nachkorrektur Powder Brows" : "Коррекция пудровых бровей",
+            "priceCurrency": "EUR",
+            "price": "100",
+            "description": isGerman ? "50% vom Erstbehandlungspreis (200€)" : "50% от первичной процедуры (200€)"
+          },
+          {
+            "@type": "Offer",
+            "name": isGerman ? "Nachkorrektur Lippen" : "Коррекция губ",
+            "priceCurrency": "EUR",
+            "price": "100",
+            "description": isGerman ? "50% vom Erstbehandlungspreis (200€)" : "50% от первичной процедуры (200€)"
+          },
+          {
+            "@type": "Offer",
+            "name": isGerman ? "Nachkorrektur Kopfhaut" : "Коррекция пигментации кожи головы",
+            "priceCurrency": "EUR",
+            "price": "150",
+            "description": isGerman ? "50% vom Erstbehandlungspreis (300€)" : "50% от первичной процедуры (300€)"
+          }
+        ],
+        "serviceType": "Nachkorrektur, PMU Korrektur, Touch-up, Permanent Make-up Korrektur"
+      };
+    }
+
     return null;
   };
 
