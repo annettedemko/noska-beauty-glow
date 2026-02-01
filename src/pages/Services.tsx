@@ -22,7 +22,6 @@ const Services = () => {
   const location = useLocation();
   const browsRef = useRef<HTMLElement>(null);
   const lipsRef = useRef<HTMLElement>(null);
-  const touchupRef = useRef<HTMLElement>(null);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
@@ -31,7 +30,6 @@ const Services = () => {
 
   const { ref: browsAnimRef, isVisible: browsVisible } = useScrollAnimation(0.1);
   const { ref: lipsAnimRef, isVisible: lipsVisible } = useScrollAnimation(0.1);
-  const { ref: touchupAnimRef, isVisible: touchupVisible } = useScrollAnimation(0.1);
   const { ref: galleryAnimRef, isVisible: galleryVisible } = useScrollAnimation(0.1);
 
   const minSwipeDistance = 50;
@@ -121,8 +119,6 @@ const Services = () => {
       setTimeout(() => browsRef.current?.scrollIntoView({ behavior: 'smooth' }), 100);
     } else if (hash === '#lips' && lipsRef.current) {
       setTimeout(() => lipsRef.current?.scrollIntoView({ behavior: 'smooth' }), 100);
-    } else if (hash === '#touchup' && touchupRef.current) {
-      setTimeout(() => touchupRef.current?.scrollIntoView({ behavior: 'smooth' }), 100);
     }
   }, [location]);
 
@@ -131,8 +127,8 @@ const Services = () => {
       <SEOHead
         titleDE="Permanent Make-up Services München - by Anastasia Noska"
         titleRU="Услуги перманентного макияжа в Мюнхене - от Анастасии Носка"
-        descriptionDE="Professionelle Permanent Make-up Services in München: Powder Brows (180€), Aquarell Lippen (200€), Nachkorrekturen (100€). Premium Qualität von Anastasia Noska."
-        descriptionRU="Профессиональные услуги перманентного макияжа в Мюнхене: пудровые брови (180€), акварельные губы (200€), коррекция (100€). Премиум качество от Анастасии Носка."
+        descriptionDE="Professionelle Permanent Make-up Services in München: Powder Brows, Aquarell Lippen. Premium Qualität von Anastasia Noska."
+        descriptionRU="Профессиональные услуги перманентного макияжа в Мюнхене: пудровые брови, акварельные губы. Премиум качество от Анастасии Носка."
         keywordsDE="Powder Brows München, Ombre Brows München, Aquarell Lippen München, Velvet Lips München, Nachkorrektur PMU München, Permanent Make-up Preise München"
         keywordsRU="Пудровые брови Мюнхен, Омбре брови Мюнхен, Акварельные губы Мюнхен, Бархатные губы Мюнхен, Коррекция ПМУ Мюнхен, Цены перманентный макияж Мюнхен"
       />
@@ -356,96 +352,6 @@ const Services = () => {
                   <div className="pt-12 text-center border-t border-charcoal/20 mt-12">
                     <p className="text-2xl sm:text-3xl font-serif mb-2 text-accent font-semibold animate-in fade-in slide-in-from-bottom duration-700">{t("lipsPrice")}</p>
                     <p className="text-sm text-muted-foreground mb-8">{t("correctionNote")}</p>
-                    <a
-                      href="https://wa.me/491779093936"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group/btn relative px-6 sm:px-10 md:px-12 py-4 sm:py-5 bg-accent text-white font-sans text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.25em] uppercase shadow-luxury hover-lift overflow-hidden inline-block tap-feedback animate-in zoom-in duration-500 delay-300 hover:scale-105 active:scale-95 transition-transform"
-                    >
-                      <span className="relative z-10 font-semibold whitespace-nowrap">{t("whatsappContact")}</span>
-                      <div className="absolute inset-0 bg-gradient-to-r from-charcoal to-silver opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
-                      {/* Shimmer effect on mobile */}
-                      <div className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* 🔄 Nachkorrektur */}
-          <section
-            ref={(node) => {
-              touchupRef.current = node;
-              touchupAnimRef.current = node as HTMLDivElement;
-            }}
-            id="touchup"
-            className="py-24 px-6 relative overflow-hidden scroll-mt-24"
-          >
-            {/* Background image */}
-            <div className="absolute inset-0 pointer-events-none z-0">
-              <div className="absolute inset-0">
-                <img
-                  src="/5.jpg"
-                  alt="Touchup Background"
-                  className="w-full h-full object-cover"
-                  style={{
-                    filter: "grayscale(100%) contrast(1.3)",
-                    opacity: 0.8,
-                  }}
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/40 to-background/50" />
-            </div>
-
-            <div className="container max-w-4xl mx-auto relative z-10">
-              <div className={`bg-background/60 backdrop-blur-sm border border-charcoal/20 shadow-luxury p-6 sm:p-8 md:p-12 lg:p-16 reveal-animation transform transition-all duration-700 hover:shadow-2xl hover:border-accent/30 ${touchupVisible ? 'is-visible' : ''}`}>
-                {/* Decorative corner accents for mobile */}
-                <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-accent/20 opacity-0 animate-in fade-in duration-700 delay-300" style={{ opacity: touchupVisible ? 1 : 0 }} />
-                <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-accent/20 opacity-0 animate-in fade-in duration-700 delay-400" style={{ opacity: touchupVisible ? 1 : 0 }} />
-                <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-accent/20 opacity-0 animate-in fade-in duration-700 delay-500" style={{ opacity: touchupVisible ? 1 : 0 }} />
-                <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-accent/20 opacity-0 animate-in fade-in duration-700 delay-600" style={{ opacity: touchupVisible ? 1 : 0 }} />
-
-                <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-center mb-8 text-accent font-bold relative">
-                  <span className="relative inline-block">
-                    {t("touchupTitle")}
-                    <div className="absolute -bottom-2 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
-                  </span>
-                </h2>
-
-                <div className="space-y-8 text-base sm:text-lg font-light leading-relaxed">
-                  <div className="relative pl-8 py-4">
-                    <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-accent" />
-                    <p className="text-foreground/90">
-                      {t("touchupIntro")}
-                    </p>
-                  </div>
-
-                  <div className="pt-4">
-                    <h3 className="font-serif text-2xl mb-6 text-accent">{t("touchupWhenTitle")}</h3>
-                    <ul className="space-y-4">
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-charcoal rotate-45 mt-2 flex-shrink-0" />
-                        <span>{t("touchupWhen1")}</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-charcoal rotate-45 mt-2 flex-shrink-0" />
-                        <span>{t("touchupWhen2")}</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-charcoal rotate-45 mt-2 flex-shrink-0" />
-                        <span>{t("touchupWhen3")}</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="pt-4">
-                    <h3 className="font-serif text-2xl mb-6 text-accent">{t("touchupImportantTitle")}</h3>
-                    <p className="text-foreground/90">{t("touchupImportant")}</p>
-                  </div>
-
-                  <div className="pt-12 text-center border-t border-charcoal/20 mt-12">
-                    <p className="text-2xl sm:text-3xl font-serif mb-8 text-accent font-semibold animate-in fade-in slide-in-from-bottom duration-700">{t("touchupPriceText")}</p>
                     <a
                       href="https://wa.me/491779093936"
                       target="_blank"

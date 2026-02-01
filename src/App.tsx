@@ -14,6 +14,7 @@ const Kopfhaut = lazy(() => import("./pages/Kopfhaut"));
 const Camouflage = lazy(() => import("./pages/Camouflage"));
 const Remover = lazy(() => import("./pages/Remover"));
 const Services = lazy(() => import("./pages/Services"));
+const Nachkorrektur = lazy(() => import("./pages/Nachkorrektur"));
 const Impressum = lazy(() => import("./pages/Impressum"));
 const Datenschutz = lazy(() => import("./pages/Datenschutz"));
 const AGB = lazy(() => import("./pages/AGB"));
@@ -37,6 +38,7 @@ const App = () => (
             <Route path="/camouflage-muenchen" element={<Camouflage />} />
             <Route path="/remover-muenchen" element={<Remover />} />
             <Route path="/services-muenchen" element={<Services />} />
+            <Route path="/nachkorrektur-muenchen" element={<Nachkorrektur />} />
             <Route path="/impressum" element={<Impressum />} />
             <Route path="/datenschutz" element={<Datenschutz />} />
             <Route path="/agb" element={<AGB />} />
@@ -47,6 +49,7 @@ const App = () => (
             <Route path="/ru/camouflage-muenchen" element={<Camouflage />} />
             <Route path="/ru/remover-muenchen" element={<Remover />} />
             <Route path="/ru/services-muenchen" element={<Services />} />
+            <Route path="/ru/nachkorrektur-muenchen" element={<Nachkorrektur />} />
             <Route path="/ru/impressum" element={<Impressum />} />
             <Route path="/ru/datenschutz" element={<Datenschutz />} />
             <Route path="/ru/agb" element={<AGB />} />

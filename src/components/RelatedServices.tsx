@@ -62,6 +62,14 @@ export const RelatedServices = ({ currentService, showCount = 3 }: RelatedServic
       descriptionRU: "Бережное удаление нежелательного перманентного макияжа",
       path: "/remover-muenchen",
       image: "/20.jpg"
+    },
+    {
+      titleDE: "Nachkorrektur",
+      titleRU: "Коррекция",
+      descriptionDE: "Nachkorrektur für alle Permanent Make-up Behandlungen - 50% vom Erstpreis",
+      descriptionRU: "Коррекция для всех процедур перманентного макияжа - 50% от первичной цены",
+      path: "/nachkorrektur-muenchen",
+      image: "/5.jpg"
     }
   ];
 

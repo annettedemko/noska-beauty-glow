@@ -51,6 +51,7 @@ const translations = {
     price200From: "ab 200 €",
     price300: "300 €",
     price100: "100 €",
+    price50percent: "50%",
     price120: "120 €",
     priceCamouflage: "100/200/300 €",
     camouflageNote: "Preis variiert je nach Behandlungsumfang",
@@ -189,7 +190,7 @@ const translations = {
     lipsAdv3: "Langanhaltende Farbe für 2–4 Jahre",
     lipsPrice: "Preis: 200 €",
 
-    // Touchup
+    // Touchup / Nachkorrektur Page
     touchupTitle: "Nachkorrektur",
     touchupIntro: "Eine Nachkorrektur ist ein wichtiger Teil jeder Permanent-Make-up-Behandlung. Nach der ersten Sitzung wird das Ergebnis noch einmal perfektioniert, um Farbintensität und Form optimal anzupassen.",
     touchupWhenTitle: "Wann ist eine Nachkorrektur nötig?",
@@ -198,7 +199,17 @@ const translations = {
     touchupWhen3: "Zum Auffrischen nach 12–18 Monaten",
     touchupImportantTitle: "Wichtig:",
     touchupImportant: "Die Nachkorrektur ist in der Regel kürzer als die Erstbehandlung und dient dazu, kleine Anpassungen vorzunehmen und das Ergebnis zu verfeinern.",
-    touchupPriceText: "Preis: 100 €",
+    touchupPriceText: "50% vom Erstbehandlungspreis",
+    touchupServicesTitle: "Nachkorrektur für alle Behandlungen",
+    touchupServiceBrows: "Powder / Ombre Brows",
+    touchupServiceBrowsPrice: "100 € (50% von 200 €)",
+    touchupServiceLips: "Aquarell / Velvet / Ombre Lippen",
+    touchupServiceLipsPrice: "100 € (50% von 200 €)",
+    touchupServiceScalp: "Kopfhaut Pigmentierung",
+    touchupServiceScalpPrice: "150 € (50% von 300 €)",
+    touchupServiceCamouflage: "Camouflage",
+    touchupServiceCamouflagePrice: "50% vom Behandlungspreis",
+    touchupNote: "Die Nachkorrektur sollte innerhalb von 4–6 Wochen nach der Erstbehandlung erfolgen. Bei späteren Terminen gelten reguläre Preise.",
 
     backToHome: "Zurück zur Hauptseite",
   },
@@ -243,6 +254,7 @@ const translations = {
     price200From: "от 200 €",
     price300: "300 €",
     price100: "100 €",
+    price50percent: "50%",
     price120: "120 €",
     priceCamouflage: "100/200/300 €",
     camouflageNote: "Цена зависит от объёма процедуры",
@@ -381,7 +393,7 @@ const translations = {
     lipsAdv3: "Стойкий цвет на 2-4 года",
     lipsPrice: "Цена: 200 €",
 
-    // Touchup
+    // Touchup / Nachkorrektur Page
     touchupTitle: "Коррекция",
     touchupIntro: "Коррекция – важная часть любой процедуры перманентного макияжа. После первого сеанса результат еще раз совершенствуется для оптимальной настройки интенсивности цвета и формы.",
     touchupWhenTitle: "Когда необходима коррекция?",
@@ -390,7 +402,17 @@ const translations = {
     touchupWhen3: "Для обновления через 12-18 месяцев",
     touchupImportantTitle: "Важно:",
     touchupImportant: "Коррекция обычно короче, чем первая процедура, и служит для внесения небольших корректировок и доработки результата.",
-    touchupPriceText: "Цена: 100 €",
+    touchupPriceText: "50% от стоимости первичной процедуры",
+    touchupServicesTitle: "Коррекция для всех процедур",
+    touchupServiceBrows: "Пудровые / Омбре брови",
+    touchupServiceBrowsPrice: "100 € (50% от 200 €)",
+    touchupServiceLips: "Акварельные / Бархатные / Омбре губы",
+    touchupServiceLipsPrice: "100 € (50% от 200 €)",
+    touchupServiceScalp: "Пигментация кожи головы",
+    touchupServiceScalpPrice: "150 € (50% от 300 €)",
+    touchupServiceCamouflage: "Камуфляж",
+    touchupServiceCamouflagePrice: "50% от стоимости процедуры",
+    touchupNote: "Коррекция должна быть проведена в течение 4-6 недель после первичной процедуры. При более поздних сроках применяются обычные цены.",
 
     backToHome: "Вернуться на главную",
   },

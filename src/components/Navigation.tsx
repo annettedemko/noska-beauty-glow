@@ -79,7 +79,7 @@ export const Navigation = () => {
     { name: t("scarCamouflage"), path: `${langPrefix}/camouflage-muenchen` },
     { name: t("powderBrows"), path: `${langPrefix}/services-muenchen#brows` },
     { name: t("aquarellLips"), path: `${langPrefix}/services-muenchen#lips` },
-    { name: t("touchup"), path: `${langPrefix}/services-muenchen#touchup` },
+    { name: t("touchup"), path: `${langPrefix}/nachkorrektur-muenchen` },
     { name: t("remover"), path: `${langPrefix}/remover-muenchen` },
   ];
 

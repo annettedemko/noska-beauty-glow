@@ -20,6 +20,7 @@ export const Breadcrumbs = () => {
     'services-muenchen': { de: 'Leistungen', ru: 'Услуги' },
     'kopfhaut-muenchen': { de: 'Kopfhaut Pigmentierung', ru: 'Пигментация кожи головы' },
     'camouflage-muenchen': { de: 'Camouflage', ru: 'Камуфляж' },
+    'nachkorrektur-muenchen': { de: 'Nachkorrektur', ru: 'Коррекция' },
     'remover-muenchen': { de: 'Remover', ru: 'Ремувер' },
     'impressum': { de: 'Impressum', ru: 'Импрессум' },
     'datenschutz': { de: 'Datenschutz', ru: 'Защита данных' }

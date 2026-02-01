@@ -42,9 +42,10 @@ export const Services = () => {
     },
     {
       name: t("touchup"),
-      price: t("price100"),
+      price: t("price50percent"),
+      note: t("correctionNote"),
       isSpecial: true,
-      link: `${langPrefix}/services-muenchen#touchup`,
+      link: `${langPrefix}/nachkorrektur-muenchen`,
       featured: false
     },
     {
