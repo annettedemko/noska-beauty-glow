@@ -47,7 +47,7 @@ export const ServiceHero = ({
       className="relative overflow-hidden flex items-center justify-center"
       style={
         compact
-          ? { minHeight: "50vh" }
+          ? { minHeight: "65vh" }
           : isMobile
             ? { height: heroHeight, minHeight: "100vh" }
             : { minHeight: "80vh" }
