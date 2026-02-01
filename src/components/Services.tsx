@@ -10,6 +10,7 @@ export const Services = () => {
     {
       name: t("scalpPigmentation"),
       price: t("price300"),
+      note: t("correctionNote"),
       isSpecial: true,
       link: `${langPrefix}/kopfhaut-muenchen`,
       featured: true
@@ -17,7 +18,7 @@ export const Services = () => {
     {
       name: t("scarCamouflage"),
       price: t("priceCamouflage"),
-      note: t("camouflageNote"),
+      note: t("camouflageNote") + " | " + t("correctionNote"),
       isSpecial: true,
       link: `${langPrefix}/camouflage-muenchen`,
       featured: true
@@ -26,6 +27,7 @@ export const Services = () => {
     {
       name: t("powderBrows"),
       price: t("price200"),
+      note: t("correctionNote"),
       isSpecial: true,
       link: `${langPrefix}/services-muenchen#brows`,
       featured: false
@@ -33,6 +35,7 @@ export const Services = () => {
     {
       name: t("aquarellLips"),
       price: t("price200"),
+      note: t("correctionNote"),
       isSpecial: true,
       link: `${langPrefix}/services-muenchen#lips`,
       featured: false

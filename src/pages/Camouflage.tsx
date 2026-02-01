@@ -200,7 +200,8 @@ const Camouflage = () => {
 
                 <div className="pt-12 text-center border-t border-charcoal/20 mt-12">
                   <p className="text-2xl sm:text-3xl font-serif mb-2 text-accent font-semibold">{t("camouflagePrice")}</p>
-                  <p className="text-sm text-muted-foreground mb-8">{t("camouflagePriceNote")}</p>
+                  <p className="text-sm text-muted-foreground mb-2">{t("camouflagePriceNote")}</p>
+                  <p className="text-sm text-muted-foreground mb-8">{t("correctionNote")}</p>
                   <a
                     href="https://wa.me/491779093936"
                     target="_blank"
