@@ -36,6 +36,12 @@
       "permanent": false
     }
   ],
+  "rewrites": [
+    {
+      "source": "/((?!assets|.*\\..*).*)",
+      "destination": "/index.html"
+    }
+  ],
   "trailingSlash": false,
   "cleanUrls": true,
   "headers": [
