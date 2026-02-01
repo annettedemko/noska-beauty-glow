@@ -6,7 +6,6 @@ import { ServiceHero } from "@/components/ServiceHero";
 import { VideoBackground } from "@/components/VideoBackground";
 import { RelatedServices } from "@/components/RelatedServices";
 import { StructuredData } from "@/components/StructuredData";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { useEffect } from "react";
 
 const Nachkorrektur = () => {
@@ -77,7 +76,6 @@ const Nachkorrektur = () => {
       />
 
       <main className="relative z-10">
-        <Breadcrumbs />
 
         {/* Main Content */}
         <section className="py-16 sm:py-24 px-4 sm:px-6 relative">
