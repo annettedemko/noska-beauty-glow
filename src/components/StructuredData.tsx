@@ -367,7 +367,7 @@ export const StructuredData = () => {
           "name": "Was kostet Permanent Make-up in München?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Die Preise variieren je nach Behandlung: Powder Brows 180€, Aquarell Lippen 200€, Kopfhaut Pigmentierung 300€, Camouflage ab 200€. Eine kostenlose Beratung ist jederzeit möglich."
+            "text": "Die Preise variieren je nach Behandlung. Eine kostenlose Beratung ist jederzeit möglich – kontaktieren Sie uns für aktuelle Preise."
           }
         }
       ] : [
@@ -400,7 +400,7 @@ export const StructuredData = () => {
           "name": "Сколько стоит перманентный макияж в Мюнхене?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Цены варьируются в зависимости от процедуры: Пудровые брови 180€, Акварельные губы 200€, Пигментация кожи головы 300€, Камуфляж от 200€. Бесплатная консультация доступна в любое время."
+            "text": "Цены варьируются в зависимости от процедуры. Бесплатная консультация доступна в любое время – свяжитесь с нами для актуальных цен."
           }
         }
       ]
