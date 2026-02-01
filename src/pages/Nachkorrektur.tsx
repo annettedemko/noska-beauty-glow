@@ -69,10 +69,7 @@ const Nachkorrektur = () => {
       <ServiceHero
         title={t("touchupTitle")}
         description={t("touchupPriceText")}
-        backgroundImage="/5.jpg"
-        ctaButtons={{
-          whatsappLink: "https://wa.me/491779093936"
-        }}
+        backgroundImage="/24.jpg"
       />
 
       <main className="relative z-10">
