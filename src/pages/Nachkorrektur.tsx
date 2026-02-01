@@ -70,6 +70,7 @@ const Nachkorrektur = () => {
         title={t("touchupTitle")}
         description={t("touchupPriceText")}
         backgroundImage="/24.jpg"
+        compact={true}
       />
 
       <main className="relative z-10">
@@ -104,10 +105,6 @@ const Nachkorrektur = () => {
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-accent rotate-45 mt-2 flex-shrink-0" />
                     <span className="text-foreground/90">{t("touchupWhen2")}</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-accent rotate-45 mt-2 flex-shrink-0" />
-                    <span className="text-foreground/90">{t("touchupWhen3")}</span>
                   </li>
                 </ul>
               </div>

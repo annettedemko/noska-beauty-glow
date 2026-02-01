@@ -6,6 +6,7 @@ interface ServiceHeroProps {
   title: string;
   description: string;
   backgroundImage: string;
+  compact?: boolean;
   ctaButtons?: {
     whatsappLink?: string;
     instagramLink?: string;
@@ -16,6 +17,7 @@ export const ServiceHero = ({
   title,
   description,
   backgroundImage,
+  compact = false,
   ctaButtons,
 }: ServiceHeroProps) => {
   const { t } = useLanguage();
@@ -44,9 +46,11 @@ export const ServiceHero = ({
     <section
       className="relative overflow-hidden flex items-center justify-center"
       style={
-        isMobile
-          ? { height: heroHeight, minHeight: "100vh" }
-          : { minHeight: "80vh" }
+        compact
+          ? { minHeight: "50vh" }
+          : isMobile
+            ? { height: heroHeight, minHeight: "100vh" }
+            : { minHeight: "80vh" }
       }
     >
       {/* Background Image */}
@@ -138,14 +142,16 @@ export const ServiceHero = ({
           </h1>
 
           <p
-            className={`text-sm sm:text-base md:text-lg lg:text-xl font-light tracking-wide max-w-3xl mx-auto relative animate-fade-in-delay px-6 ${
+            className={`${compact ? "text-xl sm:text-2xl md:text-3xl font-medium" : "text-sm sm:text-base md:text-lg lg:text-xl font-light"} tracking-wide max-w-3xl mx-auto relative animate-fade-in-delay px-6 ${
               isMobile ? "text-white/90" : "text-foreground/80"
             }`}
             style={{
-              fontFamily: "'Montserrat', sans-serif",
-              textShadow: isMobile
-                ? "0 2px 8px rgba(0,0,0,0.6)"
-                : "0 1px 4px rgba(0,0,0,0.15)",
+              fontFamily: compact ? "'Cormorant Garamond', serif" : "'Montserrat', sans-serif",
+              textShadow: compact
+                ? "none"
+                : isMobile
+                  ? "0 2px 8px rgba(0,0,0,0.6)"
+                  : "0 1px 4px rgba(0,0,0,0.15)",
             }}
           >
             {description}
