@@ -145,8 +145,11 @@ const Nachkorrektur = () => {
 
               {/* CTA */}
               <div className="pt-12 text-center border-t border-charcoal/20 mt-12">
-                <p className="text-2xl sm:text-3xl font-serif mb-8 text-accent font-semibold">
-                  {t("touchupPriceText")} · {t("correctionNote")}
+                <p className="text-2xl sm:text-3xl font-serif mb-2 text-accent font-semibold">
+                  {t("touchupPriceText")}
+                </p>
+                <p className="text-xs sm:text-sm text-muted-foreground mb-8">
+                  {t("correctionNote")}
                 </p>
                 <a
                   href="https://wa.me/491779093936"
