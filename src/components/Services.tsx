@@ -43,6 +43,7 @@ export const Services = () => {
     {
       name: t("touchup"),
       price: t("price50percent"),
+      note: t("correctionNoteShort"),
       smallPrice: true,
       isSpecial: true,
       link: `${langPrefix}/nachkorrektur-muenchen`,

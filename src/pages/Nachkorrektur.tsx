@@ -149,7 +149,7 @@ const Nachkorrektur = () => {
                   {t("touchupPriceText")}
                 </p>
                 <p className="text-xs sm:text-sm text-muted-foreground mb-8">
-                  {t("correctionNote")}
+                  {t("correctionNoteShort")}
                 </p>
                 <a
                   href="https://wa.me/491779093936"
