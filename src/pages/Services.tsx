@@ -293,7 +293,7 @@ const Services = () => {
                 <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-accent/20 opacity-0 animate-in fade-in duration-700 delay-600" style={{ opacity: lipsVisible ? 1 : 0 }} />
 
                 <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-center mb-8 text-accent font-bold relative">
-                  <span className="relative inline-block">
+                  <span className="relative inline-block whitespace-nowrap">
                     {t("lipsTitle")}
                     <div className="absolute -bottom-2 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
                   </span>
