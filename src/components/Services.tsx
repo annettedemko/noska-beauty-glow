@@ -43,7 +43,7 @@ export const Services = () => {
     {
       name: t("touchup"),
       price: t("price50percent"),
-      note: t("correctionNote"),
+      smallPrice: true,
       isSpecial: true,
       link: `${langPrefix}/nachkorrektur-muenchen`,
       featured: false
@@ -116,7 +116,7 @@ export const Services = () => {
                     <div className="md:col-span-3 flex items-center">
                       <div className="space-y-1">
                         <p className="text-xs uppercase tracking-wider text-muted-foreground">Preis</p>
-                        <span className="text-xl sm:text-2xl md:text-3xl font-serif text-accent font-semibold">
+                        <span className={`font-serif text-accent font-semibold ${service.smallPrice ? 'text-sm sm:text-base md:text-lg' : 'text-xl sm:text-2xl md:text-3xl'}`}>
                           {service.price}
                         </span>
                       </div>
