@@ -96,10 +96,10 @@ const Kopfhaut = () => {
   return (
     <div className="min-h-screen relative">
       <SEOHead
-        titleDE="Kopfhaut Pigmentierung München 300€ | TOP Bewertet 5.0★ | SMP"
-        titleRU="Пигментация кожи головы Мюнхен 300€ | ТОП оценка 5.0★ | SMP"
-        descriptionDE="Kopfhaut Pigmentierung München ✓ SMP bei Haarausfall & Geheimratsecken ✓ Für Männer & Frauen ✓ 300€ ✓ Natürliche Ergebnisse ✓ 5.0★ Google Bewertung ✓ Anastasia Noska - Jetzt Termin!"
-        descriptionRU="Пигментация кожи головы Мюнхен ✓ SMP при выпадении волос ✓ Для мужчин и женщин ✓ 300€ ✓ Естественные результаты ✓ 5.0★ Google ✓ Запись сейчас!"
+        titleDE="Kopfhaut Pigmentierung München ab 250€ | TOP Bewertet 5.0★ | SMP"
+        titleRU="Пигментация кожи головы Мюнхен от 250€ | ТОП оценка 5.0★ | SMP"
+        descriptionDE="Kopfhaut Pigmentierung München ✓ SMP bei Haarausfall & Geheimratsecken ✓ Für Männer & Frauen ✓ ab 250€ ✓ Natürliche Ergebnisse ✓ 5.0★ Google Bewertung ✓ Anastasia Noska - Jetzt Termin!"
+        descriptionRU="Пигментация кожи головы Мюнхен ✓ SMP при выпадении волос ✓ Для мужчин и женщин ✓ от 250€ ✓ Естественные результаты ✓ 5.0★ Google ✓ Запись сейчас!"
         keywordsDE="Kopfhaut Pigmentierung München, Trichopigmentierung München, Scalp Micropigmentation München, SMP München, Haarausfall Lösung München, Geheimratsecken kaschieren München, Haarpigmentierung München, lichtes Haar München"
         keywordsRU="Пигментация кожи головы Мюнхен, Трихопигментация Мюнхен, SMP Мюнхен, Решение выпадения волос Мюнхен, Маскировка залысин Мюнхен, пигментация волос Мюнхен"
       />
@@ -215,6 +215,7 @@ const Kopfhaut = () => {
                     <p className="text-2xl sm:text-3xl font-serif mb-2 text-accent font-semibold">
                       {t("scalpPrice")}
                     </p>
+                    <p className="text-sm text-muted-foreground mb-2">{t("scalpPriceNote")}</p>
                     <p className="text-sm text-muted-foreground mb-8">{t("correctionNote")}</p>
                     <a
                       href="https://wa.me/491779093936"

@@ -10,7 +10,7 @@ export const Services = () => {
     {
       name: t("scalpPigmentation"),
       price: t("price300"),
-      note: t("correctionNote"),
+      note: t("scalpPriceNote") + " | " + t("correctionNote"),
       isSpecial: true,
       link: `${langPrefix}/kopfhaut-muenchen`,
       featured: true

@@ -78,7 +78,7 @@ export const StructuredData = () => {
             "offers": {
               "@type": "Offer",
               "priceCurrency": "EUR",
-              "price": "180"
+              "price": "250"
             }
           }
         },
@@ -93,7 +93,7 @@ export const StructuredData = () => {
             "offers": {
               "@type": "Offer",
               "priceCurrency": "EUR",
-              "price": "200"
+              "price": "250"
             }
           }
         },
@@ -106,9 +106,10 @@ export const StructuredData = () => {
               ? "Kaschierung von Haarausfall und lichtem Haar"
               : "Маскировка выпадения волос и редких волос",
             "offers": {
-              "@type": "Offer",
+              "@type": "AggregateOffer",
               "priceCurrency": "EUR",
-              "price": "300"
+              "lowPrice": "250",
+              "highPrice": "350"
             }
           }
         },
@@ -123,7 +124,8 @@ export const StructuredData = () => {
             "offers": {
               "@type": "AggregateOffer",
               "priceCurrency": "EUR",
-              "lowPrice": "200"
+              "lowPrice": "150",
+              "highPrice": "350"
             }
           }
         }
@@ -427,9 +429,10 @@ export const StructuredData = () => {
         },
         "areaServed": "München",
         "offers": {
-          "@type": "Offer",
+          "@type": "AggregateOffer",
           "priceCurrency": "EUR",
-          "price": "300"
+          "lowPrice": "250",
+          "highPrice": "350"
         },
         "serviceType": "Kopfhaut Pigmentierung, SMP, Scalp Micropigmentation"
       };
@@ -448,15 +451,10 @@ export const StructuredData = () => {
         },
         "areaServed": "München",
         "offers": {
-          "@type": "Offer",
+          "@type": "AggregateOffer",
           "priceCurrency": "EUR",
-          "price": "200",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "priceCurrency": "EUR",
-            "price": "200",
-            "minPrice": "200"
-          }
+          "lowPrice": "150",
+          "highPrice": "350"
         },
         "serviceType": "Camouflage, Narben Kaschierung, Dehnungsstreifen Camouflage"
       };
@@ -479,13 +477,13 @@ export const StructuredData = () => {
             "@type": "Offer",
             "name": isGerman ? "Powder Brows" : "Пудровые брови",
             "priceCurrency": "EUR",
-            "price": "180"
+            "price": "250"
           },
           {
             "@type": "Offer",
             "name": isGerman ? "Aquarell Lippen" : "Акварельные губы",
             "priceCurrency": "EUR",
-            "price": "200"
+            "price": "250"
           }
         ],
         "serviceType": "Permanent Make-up, Powder Brows, Aquarell Lippen, Microblading"
@@ -509,22 +507,22 @@ export const StructuredData = () => {
             "@type": "Offer",
             "name": isGerman ? "Nachkorrektur Powder Brows" : "Коррекция пудровых бровей",
             "priceCurrency": "EUR",
-            "price": "100",
-            "description": isGerman ? "50% vom Erstbehandlungspreis (200€)" : "50% от первичной процедуры (200€)"
+            "price": "125",
+            "description": isGerman ? "50% vom Erstbehandlungspreis (250€)" : "50% от первичной процедуры (250€)"
           },
           {
             "@type": "Offer",
             "name": isGerman ? "Nachkorrektur Lippen" : "Коррекция губ",
             "priceCurrency": "EUR",
-            "price": "100",
-            "description": isGerman ? "50% vom Erstbehandlungspreis (200€)" : "50% от первичной процедуры (200€)"
+            "price": "125",
+            "description": isGerman ? "50% vom Erstbehandlungspreis (250€)" : "50% от первичной процедуры (250€)"
           },
           {
             "@type": "Offer",
             "name": isGerman ? "Nachkorrektur Kopfhaut" : "Коррекция пигментации кожи головы",
             "priceCurrency": "EUR",
-            "price": "150",
-            "description": isGerman ? "50% vom Erstbehandlungspreis (300€)" : "50% от первичной процедуры (300€)"
+            "price": "125",
+            "description": isGerman ? "50% vom Erstbehandlungspreis (250-350€)" : "50% от первичной процедуры (250-350€)"
           }
         ],
         "serviceType": "Nachkorrektur, PMU Korrektur, Touch-up, Permanent Make-up Korrektur"

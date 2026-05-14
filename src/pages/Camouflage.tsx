@@ -96,10 +96,10 @@ const Camouflage = () => {
   return (
     <div className="min-h-screen bg-background relative">
       <SEOHead
-        titleDE="Camouflage München ab 200€ | TOP Bewertet 5.0★ | Narben kaschieren"
-        titleRU="Камуфляж Мюнхен от 200€ | ТОП оценка 5.0★ | Маскировка шрамов"
-        descriptionDE="Camouflage München ✓ Narben & Dehnungsstreifen kaschieren ✓ Schwangerschaftsstreifen, Kaiserschnitt, OP-Narben ✓ Ab 200€ ✓ PMU Technik ✓ 5.0★ Bewertung ✓ Termin bei Anastasia Noska!"
-        descriptionRU="Камуфляж Мюнхен ✓ Маскировка шрамов и растяжек ✓ Растяжки от беременности, кесарево, послеоперационные шрамы ✓ От 200€ ✓ PMU техника ✓ 5.0★ ✓ Запись!"
+        titleDE="Camouflage München ab 150€ | TOP Bewertet 5.0★ | Narben kaschieren"
+        titleRU="Камуфляж Мюнхен от 150€ | ТОП оценка 5.0★ | Маскировка шрамов"
+        descriptionDE="Camouflage München ✓ Narben & Dehnungsstreifen kaschieren ✓ Schwangerschaftsstreifen, Kaiserschnitt, OP-Narben ✓ Ab 150€ ✓ PMU Technik ✓ 5.0★ Bewertung ✓ Termin bei Anastasia Noska!"
+        descriptionRU="Камуфляж Мюнхен ✓ Маскировка шрамов и растяжек ✓ Растяжки от беременности, кесарево, послеоперационные шрамы ✓ От 150€ ✓ PMU техника ✓ 5.0★ ✓ Запись!"
         keywordsDE="Camouflage München, Dehnungsstreifen kaschieren München, Schwangerschaftsstreifen entfernen München, Narben kaschieren München, Kaiserschnitt Narbe München, Brust OP Narbe München, Narben Camouflage PMU München"
         keywordsRU="Камуфляж Мюнхен, Маскировка растяжек Мюнхен, Удаление растяжек от беременности Мюнхен, Маскировка шрамов Мюнхен, Шрам от кесарева Мюнхен, Шрам от операции Мюнхен"
       />
