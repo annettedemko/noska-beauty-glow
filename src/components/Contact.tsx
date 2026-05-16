@@ -39,7 +39,7 @@ export const Contact = () => {
           {/* Contact info */}
           <div className="space-y-8">
             <a
-              href="https://maps.app.goo.gl/XGUwn9CWqRcSi5Lq9?g_st=ipc"
+              href="https://maps.app.goo.gl/YZ6PrxGd7WPoXRKc8?g_st=ic"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative block pl-8 py-6 bg-background/60 backdrop-blur-sm border border-silver/20 hover:border-accent/30 active:border-accent/50 transition-all duration-300 shadow-luxury hover:shadow-2xl animate-in slide-in-from-left duration-700 cursor-pointer"
@@ -54,7 +54,7 @@ export const Contact = () => {
             </a>
 
             <a
-              href="https://maps.app.goo.gl/PdddogcVErFvof8h7?g_st=ipc"
+              href="https://maps.app.goo.gl/YZ6PrxGd7WPoXRKc8?g_st=ic"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative block pl-8 py-6 bg-background/60 backdrop-blur-sm border border-silver/20 hover:border-accent/30 active:border-accent/50 transition-all duration-300 shadow-luxury hover:shadow-2xl active:scale-[0.98] tap-feedback animate-in slide-in-from-left duration-700 delay-75 cursor-pointer"

@@ -38,8 +38,8 @@ const Datenschutz = () => {
                     </p>
                     <p className="pl-4">
                       Anastasia Noska<br />
-                      Aubingerstraße 147<br />
-                      81243 München<br />
+                      Englmannstraße 2, Büro 1A<br />
+                      81673 München<br />
                       Deutschland
                     </p>
                     <p className="pl-4 mt-3">
@@ -391,8 +391,8 @@ const Datenschutz = () => {
                     </p>
                     <p className="pl-4">
                       Anastasia Noska<br />
-                      Aubingerstraße 147<br />
-                      81243 Мюнхен<br />
+                      Englmannstraße 2, Büro 1A<br />
+                      81673 Мюнхен<br />
                       Германия
                     </p>
                     <p className="pl-4 mt-3">

@@ -191,7 +191,7 @@ export const Footer = () => {
               </svg>
             </a>
             <a
-              href="https://maps.app.goo.gl/fhN77Y7Y2gCJJfYG8?g_st=ipc"
+              href="https://maps.app.goo.gl/YZ6PrxGd7WPoXRKc8?g_st=ic"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-accent transition-colors duration-300"

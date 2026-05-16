@@ -32,16 +32,16 @@ export const StructuredData = () => {
     "paymentAccepted": isGerman ? "Bar, EC-Karte" : "Наличные, EC-карта",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "München",
+      "streetAddress": "Englmannstraße 2, Büro 1A",
       "addressLocality": "München",
       "addressRegion": "Bayern",
-      "postalCode": "80331",
+      "postalCode": "81673",
       "addressCountry": "DE"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 48.1351,
-      "longitude": 11.5820
+      "latitude": 48.1306965,
+      "longitude": 11.6282227
     },
     "telephone": "+49-xxx-xxxxxxx",
     "email": "info@pmu-noska.de",

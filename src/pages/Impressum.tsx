@@ -38,19 +38,10 @@ const Impressum = () => {
                     </p>
 
                     <div className="mb-6">
-                      <p className="font-medium mb-2">Geschäftsadresse (für Post / Impressum):</p>
+                      <p className="font-medium mb-2">Geschäfts- und Studioadresse:</p>
                       <p className="pl-4">
-                        Aubingerstraße 147<br />
-                        81243 München<br />
-                        Deutschland
-                      </p>
-                    </div>
-
-                    <div className="mb-6">
-                      <p className="font-medium mb-2">Studio / Behandlungsort:</p>
-                      <p className="pl-4">
-                        Hildegardstraße 4<br />
-                        80539 München<br />
+                        Englmannstraße 2, Büro 1A<br />
+                        81673 München<br />
                         Deutschland
                       </p>
                     </div>
@@ -136,19 +127,10 @@ const Impressum = () => {
                     </p>
 
                     <div className="mb-6">
-                      <p className="font-medium mb-2">Юридический адрес (для корреспонденции / Impressum):</p>
+                      <p className="font-medium mb-2">Юридический адрес / место проведения процедур:</p>
                       <p className="pl-4">
-                        Aubingerstraße 147<br />
-                        81243 Мюнхен<br />
-                        Германия
-                      </p>
-                    </div>
-
-                    <div className="mb-6">
-                      <p className="font-medium mb-2">Студия / место проведения процедур:</p>
-                      <p className="pl-4">
-                        Hildegardstraße 4<br />
-                        80539 Мюнхен<br />
+                        Englmannstraße 2, Büro 1A<br />
+                        81673 Мюнхен<br />
                         Германия
                       </p>
                     </div>
