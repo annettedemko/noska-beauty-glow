@@ -46,8 +46,8 @@ const AGB = () => {
                     <p className="mb-4">
                       <strong>Anastasia Noska</strong><br />
                       Einzelunternehmerin (Gewerbetreibende)<br />
-                      Englmannstraße 2, Büro 1A<br />
-                      81673 München<br />
+                      Aubinger Straße 147<br />
+                      81243 München<br />
                       Deutschland
                     </p>
                     <div>
@@ -227,8 +227,8 @@ const AGB = () => {
                     <p className="mb-4">
                       <strong>Anastasia Noska</strong><br />
                       Индивидуальный предприниматель<br />
-                      Englmannstraße 2, Büro 1A<br />
-                      81673 Мюнхен<br />
+                      Aubinger Straße 147<br />
+                      81243 Мюнхен<br />
                       Германия
                     </p>
                     <div>
