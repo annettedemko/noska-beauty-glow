@@ -45,13 +45,23 @@ export const Contact = () => {
               className="group relative block pl-8 py-6 bg-background/60 backdrop-blur-sm border border-silver/20 hover:border-accent/30 active:border-accent/50 transition-all duration-300 shadow-luxury hover:shadow-2xl animate-in slide-in-from-left duration-700 cursor-pointer"
             >
               <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-accent group-hover:w-[4px] group-active:w-[5px] transition-all duration-300" />
-              <p className="text-xs uppercase tracking-[0.3em] text-accent font-semibold mb-3">{t("contactAddress")}</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-accent font-semibold mb-3">{t("contactTreatment")}</p>
               <p className="text-xl font-serif group-hover:text-accent group-active:text-accent transition-colors">
                 {t("address")}
               </p>
               {/* Hover shimmer effect */}
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-accent/5 to-transparent transition-transform duration-1000 pointer-events-none" />
             </a>
+
+            <div className="group relative pl-8 py-6 bg-background/60 backdrop-blur-sm border border-silver/20 hover:border-accent/30 transition-all duration-300 shadow-luxury hover:shadow-2xl animate-in slide-in-from-left duration-700 delay-50">
+              <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-accent group-hover:w-[4px] transition-all duration-300" />
+              <p className="text-xs uppercase tracking-[0.3em] text-accent font-semibold mb-3">{t("contactPostal")}</p>
+              <p className="text-xl font-serif">
+                {t("postalAddress")}
+              </p>
+              {/* Hover shimmer effect */}
+              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-accent/5 to-transparent transition-transform duration-1000 pointer-events-none" />
+            </div>
 
             <a
               href="https://maps.app.goo.gl/YZ6PrxGd7WPoXRKc8?g_st=ic"
