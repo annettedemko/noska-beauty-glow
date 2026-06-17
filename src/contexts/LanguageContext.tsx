@@ -77,6 +77,12 @@ const translations = {
     gallerySubtitle: "Portfolio unserer Arbeiten",
     galleryConsent: "Alle auf dieser Website dargestellten Vorher-/Nachher-Bilder wurden mit ausdrücklicher, schriftlicher Einwilligung der jeweiligen Kunden veröffentlicht.",
 
+    // Instagram Feed
+    instaTitle: "Folgen Sie mir auf Instagram",
+    instaSubtitle: "Aktuelle Arbeiten, Einblicke und Inspiration – täglich auf @anastasia__noska",
+    instaConsentText: "Der Instagram-Feed lädt externe Inhalte. Aktivieren Sie dafür in den Cookie-Einstellungen die Kategorie „Analyse & externe Inhalte\".",
+    instaLoadButton: "Cookie-Einstellungen öffnen",
+
     // Testimonials
     testimonialsTitle: "Kundenfeedbacks",
     testimonial1: "Ich hätte es viel früher machen sollen",
@@ -283,6 +289,12 @@ const translations = {
     galleryTitle: "Мои работы",
     gallerySubtitle: "Портфолио наших работ",
     galleryConsent: "Все фотографии до/после на этом сайте опубликованы с письменного согласия клиентов.",
+
+    // Instagram Feed
+    instaTitle: "Подписывайтесь в Instagram",
+    instaSubtitle: "Свежие работы, закулисье и вдохновение — каждый день в @anastasia__noska",
+    instaConsentText: "Лента Instagram загружает внешний контент. Включите в настройках cookie категорию «Аналитика и внешний контент».",
+    instaLoadButton: "Открыть настройки cookie",
 
     // Testimonials
     testimonialsTitle: "Отзывы клиентов",

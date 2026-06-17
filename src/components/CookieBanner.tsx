@@ -222,16 +222,17 @@ export const CookieSettings = () => {
               <div className="flex items-start justify-between gap-4 mb-3">
                 <div className="flex-1">
                   <h3 className="font-serif text-base sm:text-lg font-semibold mb-2">
-                    {language === "DE" ? "Analyse & Statistik" : "Аналитика и статистика"}
+                    {language === "DE" ? "Analyse & externe Inhalte" : "Аналитика и внешний контент"}
                   </h3>
                   <p className="text-xs sm:text-sm text-muted-foreground mb-3">
                     {language === "DE"
-                      ? "Diese Cookies helfen uns zu verstehen, wie Besucher mit unserer Website interagieren. Wir verwenden Google Analytics, um anonymisierte Statistiken zu sammeln."
-                      : "Эти файлы cookie помогают нам понять, как посетители взаимодействуют с нашим сайтом. Мы используем Google Analytics для сбора анонимизированной статистики."}
+                      ? "Diese Cookies helfen uns zu verstehen, wie Besucher mit unserer Website interagieren (Google Analytics, anonymisiert), und ermöglichen das Anzeigen externer Inhalte wie unseres Instagram-Feeds."
+                      : "Эти файлы cookie помогают нам понять, как посетители взаимодействуют с сайтом (Google Analytics, анонимно), и позволяют отображать внешний контент, например нашу ленту Instagram."}
                   </p>
                   <div className="text-xs text-muted-foreground space-y-1">
                     <p>• Google Analytics (_ga, _gid)</p>
                     <p>• Ahrefs Analytics</p>
+                    <p>• {language === "DE" ? "Instagram-Feed (Elfsight)" : "Лента Instagram (Elfsight)"}</p>
                     <p>• {language === "DE" ? "Anonymisierte IP-Adressen" : "Анонимизированные IP-адреса"}</p>
                   </div>
                 </div>

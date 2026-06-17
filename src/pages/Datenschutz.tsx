@@ -118,7 +118,7 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">6. Verlinkung zu Instagram / Social Media</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">6. Instagram / Social Media (Verlinkung &amp; eingebetteter Feed)</h2>
                     <p className="mb-3">
                       Auf unserer Website befinden sich Links zum sozialen Netzwerk Instagram.
                     </p>
@@ -135,10 +135,38 @@ const Datenschutz = () => {
                       Rechtsgrundlage:
                       Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer ansprechenden Online-Präsenz)
                     </p>
-                    <p>
+                    <p className="mb-6">
                       Weitere Informationen zum Datenschutz bei Instagram finden Sie unter:{' '}
                       <a href="https://privacycenter.instagram.com/policy" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
                         https://privacycenter.instagram.com/policy
+                      </a>
+                    </p>
+
+                    <h3 className="font-serif text-lg mb-3 text-accent">Eingebetteter Instagram-Feed (Elfsight)</h3>
+                    <p className="mb-3">
+                      Auf unserer Website binden wir über den Dienst „Elfsight Instagram Feed" einen Instagram-Feed ein, der aktuelle Beiträge unseres Instagram-Profils anzeigt. Anbieter ist die Elfsight LLC (nachfolgend „Elfsight").
+                    </p>
+                    <p className="mb-3">
+                      Beim Laden des Feeds wird ein Skript von Servern von Elfsight (u. a. <span className="whitespace-nowrap">elfsightcdn.com</span>, <span className="whitespace-nowrap">static.elfsight.com</span>) nachgeladen. Dabei wird Ihre IP-Adresse an Elfsight übermittelt; zudem können Cookies bzw. ähnliche Technologien (z. B. lokale Speicherung im Browser) eingesetzt werden. Die im Feed dargestellten Inhalte werden von Instagram (Meta Platforms Ireland Limited) bereitgestellt, wodurch beim Laden auch eine Verbindung zu Servern von Meta hergestellt werden kann.
+                    </p>
+                    <p className="mb-3">
+                      Der Instagram-Feed wird erst geladen, nachdem Sie über unser Cookie-Banner Ihre Einwilligung erteilt haben (Kategorie „Analyse &amp; externe Inhalte"). Ohne Ihre Einwilligung wird der Feed nicht geladen; stattdessen wird an dieser Stelle ein Hinweis mit der Möglichkeit angezeigt, die Cookie-Einstellungen zu öffnen.
+                    </p>
+                    <p className="mb-3">
+                      Rechtsgrundlage:
+                      Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG (Einwilligung).
+                    </p>
+                    <p className="mb-3">
+                      Eine Übermittlung in Drittländer (z. B. USA) kann dabei nicht ausgeschlossen werden.
+                    </p>
+                    <p className="mb-3">
+                      Widerruf:
+                      Sie können Ihre Einwilligung jederzeit über die Cookie-Einstellungen mit Wirkung für die Zukunft widerrufen.
+                    </p>
+                    <p>
+                      Weitere Informationen zum Datenschutz bei Elfsight finden Sie unter:{' '}
+                      <a href="https://elfsight.com/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                        https://elfsight.com/privacy-policy/
                       </a>
                     </p>
                   </section>
@@ -194,7 +222,7 @@ const Datenschutz = () => {
                       Sofern darüber hinaus Cookies oder ähnliche Technologien (z. B. zu Analyse- oder Statistikzwecken) eingesetzt werden, erfolgt dies ausschließlich auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG.
                     </p>
                     <p>
-                      Nicht technisch notwendige Dienste (z. B. Analyse & Statistik) werden erst nach Ihrer ausdrücklichen Einwilligung über das Cookie-Banner geladen (z. B. durch „Alle akzeptieren" oder durch „Speichern" bei aktivierter Kategorie „Analyse & Statistik"). Sie können Ihre Auswahl jederzeit über die Cookie-Einstellungen ändern und eine erteilte Einwilligung mit Wirkung für die Zukunft widerrufen.
+                      Nicht technisch notwendige Dienste (z. B. Analyse & Statistik sowie externe Inhalte wie der Instagram-Feed) werden erst nach Ihrer ausdrücklichen Einwilligung über das Cookie-Banner geladen (z. B. durch „Alle akzeptieren" oder durch „Speichern" bei aktivierter Kategorie „Analyse & externe Inhalte"). Sie können Ihre Auswahl jederzeit über die Cookie-Einstellungen ändern und eine erteilte Einwilligung mit Wirkung für die Zukunft widerrufen.
                     </p>
                   </section>
 
@@ -243,7 +271,7 @@ const Datenschutz = () => {
                       Diese Website nutzt Ahrefs Web Analytics (Ahrefs Pte. Ltd., Singapur) zur Analyse des Website-Traffics und zur Suchmaschinenoptimierung. Dabei können Cookies eingesetzt sowie technische Zugriffsdaten (z. B. IP-Adresse, User-Agent, aufgerufene Seiten) verarbeitet werden.
                     </p>
                     <p className="mb-3">
-                      Ahrefs Web Analytics wird erst nach Ihrer Einwilligung über das Cookie-Banner (Kategorie „Analyse & Statistik") geladen.
+                      Ahrefs Web Analytics wird erst nach Ihrer Einwilligung über das Cookie-Banner (Kategorie „Analyse & externe Inhalte") geladen.
                     </p>
                     <p className="mb-3">
                       Rechtsgrundlage:
@@ -369,7 +397,7 @@ const Datenschutz = () => {
                     <p className="mb-3">
                       Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht.
                     </p>
-                    <p className="text-sm text-muted-foreground">Stand: Januar 2026</p>
+                    <p className="text-sm text-muted-foreground">Stand: Juni 2026</p>
                   </section>
                 </div>
               </>
@@ -471,7 +499,7 @@ const Datenschutz = () => {
                   </section>
 
                   <section>
-                    <h2 className="font-serif text-2xl mb-4 text-accent">6. Ссылки на Instagram / Социальные сети</h2>
+                    <h2 className="font-serif text-2xl mb-4 text-accent">6. Instagram / Социальные сети (ссылки и встроенная лента)</h2>
                     <p className="mb-3">
                       На нашем сайте размещены ссылки на социальную сеть Instagram.
                     </p>
@@ -488,10 +516,38 @@ const Datenschutz = () => {
                       Правовое основание:
                       ст. 6 ч. 1 п. f GDPR (законный интерес в представлении нашей онлайн-деятельности).
                     </p>
-                    <p>
+                    <p className="mb-6">
                       Политика конфиденциальности Instagram:{' '}
                       <a href="https://privacycenter.instagram.com/policy" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
                         https://privacycenter.instagram.com/policy
+                      </a>
+                    </p>
+
+                    <h3 className="font-serif text-lg mb-3 text-accent">Встроенная лента Instagram (Elfsight)</h3>
+                    <p className="mb-3">
+                      На нашем сайте с помощью сервиса «Elfsight Instagram Feed» встроена лента Instagram, отображающая актуальные публикации нашего профиля. Провайдером является Elfsight LLC (далее — «Elfsight»).
+                    </p>
+                    <p className="mb-3">
+                      При загрузке ленты подгружается скрипт с серверов Elfsight (в частности, <span className="whitespace-nowrap">elfsightcdn.com</span>, <span className="whitespace-nowrap">static.elfsight.com</span>). При этом ваш IP-адрес передаётся Elfsight; кроме того, могут использоваться cookies или аналогичные технологии (например, локальное хранилище браузера). Содержимое ленты предоставляется Instagram (Meta Platforms Ireland Limited), в связи с чем при загрузке также может устанавливаться соединение с серверами Meta.
+                    </p>
+                    <p className="mb-3">
+                      Лента Instagram загружается только после того, как вы дали согласие через наш cookie-баннер (категория «Аналитика и внешний контент»). Без вашего согласия лента не загружается; вместо неё отображается уведомление с возможностью открыть настройки cookie.
+                    </p>
+                    <p className="mb-3">
+                      Правовое основание:
+                      ст. 6 ч. 1 п. a GDPR и § 25 п. 1 TDDDG (согласие).
+                    </p>
+                    <p className="mb-3">
+                      Передача в третьи страны (например, США) при этом не может быть исключена.
+                    </p>
+                    <p className="mb-3">
+                      Отзыв:
+                      Вы можете в любое время отозвать своё согласие через настройки cookie с действием на будущее.
+                    </p>
+                    <p>
+                      Дополнительная информация о защите данных в Elfsight:{' '}
+                      <a href="https://elfsight.com/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                        https://elfsight.com/privacy-policy/
                       </a>
                     </p>
                   </section>
@@ -547,7 +603,7 @@ const Datenschutz = () => {
                       Если используются дополнительные cookies или аналогичные технологии (например, для анализа или статистики), это осуществляется исключительно на основании вашего согласия в соответствии со ст. 6 ч. 1 п. a GDPR и § 25 п. 1 TDDDG.
                     </p>
                     <p>
-                      Технически необязательные сервисы (например, Анализ и Статистика) загружаются только после вашего явного согласия через cookie-баннер (например, через «Alle akzeptieren» или через «Speichern» при активированной категории «Analyse & Statistik»). Вы можете в любое время изменить свой выбор через настройки cookie и отозвать данное согласие с действием на будущее.
+                      Технически необязательные сервисы (например, Анализ и Статистика, а также внешний контент, такой как лента Instagram) загружаются только после вашего явного согласия через cookie-баннер (например, через «Alle akzeptieren» или через «Speichern» при активированной категории «Аналитика и внешний контент»). Вы можете в любое время изменить свой выбор через настройки cookie и отозвать данное согласие с действием на будущее.
                     </p>
                   </section>
 
@@ -595,7 +651,7 @@ const Datenschutz = () => {
                       Наш сайт использует Ahrefs Web Analytics (Ahrefs Pte. Ltd., Сингапур) для анализа трафика сайта и поисковой оптимизации. При этом могут использоваться cookies, а также обрабатываться технические данные доступа (например, IP-адрес, user-agent, посещенные страницы).
                     </p>
                     <p className="mb-3">
-                      Ahrefs Web Analytics загружается только после вашего согласия через cookie-баннер (категория «Analyse & Statistik»).
+                      Ahrefs Web Analytics загружается только после вашего согласия через cookie-баннер (категория «Аналитика и внешний контент»).
                     </p>
                     <p className="mb-3">
                       Правовое основание:
@@ -721,7 +777,7 @@ const Datenschutz = () => {
                     <p className="mb-3">
                       Мы оставляем за собой право изменять данную политику конфиденциальности с целью ее актуализации и соответствия действующим правовым требованиям.
                     </p>
-                    <p className="text-sm text-muted-foreground">Версия: январь 2026 года</p>
+                    <p className="text-sm text-muted-foreground">Версия: июнь 2026 года</p>
                   </section>
                 </div>
               </>
