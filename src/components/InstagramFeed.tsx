@@ -41,7 +41,7 @@ export const InstagramFeed = () => {
   }, [loaded]);
 
   return (
-    <section id="instagram-feed" className="pt-12 pb-24 px-3 sm:px-6 relative overflow-hidden" ref={ref}>
+    <section id="instagram-feed" className="pt-4 pb-16 sm:pt-12 sm:pb-24 px-3 sm:px-6 relative overflow-hidden" ref={ref}>
       {/* Luxury background */}
       <div className="absolute inset-0 bg-gradient-to-b from-pearl/20 via-background to-pearl/20" />
 
@@ -53,7 +53,7 @@ export const InstagramFeed = () => {
 
       <div className="container max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className={`text-center mb-10 space-y-6 reveal-animation ${isVisible ? "is-visible" : ""}`}>
+        <div className={`text-center mb-6 sm:mb-10 space-y-6 reveal-animation ${isVisible ? "is-visible" : ""}`}>
           <div className="flex items-center justify-center gap-4 opacity-60">
             <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-silver animate-shimmer" />
             <div className="w-2 h-2 bg-silver rotate-45 animate-pulse" />

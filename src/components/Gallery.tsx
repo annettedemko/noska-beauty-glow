@@ -99,7 +99,7 @@ export const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="py-32 px-6 relative overflow-hidden" ref={galleryRef}>
+    <section id="gallery" className="pt-32 pb-16 sm:pb-32 px-6 relative overflow-hidden" ref={galleryRef}>
       {/* Luxury background with animation */}
       <div className="absolute inset-0 bg-gradient-to-b from-pearl/20 via-background to-pearl/20" />
 
