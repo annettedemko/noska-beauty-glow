@@ -41,7 +41,7 @@ export const InstagramFeed = () => {
   }, [loaded]);
 
   return (
-    <section id="instagram-feed" className="pt-12 pb-24 px-6 relative overflow-hidden" ref={ref}>
+    <section id="instagram-feed" className="pt-12 pb-24 px-3 sm:px-6 relative overflow-hidden" ref={ref}>
       {/* Luxury background */}
       <div className="absolute inset-0 bg-gradient-to-b from-pearl/20 via-background to-pearl/20" />
 
