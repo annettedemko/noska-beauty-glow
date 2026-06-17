@@ -23,15 +23,25 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Chrome for Puppeteer
+      - name: Resolve system Chrome for Puppeteer
+        id: chrome
         run: |
-          rm -rf ~/.cache/puppeteer
-          npx puppeteer browsers install chrome
+          CHROME="$(which google-chrome || which google-chrome-stable || which chromium-browser || true)"
+          if [ -z "$CHROME" ]; then
+            echo "No system Chrome found, installing Puppeteer's Chrome"
+            rm -rf ~/.cache/puppeteer
+            npx puppeteer browsers install chrome
+          else
+            echo "Using system Chrome at: $CHROME"
+            "$CHROME" --version || true
+            echo "path=$CHROME" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Build project with pre-rendering
         run: npm run build
         env:
           NODE_ENV: production
+          PUPPETEER_EXECUTABLE_PATH: ${{ steps.chrome.outputs.path }}
 
       - name: Create Vercel build output structure
         run: |
