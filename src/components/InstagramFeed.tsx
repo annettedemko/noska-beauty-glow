@@ -71,7 +71,7 @@ export const InstagramFeed = () => {
 
         {/* Widget / consent placeholder */}
         {loaded ? (
-          <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden border border-silver/20 shadow-luxury bg-white">
+          <div className="rounded-2xl overflow-hidden border border-silver/20 shadow-luxury bg-white">
             <div className={ELFSIGHT_APP_CLASS} />
           </div>
         ) : (
