@@ -44,13 +44,6 @@ const pages = [
     comment: 'Services Page'
   },
   {
-    path: '/kopfhaut-muenchen',
-    priority: '0.8',
-    changefreq: 'monthly',
-    lastmod: TODAY,
-    comment: 'Kopfhaut Pigmentierung'
-  },
-  {
     path: '/camouflage-muenchen',
     priority: '0.8',
     changefreq: 'monthly',

@@ -25,8 +25,8 @@ export const StructuredData = () => {
       "https://pmu-noska.de/12.jpg"
     ],
     "description": isGerman
-      ? "Professionelles Permanent Make-up Studio in München. Spezialisiert auf Powder Brows, Aquarell Lippen, Lidstrich, Kopfhaut Pigmentierung und Camouflage."
-      : "Профессиональная студия перманентного макияжа в Мюнхене. Специализируется на пудровых бровях, акварельных губах, подводке, пигментации кожи головы и камуфляже.",
+      ? "Professionelles Permanent Make-up Studio in München. Spezialisiert auf Powder Brows, Aquarell Lippen, Lidstrich und Camouflage."
+      : "Профессиональная студия перманентного макияжа в Мюнхене. Специализируется на пудровых бровях, акварельных губах, подводке и камуфляже.",
     "priceRange": "€€-€€€",
     "currenciesAccepted": "EUR",
     "paymentAccepted": isGerman ? "Bar, EC-Karte" : "Наличные, EC-карта",
@@ -94,22 +94,6 @@ export const StructuredData = () => {
               "@type": "Offer",
               "priceCurrency": "EUR",
               "price": "250"
-            }
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": isGerman ? "Kopfhaut Pigmentierung" : "Пигментация кожи головы",
-            "description": isGerman
-              ? "Kaschierung von Haarausfall und lichtem Haar"
-              : "Маскировка выпадения волос и редких волос",
-            "offers": {
-              "@type": "AggregateOffer",
-              "priceCurrency": "EUR",
-              "lowPrice": "250",
-              "highPrice": "350"
             }
           }
         },
@@ -302,7 +286,6 @@ export const StructuredData = () => {
       // Map URL segments to display names
       const pageNames: Record<string, { de: string; ru: string }> = {
         'services-muenchen': { de: 'Leistungen', ru: 'Услуги' },
-        'kopfhaut-muenchen': { de: 'Kopfhaut Pigmentierung', ru: 'Пигментация кожи головы' },
         'camouflage-muenchen': { de: 'Camouflage', ru: 'Камуфляж' },
         'nachkorrektur-muenchen': { de: 'Nachkorrektur', ru: 'Коррекция' },
         'remover-muenchen': { de: 'Remover', ru: 'Ремувер' },
@@ -415,29 +398,6 @@ export const StructuredData = () => {
   // Service Schema for specific service pages
   const getServiceSchema = () => {
     const path = location.pathname.replace(/^\/ru/, "");
-
-    if (path === "/kopfhaut-muenchen") {
-      return {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": isGerman ? "Kopfhaut Pigmentierung München" : "Пигментация кожи головы Мюнхен",
-        "description": isGerman
-          ? "Professionelle Kopfhaut Pigmentierung (SMP) bei Haarausfall. Natürliche Kaschierung von lichtem Haar und Haarverlust in München."
-          : "Профессиональная пигментация кожи головы (SMP) при выпадении волос. Естественная маскировка редких волос в Мюнхене.",
-        "provider": {
-          "@id": "https://pmu-noska.de/#organization"
-        },
-        "areaServed": "München",
-        "offers": {
-          "@type": "AggregateOffer",
-          "priceCurrency": "EUR",
-          "lowPrice": "250",
-          "highPrice": "350"
-        },
-        "serviceType": "Kopfhaut Pigmentierung, SMP, Scalp Micropigmentation"
-      };
-    }
-
     if (path === "/camouflage-muenchen") {
       return {
         "@context": "https://schema.org",
@@ -496,8 +456,8 @@ export const StructuredData = () => {
         "@type": "Service",
         "name": isGerman ? "Nachkorrektur München - PMU Korrektur" : "Коррекция Мюнхен - Коррекция ПМУ",
         "description": isGerman
-          ? "Nachkorrektur für alle Permanent Make-up Behandlungen in München. 50% vom Erstbehandlungspreis. Powder Brows, Lippen, Kopfhaut Pigmentierung, Camouflage."
-          : "Коррекция для всех процедур перманентного макияжа в Мюнхене. 50% от стоимости первичной процедуры. Брови, губы, пигментация кожи головы, камуфляж.",
+          ? "Nachkorrektur für alle Permanent Make-up Behandlungen in München. 50% vom Erstbehandlungspreis. Powder Brows, Lippen, Camouflage."
+          : "Коррекция для всех процедур перманентного макияжа в Мюнхене. 50% от стоимости первичной процедуры. Брови, губы, камуфляж.",
         "provider": {
           "@id": "https://pmu-noska.de/#organization"
         },
@@ -516,13 +476,6 @@ export const StructuredData = () => {
             "priceCurrency": "EUR",
             "price": "125",
             "description": isGerman ? "50% vom Erstbehandlungspreis (250€)" : "50% от первичной процедуры (250€)"
-          },
-          {
-            "@type": "Offer",
-            "name": isGerman ? "Nachkorrektur Kopfhaut" : "Коррекция пигментации кожи головы",
-            "priceCurrency": "EUR",
-            "price": "125",
-            "description": isGerman ? "50% vom Erstbehandlungspreis (250-350€)" : "50% от первичной процедуры (250-350€)"
           }
         ],
         "serviceType": "Nachkorrektur, PMU Korrektur, Touch-up, Permanent Make-up Korrektur"

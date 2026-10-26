@@ -40,14 +40,6 @@ export const RelatedServices = ({ currentService, showCount = 3 }: RelatedServic
       image: "/23.jpg"
     },
     {
-      titleDE: "Kopfhaut Pigmentierung",
-      titleRU: "Пигментация кожи головы",
-      descriptionDE: "Natürliche Lösung bei Haarausfall und lichtem Haar",
-      descriptionRU: "Естественное решение при выпадении волос и редких волосах",
-      path: "/kopfhaut-muenchen",
-      image: "/28.jpg"
-    },
-    {
       titleDE: "Camouflage",
       titleRU: "Камуфляж",
       descriptionDE: "Professionelle Kaschierung von Narben und Dehnungsstreifen",
@@ -79,7 +71,7 @@ export const RelatedServices = ({ currentService, showCount = 3 }: RelatedServic
   // Special handling for /services-muenchen page:
   // Ensure remover-muenchen is always included and show specific services
   if (currentService === "/services-muenchen") {
-    // Show: Kopfhaut, Camouflage, Remover (exclude "Alle Leistungen")
+    // Show: Camouflage, Remover (exclude "Alle Leistungen")
     relatedServices = relatedServices.filter(service => service.path !== "/#services");
   }
 

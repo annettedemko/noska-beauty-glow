@@ -180,10 +180,6 @@ export const About = () => {
                       <div className="w-2 h-2 bg-accent rotate-45 mt-2 flex-shrink-0" />
                       <span className="text-base md:text-lg font-light">{t("aboutService1")}</span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-accent rotate-45 mt-2 flex-shrink-0" />
-                      <span className="text-base md:text-lg font-light">{t("aboutService2")}</span>
-                    </li>
                   </ul>
                 </div>
               </div>

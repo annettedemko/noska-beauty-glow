@@ -18,7 +18,6 @@ export const Breadcrumbs = () => {
   // Map URL segments to display names
   const pageNames: Record<string, { de: string; ru: string }> = {
     'services-muenchen': { de: 'Leistungen', ru: 'Услуги' },
-    'kopfhaut-muenchen': { de: 'Kopfhaut Pigmentierung', ru: 'Пигментация кожи головы' },
     'camouflage-muenchen': { de: 'Camouflage', ru: 'Камуфляж' },
     'nachkorrektur-muenchen': { de: 'Nachkorrektur', ru: 'Коррекция' },
     'remover-muenchen': { de: 'Remover', ru: 'Ремувер' },

@@ -46,11 +46,6 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to={`${langPrefix}/kopfhaut-muenchen`} className="text-muted-foreground hover:text-accent transition-colors duration-300">
-                  {language === "DE" ? "Kopfhaut Pigmentierung" : "Пигментация кожи головы"}
-                </Link>
-              </li>
-              <li>
                 <Link to={`${langPrefix}/camouflage-muenchen`} className="text-muted-foreground hover:text-accent transition-colors duration-300">
                   Camouflage
                 </Link>

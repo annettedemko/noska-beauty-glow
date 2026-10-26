@@ -67,7 +67,6 @@ const AGB = () => {
                     <ul className="list-disc list-inside pl-4 mb-3 space-y-1">
                       <li>Permanent Make-up</li>
                       <li>Camouflage (z. B. Narben- und Dehnungsstreifenpigmentierung)</li>
-                      <li>Trichopigmentation</li>
                     </ul>
                     <p className="mb-3">
                       Es werden keine medizinischen Behandlungen oder heilkundlichen Leistungen erbracht.
@@ -248,7 +247,6 @@ const AGB = () => {
                     <ul className="list-disc list-inside pl-4 mb-3 space-y-1">
                       <li>Перманентный макияж</li>
                       <li>Камуфляж (например, пигментация шрамов и растяжек)</li>
-                      <li>Трихопигментация</li>
                     </ul>
                     <p className="mb-3">
                       Медицинские процедуры или лечебные услуги не оказываются.

@@ -75,12 +75,8 @@ export const Gallery = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [lightboxOpen]);
 
-  // Gallery images - акцент на Trichopigmentierung и камуфляж шрамов (первые в списке!)
+  // Gallery images - акцент на камуфляж шрамов (первые в списке!)
   const galleryImages = [
-    // Trichopigmentierung - ГЛАВНОЕ!
-    { src: "/9.jpg", alt: "Kopfhaut Pigmentierung München - SMP Vorher Nachher Ergebnis", category: "Trichopigmentierung" },
-    { src: "/8.jpg", alt: "Scalp Micropigmentation München - Natürliches Haarpigmentierung Ergebnis", category: "Trichopigmentierung" },
-    { src: "/28.jpg", alt: "Trichopigmentierung München - Professionelle Kopfhaut Pigmentierung bei Haarausfall", category: "Trichopigmentierung" },
     // Камуфляж шрамов - ГЛАВНОЕ!
     { src: "/14.PNG", alt: "Narben Camouflage München - Vorher Nachher Vergleich", category: "Camouflage" },
     { src: "/15.jpg", alt: "Dehnungsstreifen Camouflage München - Natürliche Kaschierung", category: "Camouflage" },

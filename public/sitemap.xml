@@ -76,37 +76,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/services-muenchen" />
   </url>
 
-  <!-- Kopfhaut Pigmentierung (DE) -->
-  <url>
-    <loc>https://pmu-noska.de/kopfhaut-muenchen</loc>
-    <lastmod>2025-01-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/kopfhaut-muenchen" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru/kopfhaut-muenchen" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/kopfhaut-muenchen" />
-    <image:image>
-      <image:loc>https://pmu-noska.de/19.webp</image:loc>
-      <image:title>Kopfhaut Pigmentierung München - Vorher Nachher</image:title>
-      <image:caption>SMP Scalp Micropigmentation bei Haarausfall München</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://pmu-noska.de/20.webp</image:loc>
-      <image:title>Haarpigmentierung Ergebnis München</image:title>
-      <image:caption>Natürliches Ergebnis bei lichtem Haar</image:caption>
-    </image:image>
-  </url>
-  <!-- Kopfhaut Pigmentierung (RU) -->
-  <url>
-    <loc>https://pmu-noska.de/ru/kopfhaut-muenchen</loc>
-    <lastmod>2025-01-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pmu-noska.de/kopfhaut-muenchen" />
-    <xhtml:link rel="alternate" hreflang="ru" href="https://pmu-noska.de/ru/kopfhaut-muenchen" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pmu-noska.de/kopfhaut-muenchen" />
-  </url>
-
   <!-- Camouflage (DE) -->
   <url>
     <loc>https://pmu-noska.de/camouflage-muenchen</loc>

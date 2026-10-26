@@ -10,7 +10,6 @@ const __dirname = path.dirname(__filename);
 const routes = [
   // German routes (default)
   '/',
-  '/kopfhaut-muenchen',
   '/camouflage-muenchen',
   '/nachkorrektur-muenchen',
   '/remover-muenchen',
@@ -21,7 +20,6 @@ const routes = [
 
   // Russian routes
   '/ru',
-  '/ru/kopfhaut-muenchen',
   '/ru/camouflage-muenchen',
   '/ru/nachkorrektur-muenchen',
   '/ru/remover-muenchen',
