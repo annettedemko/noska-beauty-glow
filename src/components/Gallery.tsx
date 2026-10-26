@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { FEATURES } from "@/config/features";
 
 export const Gallery = () => {
   const { t } = useLanguage();
@@ -75,8 +76,12 @@ export const Gallery = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [lightboxOpen]);
 
-  // Gallery images - акцент на камуфляж шрамов (первые в списке!)
+  // Gallery images - акцент на Trichopigmentierung и камуфляж шрамов (первые в списке!)
   const galleryImages = [
+    // Trichopigmentierung - ГЛАВНОЕ!
+    { src: "/9.jpg", alt: "Kopfhaut Pigmentierung München - SMP Vorher Nachher Ergebnis", category: "Trichopigmentierung" },
+    { src: "/8.jpg", alt: "Scalp Micropigmentation München - Natürliches Haarpigmentierung Ergebnis", category: "Trichopigmentierung" },
+    { src: "/28.jpg", alt: "Trichopigmentierung München - Professionelle Kopfhaut Pigmentierung bei Haarausfall", category: "Trichopigmentierung" },
     // Камуфляж шрамов - ГЛАВНОЕ!
     { src: "/14.PNG", alt: "Narben Camouflage München - Vorher Nachher Vergleich", category: "Camouflage" },
     { src: "/15.jpg", alt: "Dehnungsstreifen Camouflage München - Natürliche Kaschierung", category: "Camouflage" },
@@ -92,7 +97,7 @@ export const Gallery = () => {
     { src: "/6.jpg", alt: "Lip Blush München - Sanfte Lippen Auffrischung mit PMU", category: "Lippen" },
     { src: "/24.jpg", alt: "Permanente Lippen München - Volle Lippenkontur mit Aquarell Technik", category: "Lippen" },
     { src: "/25.jpeg", alt: "Lippen PMU München - Natürliches Ergebnis ohne Überzeichnung", category: "Lippen" },
-  ];
+  ].filter((image) => FEATURES.scalpPigmentation || image.category !== "Trichopigmentierung");
 
   return (
     <section id="gallery" className="pt-32 pb-16 sm:pb-32 px-6 relative overflow-hidden" ref={galleryRef}>

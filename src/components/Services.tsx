@@ -1,5 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "react-router-dom";
+import { FEATURES } from "@/config/features";
 
 export const Services = () => {
   const { t, language } = useLanguage();
@@ -7,6 +8,14 @@ export const Services = () => {
 
   const services = [
     // ГЛАВНЫЕ УСЛУГИ - акцент на них!
+    ...(FEATURES.scalpPigmentation ? [{
+      name: t("scalpPigmentation"),
+      price: t("price300"),
+      note: t("scalpPriceNote") + " | " + t("correctionNote"),
+      isSpecial: true,
+      link: `${langPrefix}/kopfhaut-muenchen`,
+      featured: true
+    }] : []),
     {
       name: t("scarCamouflage"),
       price: t("priceCamouflage"),

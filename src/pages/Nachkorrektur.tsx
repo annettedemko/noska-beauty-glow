@@ -7,6 +7,7 @@ import { VideoBackground } from "@/components/VideoBackground";
 import { RelatedServices } from "@/components/RelatedServices";
 import { StructuredData } from "@/components/StructuredData";
 import { useEffect } from "react";
+import { FEATURES } from "@/config/features";
 
 const Nachkorrektur = () => {
   const { t, language } = useLanguage();
@@ -22,8 +23,8 @@ const Nachkorrektur = () => {
       metaDescription.setAttribute(
         "content",
         language === "DE"
-          ? "Nachkorrektur für Permanent Make-up in München. 50% vom Erstbehandlungspreis. Powder Brows, Lippen, Camouflage. Jetzt Termin buchen!"
-          : "Коррекция перманентного макияжа в Мюнхене. 50% от стоимости первичной процедуры. Брови, губы, камуфляж. Запишитесь!"
+          ? (FEATURES.scalpPigmentation ? "Nachkorrektur für Permanent Make-up in München. 50% vom Erstbehandlungspreis. Powder Brows, Lippen, Kopfhaut Pigmentierung, Camouflage. Jetzt Termin buchen!" : "Nachkorrektur für Permanent Make-up in München. 50% vom Erstbehandlungspreis. Powder Brows, Lippen, Camouflage. Jetzt Termin buchen!")
+          : (FEATURES.scalpPigmentation ? "Коррекция перманентного макияжа в Мюнхене. 50% от стоимости первичной процедуры. Брови, губы, пигментация кожи головы, камуфляж. Запишитесь!" : "Коррекция перманентного макияжа в Мюнхене. 50% от стоимости первичной процедуры. Брови, губы, камуфляж. Запишитесь!")
       );
     }
   }, [language]);
@@ -39,6 +40,11 @@ const Nachkorrektur = () => {
       price: t("touchupServiceLipsPrice"),
       link: `${langPrefix}/services-muenchen#lips`
     },
+    ...(FEATURES.scalpPigmentation ? [{
+      name: t("touchupServiceScalp"),
+      price: t("touchupServiceScalpPrice"),
+      link: `${langPrefix}/kopfhaut-muenchen`
+    }] : []),
     {
       name: t("touchupServiceCamouflage"),
       price: t("touchupServiceCamouflagePrice"),
@@ -51,8 +57,8 @@ const Nachkorrektur = () => {
       <SEOHead
         titleDE="Nachkorrektur München | 50% vom Erstbehandlungspreis | PMU Korrektur"
         titleRU="Коррекция Мюнхен | 50% от первичной процедуры | Коррекция ПМУ"
-        descriptionDE="Nachkorrektur für Permanent Make-up in München ✓ 50% vom Erstbehandlungspreis ✓ Powder Brows, Lippen, Camouflage ✓ 4-6 Wochen nach Erstbehandlung ✓ Jetzt Termin!"
-        descriptionRU="Коррекция перманентного макияжа в Мюнхене ✓ 50% от стоимости ✓ Брови, губы, камуфляж ✓ Через 4-6 недель ✓ Запишитесь!"
+        descriptionDE={FEATURES.scalpPigmentation ? "Nachkorrektur für Permanent Make-up in München ✓ 50% vom Erstbehandlungspreis ✓ Powder Brows, Lippen, Kopfhaut, Camouflage ✓ 4-6 Wochen nach Erstbehandlung ✓ Jetzt Termin!" : "Nachkorrektur für Permanent Make-up in München ✓ 50% vom Erstbehandlungspreis ✓ Powder Brows, Lippen, Camouflage ✓ 4-6 Wochen nach Erstbehandlung ✓ Jetzt Termin!"}
+        descriptionRU={FEATURES.scalpPigmentation ? "Коррекция перманентного макияжа в Мюнхене ✓ 50% от стоимости ✓ Брови, губы, кожа головы, камуфляж ✓ Через 4-6 недель ✓ Запишитесь!" : "Коррекция перманентного макияжа в Мюнхене ✓ 50% от стоимости ✓ Брови, губы, камуфляж ✓ Через 4-6 недель ✓ Запишитесь!"}
         keywordsDE="Nachkorrektur München, PMU Korrektur München, Permanent Make-up Korrektur, Augenbrauen Korrektur München, Lippen Korrektur München"
         keywordsRU="Коррекция Мюнхен, Коррекция ПМУ Мюнхен, Коррекция перманентного макияжа, Коррекция бровей Мюнхен, Коррекция губ Мюнхен"
       />

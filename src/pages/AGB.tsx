@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { SEOHead } from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { FEATURES } from "@/config/features";
 
 const AGB = () => {
   const { language } = useLanguage();
@@ -67,6 +68,7 @@ const AGB = () => {
                     <ul className="list-disc list-inside pl-4 mb-3 space-y-1">
                       <li>Permanent Make-up</li>
                       <li>Camouflage (z. B. Narben- und Dehnungsstreifenpigmentierung)</li>
+                      {FEATURES.scalpPigmentation && <li>Trichopigmentation</li>}
                     </ul>
                     <p className="mb-3">
                       Es werden keine medizinischen Behandlungen oder heilkundlichen Leistungen erbracht.
@@ -247,6 +249,7 @@ const AGB = () => {
                     <ul className="list-disc list-inside pl-4 mb-3 space-y-1">
                       <li>Перманентный макияж</li>
                       <li>Камуфляж (например, пигментация шрамов и растяжек)</li>
+                      {FEATURES.scalpPigmentation && <li>Трихопигментация</li>}
                     </ul>
                     <p className="mb-3">
                       Медицинские процедуры или лечебные услуги не оказываются.

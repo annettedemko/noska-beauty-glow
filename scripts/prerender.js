@@ -3,13 +3,21 @@ import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+import fsSync from 'fs';
+
+// Feature switch shared with the app (src/config/features.json)
+const FEATURES = JSON.parse(
+  fsSync.readFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), '../src/config/features.json'), 'utf-8')
+);
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // All routes to pre-render
-const routes = [
+const allRoutes = [
   // German routes (default)
   '/',
+  '/kopfhaut-muenchen',
   '/camouflage-muenchen',
   '/nachkorrektur-muenchen',
   '/remover-muenchen',
@@ -20,6 +28,7 @@ const routes = [
 
   // Russian routes
   '/ru',
+  '/ru/kopfhaut-muenchen',
   '/ru/camouflage-muenchen',
   '/ru/nachkorrektur-muenchen',
   '/ru/remover-muenchen',
@@ -28,6 +37,7 @@ const routes = [
   '/ru/datenschutz',
   '/ru/agb',
 ];
+const routes = allRoutes.filter((r) => FEATURES.scalpPigmentation || !r.includes('kopfhaut'));
 
 const distDir = path.resolve(__dirname, '../dist');
 const baseUrl = 'http://localhost:4173'; // Vite preview server

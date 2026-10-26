@@ -9,6 +9,11 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+// Feature switch shared with the app (src/config/features.json)
+const FEATURES = JSON.parse(
+  fs.readFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), '../src/config/features.json'), 'utf-8')
+);
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -28,7 +33,7 @@ const getCurrentDate = () => {
 const TODAY = getCurrentDate();
 
 // Define all pages with their properties
-const pages = [
+const allPages = [
   {
     path: '',
     priority: '1.0',
@@ -42,6 +47,13 @@ const pages = [
     changefreq: 'monthly',
     lastmod: TODAY,
     comment: 'Services Page'
+  },
+  {
+    path: '/kopfhaut-muenchen',
+    priority: '0.8',
+    changefreq: 'monthly',
+    lastmod: TODAY,
+    comment: 'Kopfhaut Pigmentierung'
   },
   {
     path: '/camouflage-muenchen',
@@ -72,6 +84,7 @@ const pages = [
     comment: 'Datenschutz'
   }
 ];
+const pages = allPages.filter((p) => FEATURES.scalpPigmentation || !p.path.includes('kopfhaut'));
 
 // Languages
 const LANGUAGES = ['de', 'ru'];

@@ -1,5 +1,6 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { FEATURES } from "@/config/features";
 
 interface Service {
   titleDE: string;
@@ -40,6 +41,14 @@ export const RelatedServices = ({ currentService, showCount = 3 }: RelatedServic
       image: "/23.jpg"
     },
     {
+      titleDE: "Kopfhaut Pigmentierung",
+      titleRU: "Пигментация кожи головы",
+      descriptionDE: "Natürliche Lösung bei Haarausfall und lichtem Haar",
+      descriptionRU: "Естественное решение при выпадении волос и редких волосах",
+      path: "/kopfhaut-muenchen",
+      image: "/28.jpg"
+    },
+    {
       titleDE: "Camouflage",
       titleRU: "Камуфляж",
       descriptionDE: "Professionelle Kaschierung von Narben und Dehnungsstreifen",
@@ -66,12 +75,12 @@ export const RelatedServices = ({ currentService, showCount = 3 }: RelatedServic
   ];
 
   // Filter out current service and prioritize based on current page
-  let relatedServices = allServices.filter(service => service.path !== currentService);
+  let relatedServices = allServices.filter(service => service.path !== currentService && (FEATURES.scalpPigmentation || service.path !== "/kopfhaut-muenchen"));
 
   // Special handling for /services-muenchen page:
   // Ensure remover-muenchen is always included and show specific services
   if (currentService === "/services-muenchen") {
-    // Show: Camouflage, Remover (exclude "Alle Leistungen")
+    // Show: Kopfhaut, Camouflage, Remover (exclude "Alle Leistungen")
     relatedServices = relatedServices.filter(service => service.path !== "/#services");
   }
 

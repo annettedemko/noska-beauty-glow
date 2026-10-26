@@ -7,9 +7,11 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import { CookieConsentProvider } from "@/contexts/CookieConsentContext";
 import { CookieBanner, CookieSettings } from "@/components/CookieBanner";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { FEATURES } from "@/config/features";
 
 // Lazy load pages for better performance
 import Index from "./pages/Index"; // Keep home page eager
+const Kopfhaut = lazy(() => import("./pages/Kopfhaut"));
 const Camouflage = lazy(() => import("./pages/Camouflage"));
 const Remover = lazy(() => import("./pages/Remover"));
 const Services = lazy(() => import("./pages/Services"));
@@ -33,7 +35,7 @@ const App = () => (
             <Routes>
             {/* German routes (default, no language prefix) */}
             <Route path="/" element={<Index />} />
-            <Route path="/kopfhaut-muenchen" element={<Navigate to="/" replace />} />
+            <Route path="/kopfhaut-muenchen" element={FEATURES.scalpPigmentation ? <Kopfhaut /> : <Navigate to="/" replace />} />
             <Route path="/camouflage-muenchen" element={<Camouflage />} />
             <Route path="/remover-muenchen" element={<Remover />} />
             <Route path="/services-muenchen" element={<Services />} />
@@ -44,7 +46,7 @@ const App = () => (
 
             {/* Russian routes (with /ru prefix) */}
             <Route path="/ru" element={<Index />} />
-            <Route path="/ru/kopfhaut-muenchen" element={<Navigate to="/ru" replace />} />
+            <Route path="/ru/kopfhaut-muenchen" element={FEATURES.scalpPigmentation ? <Kopfhaut /> : <Navigate to="/ru" replace />} />
             <Route path="/ru/camouflage-muenchen" element={<Camouflage />} />
             <Route path="/ru/remover-muenchen" element={<Remover />} />
             <Route path="/ru/services-muenchen" element={<Services />} />
@@ -55,7 +57,7 @@ const App = () => (
 
             {/* 301 Redirects from old /de/ URLs to new German URLs (without prefix) */}
             <Route path="/de" element={<Navigate to="/" replace />} />
-            <Route path="/de/kopfhaut-muenchen" element={<Navigate to="/" replace />} />
+            <Route path="/de/kopfhaut-muenchen" element={<Navigate to="/kopfhaut-muenchen" replace />} />
             <Route path="/de/camouflage-muenchen" element={<Navigate to="/camouflage-muenchen" replace />} />
             <Route path="/de/remover-muenchen" element={<Navigate to="/remover-muenchen" replace />} />
             <Route path="/de/services-muenchen" element={<Navigate to="/services-muenchen" replace />} />
@@ -64,7 +66,7 @@ const App = () => (
             <Route path="/de/agb" element={<Navigate to="/agb" replace />} />
 
             {/* Legacy redirects (old URLs without -muenchen suffix) */}
-            <Route path="/kopfhaut" element={<Navigate to="/" replace />} />
+            <Route path="/kopfhaut" element={<Navigate to="/kopfhaut-muenchen" replace />} />
             <Route path="/camouflage" element={<Navigate to="/camouflage-muenchen" replace />} />
             <Route path="/remover" element={<Navigate to="/remover-muenchen" replace />} />
             <Route path="/services" element={<Navigate to="/services-muenchen" replace />} />

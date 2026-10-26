@@ -1,6 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useCookieConsent } from "@/contexts/CookieConsentContext";
 import { Link } from "react-router-dom";
+import { FEATURES } from "@/config/features";
 
 export const Footer = () => {
   const { t, language, toggleLanguage } = useLanguage();
@@ -45,6 +46,11 @@ export const Footer = () => {
                   {language === "DE" ? "Powder Brows & Lippen" : "Брови и Губы"}
                 </Link>
               </li>
+              {FEATURES.scalpPigmentation && (<li>
+                <Link to={`${langPrefix}/kopfhaut-muenchen`} className="text-muted-foreground hover:text-accent transition-colors duration-300">
+                  {language === "DE" ? "Kopfhaut Pigmentierung" : "Пигментация кожи головы"}
+                </Link>
+              </li>)}
               <li>
                 <Link to={`${langPrefix}/camouflage-muenchen`} className="text-muted-foreground hover:text-accent transition-colors duration-300">
                   Camouflage

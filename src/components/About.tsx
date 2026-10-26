@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { FEATURES } from "@/config/features";
 
 export const About = () => {
   const { t } = useLanguage();
@@ -148,7 +149,7 @@ export const About = () => {
               <div className="group/text relative pl-8 py-4">
                 <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-accent" />
                 <p className="text-lg md:text-xl font-light leading-relaxed text-foreground/90 group-hover/text:text-foreground transition-colors">
-                  {t("aboutText1")}
+                  {t(FEATURES.scalpPigmentation ? "aboutText1" : "aboutText1NoScalp")}
                 </p>
               </div>
 
@@ -180,6 +181,10 @@ export const About = () => {
                       <div className="w-2 h-2 bg-accent rotate-45 mt-2 flex-shrink-0" />
                       <span className="text-base md:text-lg font-light">{t("aboutService1")}</span>
                     </li>
+                    {FEATURES.scalpPigmentation && (<li className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-accent rotate-45 mt-2 flex-shrink-0" />
+                      <span className="text-base md:text-lg font-light">{t("aboutService2")}</span>
+                    </li>)}
                   </ul>
                 </div>
               </div>

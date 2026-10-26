@@ -12,6 +12,7 @@ import { Footer } from "@/components/Footer";
 import { VideoBackground } from "@/components/VideoBackground";
 import { SEOHead } from "@/components/SEOHead";
 import { StructuredData } from "@/components/StructuredData";
+import { FEATURES } from "@/config/features";
 
 const Index = () => {
   return (
@@ -19,10 +20,10 @@ const Index = () => {
       <SEOHead
         titleDE="Permanent Make-up München | TOP Bewertet 5.0★ | Anastasia Noska"
         titleRU="Перманентный макияж Мюнхен | ТОП оценка 5.0★ | Анастасия Носка"
-        descriptionDE="Permanent Make-up München ✓ Powder Brows ✓ Aquarell Lippen ✓ Camouflage ✓ 6 Google Bewertungen: 5.0★ ✓ Natürliche Ergebnisse ✓ Jetzt Termin!"
-        descriptionRU="Перманентный макияж Мюнхен ✓ Пудровые брови ✓ Акварельные губы ✓ Камуфляж ✓ 6 отзывов Google: 5.0★ ✓ Запишитесь!"
-        keywordsDE="Permanent Make-up München, PMU München, Powder Brows München, Augenbrauen München, Lippen München, Lidstrich München, Camouflage München, Anastasia Noska, beste PMU München, 5 Sterne Bewertung"
-        keywordsRU="Перманентный макияж Мюнхен, ПМУ Мюнхен, Пудровые брови Мюнхен, Брови Мюнхен, Губы Мюнхен, Камуфляж Мюнхен, Анастасия Носка, лучший ПМУ Мюнхен, 5 звезд"
+        descriptionDE={FEATURES.scalpPigmentation ? "Permanent Make-up München ✓ Powder Brows ✓ Aquarell Lippen ✓ Kopfhaut Pigmentierung ✓ Camouflage ✓ 6 Google Bewertungen: 5.0★ ✓ Natürliche Ergebnisse ✓ Jetzt Termin!" : "Permanent Make-up München ✓ Powder Brows ✓ Aquarell Lippen ✓ Camouflage ✓ 6 Google Bewertungen: 5.0★ ✓ Natürliche Ergebnisse ✓ Jetzt Termin!"}
+        descriptionRU={FEATURES.scalpPigmentation ? "Перманентный макияж Мюнхен ✓ Пудровые брови ✓ Акварельные губы ✓ Пигментация кожи головы ✓ Камуфляж ✓ 6 отзывов Google: 5.0★ ✓ Запишитесь!" : "Перманентный макияж Мюнхен ✓ Пудровые брови ✓ Акварельные губы ✓ Камуфляж ✓ 6 отзывов Google: 5.0★ ✓ Запишитесь!"}
+        keywordsDE={FEATURES.scalpPigmentation ? "Permanent Make-up München, PMU München, Powder Brows München, Augenbrauen München, Lippen München, Lidstrich München, Kopfhaut Pigmentierung München, Camouflage München, Anastasia Noska, beste PMU München, 5 Sterne Bewertung" : "Permanent Make-up München, PMU München, Powder Brows München, Augenbrauen München, Lippen München, Lidstrich München, Camouflage München, Anastasia Noska, beste PMU München, 5 Sterne Bewertung"}
+        keywordsRU={FEATURES.scalpPigmentation ? "Перманентный макияж Мюнхен, ПМУ Мюнхен, Пудровые брови Мюнхен, Брови Мюнхен, Губы Мюнхен, Пигментация кожи головы Мюнхен, Камуфляж Мюнхен, Анастасия Носка, лучший ПМУ Мюнхен, 5 звезд" : "Перманентный макияж Мюнхен, ПМУ Мюнхен, Пудровые брови Мюнхен, Брови Мюнхен, Губы Мюнхен, Камуфляж Мюнхен, Анастасия Носка, лучший ПМУ Мюнхен, 5 звезд"}
       />
       <StructuredData />
 

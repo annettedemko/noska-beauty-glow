@@ -2,6 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
+import { FEATURES } from "@/config/features";
 
 export const Navigation = () => {
   const { language, toggleLanguage, t } = useLanguage();
@@ -75,6 +76,7 @@ export const Navigation = () => {
 
   const langPrefix = language === "DE" ? "" : "/ru";
   const services = [
+    ...(FEATURES.scalpPigmentation ? [{ name: t("scalpPigmentation"), path: `${langPrefix}/kopfhaut-muenchen` }] : []),
     { name: t("scarCamouflage"), path: `${langPrefix}/camouflage-muenchen` },
     { name: t("powderBrows"), path: `${langPrefix}/services-muenchen#brows` },
     { name: t("aquarellLips"), path: `${langPrefix}/services-muenchen#lips` },
